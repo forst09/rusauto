@@ -37,6 +37,7 @@ section {
     line-height: 2rem;
     color: #064E8C;
     text-align: center;
+    width: 100%;
 }
 
 .btn__wrapper {
@@ -248,5 +249,25 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
+
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ*/
+.swiper-partners {
+    .swiper-wrapper {
+        gap: 3.2rem;
+    }
+}
+
+.partners__logo {
+    width: 6.4rem;
+    height: 6.4rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ*/
 
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
