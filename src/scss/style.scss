@@ -1,1 +1,17 @@
 @import 'variables.scss';
+
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ*/
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Geometria';
+    color: $black;
+}
+
+section {
+    margin-bottom: 4.8rem;
+}
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/

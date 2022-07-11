@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ*/
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Geometria";
+  color: #262B2E;
+}
+
+section {
+  margin-bottom: 4.8rem;
+}
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/

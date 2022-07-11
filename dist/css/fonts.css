@@ -1,0 +1,43 @@
+@font-face {
+  font-weight: 300;
+  font-family: "Geometria";
+  src: url("../fonts/GEOMETRIA_LIGHT.OTF");
+}
+@font-face {
+  font-weight: 300;
+  font-family: "Geometria";
+  font-style: italic;
+  src: url("../fonts/GEOMETRIA_LIGHTITALIC.OTF");
+}
+@font-face {
+  font-weight: 400;
+  font-family: "Geometria";
+  src: url("../fonts/GEOMETRIAREGULAR.TTF");
+}
+@font-face {
+  font-weight: 500;
+  font-family: "Geometria";
+  src: url("../fonts/GEOMETRIA_MEDIUM.OTF");
+}
+@font-face {
+  font-weight: 500;
+  font-family: "Geometria";
+  font-style: italic;
+  src: url("../fonts/GEOMETRIA_MEDIUMITALIC.OTF");
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Geometria";
+  src: url("../fonts/GEOMETRIA_BOLD_0.OTF");
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Geometria";
+  font-style: italic;
+  src: url("../fonts/GEOMETRIA_BOLDITALIC.OTF");
+}
+@font-face {
+  font-weight: 800;
+  font-family: "Geometria";
+  src: url("../fonts/GEOMETRIA_EXTRABOLD_0.OTF");
+}
