@@ -26,6 +26,55 @@ section {
   margin: 0 auto 3.2rem;
 }
 
+.title-desc {
+  margin-bottom: 1.2rem;
+}
+
+.desc {
+  margin: 0 auto 3.2rem;
+  max-width: 40.4rem;
+  line-height: 2rem;
+  color: #064E8C;
+  text-align: center;
+}
+
+.btn__wrapper {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.btn {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  display: inline-block;
+  color: #fff;
+  min-width: 17.7rem;
+  background-color: #5CBFE9;
+  text-align: center;
+  padding: 1rem 2.8rem;
+  font-weight: 500;
+}
+.btn::before, .btn::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+}
+.btn::before {
+  border-left: 1.9rem solid transparent;
+  border-bottom: 3.8rem solid #5CBFE9;
+  left: -1.9rem;
+}
+.btn::after {
+  border-right: 1.9rem solid transparent;
+  border-top: 3.8rem solid #5CBFE9;
+  right: -1.9rem;
+}
+
 .swiper::-webkit-scrollbar,
 .scroll::-webkit-scrollbar {
   width: 0;
@@ -96,7 +145,52 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ*/
+.spares__container {
+  max-width: 28.8rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  grid-column-gap: 3.6rem;
+  grid-row-gap: 4.8rem;
+  align-items: flex-start;
+}
+
+.spares__item {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.spares__item-img {
+  margin-top: 1.6rem;
+  width: 12.6rem;
+  height: 9rem;
+}
+.spares__item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.spares__item-info-title {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #064E8C;
+  text-align: center;
+  min-height: 4.4rem;
+}
+
+.spares__item-info-models {
+  display: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
+.swiper-companies .swiper-wrapper {
+  gap: 2.4rem;
+}
+
 .companies__image {
   width: 6.4rem;
   height: 6.4rem;
