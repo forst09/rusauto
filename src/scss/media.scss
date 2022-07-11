@@ -116,6 +116,22 @@
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 668*/
 
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 668*/
+    .news__container {
+        grid-template-columns: repeat(2, 6fr);
+        grid-column-gap: 3.2rem;
+    }
+
+    .news__item {
+        max-width: 27.6rem;
+    }
+
+    .news__item-text {
+        margin-bottom: 3.2rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 668*/
+
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
 }
 
@@ -243,7 +259,7 @@
         padding: 0.4rem 0.8rem;
         font-size: 1.2rem;
         line-height: 1.5rem;
-        color: #064E8C;
+        color: $blue;
 
         &:nth-of-type(2n) {
             margin-right: 0;
@@ -307,6 +323,13 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 1024*/
+    .news__container {
+        grid-template-columns: repeat(3, 4fr);
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 1024*/
 
 }
 
@@ -406,6 +429,22 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 1500*/
+    .news__container {
+        grid-template-columns: repeat(4, 3fr);
+    }
+
+    .news__item {
+        max-width: 29.9rem;
+    }
+
+    .news__item-title {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 1500*/
 
 }
 
