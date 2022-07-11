@@ -334,4 +334,64 @@ section {
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ*/
 
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ КОНТАКТЫ*/
+.contacts__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    justify-content: center;
+}
+
+.contacts__info-item {
+    max-width: 22.5rem;
+    margin: 0 auto 2.4rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__info-item-mini {
+    margin-bottom: 1.6rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__info-item-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.contacts__info-item-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $blue;
+    margin-bottom: 0.8rem;
+}
+
+.contacts__info-item-text {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.contacts__map {
+    width: 100%;
+    height: 32rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ*/
+
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/

@@ -132,6 +132,25 @@
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 668*/
 
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 668*/
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 668*/
+    .contacts__container {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: unset;
+    }
+
+    .contacts__info-item-text {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    .contacts__map {
+        width: 30.7rem;
+        height: 31.5rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
 }
 
