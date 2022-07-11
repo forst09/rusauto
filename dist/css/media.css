@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*НАЧАЛО АДАПТИВА 668*/
+@media (min-width: 668px) {
+  /*НАЧАЛО ОБЩИХ СТИЛЕЙ 668*/
+  html {
+    font-size: 1.497005988vw;
+  }
+
+  section {
+    margin-bottom: 8rem;
+  }
+
+  .title {
+    max-width: 53.2rem;
+    font-size: 2.1rem;
+    line-height: 3rem;
+  }
+
+  .wrapper {
+    padding: 0 4.4rem;
+  }
+
+  /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
+  /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 668*/
+  .desc-icon__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .desc-icon__item {
+    margin-bottom: 0;
+    max-width: 17.3rem;
+  }
+
+  .desc-icon__text-title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 668*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 668*/
+  .companies .scroll {
+    padding: 0 4.4rem;
+  }
+
+  .companies__banner-text {
+    max-width: 40rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 668*/
+  /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
+}
+/*КОНЕЦ АДАПТИВА 668*/
+/*НАЧАЛО АДАПТИВА 1024*/
+@media (min-width: 1024px) {
+  /*НАЧАЛО ОБЩИХ СТИЛЕЙ 1024*/
+  html {
+    font-size: 0.9765625vw;
+  }
+
+  section {
+    margin-bottom: 11.2rem;
+  }
+
+  .title {
+    max-width: none;
+    margin-bottom: 4.8rem;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+
+  .wrapper {
+    padding: 0 6.4rem;
+  }
+
+  /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
+  .swiper {
+    display: block;
+    overflow-x: hidden;
+  }
+
+  .scroll {
+    padding: 0;
+    overflow-x: unset;
+  }
+
+  /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
+  /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1024*/
+  .desc-icon {
+    padding: 3.2rem 0;
+  }
+
+  .desc-icon__item {
+    max-width: 23.9rem;
+  }
+
+  .desc-icon__item-img {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .desc-icon__text-title {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1024*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1024*/
+  .companies .scroll {
+    padding: 0;
+  }
+  .companies .swiper-slide {
+    width: 8.9rem;
+  }
+
+  .swiper-companies {
+    padding: 0 6.4rem;
+  }
+
+  .companies__image {
+    width: 8.9rem;
+    height: 8.9rem;
+  }
+
+  .companies__banner {
+    margin-top: 5.6rem;
+    padding: 1.6rem 0;
+  }
+
+  .companies__banner-text {
+    max-width: none;
+    font-size: 1.6rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1024*/
+}
+/*КОНЕЦ АДАПТИВА 1024*/
+/*НАЧАЛО АДАПТИВА 1500*/
+@media (min-width: 1500px) {
+  /*НАЧАЛО ОБЩИХ СТИЛЕЙ 1500*/
+  html {
+    font-size: 0.666668vw;
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+
+  section {
+    margin-bottom: 12.8rem;
+  }
+
+  .wrapper {
+    padding: 0 8rem;
+  }
+
+  /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1500*/
+  .desc-icon {
+    padding: 5.6rem 0;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1500*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1500*/
+  .companies .swiper-slide {
+    width: 9.2rem;
+  }
+
+  .swiper-companies {
+    padding: 0 16.5rem;
+  }
+
+  .companies__image {
+    width: 9.2rem;
+    height: 9.2rem;
+  }
+
+  .companies__banner-text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1500*/
+}
+/*КОНЕЦ АДАПТИВА 1500*/

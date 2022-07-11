@@ -13,4 +13,114 @@ section {
   margin-bottom: 4.8rem;
 }
 
+.wrapper {
+  padding: 0 1.6rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 40.4rem;
+  margin: 0 auto 3.2rem;
+}
+
+.swiper::-webkit-scrollbar,
+.scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+
+.scroll {
+  padding: 0 1.6rem;
+  overflow-x: auto;
+}
+
+/*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
+.swiper {
+  display: inline-flex;
+  overflow-x: auto;
+}
+
+.swiper-slide {
+  width: auto;
+}
+
+/*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
+/*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ*/
+.desc-icon {
+  background-color: #F5FBFE;
+  padding: 2.4rem 0;
+}
+
+.desc-icon__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc-icon__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 18.8rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+.desc-icon__item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.desc-icon__item-img {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.6rem;
+}
+.desc-icon__item-img img {
+  width: 100%;
+  height: auto;
+}
+
+.desc-icon__text-title {
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  font-weight: 700;
+}
+.desc-icon__text-title span {
+  font-weight: 400;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
+.companies__image {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.companies__image img {
+  height: 100%;
+  width: auto;
+}
+
+.companies__banner {
+  margin-top: 4rem;
+  background-color: #F5FBFE;
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+.companies__banner-text {
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  font-weight: 500;
+  color: #064E8C;
+  max-width: 28.8rem;
+  margin: auto;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
+/*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
