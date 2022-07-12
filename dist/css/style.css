@@ -30,6 +30,18 @@ section {
   margin-bottom: 1.2rem;
 }
 
+.text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.text p {
+  margin-bottom: 2rem;
+}
+.text p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
 .desc {
   margin: 0 auto 3.2rem;
   max-width: 40.4rem;
@@ -317,6 +329,10 @@ section {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.contacts__info-item-title-big {
   margin-bottom: 1.2rem;
 }
 
@@ -346,4 +362,119 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ О КОМПАНИИ*/
+.about__logo {
+  display: none;
+}
+
+.about__info .text {
+  margin-bottom: 2.4rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ О КОМПАНИИ*/
+/*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
+.footer {
+  background-color: #064E8C;
+  padding: 2.4rem 0 4rem;
+}
+
+.footer__info-images-logo,
+.footer__links,
+.footer__info-contacts-feedback-phone {
+  display: none;
+}
+
+.footer__info-images-socials {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+}
+
+.footer__info-images-socials-item {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.footer__info-images-socials-item svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer__info-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info-contacts-address,
+.footer__info-contacts-feedback {
+  max-width: 12rem;
+  width: 100%;
+}
+
+.footer__info-contacts-title {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.footer__info-contacts-text {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  color: #fff;
+}
+
+.footer__info-images {
+  margin-bottom: 4rem;
+}
+
+.footer__container,
+.footer__copyright {
+  margin: auto;
+  max-width: 28.8rem;
+  width: 100%;
+}
+
+.footer__copyright {
+  margin-top: 3.2rem;
+}
+
+.footer__copyright-text {
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.3rem;
+}
+.footer__copyright-text p {
+  margin-bottom: 0.8rem;
+}
+.footer__copyright-text p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.footer__copyright-upfly {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6rem;
+  width: 11.9rem;
+}
+.footer__copyright-upfly img {
+  width: 2.4rem;
+  height: 3rem;
+}
+.footer__copyright-upfly span {
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+
+.footer__copyright-upfly-wrapper {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: end;
+}
+
+/*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/

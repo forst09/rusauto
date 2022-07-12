@@ -23,6 +23,14 @@
         max-width: 50.8rem;
     }
 
+    .text {
+        line-height: 1.8rem;
+
+        p {
+            margin-bottom: 1.8rem;
+        }
+    }
+
     .wrapper {
         padding: 0 4.4rem;
     }
@@ -133,8 +141,6 @@
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 668*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 668*/
-
-    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 668*/
     .contacts__container {
         justify-content: space-between;
         flex-direction: row;
@@ -150,6 +156,69 @@
         width: 30.7rem;
         height: 31.5rem;
     }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 668*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 668*/
+
+    .about__container {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    .about__logo {
+        display: block;
+        flex-shrink: 0;
+        width: 16rem;
+        height: 11.5rem;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 668*/
+
+    /*НАЧАЛО СТИЛЕЙ ФУТЕРА 668*/
+    .footer {
+        padding: 4rem 0 3.2rem;
+    }
+
+    .footer__container,
+    .footer__copyright {
+        max-width: none;
+    }
+
+    .footer__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__info-contacts {
+        gap: 1.6rem;
+        width: 100%;
+        max-width: 33.8rem;
+    }
+
+    .footer__info-contacts-feedback,
+    .footer__info-contacts-address {
+        max-width: 16.1rem;
+    }
+
+    .footer__info-images {
+        margin-bottom: 0;
+    }
+
+    .footer__copyright {
+        margin-top: 4rem;
+    }
+
+    .footer__copyright-upfly-wrapper {
+        margin-top: 1.6rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ФУТЕРА 668*/
 
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
 }
@@ -350,6 +419,136 @@
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 1024*/
 
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 1024*/
+    .contacts__info-item-title {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+
+    .contacts__info-item {
+        margin-bottom: 2.9rem;
+    }
+
+    .contacts__map {
+        width: 57.6rem;
+        height: 40rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 1024*/
+    .about__container {
+        gap: 10.3rem;
+    }
+
+    .about__logo {
+        width: 20rem;
+        height: 14.4rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
+    .footer {
+        padding: 5.6rem 0 3.2rem;
+    }
+
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__info-images-logo {
+        display: block;
+        margin: 0 auto 1.6rem;
+        width: 7.2rem;
+        height: 5.2rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .footer__info-images-socials-item {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+
+    .footer__info-contacts-feedback-phone {
+        display: block;
+        margin-bottom: 1.6rem;
+    }
+
+    .footer__links {
+        display: flex;
+        gap: 6.4rem;
+    }
+
+    .footer__link {
+        margin-bottom: 1.6rem;
+        font-weight: 500;
+        color: #fff;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        display: block;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    .foooter__links-wrapper-item {
+        margin-bottom: 1.6rem;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__info {
+        gap: 6.6rem;
+    }
+
+    .footer__info-contacts-feedback-call {
+        font-weight: 500;
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 2.1rem;
+        text-decoration: underline;
+    }
+
+    .footer__info-contacts-text {
+        margin-bottom: 0.8rem;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__copyright {
+        margin-top: 3.2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__copyright-text {
+        max-width: 55.5rem;
+        width: 100%;
+
+        p {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .footer__copyright-upfly-wrapper {
+        margin-top: 1rem;
+        height: fit-content;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1024*/
+
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -464,6 +663,71 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 1500*/
+
+    .contacts__info-item {
+        max-width: none;
+    }
+
+    .contacts__map {
+        width: 102rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 1500*/
+    .about__container {
+        max-width: 118.3rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1500*/
+    .footer {
+        padding: 6.4rem 0 4.8rem;
+    }
+
+    .footer__info-contacts {
+        max-width: none;
+        flex-shrink: 0;
+    }
+
+    .footer__info-contacts-feedback {
+        display: flex;
+        max-width: none;
+        gap: 1.6rem;
+    }
+
+    .footer__info-contacts-feedback-phone,
+    .footer__info-contacts-feedback-mail {
+        max-width: 16.1rem;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .footer__links-wrapper {
+        display: flex;
+        gap: 6.4rem;
+    }
+
+    .foooter__links-wrapper-item {
+        margin-bottom: 0;
+    }
+
+    .footer__copyright {
+        margin-top: 5.6rem;
+    }
+
+    .footer__copyright-text {
+        max-width: 78.4rem;
+    }
+
+    .footer__info-contacts-feedback-phone {
+        margin-bottom: 0;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1500*/
 
 }
 
