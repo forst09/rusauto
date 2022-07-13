@@ -292,6 +292,170 @@ section {
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
 
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ КАТАЛОГ*/
+.catalog__container {
+    max-width: 28.8rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.catalog__stock-title {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    color: #00A0E3;
+    margin-bottom: 1.2rem;
+}
+
+.catalog__stock-card {
+    background-color: #EDF8FD;
+    padding: 0.8rem 1.6rem 1.6rem;
+    min-height: 17.2rem;
+    position: relative;
+
+    .btn-arrow {
+        position: absolute;
+        bottom: 1.6rem;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}
+
+.catalog__stock-card-time {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+
+.catalog__stock-card-time-item {
+    position: relative;
+    border-radius: 0.2rem;
+    padding: 0.4rem 0.2rem 0.2rem;
+    background-color: rgba(0, 160, 227, 0.08);
+
+    &::after {
+        content: ':';
+        position: absolute;
+        top: 0.1rem;
+        right: -0.8rem;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        font-weight: 500;
+    }
+
+    &:nth-last-of-type(1) {
+        &::after {
+            content: none;
+        }
+    }
+
+    span {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        color: #064E8C;
+    }
+}
+
+.catalog__stock-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog__stock-card-name {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.catalog__stock-card-cost {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.catalog__stock-card-cost-new {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.catalog__stock-card-cost-old {
+    line-height: 1.3rem;
+    text-decoration: line-through;
+    color: #A3A8AB;
+}
+
+.catalog__stock-card-img {
+    width: 9.4rem;
+    height: 6.1rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.catalog__sections-item {
+    width: 100%;
+    max-width: 13.8rem;
+    height: 100%;
+    min-height: 9.3rem;
+    padding: 0.8rem;
+    position: relative;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2) {
+        display: none;
+    }
+}
+
+.catalog__sections-item-image {
+    width: 10rem;
+    height: 8rem;
+    flex-shrink: 0;
+    position: absolute;
+    top: calc(50% - 4rem);
+    right: -3.5rem;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        path {
+            opacity: 0.18;
+        }
+    }
+}
+
+.catalog__sections-item-title {
+    font-weight: 700;
+    line-height: 1.3rem;
+}
+
+.catalog__sections {
+    display: grid;
+    grid-template-columns: repeat(2, 13.8rem);
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.2rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ*/
+
+
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ*/
 .swiper-partners {
     .swiper-wrapper {

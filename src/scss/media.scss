@@ -110,6 +110,72 @@
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 668*/
 
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КАТАЛОГ 668*/
+    .catalog__container {
+        max-width: none;
+    }
+
+    .catalog__stock-title {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+    .catalog__stock-card {
+        padding: 1.4rem 1.6rem 1.3rem;
+        min-height: fit-content;
+
+        .btn-arrow {
+            position: static;
+            transform: none;
+            margin-top: 2.2rem;
+        }
+    }
+
+    .catalog__stock-card-time {
+        position: absolute;
+        right: 0.8rem;
+        top: 0.8rem;
+    }
+
+    .catalog__stock-card-container {
+        justify-content: flex-start;
+        gap: 3.9rem;
+    }
+
+    .catalog__stock-card-img {
+        width: 11.5rem;
+        height: 7.5rem;
+    }
+
+    .catalog__stock-card-name {
+        margin-bottom: 1rem;
+    }
+
+    .catalog__sections {
+        grid-template-columns: repeat(3, 17.6rem);
+        grid-column-gap: 2.6rem;
+        grid-row-gap: 2.4rem;
+    }
+
+    .catalog__sections-item {
+        max-width: 17.6rem;
+        min-height: 11rem;
+    }
+
+    .catalog__sections-item-title {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .catalog__sections-item-image {
+        right: -6.4rem;
+        width: 14.9rem;
+        height: 9.4rem;
+        top: calc(50% - 4.7rem);
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 668*/
+
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 668*/
     .swiper-partners {
         .swiper-wrapper {
@@ -392,6 +458,82 @@
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1024*/
 
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1024*/
+    .catalog__container {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .catalog__stock {
+        width: 100%;
+        max-width: 20rem;
+        flex-shrink: 0;
+    }
+
+    .catalog__stock-title {
+        font-size: 2.4rem;
+        line-height: 4.2rem;
+        text-align: center;
+        margin-bottom: 1.6rem;
+    }
+
+    .catalog__stock-card {
+        padding: 5.3rem 1.1rem 2.4rem;
+        text-align: center;
+
+        .btn-arrow {
+            margin-top: 5.2rem;
+        }
+    }
+
+    .catalog__stock-card-container {
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .catalog__stock-card-img {
+        width: 8.5rem;
+        height: 5.6rem;
+    }
+
+    .catalog__stock-card-name {
+        margin-bottom: 1.6rem;
+    }
+
+    .catalog__stock-card-cost {
+        flex-direction: column-reverse;
+        gap: 0.2rem;
+    }
+
+    .catalog__stock-card-cost-new {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .catalog__sections {
+        grid-column-gap: 2.877rem;
+        grid-template-columns: repeat(3, 20.473rem);
+    }
+
+    .catalog__sections-item {
+        padding: 1.2rem;
+        max-width: 20.473rem;
+        min-height: 13.6rem;
+    }
+
+    .catalog__sections-item-title {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    .catalog__sections-item-image {
+        width: 13.5rem;
+        height: 9rem;
+        top: calc(50% - 4.5rem);
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1024*/
+
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 1024*/
     .swiper-partners {
         padding: 0 6.4rem;
@@ -639,7 +781,27 @@
         line-height: 2.6rem;
     }
 
+    .catalog__sections-item {
+
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2) {
+            display: flex;
+        }
+    }
+
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1500*/
+    .catalog__container {
+        justify-content: center;
+    }
+
+    .catalog__sections {
+        grid-column-gap: 2.427rem;
+        grid-template-columns: repeat(4, 20.473rem);
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 1500*/
     .swiper-partners {
