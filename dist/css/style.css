@@ -444,12 +444,36 @@ section {
   font-size: 1.4rem;
   line-height: 1.8rem;
   margin-bottom: 1.6rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 }
 
 .news__item-text {
   font-size: 1.2rem;
   line-height: 2.1rem;
   margin-bottom: 2.4rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ*/
