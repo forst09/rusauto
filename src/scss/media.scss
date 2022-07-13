@@ -43,6 +43,61 @@
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
 
+    /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
+    .main {
+        padding: 5.6rem 0 4.8rem;
+
+        .title {
+            max-width: 31.6rem;
+        }
+
+        .desc {
+            font-size: 1.2rem;
+            max-width: 30.2rem;
+            margin: 0;
+        }
+    }
+
+    .swiper-main__item {
+        position: relative;
+        padding: 0 4.4rem;
+    }
+
+    .swiper-main__item-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-main__wrapper {
+        text-align: left;
+        margin-top: 3rem;
+        margin-left: 1.1rem;
+    }
+
+    .swiper-main__item-info-image {
+        display: block;
+        width: 21.6rem;
+        height: 14.6rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-main__pagination {
+        margin-top: 2.4rem;
+
+        .swiper-pagination-bullet {
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
+
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 668*/
     .desc-icon__container {
         flex-direction: row;
@@ -96,10 +151,6 @@
         .swiper-wrapper {
             gap: 3.92rem;
         }
-
-        // .swiper-slide {
-        //     margin-right: 3.92rem;
-        // }
     }
 
     .companies__banner-text {
@@ -330,7 +381,7 @@
     }
 
     /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
-    .swiper {
+    .swiper-not-mobile {
         display: block;
         overflow-x: hidden;
     }
@@ -343,6 +394,49 @@
     /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
+    .main {
+        padding: 5.6rem 0 8rem;
+
+        .title {
+            max-width: 49.6rem;
+        }
+
+        .desc {
+            max-width: 48.1rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    .swiper-main__item {
+        padding: 0 1.6rem 0 6.4rem;
+    }
+
+    .swiper-main__item-wrapper {
+        align-items: flex-start;
+    }
+
+    .swiper-main__item-info {
+        position: relative;
+    }
+
+    .swiper-main__item-info-image {
+        width: 40rem;
+        height: 27.1rem;
+    }
+
+    .swiper-main {
+        .swiper-main__pagination {
+            position: absolute;
+            width: fit-content;
+            left: 6.4rem;
+            bottom: 1.7rem;
+            margin-top: 0;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1024*/
     .desc-icon {
@@ -718,6 +812,41 @@
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
+    .main {
+        padding: 6.4rem 0 8rem;
+
+        .title {
+            max-width: 69.8rem;
+        }
+
+        .desc {
+            max-width: 69.8rem;
+        }
+    }
+
+    .swiper-main__item {
+        padding: 0 8rem;
+    }
+
+    .btn-main__wrapper {
+        margin-top: 3.2rem;
+    }
+
+    .swiper-main__item-info-image {
+        width: 50rem;
+        height: 33.6rem;
+    }
+
+    .swiper-main {
+        .swiper-main__pagination {
+            bottom: 4.2rem;
+            left: 8rem;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1500*/
     .desc-icon {

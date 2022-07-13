@@ -25,6 +25,9 @@ section {
   max-width: 40.4rem;
   margin: 0 auto 3.2rem;
 }
+.title span {
+  color: #00A0E3;
+}
 
 .title-desc {
   margin-bottom: 1.2rem;
@@ -122,18 +125,79 @@ section {
 }
 
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
-.swiper {
+.swiper-not-mobile {
   display: inline-flex;
   overflow-x: auto;
 }
-
-.swiper-slide {
+.swiper-not-mobile .swiper-slide {
   width: auto;
 }
 
 /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
+/*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
+.main {
+  padding: 4.8rem 0 2.4rem;
+}
+.main .title {
+  text-align: left;
+  max-width: 28.8rem;
+  margin: 0 0 1.6rem;
+}
+.main .desc {
+  text-align: left;
+  font-size: 1.4rem;
+  max-width: 47.9rem;
+  margin: 0 0 3.2rem;
+}
+
+.btn-main {
+  min-width: unset;
+  padding: 0.7rem 2.1rem;
+  background-color: #00A0E3;
+}
+.btn-main::before {
+  border-left: 1.1rem solid transparent;
+  border-bottom: 3.2rem solid #00A0E3;
+  left: -1.1rem;
+}
+.btn-main::after {
+  border-right: 1.1rem solid transparent;
+  border-top: 3.2rem solid #00A0E3;
+  right: -1.1rem;
+}
+
+.btn-main__wrapper {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.swiper-main__item-info-image {
+  display: none;
+}
+
+.swiper-main__pagination {
+  position: static;
+  margin-top: 1.6rem;
+}
+.swiper-main__pagination .swiper-pagination-bullet {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0 0.6rem;
+  background-color: #00A0E3;
+  opacity: 0.4;
+}
+.swiper-main__pagination .swiper-pagination-bullet-active {
+  background-color: #00A0E3;
+  opacity: 1;
+}
+
+.swiper-main__item {
+  padding: 0 1.6rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ*/
 .desc-icon {
   background-color: #F5FBFE;
