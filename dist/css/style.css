@@ -136,6 +136,76 @@ section {
 /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
+/*НАЧАЛО СТИЛЕЙ ШАПКИ*/
+.header-top {
+  display: none;
+}
+
+.header-bottom__search,
+.header-bottom__links,
+.header-bottom__request-phone span,
+.header-bottom__request-btn {
+  display: none;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-bottom {
+  padding-top: 1.6rem;
+}
+
+.header-bottom__burger-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header-bottom__burger-icon::before, .header-bottom__burger-icon::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 1px;
+  background-color: #064E8C;
+}
+.header-bottom__burger-icon::before {
+  top: 0.55rem;
+}
+.header-bottom__burger-icon::after {
+  bottom: 0.55rem;
+}
+.header-bottom__burger-icon span {
+  position: relative;
+  width: 2rem;
+  height: 1px;
+  background-color: #064E8C;
+}
+
+.header-bottom__logo {
+  margin: 0 0 0 -0.4rem;
+  width: 5rem;
+  height: 3.6rem;
+}
+.header-bottom__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-bottom__request-phone {
+  display: inline-flex;
+}
+.header-bottom__request-phone svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ ШАПКИ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
 .main {
   padding: 4.8rem 0 2.4rem;
