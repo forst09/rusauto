@@ -7,6 +7,7 @@ html {
 body {
   font-family: "Geometria";
   color: #262B2E;
+  padding-bottom: 4rem;
 }
 
 section {
@@ -145,8 +146,6 @@ section {
 }
 
 /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
-/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
-/*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
 .header-top {
   display: none;
@@ -198,6 +197,7 @@ section {
 }
 
 .header-bottom__logo {
+  display: inline-block;
   margin: 0 0 0 -0.4rem;
   width: 5rem;
   height: 3.6rem;
@@ -217,6 +217,39 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
+/*НАЧАЛО СТИЛЕЙ ТАББАРА*/
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #FAFAFA;
+  width: 100%;
+  padding: 0.8rem 0;
+}
+
+.tab-bar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-bar__item-img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.tab-bar__item-img svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tab-bar__item-name {
+  display: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ ТАББАРА*/
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
+/*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
 .main {
   padding: 4.8rem 0 2.4rem;
