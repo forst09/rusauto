@@ -387,6 +387,16 @@
     max-width: 58.6rem;
   }
 
+  .btn:hover {
+    background-color: #00A0E3;
+  }
+  .btn:hover::before {
+    border-bottom: 3.8rem solid #00A0E3;
+  }
+  .btn:hover::after {
+    border-top: 3.8rem solid #00A0E3;
+  }
+
   .wrapper {
     padding: 0 6.4rem;
   }
@@ -444,12 +454,45 @@
 
   .header-top__links-item {
     line-height: 1.3rem;
+    transition: all 0.9s ease;
+    position: relative;
+  }
+  .header-top__links-item::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    height: 1px;
+    background-color: #064E8C;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+  }
+  .header-top__links-item:hover {
+    color: #064E8C;
+  }
+  .header-top__links-item:hover::after {
+    width: 100%;
+  }
+  .header-top__links-item:active, .header-top__links-item:focus, .header-top__links-item:focus-within {
+    color: #064E8C;
+  }
+  .header-top__links-item:active::after, .header-top__links-item:focus::after, .header-top__links-item:focus-within::after {
+    width: 0;
   }
 
   .header-top__links-icons {
     display: flex;
     gap: 1.6rem;
     align-items: center;
+  }
+  .header-top__links-icons a svg path {
+    transition: 0.3s ease;
+  }
+  .header-top__links-icons a:hover svg path,
+.header-top__links-icons a:focus svg path,
+.header-top__links-icons a:focus-within svg path,
+.header-top__links-icons a:active svg path {
+    fill: #064E8C;
   }
 
   .header-top__links-icons-basket,
@@ -510,6 +553,13 @@
     padding: 0.65rem 1.2rem;
     color: #fff;
     background-color: #064E8C;
+    transition: 0.3s ease;
+  }
+  .header-bottom__search-catalog:hover {
+    background-color: #00A0E3;
+  }
+  .header-bottom__search-catalog:active, .header-bottom__search-catalog:focus, .header-bottom__search-catalog:focus-within {
+    background-color: #0091CE;
   }
   .header-bottom__search-catalog svg {
     width: 1.6rem;
@@ -528,8 +578,7 @@
   .header-bottom__search-input {
     border: none;
     padding: 0.8rem 1.6rem;
-    width: 100%;
-    max-width: 20rem;
+    width: 20rem;
     font-size: 1rem;
     line-height: 1.3rem;
     font-weight: 400;
@@ -566,6 +615,8 @@
     position: absolute;
     left: 1.6rem;
     top: calc(100% + 0.8rem);
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
   .header-bottom__search-example span {
     color: #A3A8AB;
@@ -701,6 +752,13 @@
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: #064E8C;
+    transition: 0.3s ease;
+  }
+  .spares__item-info-models-item:hover {
+    color: #00A0E3;
+  }
+  .spares__item-info-models-item:active, .spares__item-info-models-item:focus, .spares__item-info-models-item:focus-within {
+    color: #0091CE;
   }
   .spares__item-info-models-item:nth-of-type(2n) {
     margin-right: 0;
@@ -798,6 +856,12 @@
     padding: 1.2rem;
     max-width: 20.473rem;
     min-height: 13.6rem;
+  }
+  .catalog__sections-item:hover {
+    background-color: #F5FBFE;
+  }
+  .catalog__sections-item:hover .catalog__sections-item-image {
+    right: 0;
   }
 
   .catalog__sections-item-title {
@@ -899,15 +963,30 @@
   }
 
   .footer__link {
+    position: relative;
     margin-bottom: 1.6rem;
     font-weight: 500;
     color: #fff;
     font-size: 1.4rem;
     line-height: 1.8rem;
     display: block;
+    width: fit-content;
   }
   .footer__link:nth-last-of-type(1) {
     margin-bottom: 0;
+  }
+  .footer__link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    transition: 0.3s ease;
+  }
+  .footer__link:hover::after, .footer__link:active::after, .footer__link:focus::after, .footer__link:focus-within::after {
+    width: 100%;
   }
 
   .foooter__links-wrapper-item {
@@ -976,6 +1055,21 @@
 
   .wrapper {
     padding: 0 8rem;
+  }
+
+  /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
+  /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+  .header-bottom__logo {
+    width: 11.5rem;
+    height: 8.3rem;
+  }
+
+  .header-bottom__search-input {
+    width: 51.6rem;
+  }
+
+  .header-bottom__request-btn {
+    padding: 0.5rem 1.6rem;
   }
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/

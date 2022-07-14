@@ -423,6 +423,20 @@
         max-width: 58.6rem;
     }
 
+    .btn {
+        &:hover {
+            background-color: #00A0E3;
+
+            &::before {
+                border-bottom: 3.8rem solid #00A0E3;
+            }
+
+            &::after {
+                border-top: 3.8rem solid #00A0E3;
+            }
+        }
+    }
+
     .wrapper {
         padding: 0 6.4rem;
     }
@@ -483,12 +497,59 @@
 
     .header-top__links-item {
         line-height: 1.3rem;
+        transition: all 0.9s ease;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 0;
+            position: absolute;
+            height: 1px;
+            background-color: #064E8C;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            color: #064E8C;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            color: #064E8C;
+
+            &::after {
+                width: 0;
+            }
+        }
     }
 
     .header-top__links-icons {
         display: flex;
         gap: 1.6rem;
         align-items: center;
+
+        a svg path {
+            transition: 0.3s ease;
+        }
+
+        a:hover,
+        a:focus,
+        a:focus-within,
+        a:active {
+            svg {
+
+                path {
+                    fill: #064E8C;
+                }
+            }
+        }
     }
 
     .header-top__links-icons-basket,
@@ -550,6 +611,17 @@
         padding: 0.65rem 1.2rem;
         color: #fff;
         background-color: #064E8C;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: #00A0E3;
+        }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            background-color: #0091CE;
+        }
 
         svg {
             width: 1.6rem;
@@ -570,8 +642,7 @@
     .header-bottom__search-input {
         border: none;
         padding: 0.8rem 1.6rem;
-        width: 100%;
-        max-width: 20rem;
+        width: 20rem;
         font-size: 1rem;
         line-height: 1.3rem;
         font-weight: 400;
@@ -610,6 +681,8 @@
         position: absolute;
         left: 1.6rem;
         top: calc(100% + 0.8rem);
+        font-size: 1rem;
+        line-height: 1.3rem;
 
         span {
             color: #A3A8AB;
@@ -754,6 +827,17 @@
         font-size: 1.2rem;
         line-height: 1.5rem;
         color: $blue;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: #00A0E3;
+        }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            color: #0091CE;
+        }
 
         &:nth-of-type(2n) {
             margin-right: 0;
@@ -859,6 +943,15 @@
         padding: 1.2rem;
         max-width: 20.473rem;
         min-height: 13.6rem;
+
+
+        &:hover {
+            background-color: #F5FBFE;
+
+            .catalog__sections-item-image {
+                right: 0;
+            }
+        }
     }
 
     .catalog__sections-item-title {
@@ -969,15 +1062,37 @@
     }
 
     .footer__link {
+        position: relative;
         margin-bottom: 1.6rem;
         font-weight: 500;
         color: #fff;
         font-size: 1.4rem;
         line-height: 1.8rem;
         display: block;
+        width: fit-content;
 
         &:nth-last-of-type(1) {
             margin-bottom: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            background-color: #ffffff;
+            transition: 0.3s ease;
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            &::after {
+                width: 100%;
+            }
         }
     }
 
@@ -1055,6 +1170,22 @@
 
     .wrapper {
         padding: 0 8rem;
+    }
+
+    /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
+
+    /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+    .header-bottom__logo {
+        width: 11.5rem;
+        height: 8.3rem;
+    }
+
+    .header-bottom__search-input {
+        width: 51.6rem;
+    }
+
+    .header-bottom__request-btn {
+        padding: 0.5rem 1.6rem;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/

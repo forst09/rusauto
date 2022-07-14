@@ -16,6 +16,10 @@ $(document).ready(function () {
         },
     });
 
+    $('.btn-main').on('mousedown touchstart pointerdown', function (e) {
+        e.stopPropagation();
+    });
+
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     const pageWidth = document.documentElement.scrollWidth;
     if (pageWidth >= 1024) {
