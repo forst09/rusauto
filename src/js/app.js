@@ -2,9 +2,25 @@
 
 $(document).ready(function () {
 
+    //ПОИСК НА 1024 В ШАПКЕ
+    $(document).on('input', '.header-bottom__search-input', function () {
+        $('.header-bottom__search-result').addClass('active');
+    });
 
+    // $(document).on('click', '.header__input-reset-label', function () {
+    //     $('.header__input-search').removeClass('active');
+    //     $('.header .work').removeClass('active');
+    //     $('.header .search__result').removeClass('active');
+    //     $('.header__form-search-wrapper').removeClass('active');
+    // });
 
-    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ГЛАВНАЯ СТРАНИЦА ГЛАВНЫЙ ЭКРАН"
+    //ЗАКРЫТИЕ ПОИСКА НА 1024 В ШАПКЕ
+    $(document).on('blur', '.header-bottom__search-input', function () {
+        $('.header-bottom__search-result').removeClass('active');
+        $(this).val('');
+    });
+
+    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ГЛАВНАЯ СТРАНИЦА ГЛАВНЫЙ ЭКРАН
     const swiperMain = new Swiper('.swiper-main', {
         speed: 700,
         slidesPerView: 1,

@@ -88,6 +88,13 @@
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 1.5rem;
+        transition: 0.3s ease;
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            background-color: #0091CE;
+        }
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
@@ -445,6 +452,18 @@
         margin-top: 5.6rem;
     }
 
+    .btn-main {
+        &:hover {
+            &::before {
+                border-bottom: 3.2rem solid #00A0E3;
+            }
+
+            &::after {
+                border-top: 3.2rem solid #00A0E3;
+            }
+        }
+    }
+
     /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
     .swiper-not-mobile {
         display: block;
@@ -662,18 +681,50 @@
         display: none;
     }
 
-    .header-bottom__search-label {
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
+    .header-bottom__search-input-buttons {
         position: absolute;
         right: 0.4rem;
         top: 0.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .header-bottom__search-label,
+    .header-bottom__search-close {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
 
         svg {
             width: 100%;
             height: 100%;
             object-fit: contain;
+
+            path,
+            circle {
+                transition: 0.3s ease;
+            }
+        }
+    }
+
+    .header-bottom__search-close {
+        &:hover {
+
+            svg path {
+                fill: #00A0E3;
+            }
+        }
+    }
+
+    .header-bottom__search-label {
+
+        &:hover {
+
+            svg path,
+            svg circle {
+                stroke: #00A0E3;
+            }
         }
     }
 
@@ -710,6 +761,75 @@
 
     .header-bottom__links-item-main {
         color: #00A0E3;
+    }
+
+    .header-bottom__search-result {
+        position: absolute;
+        z-index: 100;
+        left: 0;
+        top: 100%;
+        padding: 0.8rem 0 0.8rem 0.8rem;
+        background: #FFFFFF;
+        box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+
+    .header-bottom__search-result.active {
+        visibility: visible;
+        opacity: 1;
+        width: 39.6rem;
+    }
+
+    .header-bottom__search-result-item {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 0.8rem;
+        transition: 0.3s ease;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background-color: #F5FBFE;
+        }
+    }
+
+    .header-bottom__search-result-item-img {
+        width: 2.3rem;
+        height: 2.3rem;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .header-bottom__search-result-item-name {
+        line-height: 1.3rem;
+        font-size: 1rem;
+        max-width: 95%;
+        padding-right: 0.5rem;
+
+        b {
+            font-weight: 500;
+        }
+    }
+
+    .header-bottom__search-result-all {
+        display: inline-block;
+        margin-top: 1.6rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: #00A0E3;
+        text-decoration: underline;
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
@@ -1033,9 +1153,13 @@
         justify-content: space-between;
     }
 
+    .footer__info-images {
+        text-align: center;
+    }
+
     .footer__info-images-logo {
-        display: block;
-        margin: 0 auto 1.6rem;
+        display: inline-block;
+        margin-bottom: 1.6rem;
         width: 7.2rem;
         height: 5.2rem;
 
@@ -1186,6 +1310,15 @@
 
     .header-bottom__request-btn {
         padding: 0.5rem 1.6rem;
+    }
+
+    .header-bottom__search-result.active {
+        width: 100%;
+    }
+
+    .header-bottom__search-result-item-name {
+        font-size: 1.2rem;
+        line-height: 2.1rem;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
