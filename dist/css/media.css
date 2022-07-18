@@ -6,6 +6,10 @@
     font-size: 1.497005988vw;
   }
 
+  body {
+    padding-bottom: 5.7rem;
+  }
+
   section {
     margin-bottom: 8rem;
   }
@@ -38,6 +42,24 @@
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
+  .header-fixed {
+    top: -8rem;
+  }
+  .header-fixed .header-top__location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .header-fixed .header-top__location-text {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #064E8C;
+  }
+  .header-fixed .header-bottom__logo {
+    margin-left: 4.2rem;
+  }
+
   .header-bottom__burger-icon {
     width: 2.7rem;
     height: 2.7rem;
@@ -86,6 +108,25 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
+  /*НАЧАЛО СТИЛЕЙ ТАББАРА 668*/
+  .tab-bar__item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-bar__item.active .tab-bar__item-name {
+    color: #00A0E3;
+  }
+
+  .tab-bar__item-name {
+    display: block;
+    margin-top: 0.4rem;
+    line-height: 1.3rem;
+    color: #064E8C;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ТАББАРА 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
   .main {
@@ -369,6 +410,10 @@
     font-size: 0.9765625vw;
   }
 
+  body {
+    padding-bottom: 0;
+  }
+
   section {
     margin-bottom: 11.2rem;
   }
@@ -416,6 +461,12 @@
     border-top: 3.2rem solid #00A0E3;
   }
 
+  /*НАЧАЛО СТИЛЕЙ ТАББАРА 1024*/
+  .tab-bar {
+    display: none;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ТАББАРА 1024*/
   /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
   .swiper-not-mobile {
     display: block;
@@ -430,6 +481,25 @@
   /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
+  .header-fixed {
+    top: -8.8rem;
+  }
+  .header-fixed .header-top__location {
+    display: none;
+  }
+  .header-fixed .header-bottom__logo {
+    margin: 0;
+  }
+  .header-fixed .header-bottom__request-btn {
+    display: none;
+  }
+  .header-fixed .header-top__links-icons {
+    display: flex;
+  }
+  .header-fixed .header-bottom__search-example {
+    display: none;
+  }
+
   .header-top {
     display: block;
     padding: 1.6rem 0 1.2rem;
@@ -520,6 +590,7 @@
 
   .header-top__links-icons-basket {
     position: relative;
+    display: inline-block;
   }
   .header-top__links-icons-basket span {
     position: absolute;
@@ -619,7 +690,6 @@
 
   .header-bottom__search-label,
 .header-bottom__search-close {
-    display: inline-block;
     width: 2rem;
     height: 2rem;
   }
@@ -636,10 +706,16 @@
     transition: 0.3s ease;
   }
 
+  .header-bottom__search-close {
+    visibility: hidden;
+  }
   .header-bottom__search-close:hover svg path {
     fill: #00A0E3;
   }
 
+  .header-bottom__search-label {
+    display: inline-block;
+  }
   .header-bottom__search-label:hover svg path,
 .header-bottom__search-label:hover svg circle {
     stroke: #00A0E3;
@@ -1130,6 +1206,7 @@
   }
   .footer__copyright-text p {
     margin-bottom: 1.6rem;
+    line-height: 1.6rem;
   }
 
   .footer__copyright-upfly-wrapper {
@@ -1161,7 +1238,14 @@
   }
 
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
-  /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+  .header-fixed {
+    top: -8rem;
+  }
+  .header-fixed .header-bottom__logo {
+    width: 6.7rem;
+    height: 4.8rem;
+  }
+
   .header-bottom__logo {
     width: 11.5rem;
     height: 8.3rem;
@@ -1184,6 +1268,7 @@
     line-height: 2.1rem;
   }
 
+  /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
   .main {

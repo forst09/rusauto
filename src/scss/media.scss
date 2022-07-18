@@ -46,6 +46,27 @@
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
+    .header-fixed {
+        top: -8rem;
+
+        .header-top__location {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .header-top__location-text {
+            display: block;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            color: #064E8C;
+        }
+
+        .header-bottom__logo {
+            margin-left: 4.2rem;
+        }
+    }
+
     .header-bottom__burger-icon {
         width: 2.7rem;
         height: 2.7rem;
@@ -434,6 +455,10 @@
         font-size: 0.9765625vw;
     }
 
+    body {
+        padding-bottom: 0;
+    }
+
     section {
         margin-bottom: 11.2rem;
     }
@@ -490,6 +515,13 @@
         }
     }
 
+    /*НАЧАЛО СТИЛЕЙ ТАББАРА 1024*/
+    .tab-bar {
+        display: none;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ТАББАРА 1024*/
+
     /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
     .swiper-not-mobile {
         display: block;
@@ -506,6 +538,30 @@
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
+    .header-fixed {
+        top: -8.8rem;
+
+        .header-top__location {
+            display: none;
+        }
+
+        .header-bottom__logo {
+            margin: 0;
+        }
+
+        .header-bottom__request-btn {
+            display: none;
+        }
+
+        .header-top__links-icons {
+            display: flex;
+        }
+
+        .header-bottom__search-example {
+            display: none;
+        }
+    }
+
     .header-top {
         display: block;
         padding: 1.6rem 0 1.2rem;
@@ -719,7 +775,6 @@
 
     .header-bottom__search-label,
     .header-bottom__search-close {
-        display: inline-block;
         width: 2rem;
         height: 2rem;
 
@@ -736,6 +791,8 @@
     }
 
     .header-bottom__search-close {
+        visibility: hidden;
+
         &:hover {
 
             svg path {
@@ -745,6 +802,7 @@
     }
 
     .header-bottom__search-label {
+        display: inline-block;
 
         &:hover {
 
@@ -1287,6 +1345,7 @@
 
         p {
             margin-bottom: 1.6rem;
+            line-height: 1.6rem;
         }
     }
 
@@ -1324,8 +1383,15 @@
     }
 
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
+    .header-fixed {
+        top: -8rem;
 
-    /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+        .header-bottom__logo {
+            width: 6.7rem;
+            height: 4.8rem;
+        }
+    }
+
     .header-bottom__logo {
         width: 11.5rem;
         height: 8.3rem;
@@ -1348,8 +1414,9 @@
         line-height: 2.1rem;
     }
 
-    /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
+    /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
 
+    /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
     .main {

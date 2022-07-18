@@ -184,6 +184,51 @@ section {
 /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
+
+.header-fixed {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: -6.8rem;
+    z-index: 1000;
+    transition: 0.6s ease;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+
+    .header-top__location-img {
+        width: 2rem;
+        height: 2rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .header-top__location-text {
+        display: none;
+    }
+
+    .header-bottom__logo {
+        margin: 0;
+    }
+
+    .header-bottom {
+        padding: 1.6rem 0;
+    }
+
+    .header-top__links-icons {
+        display: none;
+    }
+}
+
+.header-fixed.active {
+    visibility: visible;
+    top: 0;
+}
+
 .header-top {
     display: none;
 }
@@ -270,6 +315,7 @@ section {
     background-color: #FAFAFA;
     width: 100%;
     padding: 0.8rem 0;
+    z-index: 1000;
 }
 
 .tab-bar__container {
