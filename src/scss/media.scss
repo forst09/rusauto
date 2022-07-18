@@ -8,6 +8,10 @@
         font-size: 1.497005988023952vw;
     }
 
+    body {
+        padding-bottom: 5.7rem;
+    }
+
     section {
         margin-bottom: 8rem;
     }
@@ -98,6 +102,28 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
+
+    /*НАЧАЛО СТИЛЕЙ ТАББАРА 668*/
+    .tab-bar__item {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-bar__item.active {
+        .tab-bar__item-name {
+            color: #00A0E3;
+        }
+    }
+
+    .tab-bar__item-name {
+        display: block;
+        margin-top: 0.4rem;
+        line-height: 1.3rem;
+        color: #064E8C;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ТАББАРА 668*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
 
@@ -585,6 +611,7 @@
 
     .header-top__links-icons-basket {
         position: relative;
+        display: inline-block;
 
         span {
             position: absolute;
