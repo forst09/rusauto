@@ -21,7 +21,7 @@ section {
 
 .title {
     font-size: 2.2rem;
-    line-height: 2.8rem;
+    line-height: 3rem;
     font-weight: 700;
     text-align: center;
     max-width: 40.4rem;
@@ -53,7 +53,7 @@ section {
 .desc {
     margin: 0 auto 3.2rem;
     max-width: 40.4rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
     color: $blue;
     text-align: center;
     width: 100%;
@@ -517,7 +517,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 18.8rem;
+    max-width: 21.3rem;
     text-align: center;
     width: 100%;
     margin-bottom: 2.4rem;
@@ -580,7 +580,7 @@ section {
 
 .spares__item-info-title {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 2.2rem;
     color: $blue;
     text-align: center;
@@ -619,7 +619,7 @@ section {
 
 .companies__banner-text {
     font-size: 1.4rem;
-    line-height: 2.1rem;
+    line-height: 2.2rem;
     font-weight: 500;
     color: $blue;
     max-width: 28.8rem;
@@ -639,7 +639,7 @@ section {
 }
 
 .catalog__stock-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 2.8rem;
     font-weight: 700;
     color: #00A0E3;
@@ -648,7 +648,7 @@ section {
 
 .catalog__stock-card {
     background-color: #EDF8FD;
-    padding: 0.8rem 1.6rem 1.6rem;
+    padding: 0.8rem 0.8rem 1.6rem 1.6rem;
     min-height: 17.2rem;
     position: relative;
 
@@ -702,13 +702,14 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.6rem;
 }
 
 .catalog__stock-card-name {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1.8rem;
     font-weight: 500;
-    margin-bottom: 1.2rem;
 }
 
 .catalog__stock-card-cost {
@@ -719,13 +720,13 @@ section {
 
 .catalog__stock-card-cost-new {
     font-size: 1.4rem;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
     font-weight: 700;
 }
 
 .catalog__stock-card-cost-old {
     font-size: 1.2rem;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     text-decoration: line-through;
     color: #A3A8AB;
 }
@@ -792,7 +793,7 @@ section {
 
 .catalog__sections-item-title {
     font-weight: 700;
-    line-height: 1.3rem;
+    line-height: 1.8rem;
     font-size: 1.4rem;
 }
 
@@ -851,7 +852,7 @@ section {
 .news__item-title {
     font-weight: 500;
     font-size: 1.6rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
     margin-bottom: 1.6rem;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -869,7 +870,7 @@ section {
 
 .news__item-text {
     font-size: 1.4rem;
-    line-height: 2.1rem;
+    line-height: 2rem;
     margin-bottom: 2.4rem;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -925,7 +926,7 @@ section {
 
 .contacts__info-item-subtitle {
     font-size: 1.6rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
     color: $blue;
     margin-bottom: 0.8rem;
 }
@@ -934,7 +935,7 @@ section {
     display: block;
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
     font-weight: 300;
 }
 
@@ -1009,7 +1010,7 @@ section {
 
 .footer__info-contacts-address,
 .footer__info-contacts-feedback {
-    max-width: 12rem;
+    max-width: 13rem;
     width: 100%;
 }
 
@@ -1024,7 +1025,7 @@ section {
 .footer__info-contacts-text {
     display: block;
     font-size: 1.4rem;
-    line-height: 2.1rem;
+    line-height: 2.2rem;
     color: #fff;
 }
 
@@ -1046,7 +1047,7 @@ section {
 .footer__copyright-text {
     font-weight: 300;
     color: #fff;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     font-size: 1.2rem;
 
     p {
