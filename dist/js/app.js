@@ -2,19 +2,6 @@
 
 $(document).ready(function () {
 
-    //ПОИСК НА 1024 В ШАПКЕ
-    $(document).on('input', '.header-bottom__search-input', function () {
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-result').addClass('active');
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-close').addClass('active');
-    });
-
-    //ЗАКРЫТИЕ ПОИСКА НА 1024 В ШАПКЕ
-    $(document).on('blur', '.header-bottom__search-input', function () {
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-result').removeClass('active');
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-close').removeClass('active');
-        $(this).val('');
-    });
-
     // ОТКЛЮЧЕНИЕ ZOOM ЧЕРЕЗ СКРОЛЛ (В ТОМ ЧИСЛЕ ТРЕКАПАДАМИ В MACOS)
     document.addEventListener('mousewheel', function (e) {
         if (!e.ctrlKey && !e.metaKey) return;
@@ -38,6 +25,31 @@ $(document).ready(function () {
         e.preventDefault();
         e.stopImmediatePropagation();
     }, { passive: false });
+
+    //ОТКРЫТИЕ МОБИЛЬНОГО МЕНЮ
+    $(document).on('click', '.header-bottom__burger', function () {
+        $('.mobile-menu').addClass('active');
+        $('body').addClass('scroll-hide');
+    });
+
+    //ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ
+    $(document).on('click', '.header-bottom__request-close', function () {
+        $('.mobile-menu').removeClass('active');
+        $('body').removeClass('scroll-hide');
+    });
+
+    //ПОИСК НА 1024 В ШАПКЕ
+    $(document).on('input', '.header-bottom__search-input', function () {
+        $(this).parents('.header-bottom__search').find('.header-bottom__search-result').addClass('active');
+        $(this).parents('.header-bottom__search').find('.header-bottom__search-close').addClass('active');
+    });
+
+    //ЗАКРЫТИЕ ПОИСКА НА 1024 В ШАПКЕ
+    $(document).on('blur', '.header-bottom__search-input', function () {
+        $(this).parents('.header-bottom__search').find('.header-bottom__search-result').removeClass('active');
+        $(this).parents('.header-bottom__search').find('.header-bottom__search-close').removeClass('active');
+        $(this).val('');
+    });
 
     //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
     let header = document.querySelector('.header');

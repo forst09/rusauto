@@ -18,12 +18,12 @@
 
     .title {
         max-width: 53.2rem;
-        font-size: 2.1rem;
+        font-size: 2.4rem;
         line-height: 3rem;
     }
 
     .desc {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         max-width: 50.8rem;
     }
 
@@ -42,6 +42,33 @@
     .scroll {
         padding: 0 4.4rem;
     }
+
+    /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ668*/
+    .mobile-menu.active {
+        .header-fixed {
+            .header-bottom__logo {
+                width: 5.6rem;
+                height: 4rem;
+                margin-right: -7.6rem;
+            }
+
+            .header-bottom__request {
+                flex-direction: row;
+                gap: 4rem;
+            }
+
+            .header-bottom__request-btn {
+                display: none;
+            }
+        }
+    }
+
+    .mobile-menu__list-item {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
@@ -144,6 +171,10 @@
         color: #064E8C;
     }
 
+    .tab-bar__item-basket span {
+        right: 0.7rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ТАББАРА 668*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
@@ -157,7 +188,6 @@
         }
 
         .desc {
-            font-size: 1.2rem;
             max-width: 30.2rem;
             margin: 0;
         }
@@ -260,8 +290,6 @@
 
     .companies__banner-text {
         max-width: 40rem;
-        font-size: 1.4rem;
-        line-height: 2.2rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 668*/
@@ -304,6 +332,8 @@
     }
 
     .catalog__stock-card-name {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
         margin-bottom: 1rem;
     }
 
@@ -319,8 +349,8 @@
     }
 
     .catalog__sections-item-title {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
     }
 
     .catalog__sections-item-image {
@@ -328,6 +358,11 @@
         width: 14.9rem;
         height: 9.4rem;
         top: calc(50% - 4.7rem);
+    }
+
+    .catalog__stock-card-cost-new {
+        font-size: 1.6rem;
+        line-height: 2rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 668*/
@@ -849,10 +884,6 @@
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 1.5rem;
-    }
-
-    .header-bottom__links-item-main {
-        color: #00A0E3;
     }
 
     .header-bottom__search-result {
@@ -1396,10 +1427,6 @@
         .header-bottom__logo {
             width: 6.7rem;
             height: 4.8rem;
-        }
-
-        .header__wrapper {
-            gap: 7.6rem;
         }
 
         .header-bottom__request {

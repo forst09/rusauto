@@ -60,6 +60,10 @@ section {
     font-size: 1.4rem;
 }
 
+.main-link {
+    color: #00A0E3 !important;
+}
+
 .btn__wrapper {
     margin-top: 4rem;
     text-align: center;
@@ -172,6 +176,10 @@ section {
     }
 }
 
+.scroll-hide {
+    overflow: hidden;
+}
+
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
 .swiper-not-mobile {
     display: inline-flex;
@@ -216,7 +224,12 @@ section {
         margin: 0;
     }
 
+    .header-bottom__logo.active {
+        margin: 0 0 0 4.8rem;
+    }
+
     .header-bottom {
+        position: relative;
         padding: 1.6rem 0;
     }
 
@@ -306,6 +319,22 @@ section {
     }
 }
 
+.header-bottom__request-close {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.header-bottom__request-close.active {
+    display: block;
+}
+
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
 
 /*НАЧАЛО СТИЛЕЙ ТАББАРА*/
@@ -332,8 +361,6 @@ section {
         stroke: #00A0E3;
     }
 }
-
-
 
 .tab-bar__item-basket {
     position: relative;
@@ -372,6 +399,59 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ ТАББАРА*/
+
+/*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
+.mobile-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: 0.3s ease;
+    background-color: #ffffff;
+    z-index: 200;
+
+    .header-fixed {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+.mobile-menu.active {
+    left: 0;
+
+    .header-fixed {
+        visibility: visible;
+
+        .header-bottom__request {
+            display: flex;
+            gap: 3.2rem;
+        }
+
+        .header-bottom__request-close {
+            display: block;
+        }
+
+        .header-bottom__logo {
+            margin-right: -5.2rem;
+        }
+    }
+}
+
+.mobile-menu__list {
+    margin-top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.mobile-menu__list-item {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #064E8C;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 
@@ -836,7 +916,7 @@ section {
 
 .news__item {
     width: 100%;
-    max-width: 28.8rem;
+    max-width: 41.4rem;
 }
 
 .news__item-date {
@@ -897,8 +977,7 @@ section {
 }
 
 .contacts__info-item {
-    max-width: 22.5rem;
-    margin: 0 auto 2.4rem;
+    margin: 0 0 2.4rem;
 
     &:nth-last-of-type(1) {
         margin-bottom: 0;
