@@ -359,7 +359,7 @@ section {
   height: 100%;
   top: 0;
   left: -100%;
-  transition: 0.3s ease;
+  transition: 0.6s ease;
   background-color: #ffffff;
   z-index: 200;
 }
@@ -1036,3 +1036,7 @@ section {
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
+.ymaps-2-1-79-copyright__content-cell,
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none !important;
+}

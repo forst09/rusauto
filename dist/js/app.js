@@ -84,9 +84,7 @@ $(document).ready(function () {
     });
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
-    const pageWidth = document.documentElement.scrollWidth;
-    if (pageWidth >= 1024) {
-
+    if ($(window).width() >= 1024) {
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ"
         const swiperCompanies = new Swiper('.swiper-companies', {
             speed: 700,
@@ -124,7 +122,88 @@ $(document).ready(function () {
                 },
             }
         });
+
+
+
     }
+    // map init
+    const jsMap = document.querySelector("#map");
+    const renderMap = function () {
+        if ($("#map").length !== 0) {
+            ymaps.ready(function () {
+                let myMap = new ymaps.Map("map", {
+                    center: [$(jsMap).attr("data-coords").split(",")[0],
+                    $(jsMap).attr("data-coords").split(",")[1]],
+                    zoom: $(window).width() > 667 ? 17 : 14,
+                }),
+                    // Создаём макет содержимого.
+                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div class="icon-map">$[properties.iconContent]</div>'
+                    ),
+                    myPlacemarkWithContent = new ymaps.Placemark(
+                        [$(jsMap).attr("data-coords").split(",")[0],
+                        $(jsMap).attr("data-coords").split(",")[1]],
+                        {},
+                        {
+                            // Опции.
+                            // Необходимо указать данный тип макета.
+                            iconLayout: "default#imageWithContent",
+                            // Своё изображение иконки метки.
+                            iconImageHref: "/upload/imgs_new/map-icon.png",
+                            // Размеры метки.
+                            iconImageSize: [150, 68],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-76, -68],
+
+                            // Макет содержимого.
+                            iconContentLayout: MyIconContentLayout,
+                        }
+                    );
+
+                myMap.controls.remove("zoomControl");
+                myMap.controls.remove("rulerControl");
+                myMap.controls.remove("trafficControl");
+                myMap.controls.remove("typeSelector");
+                myMap.controls.remove("fullscreenControl");
+                myMap.controls.remove("geolocationControl");
+                myMap.controls.remove("searchControl");
+                // jsMap.firstChild.remove();
+                myMap.geoObjects
+                    // .add(myPlacemark)
+                    .add(myPlacemarkWithContent);
+            });
+        }
+    };
+    // renderMap();
+    //check scroll to map block
+    const creatMapsScript = function () {
+        let scriptYMAPS = document.createElement("script");
+        scriptYMAPS.src =
+            "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<ваш API-ключ>";
+        scriptYMAPS.setAttribute("async", "");
+        document
+            .querySelector("body")
+            .insertAdjacentElement("beforeend", scriptYMAPS);
+        // let loader = `<div class="loader-catalog"><img src="/upload/imgs_new/loader.gif" alt="preloader"></div>`;
+        // jsMap.insertAdjacentHTML("afterbegin", loader);
+        scriptYMAPS.onload = function () {
+            renderMap();
+        };
+    };
+
+    const revealMapBlock = function (entries, observer) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        creatMapsScript();
+        observer.unobserve(entry.target);
+    };
+
+    const mapObserver = new IntersectionObserver(revealMapBlock, {
+        root: null,
+        threshold: 0.15,
+    });
+    if (jsMap) mapObserver.observe(jsMap);
 });
 
 
