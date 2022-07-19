@@ -708,8 +708,15 @@
 
   .header-bottom__search-close {
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
-  .header-bottom__search-close:hover svg path {
+
+  .header-bottom__search-close.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .header-bottom__search-close.active:hover svg path {
     fill: #00A0E3;
   }
 
@@ -1244,6 +1251,12 @@
   .header-fixed .header-bottom__logo {
     width: 6.7rem;
     height: 4.8rem;
+  }
+  .header-fixed .header__wrapper {
+    gap: 7.6rem;
+  }
+  .header-fixed .header-bottom__request {
+    margin-right: -3.6rem;
   }
 
   .header-bottom__logo {
