@@ -159,8 +159,8 @@ section {
 
 .modal {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: -100%;
   transition: 0.6s ease;
@@ -204,6 +204,72 @@ section {
 .header .header-bottom__request-phone span,
 .header .header-bottom__request-btn {
   display: none;
+}
+
+.header-bottom__search-result {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 100%;
+  padding: 0.8rem 0 0.8rem 0.8rem;
+  background: #FFFFFF;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.header-bottom__search-result.active {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+}
+
+.header-bottom__search-result-item {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  transition: 0.3s ease;
+}
+.header-bottom__search-result-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.header-bottom__search-result-item:hover {
+  background-color: #F5FBFE;
+}
+
+.header-bottom__search-result-item-img {
+  width: 2.3rem;
+  height: 2.3rem;
+  flex-shrink: 0;
+}
+.header-bottom__search-result-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-bottom__search-result-item-name {
+  line-height: 1.3rem;
+  font-size: 1rem;
+  max-width: 95%;
+  width: 100%;
+  padding-right: 0.5rem;
+}
+.header-bottom__search-result-item-name b {
+  font-weight: 500;
+}
+
+.header-bottom__search-result-all {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #00A0E3;
+  text-decoration: underline;
 }
 
 .header-fixed {
@@ -527,48 +593,115 @@ section {
 
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/
-.modal-catalog {
+.catalog-modal {
   visibility: hidden;
   opacity: 0;
   left: 0;
   transition: opacity 0.3s ease;
 }
-.modal-catalog .header-fixed {
+.catalog-modal .header-fixed {
   visibility: hidden;
 }
-.modal-catalog .header .header__wrapper {
+.catalog-modal .header-fixed .header-bottom {
+  padding-bottom: 0;
+  margin-bottom: 3.2rem;
+}
+.catalog-modal .header .header__wrapper {
   flex-direction: column;
   align-items: center;
   gap: 2.4rem;
 }
-.modal-catalog .header .header-bottom__search {
+.catalog-modal .header .header-bottom__search {
   display: flex;
   width: 100%;
 }
-.modal-catalog .header .header-bottom__search-wrapper {
+.catalog-modal .header .header-bottom__search-wrapper {
   width: 100%;
 }
-.modal-catalog .header .header-bottom__search-input {
+.catalog-modal .header .header-bottom__search-input {
   width: 100%;
   border: 1px solid #EFF0F1;
   max-height: 2.9rem;
   height: 100%;
 }
-.modal-catalog .header .header-bottom__search-example {
+.catalog-modal .header .header-bottom__search-example {
   display: none;
 }
-.modal-catalog .header .header-bottom__request {
+.catalog-modal .header .header-bottom__request {
   position: absolute;
   right: 1.6rem;
   top: 2.4rem;
 }
+.catalog-modal .spares__container {
+  display: inline-flex;
+  gap: 2.5rem;
+  max-width: none;
+}
+.catalog-modal .spares__item-img {
+  margin: 0;
+  width: 5rem;
+  height: 5rem;
+}
+.catalog-modal .spares__item-info {
+  display: none;
+}
+.catalog-modal .catalog__stock {
+  display: none;
+}
 
-.modal-catalog.active {
+.catalog-modal.active {
   visibility: visible;
   opacity: 1;
 }
-.modal-catalog.active .header-fixed {
+.catalog-modal.active .header-fixed {
   visibility: visible;
+}
+
+.catalog-modal__container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3.2rem;
+}
+
+.catalog-modal__groups {
+  overflow: auto;
+  max-height: calc(100vh - 26.5rem);
+  padding-bottom: 1.6rem;
+}
+.catalog-modal__groups::-webkit-scrollbar {
+  width: 2px;
+}
+.catalog-modal__groups::-webkit-scrollbar-thumb {
+  background-color: #00A0E3;
+}
+.catalog-modal__groups::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.catalog-modal__groups-container {
+  padding: 0 1.6rem;
+}
+
+.catalog-modal__groups-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.catalog-modal__title {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.catalog-modal__groups-item {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.catalog-modal__spares .catalog-modal__title {
+  display: none;
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/

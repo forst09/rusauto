@@ -61,15 +61,126 @@
 
   /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
   /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 668*/
-  .modal-catalog .header .header-bottom__request {
+  .catalog-modal .header .header-bottom__request {
     right: 4.4rem;
     top: 2.6rem;
   }
-  .modal-catalog .header .header-bottom__logo {
+  .catalog-modal .header .header-bottom__logo {
     margin: 0;
+  }
+  .catalog-modal .scroll {
+    padding: 0;
+    overflow-x: unset;
+  }
+  .catalog-modal .spares__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .catalog-modal .spares__item {
+    max-width: none;
+    margin: 0;
+  }
+  .catalog-modal .spares__item-info {
+    display: block;
+  }
+  .catalog-modal .spares__item-img {
+    display: none;
+  }
+  .catalog-modal .spares__item-info-models {
+    display: inline-flex;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+  }
+  .catalog-modal .spares__item-info-title {
+    max-width: none;
+    text-align: left;
+    margin-bottom: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    min-height: fit-content;
+  }
+  .catalog-modal .spares__item-info-models-item {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .catalog-modal__container {
+    flex-direction: row;
+    padding: 0 4.4rem;
+    gap: 1.6rem;
+    justify-content: space-between;
+  }
+
+  .catalog-modal__groups {
+    max-height: calc(100vh - 19.8rem);
+    padding-right: 0.8rem;
+  }
+
+  .catalog-modal__groups-container {
+    padding: 0;
+  }
+
+  .catalog-modal__groups-wrapper {
+    width: 26.2rem;
+  }
+
+  .catalog-modal__spares .catalog-modal__title {
+    display: block;
+  }
+  .catalog-modal__spares .wrapper {
+    padding: 0;
+  }
+
+  .catalog-modal__spares {
+    max-height: calc(100vh - 19.8rem);
+    overflow-y: auto;
+    padding-bottom: 1.6rem;
+  }
+  .catalog-modal__spares::-webkit-scrollbar {
+    width: 2px;
+  }
+  .catalog-modal__spares::-webkit-scrollbar-thumb {
+    background-color: #00A0E3;
+  }
+  .catalog-modal__spares::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .catalog-modal__title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 668*/
+  /*СТИЛИ ДЛЯ КАРТОЧЕК КАТАЛОГА НА ГЛАВНОЙ И В МОДАЛЬНОМ КАТАЛОГЕ*/
+  .spares__item-info-models {
+    display: none;
+    flex-wrap: wrap;
+    grid-row-gap: 1.2rem;
+  }
+
+  .spares__item-info-models-item {
+    margin-right: 1.2rem;
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #064E8C;
+    transition: 0.3s ease;
+    background-color: #FAFAFA;
+  }
+  .spares__item-info-models-item:hover {
+    color: #00A0E3;
+  }
+  .spares__item-info-models-item:active, .spares__item-info-models-item:focus, .spares__item-info-models-item:focus-within {
+    color: #0091CE;
+  }
+  .spares__item-info-models-item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
   .header .header-bottom__request-btn,
@@ -805,94 +916,80 @@
     line-height: 1.5rem;
   }
 
-  .header-bottom__search-result {
-    position: absolute;
-    z-index: 100;
-    left: 0;
-    top: 100%;
-    padding: 0.8rem 0 0.8rem 0.8rem;
-    background: #FFFFFF;
-    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-  }
-
-  .header-bottom__search-result.active {
-    visibility: visible;
-    opacity: 1;
-    width: 39.6rem;
-  }
-
-  .header-bottom__search-result-item {
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.8rem;
-    transition: 0.3s ease;
-  }
-  .header-bottom__search-result-item:nth-last-of-type(1) {
-    margin-bottom: 0;
-  }
-  .header-bottom__search-result-item:hover {
-    background-color: #F5FBFE;
-  }
-
-  .header-bottom__search-result-item-img {
-    width: 2.3rem;
-    height: 2.3rem;
-    flex-shrink: 0;
-  }
-  .header-bottom__search-result-item-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .header-bottom__search-result-item-name {
-    line-height: 1.3rem;
-    font-size: 1rem;
-    max-width: 95%;
-    padding-right: 0.5rem;
-  }
-  .header-bottom__search-result-item-name b {
-    font-weight: 500;
-  }
-
-  .header-bottom__search-result-all {
-    display: inline-block;
-    margin-top: 1.6rem;
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: #00A0E3;
-    text-decoration: underline;
-  }
-
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
   /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1024*/
-  .modal-catalog .header-bottom {
+  .catalog-modal .header-bottom {
     padding-top: 3.3rem;
     background-color: transparent;
   }
-  .modal-catalog .header .header__wrapper {
+  .catalog-modal .header .header__wrapper {
     flex-direction: row;
     gap: 13.7rem;
     justify-content: flex-start;
   }
-  .modal-catalog .header .header-bottom__logo {
+  .catalog-modal .header .header-bottom__logo {
     flex-shrink: 0;
   }
-  .modal-catalog .header .header-bottom__search {
+  .catalog-modal .header .header-bottom__search {
     max-width: 42.8rem;
   }
-  .modal-catalog .header .header-bottom__search-example {
+  .catalog-modal .header .header-bottom__search-example {
     display: block;
   }
-  .modal-catalog .header .header-bottom__request {
+  .catalog-modal .header .header-bottom__request {
     top: 3.3rem;
     right: 6.4rem;
+  }
+  .catalog-modal .catalog__stock {
+    display: block;
+  }
+  .catalog-modal .spares__container {
+    display: grid;
+    grid-template-columns: repeat(2, 20.2rem);
+    gap: 2.4rem;
+  }
+  .catalog-modal .spares__item-info-title {
+    line-height: 2rem;
+    font-size: 1.6rem;
+  }
+  .catalog-modal .spares__item-info-models-item {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .catalog-modal .catalog__stock-title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .catalog-modal__container {
+    padding: 0 6.4rem;
+    margin-top: 4rem;
+  }
+
+  .catalog-modal__groups,
+.catalog-modal__spares {
+    max-height: calc(100vh - 12.9rem);
+  }
+
+  .catalog-modal__groups-wrapper {
+    width: 16.2rem;
+    gap: 1.4rem;
+  }
+
+  .catalog-modal__title {
+    margin-bottom: 2.4rem;
+  }
+
+  .catalog-modal__groups-item {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .catalog__stock-title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1024*/
@@ -1087,6 +1184,7 @@
 
   .catalog__stock-card-name {
     margin-bottom: 1.6rem;
+    line-height: 1.8rem;
   }
 
   .catalog__stock-card-cost {
@@ -1127,6 +1225,11 @@
     top: calc(50% - 4.5rem);
   }
 
+  .catalog__stock-card-cost-old {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 1024*/
   .swiper-partners {
@@ -1149,6 +1252,20 @@
     grid-template-columns: repeat(3, 4fr);
   }
 
+  .news__item-date {
+    font-size: 1rem;
+  }
+
+  .news__item-title {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .news__item-text {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НАШИ НОВОСТИ 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 1024*/
   .contacts__info-item-title {
@@ -1165,8 +1282,17 @@
     height: 40rem;
   }
 
+  .contacts__info-item-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 1024*/
+  .about {
+    margin-bottom: 5.6rem;
+  }
+
   .about__container {
     gap: 10.3rem;
   }
@@ -1292,6 +1418,16 @@
     height: fit-content;
   }
 
+  .footer__info-contacts-text {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+  }
+
+  .footer__copyright-text {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -1355,20 +1491,20 @@
 
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
   /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/
-  .modal-catalog .header-bottom {
+  .catalog-modal .header-bottom {
     padding-top: 4rem;
   }
-  .modal-catalog .header .header__wrapper {
+  .catalog-modal .header .header__wrapper {
     gap: 10rem;
   }
-  .modal-catalog .header .header-bottom__logo {
+  .catalog-modal .header .header-bottom__logo {
     width: 7.8rem;
     height: 5.6rem;
   }
-  .modal-catalog .header .header-bottom__search {
+  .catalog-modal .header .header-bottom__search {
     max-width: 84.9rem;
   }
-  .modal-catalog .header .header-bottom__request {
+  .catalog-modal .header .header-bottom__request {
     top: 4rem;
     right: 8rem;
   }

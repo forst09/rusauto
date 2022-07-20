@@ -182,8 +182,8 @@ section {
 
 .modal {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: -100%;
     transition: 0.6s ease;
@@ -236,6 +236,76 @@ section {
     .header-bottom__request-btn {
         display: none;
     }
+}
+
+.header-bottom__search-result {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 100%;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    background: #FFFFFF;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.header-bottom__search-result.active {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+}
+
+.header-bottom__search-result-item {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    transition: 0.3s ease;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: #F5FBFE;
+    }
+}
+
+.header-bottom__search-result-item-img {
+    width: 2.3rem;
+    height: 2.3rem;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.header-bottom__search-result-item-name {
+    line-height: 1.3rem;
+    font-size: 1rem;
+    max-width: 95%;
+    width: 100%;
+    padding-right: 0.5rem;
+
+    b {
+        font-weight: 500;
+    }
+}
+
+.header-bottom__search-result-all {
+    display: inline-block;
+    margin-top: 1.6rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #00A0E3;
+    text-decoration: underline;
 }
 
 .header-fixed {
@@ -605,7 +675,7 @@ section {
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 
 /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/
-.modal-catalog {
+.catalog-modal {
     visibility: hidden;
     opacity: 0;
     left: 0;
@@ -613,6 +683,11 @@ section {
 
     .header-fixed {
         visibility: hidden;
+
+        .header-bottom {
+            padding-bottom: 0;
+            margin-bottom: 3.2rem;
+        }
     }
 
     .header {
@@ -649,14 +724,86 @@ section {
             top: 2.4rem;
         }
     }
+
+    .spares__container {
+        display: inline-flex;
+        gap: 2.5rem;
+        max-width: none;
+    }
+
+    .spares__item-img {
+        margin: 0;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .spares__item-info {
+        display: none;
+    }
+
+    .catalog__stock {
+        display: none;
+    }
 }
 
-.modal-catalog.active {
+.catalog-modal.active {
     visibility: visible;
     opacity: 1;
 
     .header-fixed {
         visibility: visible;
+    }
+}
+
+.catalog-modal__container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3.2rem;
+}
+
+.catalog-modal__groups {
+    overflow: auto;
+    max-height: calc(100vh - 26.5rem);
+    padding-bottom: 1.6rem;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #00A0E3;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}
+
+.catalog-modal__groups-container {
+    padding: 0 1.6rem;
+}
+
+.catalog-modal__groups-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.catalog-modal__title {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.catalog-modal__groups-item {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.catalog-modal__spares {
+    .catalog-modal__title {
+        display: none;
     }
 }
 

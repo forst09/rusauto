@@ -33,8 +33,8 @@ $(document).ready(function () {
     });
 
     //ОТКРЫТИЕ МОДАЛЬНОГО КАТАЛОГА
-    $(document).on('click', '.modal-catalog__btn', function () {
-        $('.modal-catalog').addClass('active');
+    $(document).on('click', '.catalog-modal__btn', function () {
+        $('.catalog-modal').addClass('active');
         $('body').addClass('scroll-hide');
     });
 
