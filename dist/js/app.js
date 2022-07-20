@@ -32,11 +32,21 @@ $(document).ready(function () {
         $('body').addClass('scroll-hide');
     });
 
-    //ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ
-    $(document).on('click', '.header-bottom__request-close', function () {
-        $('.mobile-menu').removeClass('active');
+    //ОТКРЫТИЕ МОДАЛЬНОГО КАТАЛОГА
+    $(document).on('click', '.modal-catalog__btn', function () {
+        $('.modal-catalog').addClass('active');
+        $('body').addClass('scroll-hide');
+    });
+
+    //ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
+    $(document).on('click', '.close', function () {
+        $(this).parents('.modal').removeClass('active');
         $('body').removeClass('scroll-hide');
     });
+    // $(document).on('click', '.header-bottom__request-close', function () {
+    //     $('.mobile-menu').removeClass('active');
+    //     $('body').removeClass('scroll-hide');
+    // });
 
     //ПОИСК НА 1024 В ШАПКЕ
     $(document).on('input', '.header-bottom__search-input', function () {

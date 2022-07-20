@@ -157,6 +157,37 @@ section {
   overflow: hidden;
 }
 
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transition: 0.6s ease;
+  background-color: #ffffff;
+  z-index: 200;
+}
+.modal .header-fixed {
+  position: static;
+  box-shadow: none;
+  visibility: visible;
+}
+.modal .header-fixed .header-bottom__request-close {
+  display: block;
+}
+
+.modal.active {
+  left: 0;
+}
+
+.close {
+  width: 2rem;
+  height: 2rem;
+}
+.close svg path {
+  transition: 0.3s ease;
+}
+
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
 .swiper-not-mobile {
   display: inline-flex;
@@ -168,13 +199,20 @@ section {
 
 /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
+.header .header-bottom__search,
+.header .header-bottom__links,
+.header .header-bottom__request-phone span,
+.header .header-bottom__request-btn {
+  display: none;
+}
+
 .header-fixed {
   visibility: hidden;
   position: fixed;
   width: 100%;
   left: 0;
   top: -6.8rem;
-  z-index: 1000;
+  z-index: 100;
   transition: 0.6s ease;
   background: #FFFFFF;
   box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
@@ -211,13 +249,6 @@ section {
 }
 
 .header-top {
-  display: none;
-}
-
-.header-bottom__search,
-.header-bottom__links,
-.header-bottom__request-phone span,
-.header-bottom__request-btn {
   display: none;
 }
 
@@ -281,8 +312,6 @@ section {
 
 .header-bottom__request-close {
   display: none;
-  width: 2rem;
-  height: 2rem;
 }
 .header-bottom__request-close svg {
   width: 100%;
@@ -292,6 +321,128 @@ section {
 
 .header-bottom__request-close.active {
   display: block;
+}
+
+.header-bottom__search {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-bottom__search-catalog {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.65rem 1.2rem;
+  color: #fff;
+  background-color: #064E8C;
+  transition: 0.3s ease;
+}
+.header-bottom__search-catalog:hover {
+  background-color: #00A0E3;
+}
+.header-bottom__search-catalog:active, .header-bottom__search-catalog:focus, .header-bottom__search-catalog:focus-within {
+  background-color: #0091CE;
+}
+.header-bottom__search-catalog svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.header-bottom__search-catalog span {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.header-bottom__search-wrapper {
+  position: relative;
+}
+
+.header-bottom__search-input {
+  border: none;
+  padding: 0.8rem 1.6rem;
+  width: 20rem;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  font-family: "Geometria";
+  color: #064E8C;
+}
+.header-bottom__search-input::placeholder {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #A3A8AB;
+  font-weight: 400;
+  font-family: "Geometria";
+}
+
+.header-buttom__search-input-btn {
+  display: none;
+}
+
+.header-bottom__search-input-buttons {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header-bottom__search-label,
+.header-bottom__search-close {
+  width: 2rem;
+  height: 2rem;
+}
+.header-bottom__search-label svg,
+.header-bottom__search-close svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.header-bottom__search-label svg path,
+.header-bottom__search-label svg circle,
+.header-bottom__search-close svg path,
+.header-bottom__search-close svg circle {
+  transition: 0.3s ease;
+}
+
+.header-bottom__search-close {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header-bottom__search-close.active {
+  visibility: visible;
+  opacity: 1;
+}
+.header-bottom__search-close.active:hover svg path {
+  fill: #00A0E3;
+}
+
+.header-bottom__search-label {
+  display: inline-block;
+}
+.header-bottom__search-label:hover svg path,
+.header-bottom__search-label:hover svg circle {
+  stroke: #00A0E3;
+}
+
+.header-bottom__search-example {
+  position: absolute;
+  left: 1.6rem;
+  top: calc(100% + 0.8rem);
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+.header-bottom__search-example span {
+  color: #A3A8AB;
+  margin-right: 0.8rem;
+}
+.header-bottom__search-example a {
+  line-height: 1.3rem;
+  color: #00A0E3;
+  text-decoration: underline;
 }
 
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
@@ -353,36 +504,12 @@ section {
 
 /*КОНЕЦ СТИЛЕЙ ТАББАРА*/
 /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
-.mobile-menu {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  transition: 0.6s ease;
-  background-color: #ffffff;
-  z-index: 200;
-}
-.mobile-menu .header-fixed {
-  position: static;
-  box-shadow: none;
-}
-
-.mobile-menu.active {
-  left: 0;
-}
-.mobile-menu.active .header-fixed {
-  visibility: visible;
-}
-.mobile-menu.active .header-fixed .header-bottom__request {
+.mobile-menu .header-fixed .header-bottom__request {
   display: flex;
   gap: 3.2rem;
 }
-.mobile-menu.active .header-fixed .header-bottom__request-close {
-  display: block;
-}
-.mobile-menu.active .header-fixed .header-bottom__logo {
-  margin-right: -5.2rem;
+.mobile-menu .header-fixed .header-bottom__logo {
+  margin-left: 5.2rem;
 }
 
 .mobile-menu__list {
@@ -399,6 +526,52 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
+/*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/
+.modal-catalog {
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+.modal-catalog .header-fixed {
+  visibility: hidden;
+}
+.modal-catalog .header .header__wrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+.modal-catalog .header .header-bottom__search {
+  display: flex;
+  width: 100%;
+}
+.modal-catalog .header .header-bottom__search-wrapper {
+  width: 100%;
+}
+.modal-catalog .header .header-bottom__search-input {
+  width: 100%;
+  border: 1px solid #EFF0F1;
+  max-height: 2.9rem;
+  height: 100%;
+}
+.modal-catalog .header .header-bottom__search-example {
+  display: none;
+}
+.modal-catalog .header .header-bottom__request {
+  position: absolute;
+  right: 1.6rem;
+  top: 2.4rem;
+}
+
+.modal-catalog.active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-catalog.active .header-fixed {
+  visibility: visible;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/

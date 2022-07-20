@@ -43,13 +43,13 @@
         padding: 0 4.4rem;
     }
 
-    /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ668*/
-    .mobile-menu.active {
+    /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
+    .mobile-menu {
         .header-fixed {
             .header-bottom__logo {
                 width: 5.6rem;
                 height: 4rem;
-                margin-right: -7.6rem;
+                margin-left: 6rem;
             }
 
             .header-bottom__request {
@@ -70,9 +70,34 @@
 
     /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
 
+    /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 668*/
+    .modal-catalog {
+
+        .header {
+            .header-bottom__request {
+                right: 4.4rem;
+                top: 2.6rem;
+            }
+
+            .header-bottom__logo {
+                margin: 0;
+            }
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 668*/
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
+    .header {
+
+        .header-bottom__request-btn,
+        .header-bottom__request-phone span {
+            display: inline-block;
+        }
+    }
+
     .header-fixed {
         top: -8rem;
 
@@ -90,7 +115,7 @@
         }
 
         .header-bottom__logo {
-            margin-left: 4.2rem;
+            margin-left: 11.8rem;
         }
     }
 
@@ -550,6 +575,16 @@
         }
     }
 
+    .close {
+
+        &:hover {
+
+            svg path {
+                fill: #00A0E3;
+            }
+        }
+    }
+
     /*НАЧАЛО СТИЛЕЙ ТАББАРА 1024*/
     .tab-bar {
         display: none;
@@ -570,9 +605,15 @@
 
     /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 
-    /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
-
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
+    .header {
+
+        .header-bottom__search,
+        .header-bottom__links {
+            display: flex;
+        }
+    }
+
     .header-fixed {
         top: -8.8rem;
 
@@ -834,13 +875,6 @@
     .header-bottom__search-close.active {
         visibility: visible;
         opacity: 1;
-
-        &:hover {
-
-            svg path {
-                fill: #00A0E3;
-            }
-        }
     }
 
     .header-bottom__search-label {
@@ -956,6 +990,45 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1024*/
+    .modal-catalog {
+        .header-bottom {
+            padding-top: 3.3rem;
+            background-color: transparent;
+        }
+
+        .header {
+            .header__wrapper {
+                flex-direction: row;
+                gap: 13.7rem;
+                justify-content: flex-start;
+            }
+
+            .header-bottom__logo {
+                flex-shrink: 0;
+            }
+
+            .header-bottom__search {
+                max-width: 42.8rem;
+            }
+
+            .header-bottom__search-example {
+                display: block;
+            }
+
+            .header-bottom__request {
+                top: 3.3rem;
+                right: 6.4rem;
+            }
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1024*/
+
+    /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
+
+
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
     .main {
@@ -1375,6 +1448,7 @@
         margin-top: 3.2rem;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     .footer__copyright-text {
@@ -1434,6 +1508,10 @@
         }
     }
 
+    .header-bottom {
+        padding: 1.5rem 0;
+    }
+
     .header-bottom__logo {
         width: 11.5rem;
         height: 8.3rem;
@@ -1457,6 +1535,35 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/
+    .modal-catalog {
+        .header-bottom {
+            padding-top: 4rem;
+        }
+
+        .header {
+            .header__wrapper {
+                gap: 10rem;
+            }
+
+            .header-bottom__logo {
+                width: 7.8rem;
+                height: 5.6rem;
+            }
+
+            .header-bottom__search {
+                max-width: 84.9rem;
+            }
+
+            .header-bottom__request {
+                top: 4rem;
+                right: 8rem;
+            }
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
 
