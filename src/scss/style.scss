@@ -121,6 +121,23 @@ section {
     }
 }
 
+.btn-jump__wrapper {
+    margin-top: 2.4rem;
+    display: none;
+}
+
+.btn-jump__wrapper.active {
+    display: block;
+}
+
+.btn-jump {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #00A0E3;
+    text-decoration: underline;
+}
+
 .btn-arrow {
     display: inline-flex;
     align-items: center;
@@ -211,6 +228,32 @@ section {
 
     svg path {
         transition: 0.3s ease;
+    }
+}
+
+.back__wrapper {
+    margin-top: 3.2rem;
+}
+
+.back {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #064E8C;
+    position: relative;
+    padding-left: 1.35rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-top: 1px solid #00A0E3;
+        border-right: 1px solid #00A0E3;
+        transform: rotate(-135deg);
+        top: calc(50% - 0.35rem);
+        left: 0.2rem;
+        border-radius: 0.12rem;
     }
 }
 
@@ -482,17 +525,17 @@ section {
 
 .header-bottom__search-input {
     border: none;
-    padding: 0.8rem 1.6rem;
+    padding: 0.55rem 1.6rem;
     width: 20rem;
-    font-size: 1rem;
-    line-height: 1.3rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     font-weight: 400;
     font-family: 'Geometria';
     color: #064E8C;
 
     &::placeholder {
-        font-size: 1rem;
-        line-height: 1.3rem;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
         color: #A3A8AB;
         font-weight: 400;
         font-family: 'Geometria';
@@ -675,11 +718,9 @@ section {
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 
 /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/
-.catalog-modal {
-    visibility: hidden;
-    opacity: 0;
-    left: 0;
-    transition: opacity 0.3s ease;
+.catalog-modal,
+.catalog-groups {
+
 
     .header-fixed {
         visibility: hidden;
@@ -717,13 +758,14 @@ section {
         .header-bottom__search-example {
             display: none;
         }
-
-        .header-bottom__request {
-            position: absolute;
-            right: 1.6rem;
-            top: 2.4rem;
-        }
     }
+}
+
+.catalog-modal {
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
 
     .spares__container {
         display: inline-flex;
@@ -744,15 +786,29 @@ section {
     .catalog__stock {
         display: none;
     }
+
+    .scroll {
+        text-align: center;
+    }
+
+    .header-bottom__request {
+        position: absolute;
+        top: 2.4rem;
+        right: 1.6rem;
+    }
+}
+
+.catalog-modal.active,
+.catalog-groups.active {
+
+    .header-fixed {
+        visibility: visible;
+    }
 }
 
 .catalog-modal.active {
     visibility: visible;
     opacity: 1;
-
-    .header-fixed {
-        visibility: visible;
-    }
 }
 
 .catalog-modal__container {
@@ -805,6 +861,21 @@ section {
     .catalog-modal__title {
         display: none;
     }
+}
+
+.catalog-groups {
+    left: unset;
+    right: -100%;
+
+    .catalog-modal__title {
+
+        margin-top: 3.2rem;
+    }
+}
+
+.catalog-groups.active {
+    left: unset;
+    right: 0;
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/

@@ -108,6 +108,23 @@ section {
   border-top: 3.8rem solid #0091CE;
 }
 
+.btn-jump__wrapper {
+  margin-top: 2.4rem;
+  display: none;
+}
+
+.btn-jump__wrapper.active {
+  display: block;
+}
+
+.btn-jump {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #00A0E3;
+  text-decoration: underline;
+}
+
 .btn-arrow {
   display: inline-flex;
   align-items: center;
@@ -186,6 +203,31 @@ section {
 }
 .close svg path {
   transition: 0.3s ease;
+}
+
+.back__wrapper {
+  margin-top: 3.2rem;
+}
+
+.back {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #064E8C;
+  position: relative;
+  padding-left: 1.35rem;
+}
+.back::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 1px solid #00A0E3;
+  border-right: 1px solid #00A0E3;
+  transform: rotate(-135deg);
+  top: calc(50% - 0.35rem);
+  left: 0.2rem;
+  border-radius: 0.12rem;
 }
 
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
@@ -425,17 +467,17 @@ section {
 
 .header-bottom__search-input {
   border: none;
-  padding: 0.8rem 1.6rem;
+  padding: 0.55rem 1.6rem;
   width: 20rem;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   font-weight: 400;
   font-family: "Geometria";
   color: #064E8C;
 }
 .header-bottom__search-input::placeholder {
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   color: #A3A8AB;
   font-weight: 400;
   font-family: "Geometria";
@@ -593,44 +635,47 @@ section {
 
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/
-.catalog-modal {
-  visibility: hidden;
-  opacity: 0;
-  left: 0;
-  transition: opacity 0.3s ease;
-}
-.catalog-modal .header-fixed {
+.catalog-modal .header-fixed,
+.catalog-groups .header-fixed {
   visibility: hidden;
 }
-.catalog-modal .header-fixed .header-bottom {
+.catalog-modal .header-fixed .header-bottom,
+.catalog-groups .header-fixed .header-bottom {
   padding-bottom: 0;
   margin-bottom: 3.2rem;
 }
-.catalog-modal .header .header__wrapper {
+.catalog-modal .header .header__wrapper,
+.catalog-groups .header .header__wrapper {
   flex-direction: column;
   align-items: center;
   gap: 2.4rem;
 }
-.catalog-modal .header .header-bottom__search {
+.catalog-modal .header .header-bottom__search,
+.catalog-groups .header .header-bottom__search {
   display: flex;
   width: 100%;
 }
-.catalog-modal .header .header-bottom__search-wrapper {
+.catalog-modal .header .header-bottom__search-wrapper,
+.catalog-groups .header .header-bottom__search-wrapper {
   width: 100%;
 }
-.catalog-modal .header .header-bottom__search-input {
+.catalog-modal .header .header-bottom__search-input,
+.catalog-groups .header .header-bottom__search-input {
   width: 100%;
   border: 1px solid #EFF0F1;
   max-height: 2.9rem;
   height: 100%;
 }
-.catalog-modal .header .header-bottom__search-example {
+.catalog-modal .header .header-bottom__search-example,
+.catalog-groups .header .header-bottom__search-example {
   display: none;
 }
-.catalog-modal .header .header-bottom__request {
-  position: absolute;
-  right: 1.6rem;
-  top: 2.4rem;
+
+.catalog-modal {
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
 }
 .catalog-modal .spares__container {
   display: inline-flex;
@@ -648,13 +693,23 @@ section {
 .catalog-modal .catalog__stock {
   display: none;
 }
+.catalog-modal .scroll {
+  text-align: center;
+}
+.catalog-modal .header-bottom__request {
+  position: absolute;
+  top: 2.4rem;
+  right: 1.6rem;
+}
+
+.catalog-modal.active .header-fixed,
+.catalog-groups.active .header-fixed {
+  visibility: visible;
+}
 
 .catalog-modal.active {
   visibility: visible;
   opacity: 1;
-}
-.catalog-modal.active .header-fixed {
-  visibility: visible;
 }
 
 .catalog-modal__container {
@@ -702,6 +757,19 @@ section {
 
 .catalog-modal__spares .catalog-modal__title {
   display: none;
+}
+
+.catalog-groups {
+  left: unset;
+  right: -100%;
+}
+.catalog-groups .catalog-modal__title {
+  margin-top: 3.2rem;
+}
+
+.catalog-groups.active {
+  left: unset;
+  right: 0;
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/

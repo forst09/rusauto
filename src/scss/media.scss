@@ -1079,6 +1079,7 @@
             }
 
             .header-bottom__request {
+                position: absolute;
                 top: 3.3rem;
                 right: 6.4rem;
             }
@@ -1717,6 +1718,68 @@
                 right: 8rem;
             }
         }
+
+        .spares__container {
+            grid-template-columns: repeat(2, 27.8rem);
+            grid-column-gap: 4rem;
+        }
+
+        .spares__item-info-title {
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+        }
+
+        .spares__item {
+            max-width: 27.8rem;
+        }
+
+        .spares__item-info {
+            width: fit-content;
+        }
+    }
+
+    .catalog-modal__groups-container {
+        min-width: 13.8rem;
+        max-width: 31.6rem;
+
+        &.fat {
+            width: 100%;
+        }
+    }
+
+
+
+    .catalog-modal__groups {
+        min-width: 13.8rem;
+        max-width: 31.6rem;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .catalog-modal__groups-wrapper {
+        min-width: 13.8rem;
+        max-width: 31.6rem;
+        width: 100%;
+        max-height: 29.1rem;
+        // display: grid;
+        // grid-template-rows: repeat(10, 1.5rem);
+        // grid-auto-flow: column;
+        grid-column-gap: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .catalog-modal__groups-item {
+        max-width: 13.8rem;
+    }
+
+    .catalog-modal__spares {
+        overflow: unset;
+    }
+
+    .catalog-modal__title {
+        font-size: 2rem;
+        line-height: 2.8rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/

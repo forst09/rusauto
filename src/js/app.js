@@ -43,6 +43,24 @@ $(document).ready(function () {
         $(this).parents('.modal').removeClass('active');
         $('body').removeClass('scroll-hide');
     });
+
+    //ОТКРЫТИЕ МОДАЛКИ С МОДЕЛЯМИ МАРОК НА МОБИЛКАХ
+    if ($(window).width() < 668) {
+        $(document).on('click', '.catalog-modal__spares .spares__item', function () {
+            $('.catalog-groups').addClass('active');
+        });
+
+        //ЗАКРЫТИЕ МОДАЛКИ С МОДЕЛЯМИ МАРОК НА МОБИЛКАХ ПО КНОПКЕ НАЗАД
+        $(document).on('click', '.catalog-groups .back', function () {
+            $('.catalog-groups').removeClass('active');
+        });
+    }
+
+    //ЗАКРЫТИЕ МОДАЛОК ПРИ ПЕРЕХОДЕ НА ЭЛЕМЕНТ ТАББАРА
+    // $(document).on('click', '.tab-bar__item', function () {
+    //     $('.modal').removeClass('active');
+    // });
+
     // $(document).on('click', '.header-bottom__request-close', function () {
     //     $('.mobile-menu').removeClass('active');
     //     $('body').removeClass('scroll-hide');
@@ -92,6 +110,47 @@ $(document).ready(function () {
     $('.btn-main').on('mousedown touchstart pointerdown', function (e) {
         e.stopPropagation();
     });
+
+    //ПОКАЗАТЬ КНОПКУ ПЕРЕЙТИ К... НА МОДАЛЬНОМ КАТАЛОГЕ
+    // function showJumpBtn(maxHeight, sectionName) {
+
+    // }
+    // if ($(window).width() > 1499) {
+    //     const heightParent = Math.floor(+$(".catalog-modal__groups-wrapper").css("max-height").split("px")[0]);
+    //     const heightItems = [...$(".catalog-modal__groups-item")].reduce((acc, item) => acc + item.offsetHeight, 0);
+    //     if (heightItems > heightParent) $(".catalog-modal__groups-container").addClass("fat");
+    //     console.log(heightItems, heightParent);
+    //     if (heightItems > (heightParent * 2)) {
+    //         $('.catalog-modal__groups-container .btn-jump__wrapper').addClass('active');
+    //     }
+    // }
+
+
+    let texthide = $('.text-hide');
+
+    let texthideHeight;
+
+    //убрать кнопку Показать полностью, если текст вмещается в блок
+    texthide.each(function (index, el) {
+        texthideHeight = $(this).height();
+        let elements = $(this).find('*');
+        let heightAll = 0;
+        elements.each(function () {
+            let elementsHeight = $(this).height();
+            heightAll = heightAll + elementsHeight;
+        });
+
+        if (heightAll <= texthideHeight) {
+            $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
+        }
+    });
+
+    let container = $('.catalog-modal__groups-wrapper');
+    let containerHeight = Math.floor(+$(".catalog-modal__groups-wrapper").css("max-height").split("px")[0]);
+    console.log(containerHeight);
+    let containerElements = $(container).find('*');
+    console.log(containerElements.length);
+
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
