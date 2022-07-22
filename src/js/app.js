@@ -111,6 +111,11 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
+    // УБРАТЬ ОКОШКО С ПОДТВЕРЖДЕНИЕМ ГОРОДА ПО КНОПКЕ "ВЕРНО"
+    $(document).on('click', '.choice-city .btn', function () {
+        $('.choice-city').remove();
+    });
+
     //ПОКАЗАТЬ КНОПКУ ПЕРЕЙТИ К... НА МОДАЛЬНОМ КАТАЛОГЕ
     // function showJumpBtn(maxHeight, sectionName) {
 
@@ -118,38 +123,87 @@ $(document).ready(function () {
     // if ($(window).width() > 1499) {
     //     const heightParent = Math.floor(+$(".catalog-modal__groups-wrapper").css("max-height").split("px")[0]);
     //     const heightItems = [...$(".catalog-modal__groups-item")].reduce((acc, item) => acc + item.offsetHeight, 0);
-    //     if (heightItems > heightParent) $(".catalog-modal__groups-container").addClass("fat");
+    //     if (heightItems > heightParent) $(".catalog-modal__groups-container").addClass("width-100");
     //     console.log(heightItems, heightParent);
     //     if (heightItems > (heightParent * 2)) {
     //         $('.catalog-modal__groups-container .btn-jump__wrapper').addClass('active');
     //     }
     // }
 
-
-    let texthide = $('.text-hide');
-
-    let texthideHeight;
-
-    //убрать кнопку Показать полностью, если текст вмещается в блок
-    texthide.each(function (index, el) {
-        texthideHeight = $(this).height();
-        let elements = $(this).find('*');
-        let heightAll = 0;
-        elements.each(function () {
-            let elementsHeight = $(this).height();
-            heightAll = heightAll + elementsHeight;
-        });
-
-        if (heightAll <= texthideHeight) {
-            $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
-        }
-    });
-
-    let container = $('.catalog-modal__groups-wrapper');
-    let containerHeight = Math.floor(+$(".catalog-modal__groups-wrapper").css("max-height").split("px")[0]);
+    let container = $('.catalog-modal__groups-js');
+    // console.log(container);
+    let containerHeight = Math.floor(+$(container).css("max-height").split("px")[0]);
+    let doubleContainerHeight = containerHeight * 2;
+    // console.log(doubleContainerHeight);
     console.log(containerHeight);
-    let containerElements = $(container).find('*');
-    console.log(containerElements.length);
+    let containerElements = $(container).find('a');
+    // console.log(containerElements);
+    let heightAll = 0;
+    containerElements.each(function () {
+        let elementsHeight = $(this).outerHeight(true);
+        // console.log(elementsHeight);
+        heightAll = heightAll + elementsHeight;
+    });
+    // console.log(heightAll, containerHeight);
+    if (heightAll > containerHeight) {
+        $(".catalog-modal__groups-container").addClass("width-100");
+    }
+    if (heightAll > doubleContainerHeight) {
+        console.log(heightAll, doubleContainerHeight);
+        $('.catalog-modal__groups-container').find('.btn-jump__wrapper').addClass('active');
+    }
+
+    let containerSP = $('.catalog-modal .spares__container');
+    // console.log(container);
+    let containerSPHeight = Math.floor(+$(containerSP).css("max-height").split("px")[0]);
+    let doublecontainerSPHeight = containerSPHeight * 2;
+    // console.log(doubleContainerHeight);
+    console.log(containerSPHeight);
+    let containerSPElements = $(containerSP).find('.spares__item');
+    // console.log(containerElements);
+    let heightSPAll = 0;
+    containerSPElements.each(function () {
+        let elementsSPHeight = $(this).outerHeight(true);
+        // console.log(elementsHeight);
+        heightSPAll = heightSPAll + elementsSPHeight;
+    });
+    // console.log(heightAll, containerHeight);
+    // if (heightSPAll > containerSPHeight) {
+    //     $(".catalog-modal__groups-container").addClass("width-100");
+    // }
+    if (heightSPAll > doublecontainerSPHeight) {
+        console.log(heightSPAll, doublecontainerSPHeight);
+        $('.catalog-modal__spares').find('.btn-jump__wrapper').addClass('active');
+    }
+
+    //   ПОКАЗАТЬ КНОПКУ ПЕРЕЙТИ К... НА МОДАЛЬНОМ КАТАЛОГЕ
+    // function showJumpBtn(divName, divNameElements, divParentName) {
+    //     let container = $(`.${divName}`);
+    //     console.log(container);
+    //     let containerHeight = Math.floor(+$(container).css("max-height").split("px")[0]);
+    //     let doubleContainerHeight = containerHeight * 2;
+    //     // console.log(doubleContainerHeight);
+    //     console.log(containerHeight);
+    //     containerElements = $(container).find(`${divNameElements}`);
+    //     // console.log(containerElements);
+    //     let heightAll = 0;
+    //     containerElements.each(function () {
+    //         let elementsHeight = $(this).outerHeight(true);
+    //         // console.log(elementsHeight);
+    //         heightAll = heightAll + elementsHeight;
+    //     });
+    //     // console.log(heightAll, containerHeight);
+    //     if (heightAll > containerHeight) {
+    //         $(`.${divParentName}`).addClass("width-100");
+    //     }
+    //     if (heightAll > doubleContainerHeight) {
+    //         console.log(heightAll, doubleContainerHeight);
+    //         $(`.${divParentName}`).find('.btn-jump__wrapper').addClass('active');
+    //     }
+    // };
+
+    // showJumpBtn('catalog-modal__groups-wrapper', 'a', 'catalog-modal__groups-container');
+
 
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
