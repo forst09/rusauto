@@ -14,6 +14,12 @@ section {
   margin-bottom: 4.8rem;
 }
 
+h1 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+
 .wrapper {
   padding: 0 1.6rem;
 }
@@ -34,10 +40,13 @@ section {
   margin-bottom: 1.2rem;
 }
 
+.left {
+  text-align: left;
+}
+
 .text {
   font-size: 1.4rem;
   line-height: 2rem;
-  font-weight: 300;
 }
 .text p {
   margin-bottom: 2rem;
@@ -54,6 +63,12 @@ section {
   text-align: center;
   width: 100%;
   font-size: 1.4rem;
+}
+
+.desc-maxwidth {
+  text-align: left;
+  max-width: 42rem;
+  margin: 0 0 3.2rem;
 }
 
 .main-link {
@@ -232,6 +247,44 @@ section {
   top: calc(50% - 0.35rem);
   left: 0.2rem;
   border-radius: 0.12rem;
+}
+
+.btn-show__wrapper {
+  margin-top: 2.4rem;
+}
+
+.btn-show {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #064E8C;
+  font-weight: 500;
+}
+.btn-show span {
+  position: relative;
+  padding-right: 1.8rem;
+}
+.btn-show span::after {
+  content: "";
+  position: absolute;
+  right: 0.1rem;
+  top: calc(50% - 0.45rem);
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 1px solid #064E8C;
+  border-right: 1px solid #064E8C;
+  border-radius: 5%;
+  transition: 0.3s ease;
+}
+
+.btn-show__more::after {
+  transform: rotate(135deg);
+}
+
+.btn-show__hide {
+  display: none;
+}
+.btn-show__hide::after {
+  rotate: -45deg;
 }
 
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
@@ -837,6 +890,61 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА*/
+/*НАЧАЛО СТИЛЕЙ ХЛЕБНЫХ КРОШЕК*/
+.bread-crumbs {
+  margin: 4rem 0;
+}
+
+.bread-crumbs__wrapper {
+  display: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ ХЛЕБНЫХ КРОШЕК*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
+.catalog-about__banner {
+  min-height: 24.3rem;
+  height: 100%;
+  width: 100%;
+  background-color: #F5FBFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  overflow: hidden;
+}
+
+.catalog-about__banner-image {
+  display: none;
+}
+
+.catalog-about__banner-info {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.catalog-about__banner-info::before {
+  content: "";
+  position: absolute;
+  left: -18rem;
+  top: -6.5rem;
+  width: 42rem;
+  height: 30.3rem;
+  background-image: url("../img/footer/logo.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.catalog-about__banner-info-text {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  margin-bottom: 2.4rem;
+  max-width: 25.7rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
@@ -1175,9 +1283,6 @@ section {
   align-items: flex-end;
   transition: 0.3s ease;
 }
-.catalog__sections-item:nth-last-of-type(1), .catalog__sections-item:nth-last-of-type(2) {
-  display: none;
-}
 .catalog__sections-item:active, .catalog__sections-item:focus, .catalog__sections-item:focus-within {
   background-color: #EDF8FD;
 }
@@ -1214,6 +1319,9 @@ section {
   grid-template-columns: repeat(2, 13.8rem);
   grid-column-gap: 1.2rem;
   grid-row-gap: 1.2rem;
+}
+.catalog__sections .catalog__sections-item:nth-last-of-type(1), .catalog__sections .catalog__sections-item:nth-last-of-type(2) {
+  display: none;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ*/
@@ -1474,6 +1582,36 @@ section {
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ*/
+/*КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
+.catalog-1lvl__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+.catalog-1lvl__container .catalog__sections-item {
+  max-width: 28.8rem;
+  min-height: 19.9rem;
+  padding: 1.2rem;
+}
+.catalog-1lvl__container .catalog__sections-item:active .catalog__sections-item-image, .catalog-1lvl__container .catalog__sections-item:focus .catalog__sections-item-image, .catalog-1lvl__container .catalog__sections-item:focus-within .catalog__sections-item-image {
+  right: 0;
+}
+.catalog-1lvl__container .catalog__sections-item-title {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.catalog-1lvl__container .catalog__sections-item-image {
+  width: 16rem;
+  height: 16rem;
+  top: calc(50% - 8rem);
+  right: -6rem;
+}
+
+/*КОНЕЦ КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
+/*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-map-copyrights-promo {
   display: none !important;

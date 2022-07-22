@@ -129,22 +129,22 @@ $(document).ready(function () {
     });
 
     // ОТКРЫТИЕ МОДАЛКИ С ВЫБОРОМ ГОРОДА
-    $('.choice-city .btn-secondary').on('click', function () {
-        $('.choice-city').remove();
-        $('.modal-choice').addClass('active');
-        if ($(window).width() >= 1024) {
-            $('.modal__background').addClass('active');
-        }
-        $('body').addClass('scroll-hide');
-    });
+    // $('.choice-city .btn-secondary').on('click', function () {
+    //     $('.choice-city').remove();
+    //     $('.modal-choice').addClass('active');
+    //     if ($(window).width() >= 1024) {
+    //         $('.modal__background').addClass('active');
+    //     }
+    //     $('body').addClass('scroll-hide');
+    // });
 
-    $('.header-top__location').on('click', function () {
-        $('.modal-choice').addClass('active');
-        if ($(window).width() >= 1024) {
-            $('.modal__background').addClass('active');
-        }
-        $('body').addClass('scroll-hide');
-    });
+    // $('.header-top__location').on('click', function () {
+    //     $('.modal-choice').addClass('active');
+    //     if ($(window).width() >= 1024) {
+    //         $('.modal__background').addClass('active');
+    //     }
+    //     $('body').addClass('scroll-hide');
+    // });
 
     //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
     $(document).click(function (e) {

@@ -16,6 +16,11 @@
         margin-bottom: 8rem;
     }
 
+    h1 {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+    }
+
     .title {
         max-width: 53.2rem;
         font-size: 2.4rem;
@@ -25,6 +30,10 @@
     .desc {
         font-size: 1.4rem;
         max-width: 50.8rem;
+    }
+
+    .desc-maxwidth {
+        max-width: 49rem;
     }
 
     .text {
@@ -339,6 +348,54 @@
 
     /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 668*/
 
+    /*НАЧАЛО СТИЛЕЙ ХЛЕБНЫХ КРОШЕК 668*/
+    .bread-crumbs {
+        .back__wrapper {
+            display: none;
+        }
+    }
+
+    .bread-crumbs__wrapper {
+        display: inline-flex;
+        align-items: center;
+        gap: 3.2rem;
+        grid-row-gap: 1rem;
+        flex-wrap: wrap;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .bread-crumbs__item {
+        color: #00A0E3;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background-color: #00A0E3;
+            left: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1.6rem;
+            height: 1px;
+            right: -2.4rem;
+            top: calc(50% - 0.5px);
+            background-color: #A3A8AB;
+        }
+    }
+
+    .bread-crumbs__current {
+        color: #A3A8AB;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ХЛЕБНЫХ КРОШЕК 668*/
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
 
@@ -644,6 +701,23 @@
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 668*/
 
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 668*/
+
+    /*КАТАЛОГ АВТОЗАПЧАСТЕЙ 668*/
+    .catalog-1lvl__container {
+        flex-direction: row;
+        gap: 2.4rem;
+
+        .catalog__sections-item {
+            min-height: 19.2rem;
+        }
+    }
+
+    /*КОНЕЦ КАТАЛОГ АВТОЗАПЧАСТЕЙ 668*/
+
+    /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -662,6 +736,11 @@
 
     section {
         margin-bottom: 11.2rem;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+        line-height: 5.3rem;
     }
 
     .title {
@@ -1262,6 +1341,13 @@
 
     /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 1024*/
 
+    /*НАЧАЛО СТИЛЕЙ ХЛЕБНЫХ КРОШЕК 1024*/
+    .bread-crumbs {
+        margin: 6.4rem 0;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ХЛЕБНЫХ КРОШЕК 1024*/
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
 
@@ -1743,6 +1829,36 @@
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1024*/
 
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1024*/
+
+    /*КАТАЛОГ АВТОЗАПЧАСТЕЙ 1024*/
+    .catalog-1lvl__container {
+        justify-content: center;
+
+        .catalog__sections-item {
+            min-height: 25.3rem;
+            max-width: 37.1rem;
+            padding: 1.6rem;
+        }
+
+        .catalog__sections-item-title {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+
+        .catalog__sections-item-image {
+            width: 21.5rem;
+            height: 21rem;
+            top: calc(50% - 10.5rem);
+            right: -8rem;
+        }
+    }
+
+    /*КОНЕЦ КАТАЛОГ АВТОЗАПЧАСТЕЙ 1024*/
+
+    /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1024*/
+
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -2014,14 +2130,6 @@
         line-height: 2.6rem;
     }
 
-    .catalog__sections-item {
-
-        &:nth-last-of-type(1),
-        &:nth-last-of-type(2) {
-            display: flex;
-        }
-    }
-
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1500*/
@@ -2032,6 +2140,15 @@
     .catalog__sections {
         grid-column-gap: 2.427rem;
         grid-template-columns: repeat(4, 20.473rem);
+
+
+        .catalog__sections-item {
+
+            &:nth-last-of-type(1),
+            &:nth-last-of-type(2) {
+                display: flex;
+            }
+        }
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1500*/
@@ -2123,6 +2240,34 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1500*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1500*/
+
+    /*КАТАЛОГ АВТОЗАПЧАСТЕЙ 1500*/
+    .catalog-1lvl__container {
+        gap: 5.6rem;
+
+        .catalog__sections-item {
+            padding: 2.1rem 2.3rem;
+            min-height: 27.3rem;
+            max-width: 40rem;
+        }
+
+        .catalog__sections-item-title {
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+
+        .catalog__sections-item-image {
+            width: 22.4rem;
+            height: 22.4rem;
+        }
+    }
+
+    /*КОНЕЦ КАТАЛОГ АВТОЗАПЧАСТЕЙ 1500*/
+
+    /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1500*/
 
 }
 
