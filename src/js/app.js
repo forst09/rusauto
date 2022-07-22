@@ -42,6 +42,7 @@ $(document).ready(function () {
     $(document).on('click', '.close', function () {
         $(this).parents('.modal').removeClass('active');
         $('body').removeClass('scroll-hide');
+        $('.modal__background').removeClass('active');
     });
 
     //ОТКРЫТИЕ МОДАЛКИ С МОДЕЛЯМИ МАРОК НА МОБИЛКАХ
@@ -79,6 +80,17 @@ $(document).ready(function () {
         $(this).val('');
     });
 
+    //ПОИСК ГОРОДА В МОДАЛКЕ ВЫБОРА ГОРОДА
+    $(document).on('input', '.modal-choice__search-input', function () {
+        $(this).parents('.modal-choice__search').find('.header-bottom__search-close').addClass('active');
+    });
+
+    //ЗАКРЫТИЕ ПОИСКА ГОРОДА В МОДАЛКЕ ВЫБОРА ГОРОДА
+    $(document).on('blur', '.modal-choice__search-input', function () {
+        $(this).parents('.modal-choice__search').find('.header-bottom__search-close').removeClass('active');
+        $(this).val('');
+    });
+
     //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
     let header = document.querySelector('.header');
     let headerFix = document.querySelector('.header-fixed');
@@ -112,8 +124,35 @@ $(document).ready(function () {
     });
 
     // УБРАТЬ ОКОШКО С ПОДТВЕРЖДЕНИЕМ ГОРОДА ПО КНОПКЕ "ВЕРНО"
-    $(document).on('click', '.choice-city .btn', function () {
+    $('.choice-city .btn').on('click', function () {
         $('.choice-city').remove();
+    });
+
+    // ОТКРЫТИЕ МОДАЛКИ С ВЫБОРОМ ГОРОДА
+    $('.choice-city .btn-secondary').on('click', function () {
+        $('.choice-city').remove();
+        $('.modal-choice').addClass('active');
+        if ($(window).width() >= 1024) {
+            $('.modal__background').addClass('active');
+        }
+        $('body').addClass('scroll-hide');
+    });
+
+    $('.header-top__location').on('click', function () {
+        $('.modal-choice').addClass('active');
+        if ($(window).width() >= 1024) {
+            $('.modal__background').addClass('active');
+        }
+        $('body').addClass('scroll-hide');
+    });
+
+    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
+    $(document).click(function (e) {
+        if ($(e.target).is('.modal')) {
+            $('.modal').removeClass('active');
+            $('body').removeClass('scroll-hide');
+            $('.modal__background').removeClass('active');
+        }
     });
 
     //ПОКАЗАТЬ КНОПКУ ПЕРЕЙТИ К... НА МОДАЛЬНОМ КАТАЛОГЕ

@@ -44,7 +44,8 @@
     }
 
     /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
-    .mobile-menu {
+    .mobile-menu,
+    .modal-choice {
         .header-fixed {
             .header-bottom__logo {
                 width: 5.6rem;
@@ -217,8 +218,6 @@
         }
     }
 
-    /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
-
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
     .header {
 
@@ -331,6 +330,18 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ТАББАРА 668*/
+
+    /*НАЧАЛО СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 668*/
+    .modal-choice__title {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 668*/
+
+    /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
+
+
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
 
@@ -988,25 +999,6 @@
         position: relative;
     }
 
-    .header-bottom__search-input {
-        border: none;
-        padding: 0.8rem 1.6rem;
-        width: 20rem;
-        font-size: 1rem;
-        line-height: 1.3rem;
-        font-weight: 400;
-        font-family: 'Geometria';
-        color: #064E8C;
-
-        &::placeholder {
-            font-size: 1rem;
-            line-height: 1.3rem;
-            color: #A3A8AB;
-            font-weight: 400;
-            font-family: 'Geometria';
-        }
-    }
-
     .header-buttom__search-input-btn {
         display: none;
     }
@@ -1093,8 +1085,46 @@
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
 
+    .modal {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        left: unset;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+
+    .modal.active {
+        left: unset;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(38, 43, 46, 0);
+        transition: 0.8s ease;
+        z-index: 1000;
+        visibility: hidden;
+    }
+
+    .modal__background.active {
+        background-color: rgba(38, 43, 46, 0.4);
+        visibility: visible;
+    }
+
     /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1024*/
     .catalog-modal {
+        background-color: #ffffff;
+        display: block;
+
         .header-bottom {
             padding-top: 3.3rem;
             background-color: transparent;
@@ -1184,6 +1214,53 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 1024*/
+    .modal-choice {
+
+        .header-fixed {
+            .header-bottom {
+                background-color: #ffffff;
+                padding-top: 2.4rem;
+                padding-bottom: 0;
+            }
+
+            .header-bottom__logo {
+                display: none;
+            }
+        }
+
+        .header-bottom__request-phone {
+            display: none;
+        }
+
+        .header__wrapper {
+            justify-content: flex-end;
+        }
+
+        .wrapper {
+            padding: 0 2.4rem;
+        }
+    }
+
+    .modal-choice__content {
+        max-width: 40rem;
+        width: 100%;
+        max-height: 45.3rem;
+        height: 100%;
+        background-color: #ffffff;
+    }
+
+    .modal-choice__container {
+        margin-top: 1.2rem;
+    }
+
+    .modal-choice__title {
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 1024*/
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
@@ -1701,9 +1778,10 @@
             height: 4.8rem;
         }
 
-        .header-bottom__request {
-            margin-right: -3.6rem;
-        }
+        // ПРОВЕРИТЬ
+        // .header-bottom__request {
+        //     margin-right: -3.6rem;
+        // }
     }
 
     .header-bottom {

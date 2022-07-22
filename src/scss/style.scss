@@ -691,7 +691,8 @@ section {
 /*КОНЕЦ СТИЛЕЙ ТАББАРА*/
 
 /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
-.mobile-menu {
+.mobile-menu,
+.modal-choice {
 
     .header-fixed {
 
@@ -883,6 +884,66 @@ section {
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА*/
+
+/*НАЧАЛО СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА*/
+.modal-choice__container {
+    margin-top: 1.6rem;
+}
+
+.modal-choice__search {
+    position: relative;
+}
+
+.modal-choice__search-input {
+    padding: 0.55rem 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    font-family: "Geometria";
+    color: #064E8C;
+    width: 100%;
+    border: 1px solid #EFF0F1;
+    max-height: 2.9rem;
+    height: 100%;
+
+    &::placeholder {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #A3A8AB;
+        font-weight: 400;
+        font-family: 'Geometria';
+    }
+}
+
+.modal-choice__title {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 2.4rem;
+}
+
+.modal-choice__city-list {
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modal-choice__city-item {
+    font-size: 1.4rem;
+    color: #064E8C;
+    line-height: 2.6rem;
+}
+
+.modal-choice__nothing {
+    display: none;
+    margin-top: 2.4rem;
+    line-height: 2.6rem;
+    color: #A3A8AB;
+    font-size: 1.4rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА*/
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 
