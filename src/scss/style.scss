@@ -1000,10 +1000,28 @@ h1 {
 }
 
 .modal-choice__city-list {
-    margin-top: 2.4rem;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+}
+
+.modal-choice__city-list-wrapper {
+    margin-top: 2.4rem;
+    max-height: calc(100vh - 22rem);
+    overflow: auto;
+    padding-bottom: 1.6rem;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #00A0E3;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
 }
 
 .modal-choice__city-item {

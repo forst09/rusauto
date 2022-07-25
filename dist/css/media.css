@@ -289,6 +289,10 @@
     line-height: 2.2rem;
   }
 
+  .modal-choice__city-list-wrapper {
+    max-height: calc(100vh - 24rem);
+  }
+
   /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 668*/
   /*НАЧАЛО СТИЛЕЙ ХЛЕБНЫХ КРОШЕК 668*/
   .bread-crumbs .back__wrapper {
@@ -1156,6 +1160,10 @@
     padding: 0 2.4rem;
   }
 
+  .modal-choice__city-list-wrapper {
+    max-height: calc(100vh - 18rem);
+  }
+
   .modal-choice__content {
     max-width: 40rem;
     width: 100%;
@@ -1698,6 +1706,12 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+  /*НАЧАЛО СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 1500*/
+  .modal-choice__city-list-wrapper {
+    max-height: calc(100vh - 24rem);
+  }
+
+  /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 1500*/
   /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/
   .catalog-modal .header-bottom {
     padding-top: 4rem;
