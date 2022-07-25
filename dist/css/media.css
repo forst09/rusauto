@@ -202,11 +202,6 @@
   .header-fixed {
     top: -8rem;
   }
-  .header-fixed .header-top__location {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
   .header-fixed .header-top__location-text {
     display: block;
     font-size: 1.2rem;
@@ -748,11 +743,14 @@
   }
 
   .header-top__location {
+    position: relative;
+  }
+
+  .header-top__location-wrapper {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     height: fit-content;
-    position: relative;
   }
 
   .choice-city {
@@ -1023,17 +1021,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1001;
     left: unset;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease;
+    z-index: -1;
   }
 
   .modal.active {
     left: unset;
     opacity: 1;
     visibility: visible;
+    z-index: 1001;
   }
 
   .modal__background {
@@ -1044,13 +1042,18 @@
     height: 100vh;
     background-color: rgba(38, 43, 46, 0);
     transition: 0.8s ease;
-    z-index: 1000;
     visibility: hidden;
+    z-index: -1;
   }
 
   .modal__background.active {
     background-color: rgba(38, 43, 46, 0.4);
     visibility: visible;
+    z-index: 1000;
+  }
+
+  .mobile-menu {
+    display: none;
   }
 
   /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1024*/

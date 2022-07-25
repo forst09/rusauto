@@ -57,6 +57,40 @@ $(document).ready(function () {
         });
     }
 
+    // УБРАТЬ ОКОШКО С ПОДТВЕРЖДЕНИЕМ ГОРОДА ПО КНОПКЕ "ВЕРНО"
+    $('.choice-city .btn').on('click', function () {
+        $('.choice-city').remove();
+    });
+
+    // ОТКРЫТИЕ МОДАЛКИ С ВЫБОРОМ ГОРОДА ПО КЛИКУ НА КНОПКУ "ВЫБРАТЬ ГОРОД"
+    $('.choice-city .btn-secondary').on('click', function () {
+        $('.choice-city').remove();
+        $('.modal-choice').addClass('active');
+        if ($(window).width() >= 1024) {
+            $('.modal__background').addClass('active');
+        }
+        $('body').addClass('scroll-hide');
+    });
+
+      // ОТКРЫТИЕ МОДАЛКИ С ВЫБОРОМ ГОРОДА ПО КЛИКУ НА ГОРОД
+      $('.choice-city__link').on('click', function () {
+        $('.choice-city').remove();
+        $('.modal-choice').addClass('active');
+        if ($(window).width() >= 1024) {
+            $('.modal__background').addClass('active');
+        }
+        $('body').addClass('scroll-hide');
+    });
+
+    $('.header-top__location-wrapper').on('click', function (e) {
+
+            $('.modal-choice').addClass('active');
+            if ($(window).width() >= 1024) {
+                $('.modal__background').addClass('active');
+            }
+            $('body').addClass('scroll-hide');
+    });
+
     //ЗАКРЫТИЕ МОДАЛОК ПРИ ПЕРЕХОДЕ НА ЭЛЕМЕНТ ТАББАРА
     // $(document).on('click', '.tab-bar__item', function () {
     //     $('.modal').removeClass('active');
@@ -123,28 +157,7 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
-    // УБРАТЬ ОКОШКО С ПОДТВЕРЖДЕНИЕМ ГОРОДА ПО КНОПКЕ "ВЕРНО"
-    $('.choice-city .btn').on('click', function () {
-        $('.choice-city').remove();
-    });
-
-    // ОТКРЫТИЕ МОДАЛКИ С ВЫБОРОМ ГОРОДА
-    // $('.choice-city .btn-secondary').on('click', function () {
-    //     $('.choice-city').remove();
-    //     $('.modal-choice').addClass('active');
-    //     if ($(window).width() >= 1024) {
-    //         $('.modal__background').addClass('active');
-    //     }
-    //     $('body').addClass('scroll-hide');
-    // });
-
-    // $('.header-top__location').on('click', function () {
-    //     $('.modal-choice').addClass('active');
-    //     if ($(window).width() >= 1024) {
-    //         $('.modal__background').addClass('active');
-    //     }
-    //     $('body').addClass('scroll-hide');
-    // });
+    
 
     //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
     $(document).click(function (e) {
