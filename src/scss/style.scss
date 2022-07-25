@@ -43,6 +43,11 @@ h1 {
     margin-bottom: 1.2rem;
 }
 
+.title-left {
+    text-align: left;
+    margin: 0 0 3.2rem;
+}
+
 .left {
     text-align: left;
 }
@@ -133,6 +138,21 @@ h1 {
 
         &::after {
             border-top: 3.8rem solid #0091CE;
+        }
+    }
+}
+
+.btn-simple {
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+        background-color: #0091CE !important;
+        &::before {
+            border-bottom: 3.2rem solid #0091CE !important;
+        }
+        &::after {
+            border-top: 3.2rem solid #0091CE !important;
         }
     }
 }
@@ -304,9 +324,8 @@ h1 {
             top: calc(50% - 0.45rem);
             width: 0.7rem;
             height: 0.7rem;
-            border-top: 1px solid #064E8C;
-            border-right: 1px solid #064E8C;
-            border-radius: 5%;
+            border-top: 0.15rem solid #064E8C;
+            border-right: 0.15rem solid #064E8C;
             transition: 0.3s ease;
         }
     }
@@ -417,7 +436,27 @@ h1 {
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: #00A0E3;
-    text-decoration: underline;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #00A0E3;
+        transition: 0.3s ease;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+        &::after {
+            width: 0;
+        }
+    }
 }
 
 .header-fixed {
@@ -594,7 +633,7 @@ h1 {
 
 .header-bottom__search-input {
     border: none;
-    padding: 0.55rem 1.6rem;
+    padding: 0.55rem 6.4rem 0.55rem 1.6rem;
     width: 20rem;
     font-size: 1.4rem;
     line-height: 1.8rem;
@@ -972,7 +1011,7 @@ h1 {
 }
 
 .modal-choice__search-input {
-    padding: 0.55rem 1.6rem;
+    padding: 0.55rem 6.4rem 0.55rem 1.6rem;
     font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 400;

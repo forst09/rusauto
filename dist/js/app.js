@@ -40,6 +40,7 @@ $(document).ready(function () {
 
     //ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
     $(document).on('click', '.close', function () {
+        console.log('close');
         $(this).parents('.modal').removeClass('active');
         $('body').removeClass('scroll-hide');
         $('.modal__background').removeClass('active');
@@ -72,8 +73,8 @@ $(document).ready(function () {
         $('body').addClass('scroll-hide');
     });
 
-      // ОТКРЫТИЕ МОДАЛКИ С ВЫБОРОМ ГОРОДА ПО КЛИКУ НА ГОРОД
-      $('.choice-city__link').on('click', function () {
+    // ОТКРЫТИЕ МОДАЛКИ С ВЫБОРОМ ГОРОДА ПО КЛИКУ НА ГОРОД
+    $('.choice-city__link').on('click', function () {
         $('.choice-city').remove();
         $('.modal-choice').addClass('active');
         if ($(window).width() >= 1024) {
@@ -84,22 +85,12 @@ $(document).ready(function () {
 
     $('.header-top__location-wrapper').on('click', function (e) {
 
-            $('.modal-choice').addClass('active');
-            if ($(window).width() >= 1024) {
-                $('.modal__background').addClass('active');
-            }
-            $('body').addClass('scroll-hide');
+        $('.modal-choice').addClass('active');
+        if ($(window).width() >= 1024) {
+            $('.modal__background').addClass('active');
+        }
+        $('body').addClass('scroll-hide');
     });
-
-    //ЗАКРЫТИЕ МОДАЛОК ПРИ ПЕРЕХОДЕ НА ЭЛЕМЕНТ ТАББАРА
-    // $(document).on('click', '.tab-bar__item', function () {
-    //     $('.modal').removeClass('active');
-    // });
-
-    // $(document).on('click', '.header-bottom__request-close', function () {
-    //     $('.mobile-menu').removeClass('active');
-    //     $('body').removeClass('scroll-hide');
-    // });
 
     //ПОИСК НА 1024 В ШАПКЕ
     $(document).on('input', '.header-bottom__search-input', function () {
@@ -157,14 +148,16 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
-    
 
-    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
+
+    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ НА ПК
     $(document).click(function (e) {
-        if ($(e.target).is('.modal')) {
-            $('.modal').removeClass('active');
-            $('body').removeClass('scroll-hide');
-            $('.modal__background').removeClass('active');
+        if ($(window).width() >= 1024) {
+            if ($(e.target).is('.modal') && (!($(e.target).is('.catalog-modal')))) {
+                $('.modal').removeClass('active');
+                $('body').removeClass('scroll-hide');
+                $('.modal__background').removeClass('active');
+            }
         }
     });
 
