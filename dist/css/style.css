@@ -963,6 +963,15 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ ХЛЕБНЫХ КРОШЕК*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
+.catalog-about .js-hide {
+  height: 33.9rem;
+  overflow: hidden;
+}
+
+.js-hide {
+  transition: height 0.6s ease;
+}
+
 .catalog-about__banner {
   min-height: 24.3rem;
   height: 100%;

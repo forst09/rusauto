@@ -249,6 +249,46 @@ $(document).ready(function () {
 
     // showJumpBtn('catalog-modal__groups-wrapper', 'a', 'catalog-modal__groups-container');
 
+    //УБРАТЬ КНОПКУ ПОКАЗАТЬ ПОЛНОСТЬЮ, ЕСЛИ ТЕКСТ ВМЕЩАЕТСЯ В БЛОК
+    let jshide = $('.js-hide');
+    console.log(jshide.length);
+
+    jshide.each(function () {
+        let texthideHeight = $(this).find('.text-hide').height();
+        console.log(texthideHeight);
+        if(texthideHeight <= $(this).height()) {
+            $(this).parents('section').find('.btn-show__wrapper').hide();
+        }
+    });
+
+    // texthide.each(function (index, el) {
+    //     texthideHeight = $(this).height();
+    //     let elements = $(this).find('*');
+    //     console.log(elements);
+    //     let heightAll = 0;
+    //     elements.each(function () {
+    //         let elementsHeight = $(this).height();
+    //         heightAll = heightAll + elementsHeight;
+    //     });
+    //     console.log(heightAll);
+    //     if (heightAll <= texthideHeight) {
+    //         $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
+    //     }
+    // });
+
+    // ПОКАЗАТЬ/СКРЫТЬ ТЕКСТ
+    $(document).on('click', ".btn-show", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('section').find(".js-hide").css('height', '');
+        }
+        else {
+            $(this).addClass('active');
+            let h = $(this).parents('section').find(".text-hide").css('height');
+            $(this).parents('section').find(".js-hide").css('height', h);
+        }
+    });
+
 
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
