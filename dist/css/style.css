@@ -152,7 +152,20 @@ h1 {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #00A0E3;
-  text-decoration: underline;
+  position: relative;
+}
+.btn-jump::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #00A0E3;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s ease;
+}
+.btn-jump:hover::before, .btn-jump:active::before, .btn-jump:focus::before, .btn-jump:focus-within::before {
+  width: 0;
 }
 
 .btn-arrow {

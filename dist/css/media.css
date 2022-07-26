@@ -1302,6 +1302,10 @@
   .catalog-modal__groups-item {
     font-size: 1.2rem;
     line-height: 1.5rem;
+    transition: 0.3s ease;
+  }
+  .catalog-modal__groups-item:hover {
+    color: #00A0E3;
   }
 
   .catalog__stock-title {
