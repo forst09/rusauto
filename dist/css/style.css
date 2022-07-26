@@ -1356,6 +1356,10 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КАТАЛОГ*/
+.catalog .catalog__sections-item:nth-last-of-type(1), .catalog .catalog__sections-item:nth-last-of-type(2) {
+  display: none;
+}
+
 .catalog__container {
   max-width: 28.8rem;
   width: 100%;
@@ -1464,15 +1468,14 @@ h1 {
 
 .catalog__sections-item {
   width: 100%;
-  max-width: 13.8rem;
   height: 100%;
-  min-height: 9.3rem;
+  min-height: 5.2rem;
   padding: 0.8rem;
   position: relative;
   background-color: #FAFAFA;
   overflow: hidden;
   display: inline-flex;
-  align-items: flex-end;
+  align-items: center;
   transition: 0.3s ease;
 }
 .catalog__sections-item:active, .catalog__sections-item:focus, .catalog__sections-item:focus-within {
@@ -1483,12 +1486,12 @@ h1 {
 }
 
 .catalog__sections-item-image {
-  width: 10rem;
-  height: 8rem;
   flex-shrink: 0;
   position: absolute;
-  top: calc(50% - 4rem);
-  right: -3.5rem;
+  width: 6.4rem;
+  height: 5.2rem;
+  top: calc(50% - 2.6rem);
+  right: -2.2rem;
   transition: 0.3s ease-in-out;
 }
 .catalog__sections-item-image svg {
@@ -1504,16 +1507,13 @@ h1 {
   font-weight: 700;
   line-height: 1.8rem;
   font-size: 1.4rem;
+  max-width: 84%;
 }
 
 .catalog__sections {
   display: grid;
-  grid-template-columns: repeat(2, 13.8rem);
-  grid-column-gap: 1.2rem;
+  grid-template-columns: repeat(1, 100%);
   grid-row-gap: 1.2rem;
-}
-.catalog__sections .catalog__sections-item:nth-last-of-type(1), .catalog__sections .catalog__sections-item:nth-last-of-type(2) {
-  display: none;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ*/
@@ -1777,6 +1777,10 @@ h1 {
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ*/
 /*КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
+.catalog-1lvl .catalog__sections-item {
+  align-items: flex-end;
+}
+
 .catalog-1lvl__container {
   display: flex;
   flex-direction: column;

@@ -519,19 +519,21 @@
   }
 
   .catalog__sections {
-    grid-template-columns: repeat(3, 17.6rem);
-    grid-column-gap: 2.6rem;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 4fr);
     grid-row-gap: 2.4rem;
+    grid-column-gap: 2.6rem;
   }
 
   .catalog__sections-item {
-    max-width: 17.6rem;
     min-height: 11rem;
+    align-items: flex-end;
   }
 
   .catalog__sections-item-title {
     font-size: 1.4rem;
     line-height: 2.2rem;
+    max-width: 91%;
   }
 
   .catalog__sections-item-image {
@@ -1594,13 +1596,13 @@
   }
 
   .catalog__sections {
-    grid-column-gap: 2.877rem;
-    grid-template-columns: repeat(3, 20.473rem);
+    width: 100%;
+    grid-template-columns: repeat(3, 4fr);
+    grid-column-gap: 2.85rem;
   }
 
   .catalog__sections-item {
     padding: 1.2rem;
-    max-width: 20.473rem;
     min-height: 13.6rem;
   }
   .catalog__sections-item:hover {
@@ -1885,6 +1887,15 @@
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ 1024*/
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1024*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1024*/
+  .catalog-2lvl .catalog__sections {
+    grid-template-columns: repeat(4, 3fr);
+    grid-row-gap: 1.6rem;
+    grid-column-gap: 1.6rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -2121,16 +2132,17 @@
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1500*/
+  .catalog .catalog__sections-item:nth-last-of-type(1), .catalog .catalog__sections-item:nth-last-of-type(2) {
+    display: flex;
+  }
+
   .catalog__container {
-    justify-content: center;
+    max-width: 111.5rem;
   }
 
   .catalog__sections {
+    grid-template-columns: repeat(4, 3fr);
     grid-column-gap: 2.427rem;
-    grid-template-columns: repeat(4, 20.473rem);
-  }
-  .catalog__sections .catalog__sections-item:nth-last-of-type(1), .catalog__sections .catalog__sections-item:nth-last-of-type(2) {
-    display: flex;
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1500*/
@@ -2247,5 +2259,14 @@
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ 1500*/
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1500*/
+  .catalog-2lvl .catalog__sections {
+    grid-template-columns: repeat(5, 2.4fr);
+    grid-row-gap: 2.4rem;
+    grid-column-gap: 2.5rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/
