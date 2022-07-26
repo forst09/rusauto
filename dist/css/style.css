@@ -988,25 +988,22 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВЫ НЕДАВНО СМОТРЕЛИ*/
-.swiper-recently {
-  display: inline-flex;
-  overflow-x: auto;
-}
 .swiper-recently .swiper-wrapper {
   gap: 1.6rem;
 }
 
 .recently__card {
   display: inline-block;
-  width: 100%;
-  max-width: 26rem;
+  width: 26rem;
   padding: 0.25rem 0.46rem;
+  height: 8.6rem;
 }
 
 .recently__card-wrapper {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+  height: inherit;
 }
 
 .recently__card-image {
@@ -1019,22 +1016,47 @@ h1 {
   object-fit: contain;
 }
 
+.recently__card-info-cost {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 .recently__card-info-cost-old {
+  color: #00A0E3;
+  text-decoration: line-through;
+  line-height: 1.3rem;
+}
+
+.recently__card-info-cost-new {
+  font-size: 1.6rem;
+  line-height: 2rem;
   font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
 }
 
 .recently__card-info-article {
-  line-height: 1.3rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   color: #064E8C;
   margin-top: 0.8rem;
 }
 
 .recently__card-info-name {
-  ont-size: 1.4rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
   margin-top: 0.4rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВЫ НЕДАВНО СМОТРЕЛИ*/

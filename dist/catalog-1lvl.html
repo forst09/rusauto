@@ -410,12 +410,12 @@
     <!-- КОНЕЦ ГЛАВНОГО ЭКРАНА СТРАНИЦЫ КАТАЛОГ 1 УРОВНЯ -->
 
     <!-- НАЧАЛО СЕКЦИИ  ВЫ НЕДАВНО СМОТРЕЛИ-->
-    <sestion class="recently">
+    <section class="recently">
         <div class="wrapper">
             <h2 class="title title-left">Вы недавно смотрели</h2>
         </div>
         <div class="scroll">
-            <div class="swiper swiper-recently">
+            <div class="swiper swiper-recently swiper-not-mobile">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a href="javascript:void(0)" class="recently__card">
@@ -425,8 +425,8 @@
                                 </div>
                                 <div class="recently__card-info">
                                     <div class="recently__card-info-cost">
-                                        <div class="recenrly__card-info-cost-old">3 049,34 &#8381;</div>
-                                        <div class="recently__card-info-cost-new">5 486,08 &#8381;</div>
+                                        <div class="recently__card-info-cost-new">3 049,34 &#8381;</div>
+                                        <div class="recently__card-info-cost-old">5 486,08 &#8381;</div>
                                     </div>
                                     <div class="recently__card-info-article">Артикул: <span>53-12-1701302</span></div>
                                     <div class="recently__card-info-name">Вал первичный</div>
@@ -442,7 +442,7 @@
                                 </div>
                                 <div class="recently__card-info">
                                     <div class="recently__card-info-cost">
-                                        <div class="recenrly__card-info-cost-old">3 049,34 &#8381;</div>
+                                        <div class="recently__card-info-cost-new">3 049,34 &#8381;</div>
                                     </div>
                                     <div class="recently__card-info-article">Артикул: <span>53-12-1701302</span></div>
                                     <div class="recently__card-info-name">Сальник задней крышки КПП ГАЗ</div>
@@ -458,7 +458,7 @@
                                 </div>
                                 <div class="recently__card-info">
                                     <div class="recently__card-info-cost">
-                                        <div class="recenrly__card-info-cost-old">3 049,34 &#8381;</div>
+                                        <div class="recently__card-info-cost-new">3 049,34 &#8381;</div>
                                     </div>
                                     <div class="recently__card-info-article">Артикул: <span>53-12-1701302</span></div>
                                     <div class="recently__card-info-name">Вал первичный</div>
@@ -474,7 +474,7 @@
                                 </div>
                                 <div class="recently__card-info">
                                     <div class="recently__card-info-cost">
-                                        <div class="recenrly__card-info-cost-old">3 049,34 &#8381;</div>
+                                        <div class="recently__card-info-cost-new">3 049,34 &#8381;</div>
                                     </div>
                                     <div class="recently__card-info-article">Артикул: <span>53-12-1701302</span></div>
                                     <div class="recently__card-info-name">Сальник задней крышки КПП ГАЗ</div>
@@ -490,7 +490,7 @@
                                 </div>
                                 <div class="recently__card-info">
                                     <div class="recently__card-info-cost">
-                                        <div class="recenrly__card-info-cost-old">3 049,34 &#8381;</div>
+                                        <div class="recently__card-info-cost-new">3 049,34 &#8381;</div>
                                     </div>
                                     <div class="recently__card-info-article">Артикул: <span>53-12-1701302</span></div>
                                     <div class="recently__card-info-name">Вал первичный</div>
@@ -499,11 +499,23 @@
                         </a>
                     </div>
                 </div>
-                <div class="swiper-button-prev swiper-recently-button-prev"></div>
-                <div class="swiper-button-next swiper-recently-button-next"></div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev swiper-button-arrow-prev swiper-recently-button-prev">
+                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27 9.66683L1 9.66683M1 9.66683L10.3889 18.3335M1 9.66683L10.3889 1.00016"
+                                stroke="#064E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next swiper-button-arrow-next swiper-recently-button-next">
+                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9.66667H27M27 9.66667L17.6111 1M27 9.66667L17.6111 18.3333" stroke="#064E8C"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
-    </sestion>
+    </section>
 
     <!-- КОНЕЦ СЕКЦИИ  ВЫ НЕДАВНО СМОТРЕЛИ-->
 
