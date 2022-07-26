@@ -705,6 +705,16 @@
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ 668*/
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 668*/
+  .to-encyclopedia__info-text {
+    -ms-line-clamp: 4;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    max-width: 49rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -1889,13 +1899,50 @@
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1024*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1024*/
-  .catalog-2lvl .catalog__sections {
+  .catalog-2lvl .catalog__sections,
+.catalog-3lvl .catalog__sections {
     grid-template-columns: repeat(4, 3fr);
     grid-row-gap: 1.6rem;
     grid-column-gap: 1.6rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1024*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 1024*/
+  .catalog-3lvl .catalog__sections {
+    margin-top: 4.8rem;
+  }
+  .catalog-3lvl .btn-arrow {
+    margin-top: 1.2rem;
+  }
+
+  .to-encyclopedia {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+  }
+
+  .to-encyclopedia__image {
+    display: block;
+    width: 17.6rem;
+    height: 10.8rem;
+    flex-shrink: 0;
+  }
+  .to-encyclopedia__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .to-encyclopedia__info-text {
+    max-width: 68.2rem;
+    line-height: 2.6rem;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -2261,12 +2308,32 @@
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ 1500*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1500*/
-  .catalog-2lvl .catalog__sections {
+  .catalog-2lvl .catalog__sections,
+.catalog-3lvl .catalog__sections {
     grid-template-columns: repeat(5, 2.4fr);
     grid-row-gap: 2.4rem;
     grid-column-gap: 2.5rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 2 УРОВНЯ 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 1500*/
+  .to-encyclopedia {
+    gap: 3.2rem;
+  }
+
+  .to-encyclopedia__image {
+    width: 21.2rem;
+    height: 13rem;
+  }
+
+  .to-encyclopedia__info-text {
+    max-width: 80.9rem;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

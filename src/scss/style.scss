@@ -211,7 +211,7 @@ h1 {
     }
 
     svg {
-        margin-top: 0.1rem;
+        margin-top: 0.3rem;
         width: 1.2rem;
         height: 0.8rem;
     }
@@ -2063,6 +2063,43 @@ h1 {
 /*КОНЕЦ КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
 
 /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ*/
+
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ*/
+.catalog-3lvl {
+    .btn-arrow {
+        margin-top: 0.8rem;
+    }
+
+    .catalog__sections {
+        margin-top: 3.2rem;
+    }
+}
+
+.to-encyclopedia__image {
+    display: none;
+}
+
+.to-encyclopedia__info-text {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #064E8C;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 6;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+/*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ*/
+
 // ymaps
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-map-copyrights-promo {
