@@ -204,6 +204,21 @@ h1 {
   overflow: hidden;
 }
 
+/*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН */
+.about,
+.catalog-about {
+  margin-bottom: 2.4rem;
+}
+
+/*КАСТОМИЗАЦИЯ СВАЙПЕРОВ*/
+.recently .swiper-button-prev,
+.recently .swiper-button-next {
+  display: none;
+}
+.recently .swiper-slide {
+  width: auto;
+}
+
 .choice-city {
   display: none;
 }
@@ -278,12 +293,10 @@ h1 {
   line-height: 1.8rem;
   color: #064E8C;
   font-weight: 500;
-}
-.btn-show span {
   position: relative;
-  padding-right: 1.8rem;
+  padding-right: 1.9rem;
 }
-.btn-show span::after {
+.btn-show::after {
   content: "";
   position: absolute;
   right: 0.1rem;
@@ -292,18 +305,25 @@ h1 {
   height: 0.7rem;
   border-top: 0.15rem solid #064E8C;
   border-right: 0.15rem solid #064E8C;
-  transition: 0.3s ease;
+  transform: rotate(135deg);
+  transition: transform 0.3s ease;
+}
+.btn-show span {
+  position: relative;
 }
 
-.btn-show__more::after {
-  transform: rotate(135deg);
+.btn-show.active::after {
+  transform: rotate(-45deg);
+}
+.btn-show.active .btn-show__more {
+  display: none;
+}
+.btn-show.active .btn-show__hide {
+  display: inline-block;
 }
 
 .btn-show__hide {
   display: none;
-}
-.btn-show__hide::after {
-  rotate: -45deg;
 }
 
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
@@ -941,6 +961,21 @@ h1 {
   font-size: 1.4rem;
   color: #064E8C;
   line-height: 2.6rem;
+  position: relative;
+  width: fit-content;
+}
+.modal-choice__city-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.1rem;
+  background-color: #064E8C;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s ease;
+}
+.modal-choice__city-item:hover::before, .modal-choice__city-item:active::before, .modal-choice__city-item:focus::before, .modal-choice__city-item:focus-within::before {
+  width: 100%;
 }
 
 .modal-choice__nothing {
@@ -952,6 +987,57 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВЫ НЕДАВНО СМОТРЕЛИ*/
+.swiper-recently {
+  display: inline-flex;
+  overflow-x: auto;
+}
+.swiper-recently .swiper-wrapper {
+  gap: 1.6rem;
+}
+
+.recently__card {
+  display: inline-block;
+  width: 100%;
+  max-width: 26rem;
+  padding: 0.25rem 0.46rem;
+}
+
+.recently__card-wrapper {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.recently__card-image {
+  width: 9.2rem;
+  height: 5.8rem;
+}
+.recently__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.recently__card-info-cost-old {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.recently__card-info-article {
+  line-height: 1.3rem;
+  color: #064E8C;
+  margin-top: 0.8rem;
+}
+
+.recently__card-info-name {
+  ont-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 0.4rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВЫ НЕДАВНО СМОТРЕЛИ*/
 /*НАЧАЛО СТИЛЕЙ ХЛЕБНЫХ КРОШЕК*/
 .bread-crumbs {
   margin: 4rem 0;

@@ -159,7 +159,13 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 668*/
-  /*СТИЛИ ДЛЯ КАРТОЧЕК КАТАЛОГА НА ГЛАВНОЙ И В МОДАЛЬНОМ КАТАЛОГЕ*/
+  /*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН 668*/
+  .about,
+.catalog-about {
+    margin-bottom: 4rem;
+  }
+
+  /*СТИЛИ ДЛЯ КАРТОЧЕК КАТАЛОГА НА ГЛАВНОЙ И В МОДАЛЬНОМ КАТАЛОГЕ 668*/
   .spares__item-info-models {
     display: none;
     flex-wrap: wrap;
@@ -629,6 +635,10 @@
 
   /*КОНЕЦ КАТАЛОГ АВТОЗАПЧАСТЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ 668*/
+  .catalog-about .js-hide {
+    height: 16.2rem;
+  }
+
   .catalog-about__banner {
     position: relative;
     justify-content: space-between;
@@ -1149,6 +1159,9 @@
   .catalog-modal .header .header-bottom__search {
     max-width: 42.8rem;
   }
+  .catalog-modal .header .header-bottom__search-result.active {
+    width: 100%;
+  }
   .catalog-modal .header .header-bottom__search-example {
     display: block;
   }
@@ -1251,6 +1264,12 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 1024*/
+  /*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН 1024 */
+  .about,
+.catalog-about {
+    margin-bottom: 5.6rem;
+  }
+
   /*НАЧАЛО СТИЛЕЙ ХЛЕБНЫХ КРОШЕК 1024*/
   .bread-crumbs {
     margin: 6.4rem 0;
@@ -1577,10 +1596,6 @@
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КОНТАКТЫ 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ О КОМПАНИИ 1024*/
-  .about {
-    margin-bottom: 5.6rem;
-  }
-
   .about__container {
     gap: 10.3rem;
   }
@@ -1744,6 +1759,9 @@
   .catalog-about .text p {
     line-height: 1.8rem;
     margin-bottom: 1.8rem;
+  }
+  .catalog-about .js-hide {
+    height: 18rem;
   }
 
   .catalog-about__container {
@@ -1922,6 +1940,12 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/
+  /*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН  1500*/
+  .about,
+.catalog-about {
+    margin-bottom: 6.4rem;
+  }
+
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
   .main {
@@ -2127,6 +2151,10 @@
 
   /*КОНЕЦ КАТАЛОГ АВТОЗАПЧАСТЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРО КАТАЛОГ АВТОЗАПЧАСТЕЙ 1500*/
+  .catalog-about .js-hide {
+    height: 12.6rem;
+  }
+
   .catalog-about__info {
     max-width: 88rem;
   }

@@ -256,7 +256,7 @@ $(document).ready(function () {
     jshide.each(function () {
         let texthideHeight = $(this).find('.text-hide').height();
         console.log(texthideHeight);
-        if(texthideHeight <= $(this).height()) {
+        if (texthideHeight <= $(this).height()) {
             $(this).parents('section').find('.btn-show__wrapper').hide();
         }
     });
@@ -331,10 +331,28 @@ $(document).ready(function () {
             }
         });
 
+        //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "НАШИ ПАРТНЕРЫ"
+        const swiperRecently = new Swiper('.swiper-recently', {
+            speed: 700,
+            slidesPerView: 'auto',
+            breakpoints: {
 
+                1024: {
+                    spaceBetween: 24,
+                },
+
+                1500: {
+                    spaceBetween: 32,
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-recently-button-next',
+                prevEl: '.swiper-recently-button-prev',
+            }
+        });
 
     }
-    // map init
+    // ПОДКЛЮЧЕНИЕ КАРТЫ
     const jsMap = document.querySelector("#map");
     const renderMap = function () {
         if ($("#map").length !== 0) {
