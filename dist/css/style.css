@@ -1840,6 +1840,57 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ МАРОК*/
+.brands__item {
+  display: inline-block;
+  padding: 0.8rem 1.6rem 1rem;
+  background-color: #FAFAFA;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.brands__item:hover, .brands__item:active, .brands__item:focus, .brands__item:focus-within {
+  background-color: #F5FBFE;
+}
+.brands__item:hover .brands__item-name, .brands__item:active .brands__item-name, .brands__item:focus .brands__item-name, .brands__item:focus-within .brands__item-name {
+  color: #064E8C;
+}
+
+.brands__item-image {
+  width: 7.3rem;
+  height: 4.4rem;
+}
+.brands__item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brands__item-name {
+  font-weight: 500;
+  margin-top: 1.6rem;
+  line-height: 1.3rem;
+  transition: 0.3s ease;
+}
+
+.brands__scroll {
+  padding: 0 1.6rem;
+  overflow-x: auto;
+}
+.brands__scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+
+.brands__wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6rem;
+  overflow-x: auto;
+}
+
+/*КОНЕЦ СТИЛЕЙ МАРОК*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-map-copyrights-promo {
   display: none !important;

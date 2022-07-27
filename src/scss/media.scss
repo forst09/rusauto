@@ -820,6 +820,44 @@
 
     /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 668*/
 
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ МАРОК 668*/
+    .brands {
+        .desc {
+            max-width: 49rem;
+        }
+    }
+
+    .brands__scroll {
+        padding: 0 4.4rem;
+        overflow-x: unset;
+    }
+
+    .brands__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        grid-column-gap: 2.6rem;
+        grid-row-gap: 2.4rem;
+    }
+
+    .brands__item {
+        padding: 0.8rem;
+    }
+
+    .brands__item-image {
+        margin: auto;
+        width: 10.5rem;
+        height: 6.4rem;
+    }
+
+    .brands__item-name {
+        margin-top: 1.3rem;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МАРОК 668*/
+
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -2233,6 +2271,39 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 1024*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ МАРОК 1024*/
+    .brands {
+        .desc {
+            max-width: 58.6rem;
+        }
+    }
+
+    .brands__scroll {
+        padding: 0 6.4rem;
+    }
+
+    .brands__wrapper {
+        grid-column-gap: 2.4rem;
+    }
+
+    .brands__item {
+        padding: 1.6rem;
+    }
+
+    .brands__item-image {
+        width: 17.9rem;
+        height: 11rem;
+    }
+
+    .brands__item-name {
+        margin-top: 2.2rem;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МАРОК 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -2699,6 +2770,28 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 1500*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ МАРОК 1500*/
+    .brands__scroll {
+        padding: 0 8rem;
+    }
+
+    .brands__wrapper {
+        grid-template-columns: repeat(4, 3fr);
+        gap: 3.2rem;
+    }
+
+    .brands__item {
+        padding: 2.1rem 1.6rem 1.6rem 1.6rem;
+    }
+
+    .brands__item-image {
+        width: 22.3rem;
+        height: 13.6rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МАРОК 1500*/
 
 }
 
