@@ -738,7 +738,6 @@
   }
 
   .brands__item-image {
-    margin: auto;
     width: 10.5rem;
     height: 6.4rem;
   }
@@ -1650,10 +1649,10 @@
     padding: 1.2rem;
     min-height: 13.6rem;
   }
-  .catalog__sections-item:hover {
-    background-color: #F5FBFE;
+  .catalog__sections-item:active, .catalog__sections-item:focus, .catalog__sections-item:focus-within, .catalog__sections-item:hover {
+    background-color: #EDF8FD;
   }
-  .catalog__sections-item:hover .catalog__sections-item-image {
+  .catalog__sections-item:active .catalog__sections-item-image, .catalog__sections-item:focus .catalog__sections-item-image, .catalog__sections-item:focus-within .catalog__sections-item-image, .catalog__sections-item:hover .catalog__sections-item-image {
     right: 0;
   }
 

@@ -845,7 +845,6 @@
     }
 
     .brands__item-image {
-        margin: auto;
         width: 10.5rem;
         height: 6.4rem;
     }
@@ -1891,9 +1890,11 @@
         // max-width: 20.473rem;
         min-height: 13.6rem;
 
-
+        &:active,
+        &:focus,
+        &:focus-within,
         &:hover {
-            background-color: #F5FBFE;
+            background-color: #EDF8FD;
 
             .catalog__sections-item-image {
                 right: 0;
