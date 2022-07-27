@@ -175,9 +175,21 @@ h1 {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #064E8C;
+  position: relative;
+  padding-right: 2rem;
 }
-.btn-arrow span {
-  margin-right: 0.8rem;
+.btn-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 0.4rem);
+  display: block;
+  width: 1.2rem;
+  height: 0.8rem;
+  background-image: url("../img/arrow.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1.2rem 0.8rem;
   transition: 0.3s ease;
 }
 .btn-arrow svg {
@@ -185,8 +197,8 @@ h1 {
   width: 1.2rem;
   height: 0.8rem;
 }
-.btn-arrow:active span, .btn-arrow:focus span, .btn-arrow:focus-within span, .btn-arrow:hover span {
-  margin-right: 2.4rem;
+.btn-arrow:active::after, .btn-arrow:focus::after, .btn-arrow:focus-within::after, .btn-arrow:hover::after {
+  right: -1.6rem;
 }
 
 .swiper::-webkit-scrollbar,

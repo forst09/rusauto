@@ -492,9 +492,11 @@
     min-height: fit-content;
   }
   .catalog__stock-card .btn-arrow {
-    position: static;
+    position: relative;
     transform: none;
     margin-top: 2.2rem;
+    left: unset;
+    bottom: unset;
   }
 
   .catalog__stock-card-time {

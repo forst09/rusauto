@@ -204,9 +204,21 @@ h1 {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: $blue;
+    position: relative;
+    padding-right: 2rem;
 
-    span {
-        margin-right: 0.8rem;
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: calc(50% - 0.4rem);
+        display: block;
+        width: 1.2rem;
+        height: 0.8rem;
+        background-image: url('../img/arrow.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 1.2rem 0.8rem;
         transition: 0.3s ease;
     }
 
@@ -220,8 +232,8 @@ h1 {
     &:focus,
     &:focus-within,
     &:hover {
-        span {
-            margin-right: 2.4rem;
+        &::after {
+            right: -1.6rem;
         }
     }
 }
