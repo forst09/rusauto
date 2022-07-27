@@ -74,8 +74,8 @@
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВЫ НЕДАВНО СМОТРЕЛИ 668*/
     .recently__card {
-        width: 28.8rem;
-        height: 9.4rem;
+        min-width: 28.8rem;
+        min-height: 9.4rem;
         padding: 0;
     }
 
@@ -96,6 +96,7 @@
     .recently__card-info-name {
         font-size: 1.6rem;
         line-height: 2rem;
+        max-width: 20rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВЫ НЕДАВНО СМОТРЕЛИ 668*/
@@ -842,6 +843,8 @@
 
     .brands__item {
         padding: 0.8rem;
+        width: auto;
+        height: 11.9rem;
     }
 
     .brands__item-image {
@@ -850,9 +853,9 @@
     }
 
     .brands__item-name {
-        margin-top: 1.3rem;
+        // margin-top: 1.3rem;
         font-size: 1.4rem;
-        line-height: 2.6rem;
+        line-height: 1.7rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ МАРОК 668*/
@@ -1448,8 +1451,8 @@
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВЫ НЕДАВНО СМОТРЕЛИ 1024*/
     .recently__card {
-        width: 35rem;
-        height: 9.5rem;
+        min-width: 35rem;
+        min-height: 9.5rem;
     }
 
     .recently__card-image {
@@ -2291,6 +2294,7 @@
 
     .brands__item {
         padding: 1.6rem;
+        height: 19.2rem;
     }
 
     .brands__item-image {
@@ -2299,7 +2303,6 @@
     }
 
     .brands__item-name {
-        margin-top: 2.2rem;
         font-size: 1.6rem;
         line-height: 2.8rem;
     }
@@ -2776,6 +2779,10 @@
     /*НАЧАЛО СТИЛЕЙ МАРОК 1500*/
     .brands__scroll {
         padding: 0 8rem;
+    }
+
+    .brands__item {
+        height: 22.2rem;
     }
 
     .brands__wrapper {
