@@ -1958,6 +1958,39 @@ h1 {
   font-weight: 500;
 }
 
+.catalog-4lvl__wrapper {
+  margin-top: 3.2rem;
+}
+
+.catalog-4lvl__filters {
+  display: none;
+}
+
+.catalog-4lvl__catalog-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-4lvl__catalog-buttons-tabs {
+  display: none;
+}
+
+.catalog-4lvl__catalog-buttons-filters {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.catalog-4lvl__catalog-buttons-filters svg {
+  width: 2rem;
+  height: 2rem;
+}
+.catalog-4lvl__catalog-buttons-filters span {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #064E8C;
+}
+
 /*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-map-copyrights-promo {
