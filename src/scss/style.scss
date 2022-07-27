@@ -580,29 +580,35 @@ h1 {
     align-items: center;
     position: relative;
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        width: 2rem;
-        height: 1px;
-        background-color: #064E8C;
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
-    &::before {
-        top: 0.55rem;
-    }
+    // &::before,
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     width: 2rem;
+    //     height: 1px;
+    //     background-color: #064E8C;
+    // }
 
-    &::after {
-        bottom: 0.55rem;
-    }
+    // &::before {
+    //     top: 0.55rem;
+    // }
 
-    span {
-        position: relative;
-        width: 2rem;
-        height: 1px;
-        background-color: #064E8C;
-    }
+    // &::after {
+    //     bottom: 0.55rem;
+    // }
+
+    // span {
+    //     position: relative;
+    //     width: 2rem;
+    //     height: 1px;
+    //     background-color: #064E8C;
+    // }
 }
 
 .header-bottom__logo {
