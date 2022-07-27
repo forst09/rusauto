@@ -22,6 +22,24 @@ h1 {
     margin-bottom: 1.2rem;
 }
 
+.h1__wrapper {
+    display: flex;
+    gap: 1.6rem;
+    align-items: baseline;
+    margin-bottom: 1.2rem;
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    span {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        font-weight: 400;
+        color: #A3A8AB;
+    }
+}
+
 .wrapper {
     padding: 0 1.6rem;
 }
@@ -239,7 +257,8 @@ h1 {
 }
 
 .swiper,
-.scroll {
+.scroll,
+.category__scroll {
     &::-webkit-scrollbar {
         width: 0;
         height: 0;
@@ -373,7 +392,7 @@ h1 {
         content: '';
         position: absolute;
         right: 0.1rem;
-        top: calc(50% - 0.45rem);
+        top: calc(50% - 0.35rem);
         width: 0.7rem;
         height: 0.7rem;
         border-top: 0.15rem solid #064E8C;
@@ -1263,12 +1282,12 @@ h1 {
 .catalog-about {
     .js-hide {
         height: 33.9rem;
-        overflow: hidden;
     }
 }
 
 .js-hide {
     transition: height 0.6s ease;
+    overflow: hidden;
 }
 
 .catalog-about__banner {
@@ -2196,6 +2215,45 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ МАРОК*/
+
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ*/
+.catalog-4lvl {
+    .js-hide {
+        height: 11rem;
+    }
+
+    .btn-show__wrapper {
+        margin-top: 1.2rem;
+    }
+}
+
+.category {
+    margin-top: 3.2rem;
+}
+
+.category__scroll {
+    padding: 0 1.6rem;
+    overflow-x: auto;
+}
+
+.category__container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.category__item {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    background-color: #FAFAFA;
+    width: max-content;
+    font-weight: 500;
+}
+
+/*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ*/
 
 // ymaps
 .ymaps-2-1-79-copyright__content-cell,
