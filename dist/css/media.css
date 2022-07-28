@@ -2208,6 +2208,14 @@
     box-orient: vertical;
   }
 
+  .catalog-4lvl__catalog-item-not-availability {
+    margin-top: 0.8rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #00A0E3;
+  }
+
   .catalog-4lvl__catalog-item-bottom {
     margin-top: auto;
   }
@@ -2652,5 +2660,29 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ МАРОК 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1500*/
+  .catalog-4lvl__filters {
+    min-width: 30rem;
+  }
+
+  .catalog-4lvl__catalog-tile-container {
+    grid-template-columns: repeat(4, 3fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 3.2rem;
+  }
+
+  .catalog-4lvl__catalog-item {
+    min-width: 21.8rem;
+    min-height: 35.5rem;
+    padding: 1.6rem 0.8rem 1.5rem;
+  }
+
+  .catalog-4lvl__catalog-item-name {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/
