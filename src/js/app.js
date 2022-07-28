@@ -148,8 +148,6 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
-
-
     //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ НА ПК
     $(document).click(function (e) {
         if ($(window).width() >= 1024) {
@@ -159,6 +157,15 @@ $(document).ready(function () {
                 $('.modal__background').removeClass('active');
             }
         }
+
+
+        // if ($('.catalog-4lvl__catalog-buttons-sorting-dropdown').hasClass('active')) {
+        //     if (!($(e.target).is('.catalog-4lvl__catalog-buttons-sorting-btn'))) {
+        //         console.log('cl');
+        //         $('.catalog-4lvl__catalog-buttons-sorting-dropdown').removeClass('active');
+        //     }
+        // }
+
     });
 
     //ПОКАЗАТЬ КНОПКУ ПЕРЕЙТИ К... НА МОДАЛЬНОМ КАТАЛОГЕ
@@ -298,13 +305,31 @@ $(document).ready(function () {
     });
 
     // ТАБЫ, НА МОБИЛКАХ ВКЛЮЧАТЬ ДЛИННЫЕ КАРТОЧКИ
-    if (($(window).width() >= 320) && ($(window).width() < 668)) {
+    if (($(window).width() >= 320) && ($(window).width() < 1023)) {
         $("#catalog4lvlTabLines").trigger("click");
     }
     // ТАБЫ, НАЧИНАЯ С ПЛАНШЕТОВ ВКЛЮЧАТЬ ПЛИТКИ
-    if ($(window).width() >= 668) {
+    if ($(window).width() >= 1024) {
         $("#catalog4lvlTabTiles").trigger("click");
     }
+
+    //ВЫПАДАШКА С СОРТИРОВКОЙ В КАТАЛОГЕ 4 УРОВНЯ 
+    $(document).on('click', ".catalog-4lvl__catalog-buttons-sorting-btn", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('.catalog-4lvl__catalog-buttons').find('.catalog-4lvl__catalog-buttons-sorting-dropdown').removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).parents('.catalog-4lvl__catalog-buttons').find('.catalog-4lvl__catalog-buttons-sorting-dropdown').addClass('active');
+        }
+
+    });
+
+    //ПЕРЕДАЧА ТЕКСТА В ВЫПАДАШКУ С СОРТИРОВКОЙ В КАТАЛОГЕ 4 УРОВНЯ 
+    $(document).on('click', ".catalog-4lvl__catalog-buttons-sorting-dropdown-item", function () {
+        $(this).parents('.catalog-4lvl__catalog-buttons-sorting-btn').find('.catalog-4lvl__catalog-buttons-sorting-span').html($(this).attr('data-text'));
+    });
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {

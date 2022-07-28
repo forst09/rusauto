@@ -2141,7 +2141,7 @@
 
   .catalog-4lvl__container {
     display: flex;
-    gap: 4.8rem;
+    justify-content: space-between;
   }
 
   .catalog-4lvl__filters {
@@ -2164,6 +2164,7 @@
 
   .catalog-4lvl__catalog {
     width: 100%;
+    max-width: 99.2rem;
   }
 
   .catalog-4lvl__catalog-lines-item-wrapper {
@@ -2174,10 +2175,76 @@
     top: 1.2rem;
   }
 
+  .catalog-4lvl__catalog-item {
+    transition: 0.3s ease;
+  }
+  .catalog-4lvl__catalog-item:hover {
+    background-color: #F5FBFE;
+  }
+  .catalog-4lvl__catalog-item .buy {
+    min-width: unset;
+    width: 100%;
+  }
+  .catalog-4lvl__catalog-item .catalog-4lvl__catalog-item-image {
+    margin: 0;
+  }
+  .catalog-4lvl__catalog-item .catalog-4lvl__catalog-item-manufacturer {
+    text-align: center;
+    margin-top: 0.4rem;
+  }
+  .catalog-4lvl__catalog-item .catalog-4lvl__catalog-item-name {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .catalog-4lvl__catalog-item .catalog-4lvl__catalog-item-article {
+    margin-top: 1.6rem;
+  }
+  .catalog-4lvl__catalog-item .catalog-4lvl__catalog-item-bottom {
+    gap: 0.4rem;
+  }
+  .catalog-4lvl__catalog-item .catalog-4lvl__catalog-item-image-label {
+    position: static;
+    margin: 0;
+  }
+  .catalog-4lvl__catalog-item .catalog-4lvl__catalog-item-bottom {
+    margin-top: auto;
+  }
+
   .catalog-4lvl__catalog-tile-container {
     display: grid;
     grid-template-columns: repeat(3, 4fr);
     gap: 2.4rem;
+  }
+
+  .catalog-4lvl__catalog-buttons-filters {
+    display: none;
+  }
+
+  .catalog-4lvl__catalog-buttons-tabs {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .catalog-4lvl__catalog-buttons-tabs-item {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .catalog-4lvl__catalog-buttons-tabs-item svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .catalog-4lvl__catalog-buttons-tabs-item.active svg path,
+.catalog-4lvl__catalog-buttons-tabs-item.active svg rect {
+    fill: #00A0E3;
+  }
+
+  .catalog-4lvl__catalog-tile,
+.catalog-4lvl__catalog-lines {
+    margin-top: 1.6rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1024*/

@@ -2283,6 +2283,19 @@ h1 {
     background-color: #FAFAFA;
     width: max-content;
     font-weight: 500;
+    transition: 0.3s ease;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        color: #064E8C;
+        background-color: #EDF8FD;
+    }
+
+    &:hover {
+        color: #064E8C;
+        background-color: #F5FBFE;
+    }
 }
 
 .catalog-4lvl__wrapper {
@@ -2304,7 +2317,7 @@ h1 {
 
 .catalog-4lvl__catalog-buttons-filters {
     height: fit-content;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.8rem;
 
@@ -2528,6 +2541,72 @@ h1 {
 
 .catalog-4lvl__catalog-lines {
     margin-top: 3.2rem;
+}
+
+.catalog-4lvl__catalog-buttons-sorting-btn {
+    position: relative;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: #064E8C;
+    transition: 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.catalog-4lvl__catalog-buttons-sorting-btn.active {
+    .catalog-4lvl__catalog-buttons-sorting-span::after {
+        transform: rotate(-45deg);
+        margin-top: 0.2rem;
+    }
+}
+
+.catalog-4lvl__catalog-buttons-sorting-span {
+    position: relative;
+    cursor: pointer;
+    padding-right: 3.2rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        right: 0.8rem;
+        top: calc(50% - 0.35rem);
+        width: 0.7rem;
+        height: 0.7rem;
+        border-top: 0.15rem solid #064E8C;
+        border-right: 0.15rem solid #064E8C;
+        transform: rotate(135deg);
+        transition: 0.3s ease;
+    }
+}
+
+.catalog-4lvl__catalog-buttons-sorting-dropdown {
+    padding: 0.8rem;
+    position: absolute;
+    width: max-content;
+    background: #ffffff;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.catalog-4lvl__catalog-buttons-sorting-dropdown.active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+    top: calc(100% + 0.4rem);
+}
+
+.catalog-4lvl__catalog-buttons-sorting-dropdown-item {
+    color: #262B2E;
+    cursor: pointer;
 }
 
 /*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ*/

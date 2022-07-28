@@ -56,25 +56,27 @@
                     </div>
                     <div class="catalog-4lvl__catalog">
                         <div class="catalog-4lvl__catalog-buttons">
-                            <div class="catalog-4lvl__catalog-buttons-sorting">
-                                <div href="javascript:void(0)" class="catalog-4lvl__catalog-buttons-sorting-btn">
-                                    <span class="catalog-4lvl__catalog-buttons-sorting-span">Популярное</span>
-                                    <div class="catalog-4lvl__catalog-buttons-sorting-dropdown">
-                                        <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item">Популярное
-                                        </div>
-                                        <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item">Сначала дешевле
-                                        </div>
-                                        <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item">Сначала дороже
-                                        </div>
-                                        <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item">По величине
-                                            скидки
-                                        </div>
+                            <div class="catalog-4lvl__catalog-buttons-sorting-btn">
+                                <span class="catalog-4lvl__catalog-buttons-sorting-span">Популярное</span>
+                                <div class="catalog-4lvl__catalog-buttons-sorting-dropdown">
+                                    <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item"
+                                        data-text="Популярное">Популярное
+                                    </div>
+                                    <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item"
+                                        data-text="Сначала дешевле">Сначала дешевле
+                                    </div>
+                                    <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item"
+                                        data-text="Сначала дороже">Сначала дороже
+                                    </div>
+                                    <div class="catalog-4lvl__catalog-buttons-sorting-dropdown-item"
+                                        data-text="По величине скидки">По величине
+                                        скидки
                                     </div>
                                 </div>
                             </div>
                             <div class="catalog-4lvl__catalog-buttons-tabs">
                                 <a id="catalog4lvlTabTiles" href="javascript:void(0)"
-                                    class="catalog-4lvl__catalog-buttons-tabs-tile tab"
+                                    class="catalog-4lvl__catalog-buttons-tabs-item tab"
                                     data-tab="catalog-4lvl__catalog-tile">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +87,7 @@
                                     </svg>
                                 </a>
                                 <a id="catalog4lvlTabLines" href="javascript:void(0)"
-                                    class="catalog-4lvl__catalog-buttons-tabs-lines tab"
+                                    class="catalog-4lvl__catalog-buttons-tabs-item tab"
                                     data-tab="catalog-4lvl__catalog-lines">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +112,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="catalog-4lvl__catalog-buttons-filters">
+                            <a href="javascript:void(0)" class="catalog-4lvl__catalog-buttons-filters">
                                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -118,12 +120,12 @@
                                         stroke="#064E8C" stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
                                 <span>Фильтры</span>
-                            </div>
+                            </a>
                         </div>
 
                         <!--НАЧАЛО КАТАЛОГА ПЛИТКОЙ -->
-                        <div class="catalog-4lvl__catalog-tile" id="catalog-4lvl__catalog-tile">
-                            <div class="catalog-4lvl__catalog-tile-container tab-content">
+                        <div class="catalog-4lvl__catalog-tile tab-content" id="catalog-4lvl__catalog-tile">
+                            <div class="catalog-4lvl__catalog-tile-container">
                                 <div class="catalog-4lvl__catalog-item">
                                     <div class="catalog-4lvl__catalog-item-image-container">
                                         <div class="catalog-4lvl__catalog-item-image">
@@ -482,10 +484,9 @@
                         </div>
                         <!--КОНЕЦ КАТАЛОГА ПЛИТКОЙ -->
 
-
                         <!--НАЧАЛО КАТАЛОГА В ЛИНИИ -->
-                        <div class="catalog-4lvl__catalog-lines" id="catalog-4lvl__catalog-lines">
-                            <div class="catalog-4lvl__catalog-lines-container tab-content">
+                        <div class="catalog-4lvl__catalog-lines tab-content" id="catalog-4lvl__catalog-lines">
+                            <div class="catalog-4lvl__catalog-lines-container">
 
                                 <div class="catalog-4lvl__catalog-lines-item">
                                     <div class="catalog-4lvl__catalog-lines-item-wrapper">
