@@ -230,6 +230,33 @@ h1 {
   overflow-x: auto;
 }
 
+.buy {
+  max-width: 6.8rem;
+  display: inline-flex;
+  gap: 0.8rem;
+  justify-content: center;
+  padding: 0.6rem;
+  width: 100%;
+  text-align: center;
+  background-color: #064E8C;
+  color: #ffffff;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  height: fit-content;
+}
+.buy svg {
+  height: 2rem;
+}
+
+.buy-text {
+  display: none;
+}
+
+.buy-plus {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
 .header-top__links-icons-basket,
 .header-top__links-icons-user {
   width: 2rem;
@@ -1989,6 +2016,198 @@ h1 {
   font-size: 1.4rem;
   line-height: 2rem;
   color: #064E8C;
+}
+
+.catalog-4lvl__catalog-tile {
+  display: none;
+}
+
+.catalog-4lvl__catalog-item-image-label {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.catalog-4lvl__catalog-item-image-label-item {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding: 0.2rem 0.6rem;
+  color: #ffffff;
+}
+.catalog-4lvl__catalog-item-image-label-item:nth-of-type(1) {
+  background-color: #E6281C;
+}
+.catalog-4lvl__catalog-item-image-label-item:nth-of-type(2) {
+  background-color: #00A0E3;
+}
+.catalog-4lvl__catalog-item-image-label-item:nth-of-type(3) {
+  background-color: #064E8C;
+}
+
+.catalog-4lvl__catalog-item-manufacturer {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.catalog-4lvl__catalog-item-name {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-top: 0.4rem;
+  max-width: 40rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.catalog-4lvl__catalog-item-article {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 0.8rem;
+  color: #064E8C;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.catalog-4lvl__catalog-item-availability {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 0.4rem;
+  color: #064E8C;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.catalog-4lvl__catalog-item-not-availability {
+  margin-top: 0.8rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #00A0E3;
+}
+
+.catalog-4lvl__catalog-item-bottom {
+  margin-top: auto;
+  display: flex;
+  max-width: 19.5rem;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.catalog-4lvl__catalog-item-cost {
+  min-height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  justify-content: end;
+}
+
+.catalog-4lvl__catalog-item-cost-old {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-decoration: line-through;
+  color: #00A0E3;
+}
+
+.catalog-4lvl__catalog-item-cost-new {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.catalog-4lvl__catalog-item-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-height: 12.9rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.catalog-4lvl__catalog-item-image {
+  width: 7.7rem;
+  height: 4.7rem;
+  flex-shrink: 0;
+}
+.catalog-4lvl__catalog-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.catalog-4lvl__catalog-lines-item-card {
+  display: flex;
+  gap: 1.6rem;
+  min-height: 15.2rem;
+}
+
+.catalog-4lvl__catalog-lines-item-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.catalog-4lvl__catalog-lines-item {
+  padding: 1.6rem 0;
+  position: relative;
+}
+.catalog-4lvl__catalog-lines-item::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #A3A8AB;
+  left: 0;
+  top: 0;
+  opacity: 0.1;
+}
+.catalog-4lvl__catalog-lines-item:nth-of-type(1) {
+  padding-top: 0;
+}
+.catalog-4lvl__catalog-lines-item:nth-of-type(1)::before {
+  content: none;
 }
 
 /*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ*/

@@ -814,18 +814,6 @@
     max-width: 58.6rem;
   }
 
-  .buy {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    padding: 0.7rem;
-    margin-top: 0.4rem;
-    background-color: #064E8C;
-    color: #ffffff;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-
   .btn:hover {
     background-color: #00A0E3;
   }
@@ -1729,7 +1717,7 @@
   }
 
   .news__item-date {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .news__item-title {
@@ -2084,162 +2072,10 @@
     min-width: 20rem;
   }
 
-  .catalog-4lvl__catalog-item-image-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    min-height: 12.9rem;
-    width: fit-content;
-    margin: 0 auto;
-  }
-
-  .catalog-4lvl__catalog-item-image {
-    width: 17.2rem;
-    height: 10.8rem;
-  }
-  .catalog-4lvl__catalog-item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .catalog-4lvl__catalog-item-image-label {
-    display: flex;
-    gap: 0.4rem;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .catalog-4lvl__catalog-item-image-label-item {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    padding: 0.2rem 0.6rem;
-    color: #ffffff;
-  }
-  .catalog-4lvl__catalog-item-image-label-item:nth-of-type(1) {
-    background-color: #E6281C;
-  }
-  .catalog-4lvl__catalog-item-image-label-item:nth-of-type(2) {
-    background-color: #00A0E3;
-  }
-  .catalog-4lvl__catalog-item-image-label-item:nth-of-type(3) {
-    background-color: #064E8C;
-  }
-
   .catalog-4lvl__catalog-tile-container {
     display: grid;
     grid-template-columns: repeat(3, 4fr);
     gap: 2.4rem;
-  }
-
-  .catalog-4lvl__catalog-item-manufacturer {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    text-align: center;
-    margin-top: 0.4rem;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -ms-line-clamp: 1;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    display: -webkit-box;
-    display: box;
-    word-wrap: break-word;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-  }
-
-  .catalog-4lvl__catalog-item-name {
-    margin-top: 0.8rem;
-    text-align: center;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -ms-line-clamp: 2;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    display: -webkit-box;
-    display: box;
-    word-wrap: break-word;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-  }
-
-  .catalog-4lvl__catalog-item-article {
-    margin-top: 1.6rem;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: #064E8C;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -ms-line-clamp: 1;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    display: -webkit-box;
-    display: box;
-    word-wrap: break-word;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-  }
-
-  .catalog-4lvl__catalog-item-availability {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: #064E8C;
-    margin-top: 0.8rem;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -ms-line-clamp: 1;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    display: -webkit-box;
-    display: box;
-    word-wrap: break-word;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-  }
-
-  .catalog-4lvl__catalog-item-not-availability {
-    margin-top: 0.8rem;
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: #00A0E3;
-  }
-
-  .catalog-4lvl__catalog-item-bottom {
-    margin-top: auto;
-  }
-
-  .catalog-4lvl__catalog-item-cost {
-    min-height: 3.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    align-items: center;
-    justify-content: end;
-  }
-
-  .catalog-4lvl__catalog-item-cost-old {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    text-decoration: line-through;
-    color: #00A0E3;
-  }
-
-  .catalog-4lvl__catalog-item-cost-new {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 2rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1024*/
