@@ -19,6 +19,23 @@
     line-height: 3.4rem;
   }
 
+  .buy {
+    max-width: unset;
+    min-width: 14.9rem;
+    padding: 0.7rem;
+  }
+  .buy svg {
+    display: none;
+  }
+
+  .buy-text {
+    display: block;
+  }
+
+  .buy-plus {
+    display: none;
+  }
+
   .title {
     max-width: 53.2rem;
     font-size: 2.4rem;
@@ -773,6 +790,68 @@
     padding: 2rem 3.2rem;
   }
 
+  .catalog-4lvl__catalog-item-image {
+    width: 17.2rem;
+    height: 10.8rem;
+    margin-top: 2.4rem;
+  }
+
+  .catalog-4lvl__catalog-lines-item-card {
+    align-items: flex-start;
+    min-height: 12.9rem;
+    align-items: center;
+  }
+
+  .catalog-4lvl__catalog-lines-item-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .catalog-4lvl__catalog-lines-item-info-top {
+    max-width: 19.6rem;
+    height: fit-content;
+  }
+
+  .catalog-4lvl__catalog-item-name {
+    margin-top: 0.8rem;
+  }
+
+  .catalog-4lvl__catalog-item-article {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .catalog-4lvl__catalog-item-availability {
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .catalog-4lvl__catalog-item-bottom {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: unset;
+    justify-content: unset;
+    max-width: unset;
+    align-items: center;
+  }
+
+  .catalog-4lvl__catalog-item-cost {
+    align-items: center;
+  }
+
+  .catalog-4lvl__catalog-item-image-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .catalog-4lvl__catalog-lines-item-wrapper {
+    position: relative;
+  }
+
   /*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
@@ -794,6 +873,10 @@
   h1 {
     font-size: 3.8rem;
     line-height: 5.3rem;
+  }
+
+  .buy {
+    min-width: 20.2rem;
   }
 
   .title {
@@ -2070,6 +2153,18 @@
     flex-direction: column;
     overflow: hidden;
     min-width: 20rem;
+  }
+
+  .catalog-4lvl__catalog-lines-item-card {
+    gap: 2.4rem;
+  }
+
+  .catalog-4lvl__catalog {
+    width: 100%;
+  }
+
+  .catalog-4lvl__catalog-lines-item-wrapper {
+    padding: 1.2rem 0.8rem 1.2rem 0;
   }
 
   .catalog-4lvl__catalog-tile-container {

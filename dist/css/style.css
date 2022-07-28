@@ -2210,6 +2210,10 @@ h1 {
   content: none;
 }
 
+.catalog-4lvl__catalog-lines {
+  margin-top: 3.2rem;
+}
+
 /*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-map-copyrights-promo {
