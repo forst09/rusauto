@@ -289,7 +289,22 @@ $(document).ready(function () {
         }
     });
 
+    // ПЕРЕКЛЮЧЕНИЕ ТАБОВ
+    $(document).on('click', ".tab", function () {
+        $('.tab-content').removeClass('active');
+        $('#' + $(this).attr("data-tab")).addClass('active');
+        $('.tab').removeClass('active');
+        $(this).addClass('active');
+    });
 
+    // ТАБЫ, НА МОБИЛКАХ ВКЛЮЧАТЬ ДЛИННЫЕ КАРТОЧКИ
+    if (($(window).width() >= 320) && ($(window).width() < 668)) {
+        $("#catalog4lvlTabLines").trigger("click");
+    }
+    // ТАБЫ, НАЧИНАЯ С ПЛАНШЕТОВ ВКЛЮЧАТЬ ПЛИТКИ
+    if ($(window).width() >= 668) {
+        $("#catalog4lvlTabTiles").trigger("click");
+    }
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {

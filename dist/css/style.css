@@ -65,6 +65,10 @@ h1 {
   text-align: left;
 }
 
+.tab-content {
+  animation: fadeEffect 0.5s;
+}
+
 .text {
   font-size: 1.4rem;
   line-height: 2rem;
@@ -2018,7 +2022,13 @@ h1 {
   color: #064E8C;
 }
 
-.catalog-4lvl__catalog-tile {
+.catalog-4lvl__catalog-tile.active,
+.catalog-4lvl__catalog-lines.active {
+  display: block;
+}
+
+.catalog-4lvl__catalog-tile,
+.catalog-4lvl__catalog-lines {
   display: none;
 }
 
@@ -2036,13 +2046,16 @@ h1 {
   padding: 0.2rem 0.6rem;
   color: #ffffff;
 }
-.catalog-4lvl__catalog-item-image-label-item:nth-of-type(1) {
+
+.catalog-4lvl__catalog-item-image-label-markdown {
   background-color: #E6281C;
 }
-.catalog-4lvl__catalog-item-image-label-item:nth-of-type(2) {
+
+.catalog-4lvl__catalog-item-image-label-analog {
   background-color: #00A0E3;
 }
-.catalog-4lvl__catalog-item-image-label-item:nth-of-type(3) {
+
+.catalog-4lvl__catalog-item-image-label-hit {
   background-color: #064E8C;
 }
 
@@ -2215,6 +2228,14 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ*/
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-map-copyrights-promo {
   display: none !important;

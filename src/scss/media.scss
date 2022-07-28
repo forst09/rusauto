@@ -910,7 +910,8 @@
 
     .catalog-4lvl__catalog-lines-item-card {
         align-items: flex-start;
-        min-height: 12.9rem;
+        height: 12.9rem;
+        min-height: unset;
         align-items: center;
     }
 
@@ -959,6 +960,8 @@
         position: absolute;
         top: 0;
         left: 0;
+        max-width: 17.2rem;
+        overflow: hidden;
     }
 
     .catalog-4lvl__catalog-lines-item-wrapper {
@@ -2474,6 +2477,10 @@
         padding: 1.2rem 0.8rem 1.2rem 0;
     }
 
+    .catalog-4lvl__catalog-item-image-label {
+        top: 1.2rem;
+    }
+
     // .catalog-4lvl__catalog-item-image-container {
     //     display: flex;
     //     flex-direction: column;
@@ -3122,9 +3129,8 @@
         padding: 1.6rem 0.8rem 1.5rem;
     }
 
-    .catalog-4lvl__catalog-item-name {
-        font-size: 1.6rem;
-        line-height: 2rem;
+    .catalog-4lvl__catalog-lines-item-info-top {
+        max-width: 40rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1500*/
