@@ -58,6 +58,12 @@ $(document).ready(function () {
         });
     }
 
+    //ОТКРЫТИЕ МОДАЛЬНОГО ОКНА С ФИЛЬТРАМИ 
+    $(document).on('click', '.catalog-4lvl__catalog-buttons-filters', function () {
+        $('.filters-modal').addClass('active');
+        $('body').addClass('scroll-hide');
+    });
+
     // УБРАТЬ ОКОШКО С ПОДТВЕРЖДЕНИЕМ ГОРОДА ПО КНОПКЕ "ВЕРНО"
     $('.choice-city .btn').on('click', function () {
         $('.choice-city').remove();
@@ -91,6 +97,8 @@ $(document).ready(function () {
         }
         $('body').addClass('scroll-hide');
     });
+
+
 
     //ПОИСК НА 1024 В ШАПКЕ
     $(document).on('input', '.header-bottom__search-input', function () {
@@ -354,6 +362,18 @@ $(document).ready(function () {
         let val = $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
         $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-minus').removeClass('disabled');
         $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(++val);
+    });
+
+    //РАСКРЫТИЕ ТАБА
+    $(document).on('click', ".catalog-4lvl__filters-dropdown-link", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('.catalog-4lvl__filters-dropdown-wrapper').find('.catalog-4lvl__filters-dropdown-content').slideUp();
+        }
+        else {
+            $(this).addClass('active');
+            $(this).parents('.catalog-4lvl__filters-dropdown-wrapper').find('.catalog-4lvl__filters-dropdown-content').slideDown();
+        }
     });
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024

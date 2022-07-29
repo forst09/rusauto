@@ -2382,7 +2382,193 @@ h1 {
   display: none;
 }
 
-/*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ*/
+/*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ*/
+.filters-modal {
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.filters-modal .header-bottom__request-close {
+  display: block;
+}
+
+.filters-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.filters-modal__header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+}
+
+.filters-modal__header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+}
+
+.catalog-4lvl__filters-clean {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #00A0E3;
+}
+
+.filters-modal__header-title {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-left: -3.7rem;
+}
+
+.catalog-4lvl__filters-dropdown-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+}
+.catalog-4lvl__filters-dropdown-link::after {
+  content: "";
+  position: absolute;
+  right: 0.8rem;
+  top: calc(50% - 0.35rem);
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 0.15rem solid #262B2E;
+  border-right: 0.15rem solid #262B2E;
+  transform: rotate(135deg);
+  transition: transform 0.5s ease;
+}
+.catalog-4lvl__filters-dropdown-link span {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+  max-width: 87%;
+  display: inline-block;
+  width: 100%;
+}
+
+.catalog-4lvl__filters-dropdown-link.active::after {
+  margin-top: 0.2rem;
+  transform: rotate(-45deg);
+}
+
+.catalog-4lvl__filters-dropdown-content {
+  padding: 1rem 0.8rem 0.6rem;
+}
+
+.filters-modal__content {
+  margin-top: 7.6rem;
+}
+
+.catalog-4lvl__filters-checkbox {
+  margin-bottom: 1.6rem;
+}
+.catalog-4lvl__filters-checkbox:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.catalog-4lvl__filters-checkbox-input {
+  display: none;
+}
+
+.catalog-4lvl__filters-checkbox-label {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.catalog-4lvl__filters-checkbox-label::before {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: block;
+  border: 1px solid #A3A8AB;
+  border-radius: 0.4rem;
+  left: 0;
+  top: calc(50% - 0.8rem);
+}
+.catalog-4lvl__filters-checkbox-label::after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 1.1rem;
+  height: 0.8rem;
+  left: 0.25rem;
+  top: calc(50% - 0.4rem);
+  background-image: url("../img/catalog-4lvl/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.catalog-4lvl__filters-checkbox-label span {
+  color: #A3A8AB;
+}
+
+.catalog-4lvl__filters-checkbox-input:checked + .catalog-4lvl__filters-checkbox-label::before {
+  border: none;
+  background-color: #00A0E3;
+}
+.catalog-4lvl__filters-checkbox-input:checked + .catalog-4lvl__filters-checkbox-label::after {
+  display: block;
+}
+
+.catalog-4lvl__filters-radio-label {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.catalog-4lvl__filters-radio-label::before {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: block;
+  border: 1px solid #A3A8AB;
+  border-radius: 50%;
+  left: 0;
+  top: calc(50% - 0.8rem);
+}
+.catalog-4lvl__filters-radio-label::after {
+  content: "";
+  position: absolute;
+  width: 0.96rem;
+  height: 0.96rem;
+  display: none;
+  background-color: #00A0E3;
+  border-radius: 50%;
+  left: 0.32rem;
+  top: calc(50% - 0.48rem);
+}
+
+.catalog-4lvl__filters-radio-input:checked + .catalog-4lvl__filters-radio-label::before {
+  border: 1px solid #00A0E3;
+}
+.catalog-4lvl__filters-radio-input:checked + .catalog-4lvl__filters-radio-label::after {
+  display: block;
+}
+
+.catalog-4lvl__filters-radio {
+  margin-bottom: 1.2rem;
+}
+.catalog-4lvl__filters-radio:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.catalog-4lvl__filters-list-2 {
+  padding-left: 0.8rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
