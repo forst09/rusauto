@@ -951,6 +951,22 @@
         align-items: center;
     }
 
+    .catalog-4lvl__catalog-item-bottom-buttons {
+        min-height: 3.2rem;
+        min-width: 14.9rem;
+        text-align: center;
+    }
+
+    .catalog-4lvl__catalog-item-bottom-buttons-basket {
+        width: 100%;
+        height: 100%;
+        padding: 0.45rem 0.8rem;
+
+        form {
+            width: auto;
+        }
+    }
+
     .catalog-4lvl__catalog-item-cost {
         align-items: center;
     }
@@ -2463,26 +2479,6 @@
         flex-direction: column;
         overflow: hidden;
         min-width: 20rem;
-    }
-
-    .catalog-4lvl__catalog-lines-item-card {
-        gap: 2.4rem;
-    }
-
-    .catalog-4lvl__catalog {
-        width: 100%;
-        max-width: 99.2rem;
-    }
-
-    .catalog-4lvl__catalog-lines-item-wrapper {
-        padding: 1.2rem 0.8rem 1.2rem 0;
-    }
-
-    .catalog-4lvl__catalog-item-image-label {
-        top: 1.2rem;
-    }
-
-    .catalog-4lvl__catalog-item {
         transition: 0.3s ease;
 
         &:hover {
@@ -2500,7 +2496,7 @@
 
         .catalog-4lvl__catalog-item-manufacturer {
             text-align: center;
-            margin-top: 0.4rem;
+            margin: 0.4rem auto 0;
         }
 
         .catalog-4lvl__catalog-item-name {
@@ -2525,6 +2521,34 @@
         .catalog-4lvl__catalog-item-bottom {
             margin-top: auto;
         }
+
+        .catalog-4lvl__catalog-item-bottom-buttons-basket {
+            padding: 0.45rem 0;
+            height: fit-content;
+        }
+    }
+
+    .catalog-4lvl__catalog-lines-item-card {
+        gap: 2.4rem;
+    }
+
+    .catalog-4lvl__catalog {
+        width: 100%;
+        max-width: 99.2rem;
+    }
+
+    .catalog-4lvl__catalog-lines-item-wrapper {
+        padding: 1.2rem 0.8rem 1.2rem 0;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: #F5FBFE;
+        }
+
+    }
+
+    .catalog-4lvl__catalog-item-image-label {
+        top: 1.2rem;
     }
 
     .catalog-4lvl__catalog-tile-container {
@@ -2551,6 +2575,19 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+
+            path,
+            rect {
+                transition: 0.3s ease;
+            }
+        }
+
+        &:hover {
+
+            svg path,
+            svg rect {
+                fill: #99D9F4;
+            }
         }
     }
 
@@ -2565,6 +2602,27 @@
     .catalog-4lvl__catalog-tile,
     .catalog-4lvl__catalog-lines {
         margin-top: 1.6rem;
+    }
+
+    .catalog-4lvl__catalog-item-bottom-buttons-basket {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+        form {
+            min-width: 9.7rem;
+        }
+    }
+
+    .catalog-4lvl__catalog-item-bottom-buttons-basket-text {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #064E8C;
+    }
+
+    .catalog-4lvl__catalog-item-bottom-buttons {
+        min-width: 21.8rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1024*/

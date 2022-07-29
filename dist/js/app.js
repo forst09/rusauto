@@ -331,6 +331,31 @@ $(document).ready(function () {
         $(this).parents('.catalog-4lvl__catalog-buttons-sorting-btn').find('.catalog-4lvl__catalog-buttons-sorting-span').html($(this).attr('data-text'));
     });
 
+    //ВМЕСТО КНОПКИ В КОРЗИНУ ПОКАЗАТЬ СЧЕТЧИК
+    $(document).on('click', ".buy", function () {
+        $(this).hide();
+        $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').addClass('active');
+    });
+
+    //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА
+    $(document).on('click', ".catalog-4lvl__catalog-item-bottom-buttons-basket-minus", function () {
+        let val = $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
+        if (val == 1) {
+            $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').removeClass('active');
+            $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.buy').show();
+        }
+        else {
+            $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(--val);
+        }
+    });
+
+    //УВЕЛИЧИТЬ СЧЕТЧИК ТОВАРА
+    $(document).on('click', ".catalog-4lvl__catalog-item-bottom-buttons-basket-plus", function () {
+        let val = $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
+        $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-minus').removeClass('disabled');
+        $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(++val);
+    });
+
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ"
