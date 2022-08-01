@@ -2612,6 +2612,62 @@ h1 {
   padding: 0.55rem 1.6rem;
 }
 
+.catalog-4lvl__filters-slider {
+  height: 1px;
+  border: none;
+  box-shadow: none;
+  background: #00A0E3;
+  max-width: 25.8rem;
+}
+.catalog-4lvl__filters-slider .noUi-handle.noUi-handle-lower,
+.catalog-4lvl__filters-slider .noUi-handle.noUi-handle-upper {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  top: calc(50% - 0.75rem);
+  background-color: #00A0E3;
+  box-shadow: none;
+  border: none;
+}
+.catalog-4lvl__filters-slider .noUi-handle::after, .catalog-4lvl__filters-slider .noUi-handle::before {
+  content: none;
+}
+.catalog-4lvl__filters-slider .noUi-connect {
+  background: #00A0E3;
+}
+.catalog-4lvl__filters-slider .noUi-connect,
+.catalog-4lvl__filters-slider .noUi-origin {
+  right: 0.3rem;
+}
+
+.catalog-4lvl__filters-slider-values {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-4lvl__filters-slider-values-input {
+  max-width: 9.8rem;
+  height: 3.2rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border: 1px solid #A3A8AB;
+  border-radius: 0.2rem;
+  font-family: "Geometria";
+}
+
+.catalog-4lvl__filters-slider-values-dash {
+  height: 1px;
+  width: 2.3rem;
+  background-color: #A3A8AB;
+}
+
+.catalog-4lvl__filters-dropdown-content-container {
+  max-width: 27.2rem;
+}
+
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ*/
 @keyframes fadeEffect {
   0% {

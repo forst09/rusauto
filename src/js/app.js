@@ -408,13 +408,86 @@ $(document).ready(function () {
 
     let slider = document.getElementById('filtersSlider');
     if (slider != null) {
+        let input0 = document.getElementById('filtersSliderInput1');
+        let input1 = document.getElementById('filtersSliderInput2');
+        let inputs = [input0, input1];
         noUiSlider.create(slider, {
             start: [36, 210000],
             connect: true,
             range: {
                 'min': 36,
                 'max': 210000
-            }
+            },
+            format: {
+                to: (v) => parseFloat(v).toFixed(0),
+                from: (v) => parseFloat(v).toFixed(0)
+            },
+        });
+
+        slider.noUiSlider.on('update', function (values, handle) {
+            inputs[handle].value = values[handle];
+        });
+
+        inputs.forEach(function (input, handle) {
+
+            input.addEventListener('change', function () {
+                slider.noUiSlider.setHandle(handle, this.value);
+            });
+
+            input.addEventListener('keydown', function (e) {
+
+                let values = slider.noUiSlider.get();
+                let value = Number(values[handle]);
+
+                // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+                let steps = slider.noUiSlider.steps();
+
+                // [down, up]
+                let step = steps[handle];
+
+                let position;
+
+                // 13 is enter,
+                // 38 is key up,
+                // 40 is key down.
+                switch (e.which) {
+
+                    case 13:
+                        slider.noUiSlider.setHandle(handle, this.value);
+                        break;
+
+                    case 38:
+
+                        // Get step to go increase slider value (up)
+                        position = step[1];
+
+                        // false = no step is set
+                        if (position === false) {
+                            position = 1;
+                        }
+
+                        // null = edge of slider
+                        if (position !== null) {
+                            slider.noUiSlider.setHandle(handle, value + position);
+                        }
+
+                        break;
+
+                    case 40:
+
+                        position = step[0];
+
+                        if (position === false) {
+                            position = 1;
+                        }
+
+                        if (position !== null) {
+                            slider.noUiSlider.setHandle(handle, value - position);
+                        }
+
+                        break;
+                }
+            });
         });
     }
 
