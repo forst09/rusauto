@@ -403,6 +403,21 @@ $(document).ready(function () {
     });
 
 
+    //СЛАЙДЕР В ФИЛЬТРАХ КАТАЛОГА 4 УРОВНЯ
+
+
+    let slider = document.getElementById('filtersSlider');
+    if (slider != null) {
+        noUiSlider.create(slider, {
+            start: [36, 210000],
+            connect: true,
+            range: {
+                'min': 36,
+                'max': 210000
+            }
+        });
+    }
+
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ"

@@ -1606,6 +1606,7 @@ h1 {
 }
 
 .companies__image {
+    display: inline-block;
     width: 6.4rem;
     height: 6.4rem;
 
@@ -1827,6 +1828,7 @@ h1 {
 .partners__logo {
     width: 6.4rem;
     height: 6.4rem;
+    display: inline-block;
 
     img {
         width: 100%;
