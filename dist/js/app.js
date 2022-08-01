@@ -40,7 +40,6 @@ $(document).ready(function () {
 
     //ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
     $(document).on('click', '.close', function () {
-        console.log('close');
         $(this).parents('.modal').removeClass('active');
         $('body').removeClass('scroll-hide');
         $('.modal__background').removeClass('active');
@@ -375,6 +374,34 @@ $(document).ready(function () {
             $(this).parents('.catalog-4lvl__filters-dropdown-wrapper').find('.catalog-4lvl__filters-dropdown-content').slideDown();
         }
     });
+
+    //ВЫБРАТЬ ВСЕ ДОЧЕРНИЕ ЧЕКБОКСЫ ПО КЛИКУ НА РОДИТЕЛЯ
+    let checkboxDaughter;
+    $(document).on('change', ".checkbox-input-parent", function () {
+        if ($(this).prop('checked') == true) {
+            $(this).removeClass('not-all');
+            $(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .catalog-4lvl__filters-checkbox-input:not(.not-found)').prop('checked', true);
+        }
+        else {
+            $(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .catalog-4lvl__filters-checkbox-input:not(.not-found)').prop('checked', false);
+        }
+    });
+
+    //КАК ВЕДЕТ СЕБЯ РОДИТЕЛЬ ЧЕКБОКСОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА ЧЕКНУТЫХ ДЕТЕЙ
+    $(document).on('change', ".checkbox-input-daughter", function () {
+        if ($(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .checkbox-input-daughter:not(.not-found):checked').length == $(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .checkbox-input-daughter:not(.not-found)').length) {
+            $(this).parents('.catalog-4lvl__filters-list-item').find('.checkbox-input-parent').prop('checked', true);
+            $(this).parents('.catalog-4lvl__filters-list-item').find('.checkbox-input-parent').removeClass('not-all');
+        }
+        else if ($(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .checkbox-input-daughter:not(.not-found):checked').length < $(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .checkbox-input-daughter:not(.not-found)').length && $(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .checkbox-input-daughter:checked').length != 0) {
+            $(this).parents('.catalog-4lvl__filters-list-item').find('.checkbox-input-parent').prop('checked', true);
+            $(this).parents('.catalog-4lvl__filters-list-item').find('.checkbox-input-parent').addClass('not-all');
+        }
+        else if ($(this).parents('.catalog-4lvl__filters-list-item').find('.catalog-4lvl__filters-list-2 .checkbox-input-daughter:not(.not-found):checked').length == 0) {
+            $(this).parents('.catalog-4lvl__filters-list-item').find('.checkbox-input-parent').prop('checked', false);
+        }
+    });
+
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
