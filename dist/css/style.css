@@ -2363,6 +2363,11 @@ h1 {
   line-height: 2.3rem;
   color: #064E8C;
   border: none;
+  transition: 0.3s ease;
+}
+.catalog-4lvl__catalog-item-bottom-buttons-basket-plus:hover,
+.catalog-4lvl__catalog-item-bottom-buttons-basket-minus:hover {
+  color: #00A0E3;
 }
 
 .catalog-4lvl__catalog-item-bottom-buttons-basket-minus.disabled,
@@ -2395,6 +2400,9 @@ h1 {
 }
 .filters-modal .header-bottom__request-close {
   display: block;
+}
+.filters-modal .btn__wrapper {
+  margin-top: 2.4rem;
 }
 
 .filters-modal.active {
@@ -2451,6 +2459,9 @@ h1 {
   max-width: 87%;
   display: inline-block;
   width: 100%;
+}
+.catalog-4lvl__filters-dropdown-link:hover {
+  opacity: 0.7;
 }
 
 .catalog-4lvl__filters-dropdown-link.active::after {
@@ -2509,6 +2520,7 @@ h1 {
   border-radius: 0.4rem;
   left: 0;
   top: calc(50% - 0.8rem);
+  transition: 0.3s ease;
 }
 .catalog-4lvl__filters-checkbox-label::after {
   content: "";
@@ -2525,6 +2537,9 @@ h1 {
 }
 .catalog-4lvl__filters-checkbox-label span {
   color: #A3A8AB;
+}
+.catalog-4lvl__filters-checkbox-label:hover::before {
+  border: 1px solid #00A0E3;
 }
 
 .catalog-4lvl__filters-checkbox-input.not-found + .catalog-4lvl__filters-checkbox-label {
@@ -2565,6 +2580,7 @@ h1 {
   border-radius: 50%;
   left: 0;
   top: calc(50% - 0.8rem);
+  transition: 0.3s ease;
 }
 .catalog-4lvl__filters-radio-label::after {
   content: "";
@@ -2576,6 +2592,9 @@ h1 {
   border-radius: 50%;
   left: 0.32rem;
   top: calc(50% - 0.48rem);
+}
+.catalog-4lvl__filters-radio-label:hover::before {
+  border: 1px solid #00A0E3;
 }
 
 .catalog-4lvl__filters-radio-input:checked + .catalog-4lvl__filters-radio-label::before {
@@ -2628,9 +2647,13 @@ h1 {
   background-color: #00A0E3;
   box-shadow: none;
   border: none;
+  cursor: pointer;
 }
 .catalog-4lvl__filters-slider .noUi-handle::after, .catalog-4lvl__filters-slider .noUi-handle::before {
   content: none;
+}
+.catalog-4lvl__filters-slider .noUi-handle:active, .catalog-4lvl__filters-slider .noUi-handle:focus, .catalog-4lvl__filters-slider .noUi-handle:focus-within, .catalog-4lvl__filters-slider .noUi-handle:hover {
+  background-color: #0091CE;
 }
 .catalog-4lvl__filters-slider .noUi-connect {
   background: #00A0E3;
@@ -2666,6 +2689,13 @@ h1 {
 
 .catalog-4lvl__filters-dropdown-content-container {
   max-width: 27.2rem;
+}
+
+.catalog-4lvl__filters-dropdown-wrapper {
+  margin-bottom: 1.6rem;
+}
+.catalog-4lvl__filters-dropdown-wrapper:nth-last-of-type(1) {
+  margin-bottom: 0;
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ*/

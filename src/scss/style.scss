@@ -2696,6 +2696,11 @@ h1 {
     line-height: 2.3rem;
     color: #064E8C;
     border: none;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: #00A0E3;
+    }
 }
 
 
@@ -2730,6 +2735,10 @@ h1 {
 
     .header-bottom__request-close {
         display: block;
+    }
+
+    .btn__wrapper {
+        margin-top: 2.4rem;
     }
 }
 
@@ -2792,6 +2801,10 @@ h1 {
         max-width: 87%;
         display: inline-block;
         width: 100%;
+    }
+
+    &:hover {
+        opacity: 0.7;
     }
 }
 
@@ -2863,6 +2876,7 @@ h1 {
         border-radius: 0.4rem;
         left: 0;
         top: calc(50% - 0.8rem);
+        transition: 0.3s ease;
     }
 
     &::after {
@@ -2881,6 +2895,12 @@ h1 {
 
     span {
         color: #A3A8AB;
+    }
+
+    &:hover {
+        &::before {
+            border: 1px solid #00A0E3;
+        }
     }
 }
 
@@ -2929,6 +2949,7 @@ h1 {
         border-radius: 50%;
         left: 0;
         top: calc(50% - 0.8rem);
+        transition: 0.3s ease;
     }
 
     &::after {
@@ -2941,6 +2962,12 @@ h1 {
         border-radius: 50%;
         left: 0.32rem;
         top: calc(50% - 0.48rem);
+    }
+
+    &:hover {
+        &::before {
+            border: 1px solid #00A0E3;
+        }
     }
 }
 
@@ -3002,6 +3029,7 @@ h1 {
         background-color: #00A0E3;
         box-shadow: none;
         border: none;
+        cursor: pointer;
         // display: none;
         // right: -7px;
     }
@@ -3020,6 +3048,13 @@ h1 {
         &::after,
         &::before {
             content: none;
+        }
+
+        &:active,
+        &:focus,
+        &:focus-within,
+        &:hover {
+            background-color: #0091CE;
         }
     }
 
@@ -3060,6 +3095,14 @@ h1 {
 
 .catalog-4lvl__filters-dropdown-content-container {
     max-width: 27.2rem;
+}
+
+.catalog-4lvl__filters-dropdown-wrapper {
+    margin-bottom: 1.6rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ*/

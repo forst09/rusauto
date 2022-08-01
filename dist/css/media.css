@@ -871,6 +871,20 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ МАРОК КАТАЛОГА 4 УРОВНЯ 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ 668*/
+  .catalog-4lvl__filters-clean {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .filters-modal__header-title {
+    margin-left: -4.55rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -2162,6 +2176,7 @@
   .catalog-4lvl__filters {
     display: block;
     min-width: 20rem;
+    max-width: 20rem;
   }
 
   .catalog-4lvl__catalog-item {
@@ -2216,7 +2231,7 @@
 
   .catalog-4lvl__catalog {
     width: 100%;
-    max-width: 99.2rem;
+    max-width: 64.8rem;
   }
 
   .catalog-4lvl__catalog-lines-item-wrapper {
