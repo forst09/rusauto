@@ -2463,6 +2463,9 @@ h1 {
 .catalog-4lvl__filters-dropdown-link:hover {
   opacity: 0.7;
 }
+.catalog-4lvl__filters-dropdown-link:focus, .catalog-4lvl__filters-dropdown-link:active, .catalog-4lvl__filters-dropdown-link:focus-within {
+  opacity: 1;
+}
 
 .catalog-4lvl__filters-dropdown-link.active::after {
   margin-top: 0.2rem;
