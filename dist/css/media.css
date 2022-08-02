@@ -884,6 +884,11 @@
     line-height: 2rem;
   }
 
+  .catalog-4lvl__filters-slider .noUi-connect,
+.catalog-4lvl__filters-slider .noUi-origin {
+    right: -0.3rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
@@ -2177,6 +2182,7 @@
     display: block;
     min-width: 20rem;
     max-width: 20rem;
+    margin-top: 1.2rem;
   }
 
   .catalog-4lvl__catalog-item {
@@ -2308,6 +2314,97 @@
 
   .catalog-4lvl__catalog-item-bottom-buttons {
     min-width: 21.8rem;
+  }
+
+  .filters-modal__header {
+    display: none;
+  }
+
+  .catalog-4lvl__filters-container {
+    max-height: none;
+    overflow: unset;
+    padding: 0;
+  }
+
+  .catalog-4lvl__filters-wrapper .btn__wrapper {
+    display: none;
+  }
+
+  .catalog-4lvl__filters-desctop-clean {
+    margin-bottom: 0.4rem;
+    display: inline-flex;
+    width: 100%;
+    justify-content: end;
+    color: #00A0E3;
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+  }
+
+  .catalog-4lvl__filters-wrapper {
+    padding: 0;
+  }
+
+  .catalog-4lvl__filters-dropdown-link span {
+    max-width: 90%;
+  }
+
+  .catalog-4lvl__filters-checkbox {
+    margin-bottom: 1.2rem;
+  }
+
+  .catalog-4lvl__filters-slider-values-input {
+    max-width: 7.5rem;
+  }
+
+  .catalog-4lvl__filters-slider .noUi-connect,
+.catalog-4lvl__filters-slider .noUi-origin {
+    right: 0.2rem;
+  }
+
+  .catalog-4lvl__filters-slider {
+    width: 17rem;
+  }
+
+  .catalog-4lvl__filters-list-2 {
+    margin-top: 1.2rem;
+  }
+
+  .catalog-4lvl__filters-checkbox-label::before {
+    top: 0;
+  }
+
+  .catalog-4lvl__filters-list-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .catalog-4lvl__filters-list-2 .catalog-4lvl__filters-list-item .catalog-4lvl__filters-checkbox {
+    margin: 0;
+  }
+  .catalog-4lvl__filters-list-2 .catalog-4lvl__filters-list-item:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    right: -1.5rem;
+  }
+
+  .catalog-4lvl__filters-search {
+    margin-bottom: 0.4rem;
+  }
+
+  .catalog-4lvl__filters-search-items {
+    padding: 0.6rem 0;
+    max-height: 19.2rem;
+    overflow-y: auto;
+  }
+  .catalog-4lvl__filters-search-items::-webkit-scrollbar {
+    width: 2px;
+  }
+  .catalog-4lvl__filters-search-items::-webkit-scrollbar-thumb {
+    background-color: #00A0E3;
+  }
+  .catalog-4lvl__filters-search-items::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1024*/
@@ -2748,6 +2845,23 @@
 
   .catalog-4lvl__catalog-lines-item-info-top {
     max-width: 40rem;
+  }
+
+  .catalog-4lvl__catalog {
+    max-width: 99.2rem;
+  }
+
+  .catalog-4lvl__filters-slider-values-input {
+    max-width: 9.8rem;
+  }
+
+  .catalog-4lvl__filters-dropdown-content-container {
+    max-width: none;
+  }
+
+  .catalog-4lvl__filters-slider {
+    max-width: none;
+    width: 27rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1500*/

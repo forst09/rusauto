@@ -651,41 +651,56 @@
                                                 </form>
                                             </div>
 
-                                            <div class="catalog-4lvl__filters-checkbox">
-                                                <input type="checkbox" id="filtersManufacturerCheckbox1"
-                                                    class="catalog-4lvl__filters-checkbox-input">
-                                                <label for="filtersManufacturerCheckbox1"
-                                                    class="catalog-4lvl__filters-checkbox-label">Cummins</label>
-                                            </div>
-                                            <div class="catalog-4lvl__filters-checkbox">
-                                                <input type="checkbox" id="filtersManufacturerCheckbox2"
-                                                    class="catalog-4lvl__filters-checkbox-input">
-                                                <label for="filtersManufacturerCheckbox2"
-                                                    class="catalog-4lvl__filters-checkbox-label">DIFA</label>
-                                            </div>
-                                            <div class="catalog-4lvl__filters-checkbox">
-                                                <input type="checkbox" id="filtersManufacturerCheckbox3"
-                                                    class="catalog-4lvl__filters-checkbox-input">
-                                                <label for="filtersManufacturerCheckbox3"
-                                                    class="catalog-4lvl__filters-checkbox-label">ГАЗ</label>
-                                            </div>
-                                            <div class="catalog-4lvl__filters-checkbox">
-                                                <input type="checkbox" id="filtersManufacturerCheckbox4"
-                                                    class="catalog-4lvl__filters-checkbox-input">
-                                                <label for="filtersManufacturerCheckbox4"
-                                                    class="catalog-4lvl__filters-checkbox-label">КОРА</label>
-                                            </div>
-                                            <div class="catalog-4lvl__filters-checkbox">
-                                                <input type="checkbox" id="filtersManufacturerCheckbox5"
-                                                    class="catalog-4lvl__filters-checkbox-input">
-                                                <label for="filtersManufacturerCheckbox5"
-                                                    class="catalog-4lvl__filters-checkbox-label">СОД</label>
-                                            </div>
-                                            <div class="catalog-4lvl__filters-checkbox">
-                                                <input type="checkbox" id="filtersManufacturerCheckbox6"
-                                                    class="catalog-4lvl__filters-checkbox-input">
-                                                <label for="filtersManufacturerCheckbox6"
-                                                    class="catalog-4lvl__filters-checkbox-label">УАЗ</label>
+                                            <div class="catalog-4lvl__filters-search-items">
+                                                <div class="catalog-4lvl__filters-checkbox">
+                                                    <input type="checkbox" id="filtersManufacturerCheckbox1"
+                                                        class="catalog-4lvl__filters-checkbox-input">
+                                                    <label for="filtersManufacturerCheckbox1"
+                                                        class="catalog-4lvl__filters-checkbox-label"
+                                                        title="Cummins">Cummins</label>
+                                                </div>
+                                                <div class="catalog-4lvl__filters-checkbox">
+                                                    <input type="checkbox" id="filtersManufacturerCheckbox1"
+                                                        class="catalog-4lvl__filters-checkbox-input">
+                                                    <label for="filtersManufacturerCheckbox1"
+                                                        class="catalog-4lvl__filters-checkbox-label"
+                                                        title="Cummins">Cummins</label>
+                                                </div>
+                                                <div class="catalog-4lvl__filters-checkbox">
+                                                    <input type="checkbox" id="filtersManufacturerCheckbox2"
+                                                        class="catalog-4lvl__filters-checkbox-input">
+                                                    <label for="filtersManufacturerCheckbox2"
+                                                        class="catalog-4lvl__filters-checkbox-label"
+                                                        title="DIFA">DIFA</label>
+                                                </div>
+                                                <div class="catalog-4lvl__filters-checkbox">
+                                                    <input type="checkbox" id="filtersManufacturerCheckbox3"
+                                                        class="catalog-4lvl__filters-checkbox-input">
+                                                    <label for="filtersManufacturerCheckbox3"
+                                                        class="catalog-4lvl__filters-checkbox-label"
+                                                        title="ГАЗ">ГАЗ</label>
+                                                </div>
+                                                <div class="catalog-4lvl__filters-checkbox">
+                                                    <input type="checkbox" id="filtersManufacturerCheckbox4"
+                                                        class="catalog-4lvl__filters-checkbox-input">
+                                                    <label for="filtersManufacturerCheckbox4"
+                                                        class="catalog-4lvl__filters-checkbox-label"
+                                                        title="КОРА">КОРА</label>
+                                                </div>
+                                                <div class="catalog-4lvl__filters-checkbox">
+                                                    <input type="checkbox" id="filtersManufacturerCheckbox5"
+                                                        class="catalog-4lvl__filters-checkbox-input">
+                                                    <label for="filtersManufacturerCheckbox5"
+                                                        class="catalog-4lvl__filters-checkbox-label"
+                                                        title="СОД">СОД</label>
+                                                </div>
+                                                <div class="catalog-4lvl__filters-checkbox">
+                                                    <input type="checkbox" id="filtersManufacturerCheckbox6"
+                                                        class="catalog-4lvl__filters-checkbox-input">
+                                                    <label for="filtersManufacturerCheckbox6"
+                                                        class="catalog-4lvl__filters-checkbox-label"
+                                                        title="УАЗ">УАЗ</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -849,7 +864,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-4lvl__catalog-item">
+                                <!-- появляется catalog-4lvl__catalog-item-not-availability если нет в наличии -->
+                                <div class="catalog-4lvl__catalog-item catalog-4lvl__catalog-item-not-availability">
                                     <div class="catalog-4lvl__catalog-item-image-container">
                                         <div class="catalog-4lvl__catalog-item-image">
                                             <img src="img/catalog-page/catalog-page-3.png" alt="">
@@ -864,7 +880,9 @@
                                     </a>
                                     <div class="catalog-4lvl__catalog-item-article">Артикул: <span>53-12-1701302</span>
                                     </div>
+
                                     <div class="catalog-4lvl__catalog-item-not-availability">Нет в наличии
+                                        <!-- появляется если нет в наличии -->
                                     </div>
                                     <div class="catalog-4lvl__catalog-item-bottom">
                                         <div class="catalog-4lvl__catalog-item-cost">

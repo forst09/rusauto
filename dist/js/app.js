@@ -499,6 +499,25 @@ $(document).ready(function () {
         });
     }
 
+
+    $(".catalog-4lvl__filters-search .header-bottom__search-input").keyup(function () {
+        let filter = $(this).val(),
+            count = 0;
+        $(this)
+            .parents(".catalog-4lvl__filters-dropdown-content")
+            .find(".catalog-4lvl__filters-checkbox-label")
+            .each(function () {
+                if ($(this).attr("title").search(new RegExp(filter, "i")) < 0) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+
+                    count++;
+                }
+            });
+    });
+
+
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ"
@@ -520,6 +539,7 @@ $(document).ready(function () {
             }
         });
 
+
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "НАШИ ПАРТНЕРЫ"
         const swiperPartners = new Swiper('.swiper-partners', {
             speed: 700,
@@ -538,6 +558,12 @@ $(document).ready(function () {
                 },
             }
         });
+
+        // console.log(swiperPartners.realIndex);
+
+        // swiperPartners.on('slideChange', function () {
+        //     console.log(swiperPartners.realIndex);
+        // });
 
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "НАШИ ПАРТНЕРЫ"
         const swiperRecently = new Swiper('.swiper-recently', {
