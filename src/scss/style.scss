@@ -2316,6 +2316,22 @@ h1 {
 
 .catalog-4lvl__filters {
     display: none;
+    animation: fadeEffect 0.3s;
+}
+
+.catalog-4lvl__filters.active {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    background-color: #ffffff;
+
+    .header-bottom__request-close {
+        display: block;
+    }
 }
 
 .catalog-4lvl__catalog-buttons {
@@ -3108,6 +3124,36 @@ h1 {
 
     &:nth-last-of-type(1) {
         margin-bottom: 0;
+    }
+}
+
+.catalog-4lvl__filters-desctop-clean {
+    display: none;
+}
+
+.catalog-4lvl__filters-container {
+    max-height: calc(100vh - 16.2rem);
+    overflow: auto;
+    padding-top: 2.4rem;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #00A0E3;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}
+
+.catalog-4lvl__filters-wrapper {
+    padding: 0 1.6rem;
+
+    .btn__wrapper {
+        margin-top: 2.4rem;
     }
 }
 

@@ -47,249 +47,283 @@
             <div class="wrapper">
                 <div class="catalog-4lvl__container">
                     <div class="catalog-4lvl__filters">
-                        <a href="javascript:void(0)" class="catalog-4lvl__filters-clean">Очистить фильтры</a>
-                        <div class="catalog-4lvl__filters-dropdown-wrapper">
-                            <a href="javascript:void(0)"
-                                class="catalog-4lvl__filters-dropdown-link active"><span>Параметры</span></a>
-                            <div class="catalog-4lvl__filters-dropdown-content">
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopOptionsCheckbox1"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopOptionsCheckbox1"
-                                        class="catalog-4lvl__filters-checkbox-label">Уценка
-                                        <span>(200)</span></label>
-                                </div>
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopOptionsCheckbox2"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopOptionsCheckbox2"
-                                        class="catalog-4lvl__filters-checkbox-label">В
-                                        наличии
-                                        <span>(200)</span></label>
-                                </div>
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopOptionsCheckbox3"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopOptionsCheckbox3"
-                                        class="catalog-4lvl__filters-checkbox-label">Со
-                                        скидкой
-                                        <span>(200)</span></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="catalog-4lvl__filters-dropdown-wrapper">
-                            <a href="javascript:void(0)"
-                                class="catalog-4lvl__filters-dropdown-link active"><span>Способы
-                                    получения</span></a>
-                            <div class="catalog-4lvl__filters-dropdown-content">
-                                <div class="catalog-4lvl__filters-radio">
-                                    <input class="catalog-4lvl__filters-radio-input" type="radio" name="filtersRadio"
-                                        id="filtersDesctopRadio1">
-                                    <label class="catalog-4lvl__filters-radio-label" for="filtersDesctopRadio1">Забрать
-                                        сегодня</label>
-                                </div>
-                                <div class="catalog-4lvl__filters-radio">
-                                    <input class="catalog-4lvl__filters-radio-input" type="radio" name="filtersRadio"
-                                        id="filtersDesctopRadio2">
-                                    <label class="catalog-4lvl__filters-radio-label" for="filtersDesctopRadio2">Забрать
-                                        завтра</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="catalog-4lvl__filters-dropdown-wrapper">
-                            <a href="javascript:void(0)"
-                                class="catalog-4lvl__filters-dropdown-link active"><span>Цена</span></a>
-                            <div class="catalog-4lvl__filters-dropdown-content">
-                                <div class="catalog-4lvl__filters-dropdown-content-container">
-                                    <div class="catalog-4lvl__filters-slider-values">
-                                        <input type="number" class="catalog-4lvl__filters-slider-values-input"
-                                            id="filtersSliderDesctopInput1">
-                                        <div class="catalog-4lvl__filters-slider-values-dash"></div>
-                                        <input type="number" class="catalog-4lvl__filters-slider-values-input"
-                                            id="filtersSliderDesctopInput2">
+                        <form action="">
+                            <div class="filters-modal__header">
+                                <div class="wrapper">
+                                    <div class="filters-modal__header-container">
+                                        <a href="javascript:void(0)" class="catalog-4lvl__filters-clean">Очистить</a>
+                                        <div class="filters-modal__header-title">Фильтры</div>
+                                        <a class="header-bottom__request-close close" href="javascript:void(0)">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.712384 17.4691C0.419491 17.762 0.419491 18.2369 0.712384 18.5298C1.00528 18.8227 1.48015 18.8227 1.77304 18.5298L0.712384 17.4691ZM18.5303 1.77252C18.8232 1.47962 18.8232 1.00475 18.5303 0.711857C18.2374 0.418964 17.7626 0.418964 17.4697 0.711857L18.5303 1.77252ZM17.4697 0.711857L0.712384 17.4691L1.77304 18.5298L18.5303 1.77252L17.4697 0.711857Z"
+                                                    fill="#A3A8AB" />
+                                                <path
+                                                    d="M1.77304 0.712385C1.48015 0.419492 1.00528 0.419492 0.712383 0.712385C0.419489 1.00528 0.41949 1.48015 0.712383 1.77305L1.77304 0.712385ZM17.4697 18.5303C17.7626 18.8232 18.2374 18.8232 18.5303 18.5303C18.8232 18.2374 18.8232 17.7626 18.5303 17.4697L17.4697 18.5303ZM18.5303 17.4697L1.77304 0.712385L0.712383 1.77305L17.4697 18.5303L18.5303 17.4697Z"
+                                                    fill="#A3A8AB" />
+                                            </svg>
+                                        </a>
                                     </div>
-                                    <div id="filtersSliderDesctop" class="catalog-4lvl__filters-slider"></div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="catalog-4lvl__filters-dropdown-wrapper">
-                            <a href="javascript:void(0)"
-                                class="catalog-4lvl__filters-dropdown-link active"><span>Марка</span></a>
-                            <div class="catalog-4lvl__filters-dropdown-content">
-                                <ul class="catalog-4lvl__filters-list catalog-4lvl__filters-list-1">
-                                    <li class="catalog-4lvl__filters-list-item">
-                                        <div class="catalog-4lvl__filters-checkbox">
-                                            <input type="checkbox" id="filtersDesctopBrandCheckbox1"
-                                                class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
-                                            <label for="filtersDesctopBrandCheckbox1"
-                                                class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">ПАЗ
-                                                <span>(7)</span></label>
+                            <a href="javascript:void(0)" class="catalog-4lvl__filters-desctop-clean">Очистить
+                                фильтры</a>
+                            <div class="catalog-4lvl__filters-wrapper">
+                                <div class="catalog-4lvl__filters-container">
+                                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                                        <a href="javascript:void(0)"
+                                            class="catalog-4lvl__filters-dropdown-link active"><span>Параметры</span></a>
+                                        <div class="catalog-4lvl__filters-dropdown-content">
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersOptionsCheckbox1"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersOptionsCheckbox1"
+                                                    class="catalog-4lvl__filters-checkbox-label">Уценка
+                                                    <span>(200)</span></label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersOptionsCheckbox2"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersOptionsCheckbox2"
+                                                    class="catalog-4lvl__filters-checkbox-label">В
+                                                    наличии
+                                                    <span>(200)</span></label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersOptionsCheckbox3"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersOptionsCheckbox3"
+                                                    class="catalog-4lvl__filters-checkbox-label">Со
+                                                    скидкой
+                                                    <span>(200)</span></label>
+                                            </div>
                                         </div>
-                                        <ul class="catalog-4lvl__filters-list-2">
-                                            <li class="catalog-4lvl__filters-list-item">
-                                                <div class="catalog-4lvl__filters-checkbox">
-                                                    <input type="checkbox" id="filtersDesctopBrandCheckbox2"
-                                                        class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
-                                                    <label for="filtersDesctopBrandCheckbox2"
-                                                        class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ПАЗ-3205х
-                                                        <span>(4)</span></label>
-                                                </div>
-                                            </li>
-                                            <li class="catalog-4lvl__filters-list-item">
-                                                <div class="catalog-4lvl__filters-checkbox">
-                                                    <input type="checkbox" id="filtersDesctopBrandCheckbox3"
-                                                        class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter not-found">
-                                                    <label for="filtersDesctopBrandCheckbox3"
-                                                        class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ПАЗ-3204</label>
-                                                </div>
-                                            </li>
-                                            <li class="catalog-4lvl__filters-list-item">
-                                                <div class="catalog-4lvl__filters-checkbox">
-                                                    <input type="checkbox" id="filtersDesctopBrandCheckbox4"
-                                                        class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
-                                                    <label for="filtersDesctopBrandCheckbox4"
-                                                        class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ПАЗ-3203
-                                                        <span>(3)</span></label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="catalog-4lvl__filters-list-item">
-                                        <div class="catalog-4lvl__filters-checkbox">
-                                            <input type="checkbox" id="filtersDesctopBrandCheckbox5"
-                                                class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
-                                            <label for="filtersDesctopBrandCheckbox5"
-                                                class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">ЛИАЗ
-                                                <span>(2)</span></label>
+                                    </div>
+                                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                                        <a href="javascript:void(0)"
+                                            class="catalog-4lvl__filters-dropdown-link active"><span>Способы
+                                                получения</span></a>
+                                        <div class="catalog-4lvl__filters-dropdown-content">
+                                            <div class="catalog-4lvl__filters-radio">
+                                                <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                                    name="filtersRadio" id="filtersRadio1">
+                                                <label class="catalog-4lvl__filters-radio-label"
+                                                    for="filtersRadio1">Забрать
+                                                    сегодня</label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-radio">
+                                                <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                                    name="filtersRadio" id="filtersRadio2">
+                                                <label class="catalog-4lvl__filters-radio-label"
+                                                    for="filtersRadio2">Забрать
+                                                    завтра</label>
+                                            </div>
                                         </div>
-                                        <ul class="catalog-4lvl__filters-list-2">
-                                            <li class="catalog-4lvl__filters-list-item">
-                                                <div class="catalog-4lvl__filters-checkbox">
-                                                    <input type="checkbox" id="filtersDesctopBrandCheckbox6"
-                                                        class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
-                                                    <label for="filtersDesctopBrandCheckbox6"
-                                                        class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ЛИАЗ-5292
-                                                        <span>(1)</span></label>
+                                    </div>
+
+                                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                                        <a href="javascript:void(0)"
+                                            class="catalog-4lvl__filters-dropdown-link active"><span>Цена</span></a>
+                                        <div class="catalog-4lvl__filters-dropdown-content">
+                                            <div class="catalog-4lvl__filters-dropdown-content-container">
+                                                <div class="catalog-4lvl__filters-slider-values">
+                                                    <input type="number"
+                                                        class="catalog-4lvl__filters-slider-values-input"
+                                                        id="filtersSliderInput1">
+                                                    <div class="catalog-4lvl__filters-slider-values-dash"></div>
+                                                    <input type="number"
+                                                        class="catalog-4lvl__filters-slider-values-input"
+                                                        id="filtersSliderInput2">
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                                <div id="filtersSlider" class="catalog-4lvl__filters-slider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                                        <a href="javascript:void(0)"
+                                            class="catalog-4lvl__filters-dropdown-link active"><span>Марка</span></a>
+                                        <div class="catalog-4lvl__filters-dropdown-content">
+                                            <ul class="catalog-4lvl__filters-list catalog-4lvl__filters-list-1">
+                                                <li class="catalog-4lvl__filters-list-item">
+                                                    <div class="catalog-4lvl__filters-checkbox">
+                                                        <input type="checkbox" id="filtersBrandCheckbox1"
+                                                            class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
+                                                        <label for="filtersBrandCheckbox1"
+                                                            class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">ПАЗ
+                                                            <span>(7)</span></label>
+                                                    </div>
+                                                    <ul class="catalog-4lvl__filters-list-2">
+                                                        <li class="catalog-4lvl__filters-list-item">
+                                                            <div class="catalog-4lvl__filters-checkbox">
+                                                                <input type="checkbox" id="filtersBrandCheckbox2"
+                                                                    class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
+                                                                <label for="filtersBrandCheckbox2"
+                                                                    class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ПАЗ-3205х
+                                                                    <span>(4)</span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="catalog-4lvl__filters-list-item">
+                                                            <div class="catalog-4lvl__filters-checkbox">
+                                                                <input type="checkbox" id="filtersBrandCheckbox3"
+                                                                    class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter not-found">
+                                                                <label for="filtersBrandCheckbox3"
+                                                                    class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ПАЗ-3204</label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="catalog-4lvl__filters-list-item">
+                                                            <div class="catalog-4lvl__filters-checkbox">
+                                                                <input type="checkbox" id="filtersBrandCheckbox4"
+                                                                    class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
+                                                                <label for="filtersBrandCheckbox4"
+                                                                    class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ПАЗ-3203
+                                                                    <span>(3)</span></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="catalog-4lvl__filters-list-item">
+                                                    <div class="catalog-4lvl__filters-checkbox">
+                                                        <input type="checkbox" id="filtersBrandCheckbox5"
+                                                            class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
+                                                        <label for="filtersBrandCheckbox5"
+                                                            class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">ЛИАЗ
+                                                            <span>(2)</span></label>
+                                                    </div>
+                                                    <ul class="catalog-4lvl__filters-list-2">
+                                                        <li class="catalog-4lvl__filters-list-item">
+                                                            <div class="catalog-4lvl__filters-checkbox">
+                                                                <input type="checkbox" id="filtersBrandCheckbox6"
+                                                                    class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
+                                                                <label for="filtersBrandCheckbox6"
+                                                                    class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">ЛИАЗ-5292
+                                                                    <span>(1)</span></label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                                        <a href="javascript:void(0)"
+                                            class="catalog-4lvl__filters-dropdown-link active"><span>Группы</span></a>
+                                        <div class="catalog-4lvl__filters-dropdown-content">
+                                            <ul class="catalog-4lvl__filters-list catalog-4lvl__filters-list-1">
+                                                <li class="catalog-4lvl__filters-list-item">
+                                                    <div class="catalog-4lvl__filters-checkbox">
+                                                        <input type="checkbox" id="filtersGroupsCheckbox1"
+                                                            class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
+                                                        <label for="filtersGroupsCheckbox1"
+                                                            class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">Двигатель
+                                                            <span>(200)</span></label>
+                                                    </div>
+                                                    <ul class="catalog-4lvl__filters-list-2">
+                                                        <li class="catalog-4lvl__filters-list-item">
+                                                            <div class="catalog-4lvl__filters-checkbox">
+                                                                <input type="checkbox" id="filtersGroupsCheckbox2"
+                                                                    class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
+                                                                <label for="filtersGroupsCheckbox2"
+                                                                    class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">Двигатель
+                                                                    ЗМЗ
+                                                                    <span>(50)</span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="catalog-4lvl__filters-list-item">
+                                                            <div class="catalog-4lvl__filters-checkbox">
+                                                                <input type="checkbox" id="filtersGroupsCheckbox3"
+                                                                    class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
+                                                                <label for="filtersGroupsCheckbox3"
+                                                                    class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">Двигатель
+                                                                    ММЗ
+                                                                    <span>(50)</span></label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="catalog-4lvl__filters-list-item">
+                                                            <div class="catalog-4lvl__filters-checkbox">
+                                                                <input type="checkbox" id="filtersGroupsCheckbox4"
+                                                                    class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
+                                                                <label for="filtersGroupsCheckbox4"
+                                                                    class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">Двигатель
+                                                                    Cummins ISF3.8
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="catalog-4lvl__filters-list-item">
+                                                    <div class="catalog-4lvl__filters-checkbox">
+                                                        <input type="checkbox" id="filtersGroupsCheckbox5"
+                                                            class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
+                                                        <label for="filtersGroupsCheckbox5"
+                                                            class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">Подрамник
+                                                            и
+                                                            опоры
+                                                            двигателя</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                                        <a href="javascript:void(0)"
+                                            class="catalog-4lvl__filters-dropdown-link active"><span>Производитель</span></a>
+                                        <div class="catalog-4lvl__filters-dropdown-content">
+                                            <div class="catalog-4lvl__filters-search">
+                                                <form action="">
+                                                    <input class="header-bottom__search-input" type="text"
+                                                        placeholder="Быстрый поиск">
+                                                </form>
+                                            </div>
+
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersManufacturerCheckbox1"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersManufacturerCheckbox1"
+                                                    class="catalog-4lvl__filters-checkbox-label">Cummins</label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersManufacturerCheckbox2"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersManufacturerCheckbox2"
+                                                    class="catalog-4lvl__filters-checkbox-label">DIFA</label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersManufacturerCheckbox3"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersManufacturerCheckbox3"
+                                                    class="catalog-4lvl__filters-checkbox-label">ГАЗ</label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersManufacturerCheckbox4"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersManufacturerCheckbox4"
+                                                    class="catalog-4lvl__filters-checkbox-label">КОРА</label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersManufacturerCheckbox5"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersManufacturerCheckbox5"
+                                                    class="catalog-4lvl__filters-checkbox-label">СОД</label>
+                                            </div>
+                                            <div class="catalog-4lvl__filters-checkbox">
+                                                <input type="checkbox" id="filtersManufacturerCheckbox6"
+                                                    class="catalog-4lvl__filters-checkbox-input">
+                                                <label for="filtersManufacturerCheckbox6"
+                                                    class="catalog-4lvl__filters-checkbox-label">УАЗ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn__wrapper">
+                                    <a href="javascript:void(0)" class="btn">Показать 24 товара</a>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="catalog-4lvl__filters-dropdown-wrapper">
-                            <a href="javascript:void(0)"
-                                class="catalog-4lvl__filters-dropdown-link active"><span>Группы</span></a>
-                            <div class="catalog-4lvl__filters-dropdown-content">
-                                <ul class="catalog-4lvl__filters-list catalog-4lvl__filters-list-1">
-                                    <li class="catalog-4lvl__filters-list-item">
-                                        <div class="catalog-4lvl__filters-checkbox">
-                                            <input type="checkbox" id="filtersDesctopGroupsCheckbox1"
-                                                class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
-                                            <label for="filtersDesctopGroupsCheckbox1"
-                                                class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">Двигатель
-                                                <span>(200)</span></label>
-                                        </div>
-                                        <ul class="catalog-4lvl__filters-list-2">
-                                            <li class="catalog-4lvl__filters-list-item">
-                                                <div class="catalog-4lvl__filters-checkbox">
-                                                    <input type="checkbox" id="filtersDesctopGroupsCheckbox2"
-                                                        class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
-                                                    <label for="filtersDesctopGroupsCheckbox2"
-                                                        class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">Двигатель
-                                                        ЗМЗ
-                                                        <span>(50)</span></label>
-                                                </div>
-                                            </li>
-                                            <li class="catalog-4lvl__filters-list-item">
-                                                <div class="catalog-4lvl__filters-checkbox">
-                                                    <input type="checkbox" id="filtersDesctopGroupsCheckbox3"
-                                                        class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
-                                                    <label for="filtersDesctopGroupsCheckbox3"
-                                                        class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">Двигатель
-                                                        ММЗ
-                                                        <span>(50)</span></label>
-                                                </div>
-                                            </li>
-                                            <li class="catalog-4lvl__filters-list-item">
-                                                <div class="catalog-4lvl__filters-checkbox">
-                                                    <input type="checkbox" id="filtersDesctopGroupsCheckbox4"
-                                                        class="catalog-4lvl__filters-checkbox-input checkbox-input-daughter">
-                                                    <label for="filtersDesctopGroupsCheckbox4"
-                                                        class="catalog-4lvl__filters-checkbox-label checkbox-label-daughter">Двигатель
-                                                        Cummins ISF3.8
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="catalog-4lvl__filters-list-item">
-                                        <div class="catalog-4lvl__filters-checkbox">
-                                            <input type="checkbox" id="filtersDesctopGroupsCheckbox5"
-                                                class="catalog-4lvl__filters-checkbox-input checkbox-input-parent">
-                                            <label for="filtersDesctopGroupsCheckbox5"
-                                                class="catalog-4lvl__filters-checkbox-label checkbox-label-parent">Подрамник
-                                                и
-                                                опоры
-                                                двигателя</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="catalog-4lvl__filters-dropdown-wrapper">
-                            <a href="javascript:void(0)"
-                                class="catalog-4lvl__filters-dropdown-link active"><span>Производитель</span></a>
-                            <div class="catalog-4lvl__filters-dropdown-content">
-                                <div class="catalog-4lvl__filters-search">
-                                    <form action="">
-                                        <input class="header-bottom__search-input" type="text"
-                                            placeholder="Быстрый поиск">
-                                    </form>
-                                </div>
-
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopManufacturerCheckbox1"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopManufacturerCheckbox1"
-                                        class="catalog-4lvl__filters-checkbox-label">Cummins</label>
-                                </div>
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopManufacturerCheckbox2"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopManufacturerCheckbox2"
-                                        class="catalog-4lvl__filters-checkbox-label">DIFA</label>
-                                </div>
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopManufacturerCheckbox3"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopManufacturerCheckbox3"
-                                        class="catalog-4lvl__filters-checkbox-label">ГАЗ</label>
-                                </div>
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopManufacturerCheckbox4"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopManufacturerCheckbox4"
-                                        class="catalog-4lvl__filters-checkbox-label">КОРА</label>
-                                </div>
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopManufacturerCheckbox5"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopManufacturerCheckbox5"
-                                        class="catalog-4lvl__filters-checkbox-label">СОД</label>
-                                </div>
-                                <div class="catalog-4lvl__filters-checkbox">
-                                    <input type="checkbox" id="filtersDesctopManufacturerCheckbox6"
-                                        class="catalog-4lvl__filters-checkbox-input">
-                                    <label for="filtersDesctopManufacturerCheckbox6"
-                                        class="catalog-4lvl__filters-checkbox-label">УАЗ</label>
-                                </div>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="catalog-4lvl__catalog">
                         <div class="catalog-4lvl__catalog-buttons">
@@ -2003,7 +2037,7 @@
 
     @@include('html/modal-choice.html',{})
 
-    @@include('html/filters.html',{})
+    <!-- @@include('html/filters.html',{}) -->
 
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

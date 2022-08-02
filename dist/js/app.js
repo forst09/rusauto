@@ -59,8 +59,16 @@ $(document).ready(function () {
 
     //ОТКРЫТИЕ МОДАЛЬНОГО ОКНА С ФИЛЬТРАМИ 
     $(document).on('click', '.catalog-4lvl__catalog-buttons-filters', function () {
-        $('.filters-modal').addClass('active');
+        // $('.filters-modal').addClass('active');
+        $('.catalog-4lvl__filters').addClass('active');
         $('body').addClass('scroll-hide');
+    });
+
+    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА С ФИЛЬТРАМИ 
+    $(document).on('click', '.catalog-4lvl__filters .header-bottom__request-close', function () {
+        // $('.filters-modal').addClass('active');
+        $('.catalog-4lvl__filters').removeClass('active');
+        $('body').removeClass('scroll-hide');
     });
 
     // УБРАТЬ ОКОШКО С ПОДТВЕРЖДЕНИЕМ ГОРОДА ПО КНОПКЕ "ВЕРНО"
@@ -315,7 +323,7 @@ $(document).ready(function () {
     if (($(window).width() >= 320) && ($(window).width() < 1023)) {
         $("#catalog4lvlTabLines").trigger("click");
     }
-    // ТАБЫ, НАЧИНАЯ С ПЛАНШЕТОВ ВКЛЮЧАТЬ ПЛИТКИ
+    // ТАБЫ, НАЧИНАЯ С ПК ВКЛЮЧАТЬ ПЛИТКИ
     if ($(window).width() >= 1024) {
         $("#catalog4lvlTabTiles").trigger("click");
     }
