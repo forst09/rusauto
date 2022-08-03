@@ -2543,9 +2543,9 @@ h1 {
   border: 1px solid #A3A8AB;
   border-radius: 0.4rem;
   left: 0;
-  top: calc(50% - 8px);
+  top: 0;
   transition: 0.3s ease;
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
 }
 .catalog-4lvl__filters-checkbox-label::after {
   content: "";
@@ -2554,7 +2554,7 @@ h1 {
   width: 1.1rem;
   height: 0.8rem;
   left: 0.25rem;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   background-image: url("../img/catalog-4lvl/check.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -2586,7 +2586,7 @@ h1 {
   height: 2px;
   background-color: #ffffff;
   left: 0.4rem;
-  top: calc(50% - 8px);
+  top: calc(50% - 0.7rem);
 }
 
 .catalog-4lvl__filters-radio-label {
@@ -2707,6 +2707,12 @@ h1 {
   border: 1px solid #A3A8AB;
   border-radius: 0.2rem;
   font-family: "Geometria";
+  -moz-appearance: textfield;
+  /* Chrome, Safari, Edge, Opera */
+}
+.catalog-4lvl__filters-slider-values-input::-webkit-outer-spin-button, .catalog-4lvl__filters-slider-values-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .catalog-4lvl__filters-slider-values-dash {
@@ -2750,6 +2756,10 @@ h1 {
 }
 .catalog-4lvl__filters-wrapper .btn__wrapper {
   margin-top: 2.4rem;
+}
+
+.catalog-4lvl__filters-list-2 {
+  margin-top: 1.6rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ*/
