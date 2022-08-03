@@ -2386,13 +2386,16 @@ h1 {
 /*КОНЕЦ СТИЛЕЙ МАРОК*/
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ*/
-.catalog-4lvl .js-hide {
+.catalog-4lvl .js-hide,
+.cart .js-hide {
   height: 11rem;
 }
-.catalog-4lvl .btn-show__wrapper {
+.catalog-4lvl .btn-show__wrapper,
+.cart .btn-show__wrapper {
   margin-top: 1.2rem;
 }
-.catalog-4lvl .desc {
+.catalog-4lvl .desc,
+.cart .desc {
   margin-bottom: 0;
 }
 
