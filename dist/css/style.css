@@ -267,6 +267,22 @@ h1 {
   line-height: 1.8rem;
 }
 
+.navigation {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.navigation__btn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.navigation__btn-more span {
+  font-size: 1.2rem;
+  color: #00A0E3;
+  line-height: 1.5rem;
+}
+
 .header-top__links-icons-basket,
 .header-top__links-icons-user {
   width: 2rem;
