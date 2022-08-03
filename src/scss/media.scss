@@ -66,6 +66,103 @@
         padding: 0 4.4rem;
     }
 
+    /*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ 668*/
+    .ma-production {
+        &__content {
+            h2 {
+                font-size: 2.2rem;
+                line-height: 3.0rem;
+            }
+
+            h3 {
+                font-size: 2.0rem;
+                line-height: 2.6rem;
+                margin-bottom: 2.4rem;
+            }
+
+            h4 {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                margin-bottom: 2.4rem;
+
+            }
+
+            h5 {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                margin-bottom: 2.4rem;
+                margin-top: 4rem;
+            }
+
+            h6 {
+                font-size: 1.6rem;
+                margin-bottom: 2.4rem;
+                margin-top: 4rem;
+            }
+        }
+
+        &__video {
+            width: 58.0rem;
+            height: 30.409rem;
+            margin-top: 2.4rem;
+
+            svg {
+                width: 8.4rem;
+                height: 8.4rem;
+            }
+        }
+
+        &__img-auto {
+            width: 38.3rem;
+            height: 28.7rem;
+
+
+        }
+    }
+
+    /*КОНЕЦ КОНТЕНТНЫХ СТИЛЕЙ 668*/
+
+    /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ 668*/
+    .ma-subscribe {
+
+        &__content {
+            padding: 3.2rem 0 3.2rem 4.4rem;
+            width: 40rem;
+
+        }
+
+        &__title {
+            font-size: 2rem;
+            line-height: 2.6rem;
+            margin-bottom: 2.4rem;
+        }
+
+        &__form {
+            width: 100%;
+            margin: auto;
+
+            button {
+                border: none;
+                outline: none;
+
+            }
+
+            &-container {
+                display: block;
+                column-gap: 2.4rem;
+            }
+
+            &-input {
+                max-width: 40rem;
+                height: 3.8rem;
+                margin-bottom: 1.6rem;
+            }
+
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ РАССЫЛКИ 668*/
+
     /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
     .mobile-menu,
     .modal-choice {
@@ -1094,6 +1191,119 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ТАББАРА 1024*/
+
+    /*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ 1024*/
+    .ma-production {
+        &__content {
+            p+p {
+                margin-top: 1.8rem;
+            }
+
+            p {
+                line-height: 1.8rem;
+            }
+
+            h2 {
+                font-size: 2.8rem;
+                line-height: 3.8rem;
+                margin-bottom: 4.8rem;
+                margin-top: 4.8rem;
+            }
+
+            h3 {
+                font-size: 2.4rem;
+                line-height: 3rem;
+                margin-bottom: 3.2rem;
+                margin-top: 4.8rem;
+            }
+
+            h4 {
+                font-size: 2rem;
+                line-height: 3rem;
+                margin-bottom: 3.2rem;
+            }
+
+            h5 {
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+                margin-bottom: 2.4rem;
+                margin-top: 4.8rem;
+            }
+
+            h6 {
+                font-size: 1.6rem;
+                margin-bottom: 2.4rem;
+                margin-top: 4.8rem;
+            }
+        }
+
+        &__video {
+            width: 70rem;
+            height: 36.7rem;
+            margin-top: 3.2rem;
+
+            svg {
+                width: 11.2rem;
+                height: 11.2rem;
+            }
+        }
+
+        &__img-auto {
+            width: 49rem;
+            height: 36.7rem;
+
+
+        }
+
+        .news__item-date {
+            margin-bottom: 0.4rem;
+        }
+
+        h1 {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    /*КОНЕЦ КОНТЕНТНЫХ СТИЛЕЙ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ 1024*/
+    .ma-subscribe {
+
+        &__content {
+            padding: 3.2rem 6.4rem;
+            width: auto;
+            display: flex;
+            align-items: center;
+
+        }
+
+        &__title {
+            width: 37.6rem;
+            font-size: 2.4rem;
+            line-height: 3rem;
+            margin-bottom: 0;
+            margin: unset;
+        }
+
+        &__form {
+            width: 40rem;
+            margin: unset;
+
+            button {
+                margin: auto;
+                display: block;
+            }
+
+            &-input {
+                width: 100%;
+                height: 3.8rem;
+                margin-bottom: 2.4rem;
+            }
+
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ РАССЫЛКИ 1024*/
 
     /*КАСТОМИЗАЦИЯ СВАЙПЕРА 1024*/
     .swiper {
@@ -2817,6 +3027,94 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+
+    /*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ 1500*/
+    .ma-production {
+        &__content {
+            p {
+                max-width: 88rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+                line-height: 4.2rem;
+                margin-bottom: 4.8rem;
+                margin-top: 8rem;
+            }
+
+            h3 {
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+
+            }
+
+            h4 {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                margin-top: 4.8rem;
+            }
+
+            h5 {
+                font-size: 2rem;
+                line-height: 2.8rem;
+                margin-bottom: 3.2rem;
+            }
+
+            h6 {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                margin-bottom: 3.2rem;
+            }
+
+        }
+
+        &__img-auto {
+            width: 49rem;
+            height: 36.7rem;
+        }
+    }
+
+    /*КОНЕЦ КОНТЕНТНЫХ СТИЛЕЙ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ 1500*/
+    .ma-subscribe {
+
+        &__content {
+            padding: 6rem 11.2rem;
+            width: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        &__title {
+            width: 56rem;
+            font-size: 2.6rem;
+            line-height: 3.2rem;
+        }
+
+        &__form {
+            width: 63.895rem;
+
+            button {
+                margin: auto;
+                display: block;
+
+            }
+
+            &-container {
+                display: flex;
+                align-items: center;
+                column-gap: 2.4rem;
+            }
+
+            &-input {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ РАССЫЛКИ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/
     .catalog-modal {

@@ -555,6 +555,412 @@ h1 {
 
 /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 
+/*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ*/
+.ma-production {
+    &__content {
+        p {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.0rem;
+            color: #262B2E;
+
+
+
+        }
+
+        p+p {
+            margin-top: 2rem;
+        }
+
+        h2 {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 3.0rem;
+            color: #262B2E;
+            margin-bottom: 3.2rem;
+            margin-top: 4.8rem;
+        }
+
+        h3 {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+            color: #064E8C;
+            margin-bottom: 2.4rem;
+            margin-top: 4rem;
+
+        }
+
+        span {
+            display: inline-block;
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #064E8C;
+
+            margin-bottom: 1.6rem;
+        }
+
+        ul {
+
+
+            li {
+                font-family: 'Geometria';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 2.0rem;
+                color: #262B2E;
+
+                position: relative;
+                padding-left: 2.8rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    width: 1.6rem;
+                    height: .2rem;
+                    background: url('../img/content-page/icon-list.svg');
+                    background-repeat: no-repeat;
+                    background-size: 1.6rem .2rem;
+                    top: 1rem;
+
+                }
+
+            }
+
+            li+li {
+                margin-top: 1.6rem;
+            }
+        }
+
+        h4 {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: #262B2E;
+            margin-bottom: 1.6rem;
+            margin-top: 4rem;
+        }
+
+        ol {
+            list-style: auto;
+            margin-left: 1.8rem;
+
+            li {
+                padding-left: .8rem;
+                font-family: 'Geometria';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                color: #262B2E;
+
+                &:last-child {
+                    margin-bottom: 0rem;
+                }
+
+                &::marker {
+                    font-family: 'Geometria';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                    color: #00A0E3;
+
+                }
+            }
+
+            li+li {
+                margin-top: 1.6rem;
+            }
+
+            margin-bottom: 4.8rem;
+        }
+
+        h5 {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            color: #262B2E;
+            margin-bottom: 1.6rem;
+            margin-top: 4rem;
+        }
+
+        h6 {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            color: #00A0E3;
+            margin-bottom: 1.6rem;
+            margin-top: 4.2rem;
+        }
+
+        b {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #262B2E;
+            display: inline-block;
+
+        }
+
+        i {
+            font-family: 'Geometria';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #262B2E;
+            display: inline-block;
+
+        }
+
+        a {
+            font-family: 'Geometria';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            text-decoration-line: underline;
+            color: #00A0E3;
+            display: inline-block;
+
+
+
+        }
+
+        table {
+            width: 60.4rem;
+            margin: auto;
+            border-collapse: collapse;
+
+            margin-top: 4rem;
+
+            td {
+                width: 50%;
+                border: 1px solid #A3A8AB;
+                padding: .8rem 1.4rem;
+                font-family: 'Geometria';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                color: #262B2E;
+
+                &:nth-child(1) {
+                    color: #064E8C;
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                }
+
+            }
+        }
+
+    }
+
+    &__img-auto {
+        display: block;
+        width: 28.8rem;
+        height: 21.6rem;
+        margin: auto;
+        margin-top: 3.2rem;
+
+
+    }
+
+    &__video {
+        width: 28.8rem;
+        height: 15.1rem;
+
+    }
+
+    &__img-video {
+        width: 100%;
+    }
+
+    &__video {
+        width: 28.8rem;
+        position: relative;
+        margin: auto;
+        margin-top: 3.2rem;
+
+        svg {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 5rem;
+            height: 5rem;
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__scroll {
+        overflow: auto;
+        margin: 0 -1rem;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+        }
+
+        margin-bottom: 4.8rem;
+    }
+
+    &-content {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        margin-bottom: 3.2rem;
+    }
+}
+
+/*КОНЕЦ КОНТЕНТНЫХ СТИЛЕЙ*/
+
+/*НАЧАЛО СТИЛЕЙ РАССЫЛКИ*/
+.ma-subscribe {
+    background: #F5FBFE;
+    // margin-bottom: 12.8rem;
+    // margin-top: 6.4rem;
+    background-image: url('../img/content-page/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+
+    &__content {
+        padding: 2.4rem 3.2rem;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: 'Geometria';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: #064E8C;
+        margin: auto;
+        margin-bottom: 2.3rem;
+    }
+
+    &__form {
+        margin: auto;
+
+        button {
+            border: none;
+            outline: none;
+        }
+
+        &-container {
+            display: block;
+            column-gap: 2.4rem;
+        }
+
+        &-input {
+            max-width: 44.4rem;
+            height: 3.8rem;
+            margin: auto;
+            margin-bottom: 1.6rem;
+
+            input {
+                width: 100%;
+                height: 100%;
+                outline: none;
+                border: none;
+                background: #FFFFFF;
+                border: 1.28px solid #EFF0F1;
+                padding-left: 2rem;
+                color: #064E8C;
+
+                &,
+                &::placeholder {
+                    font-family: 'Geometria';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+
+                }
+
+                &::placeholder {
+                    color: #A3A8AB;
+                }
+            }
+
+        }
+
+        &-btn {
+            margin-top: 0;
+
+        }
+
+        .btn-main {
+            min-width: 18.3rem;
+            padding: 1rem 2.8rem;
+
+            &::before {
+                border-left: 1.6rem solid transparent;
+                border-bottom: 3.8rem solid #00A0E3;
+                left: -1.6rem;
+            }
+
+            &::after {
+                border-right: 1.6rem solid transparent;
+                border-top: 3.8rem solid #00A0E3;
+                right: -1.6rem;
+            }
+
+
+            &:hover,
+            &:active,
+            &:focus,
+            &:focus-within {
+                background-color: #0091CE;
+
+                &::before {
+                    border-left: 1.6rem solid transparent;
+                    border-bottom: 3.8rem solid #0091CE;
+                }
+
+                &::after {
+                    border-right: 1.6rem solid transparent;
+                    border-top: 3.8rem solid #0091CE;
+                }
+            }
+        }
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ РАССЫЛКИ*/
+
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
 
 .header {
