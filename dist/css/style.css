@@ -287,6 +287,20 @@ h1 {
   font-size: 1.2rem;
   color: #00A0E3;
   line-height: 1.5rem;
+  transition: 0.3s ease;
+}
+.navigation__btn-more svg {
+  width: 1rem;
+  height: 1.4rem;
+}
+.navigation__btn-more svg path {
+  transition: 0.3s ease;
+}
+.navigation__btn-more:hover span, .navigation__btn-more:active span, .navigation__btn-more:focus span, .navigation__btn-more:focus-within span {
+  color: #0091CE;
+}
+.navigation__btn-more:hover svg path, .navigation__btn-more:active svg path, .navigation__btn-more:focus svg path, .navigation__btn-more:focus-within svg path {
+  stroke: #0091CE;
 }
 
 .navigation-pages {
@@ -296,16 +310,23 @@ h1 {
   align-items: center;
 }
 
-.navigation-pages__item {
+.navigation-pages__item a {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  transition: 0.3s ease;
   width: 2.6rem;
   height: 2.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.navigation-pages__item a {
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+.navigation-pages__item a:hover {
+  background-color: #EDF8FD;
+  color: #00A0E3;
+}
+.navigation-pages__item a:active, .navigation-pages__item a:focus, .navigation-pages__item a:focus-within {
+  background-color: transparent;
+  color: #00A0E3;
 }
 
 .navigation-pages__item + .navigation-pages__item {
@@ -325,6 +346,20 @@ h1 {
   position: absolute;
   width: 2.6rem;
   height: 2.6rem;
+}
+.navigation-pages__left-arrow svg path,
+.navigation-pages__right-arrow svg path {
+  transition: 0.3s ease;
+}
+.navigation-pages__left-arrow:hover svg path,
+.navigation-pages__right-arrow:hover svg path {
+  stroke: #00A0E3;
+}
+.navigation-pages__left-arrow:active svg path, .navigation-pages__left-arrow:focus svg path, .navigation-pages__left-arrow:focus-within svg path,
+.navigation-pages__right-arrow:active svg path,
+.navigation-pages__right-arrow:focus svg path,
+.navigation-pages__right-arrow:focus-within svg path {
+  stroke: #0091CE;
 }
 
 .navigation-pages__left-arrow {
@@ -658,6 +693,7 @@ h1 {
   color: #064E8C;
   font-weight: 400;
   font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 .ma-production__img-auto {
   display: block;
@@ -2355,6 +2391,9 @@ h1 {
 }
 .catalog-4lvl .btn-show__wrapper {
   margin-top: 1.2rem;
+}
+.catalog-4lvl .desc {
+  margin-bottom: 0;
 }
 
 .category {

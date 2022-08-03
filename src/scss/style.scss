@@ -333,6 +333,31 @@ h1 {
         font-size: 1.2rem;
         color: #00A0E3;
         line-height: 1.5rem;
+        transition: 0.3s ease;
+    }
+
+    svg {
+        width: 1rem;
+        height: 1.4rem;
+
+        path {
+            transition: 0.3s ease;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+        span {
+            color: #0091CE;
+        }
+
+        svg {
+            path {
+                stroke: #0091CE;
+            }
+        }
     }
 }
 
@@ -345,15 +370,28 @@ h1 {
 
 
 .navigation-pages__item {
-    width: 2.6rem;
-    height: 2.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     a {
         font-size: 1.4rem;
         line-height: 1.8rem;
+        transition: 0.3s ease;
+        width: 2.6rem;
+        height: 2.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: #EDF8FD;
+            color: #00A0E3;
+        }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            background-color: transparent;
+            color: #00A0E3;
+        }
     }
 }
 
@@ -376,6 +414,24 @@ h1 {
             height: 2.6rem;
             // top: calc(50% - 1.3rem);
             // left: calc(50% - 1.3rem);
+        }
+    }
+
+    svg path {
+        transition: 0.3s ease;
+    }
+
+    &:hover {
+        svg path {
+            stroke: #00A0E3;
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg path {
+            stroke: #0091CE;
         }
     }
 }
@@ -770,6 +826,7 @@ h1 {
                     color: #064E8C;
                     font-weight: 400;
                     font-size: 1.2rem;
+                    line-height: 1.5rem;
                 }
 
             }
@@ -2750,6 +2807,10 @@ h1 {
 
     .btn-show__wrapper {
         margin-top: 1.2rem;
+    }
+
+    .desc {
+        margin-bottom: 0;
     }
 }
 

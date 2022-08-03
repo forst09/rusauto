@@ -66,6 +66,29 @@
         padding: 0 4.4rem;
     }
 
+    .navigation__btn-more {
+        span {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    .navigation-pages {
+        margin-top: 4rem;
+    }
+
+    .navigation-pages__item+.navigation-pages__item {
+        margin-left: 1.6rem;
+    }
+
+    .navigation-pages__left-arrow {
+        margin-right: 2.6rem;
+    }
+
+    .navigation-pages__right-arrow {
+        margin-left: 2.6rem;
+    }
+
     /*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ 668*/
     .ma-production {
         &__content {
@@ -1139,6 +1162,10 @@
         font-size: 1.4rem;
         line-height: 2.6rem;
         max-width: 58.6rem;
+    }
+
+    .navigation {
+        margin-top: 5.6rem;
     }
 
     .btn {

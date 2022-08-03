@@ -280,6 +280,7 @@ $(document).ready(function () {
         console.log(texthideHeight);
         if (texthideHeight <= $(this).height()) {
             $(this).parents('section').find('.btn-show__wrapper').hide();
+            $(this).css('height', texthideHeight);
         }
     });
 
@@ -410,6 +411,55 @@ $(document).ready(function () {
         }
     });
 
+    //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
+    let imgs = document.querySelectorAll('.ma-production__content img');
+    let videoButton = document.querySelector('.ma-production__video svg');
+    let content = document.querySelector('.ma-production__content ');
+    let allEltsInContent = [...content.querySelectorAll('*')];
+    let allTagInContent = [];
+    allEltsInContent.forEach(elt => {
+        allTagInContent.push(elt.tagName.toLocaleLowerCase())
+
+    })
+    if (allTagInContent.includes('table')) {
+        let tables = content.querySelectorAll('table');
+        tables.forEach(table => {
+            let wrapper = document.createElement('div')
+            let content = document.createElement('div')
+            wrapper.classList.add('ma-production__scroll')
+            content.classList.add('ma-production__scroll-content')
+            let parent = table.parentNode
+            parent.replaceChild(wrapper, table)
+            content.appendChild(table)
+            wrapper.appendChild(content)
+            console.log(wrapper)
+        })
+    }
+    imgs.forEach(img => {
+        let div = document.createElement('div');
+        div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
+        div.classList.add('ma-production__img-auto')
+        img.parentNode.replaceChild(div, img);
+    })
+    let url = 'https://www.youtube.com/watch?v=C-g2Kghb4pM';
+    let newUrl;
+    // replace watch with embed
+    if (url.includes('watch?v=')) {
+        newUrl = url.replace('/watch?v=', '/embed/')
+
+    }
+
+    videoButton.addEventListener('click', e => {
+        $.fancybox.open({
+            src: newUrl,
+            type: 'iframe',
+            opts: {
+                afterShow: function (instance, current) {
+                    console.info('done!');
+                }
+            }
+        });
+    })
 
     //СЛАЙДЕР В ФИЛЬТРАХ КАТАЛОГА 4 УРОВНЯ
 
@@ -564,6 +614,8 @@ $(document).ready(function () {
         // swiperPartners.on('slideChange', function () {
         //     console.log(swiperPartners.realIndex);
         // });
+
+
 
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "НАШИ ПАРТНЕРЫ"
         const swiperRecently = new Swiper('.swiper-recently', {
