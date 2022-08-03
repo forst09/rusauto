@@ -109,14 +109,14 @@ $(document).ready(function () {
 
     //ПОИСК НА 1024 В ШАПКЕ
     $(document).on('input', '.header-bottom__search-input', function () {
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-result').addClass('active');
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-close').addClass('active');
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-result').addClass('active');
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-close').addClass('active');
     });
 
     //ЗАКРЫТИЕ ПОИСКА НА 1024 В ШАПКЕ
     $(document).on('blur', '.header-bottom__search-input', function () {
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-result').removeClass('active');
-        $(this).parents('.header-bottom__search').find('.header-bottom__search-close').removeClass('active');
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-result').removeClass('active');
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-close').removeClass('active');
         $(this).val('');
     });
 
