@@ -47,6 +47,10 @@
     max-width: 50.8rem;
   }
 
+  .desc-left {
+    max-width: none;
+  }
+
   .desc-maxwidth {
     max-width: unset;
   }
@@ -731,16 +735,11 @@
     -ms-line-clamp: 4;
     -webkit-line-clamp: 4;
     line-clamp: 4;
-    max-width: 49rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 3 УРОВНЯ 668*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ МАРОК 668*/
-  .brands .desc {
-    max-width: 49rem;
-  }
-
   .brands__scroll {
     padding: 0 4.4rem;
     overflow-x: unset;

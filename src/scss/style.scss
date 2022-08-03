@@ -97,6 +97,12 @@ h1 {
     font-size: 1.4rem;
 }
 
+.desc-left {
+    max-width: none;
+    text-align: left;
+    margin: 0 0 3.2rem;
+}
+
 .desc-maxwidth {
     text-align: left;
     max-width: 42rem;
@@ -328,6 +334,58 @@ h1 {
         color: #00A0E3;
         line-height: 1.5rem;
     }
+}
+
+.navigation-pages {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navigation-pages__item {
+    width: 2.6rem;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+
+.navigation-pages__item+.navigation-pages__item {
+    margin-left: 0.8rem;
+}
+
+.navigation-pages__left-arrow,
+.navigation-pages__right-arrow {
+    a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 2.6rem;
+            height: 2.6rem;
+            // top: calc(50% - 1.3rem);
+            // left: calc(50% - 1.3rem);
+        }
+    }
+}
+
+.navigation-pages__left-arrow {
+    margin-right: 2.2rem;
+}
+
+.navigation-pages__right-arrow {
+    margin-left: 2.2rem;
 }
 
 .header-top__links-icons-basket,

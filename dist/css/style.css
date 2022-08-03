@@ -90,6 +90,12 @@ h1 {
   font-size: 1.4rem;
 }
 
+.desc-left {
+  max-width: none;
+  text-align: left;
+  margin: 0 0 3.2rem;
+}
+
 .desc-maxwidth {
   text-align: left;
   max-width: 42rem;
@@ -281,6 +287,52 @@ h1 {
   font-size: 1.2rem;
   color: #00A0E3;
   line-height: 1.5rem;
+}
+
+.navigation-pages {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-pages__item {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-pages__item a {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.navigation-pages__item + .navigation-pages__item {
+  margin-left: 0.8rem;
+}
+
+.navigation-pages__left-arrow a,
+.navigation-pages__right-arrow a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-pages__left-arrow a::before,
+.navigation-pages__right-arrow a::before {
+  content: "";
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.navigation-pages__left-arrow {
+  margin-right: 2.2rem;
+}
+
+.navigation-pages__right-arrow {
+  margin-left: 2.2rem;
 }
 
 .header-top__links-icons-basket,
