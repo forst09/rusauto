@@ -849,9 +849,7 @@
     width: 100%;
     height: 100%;
     padding: 0.45rem 0.8rem;
-  }
-  .catalog-4lvl__catalog-item-bottom-buttons-basket form {
-    width: auto;
+    justify-content: space-between;
   }
 
   .catalog-4lvl__catalog-item-cost {
@@ -882,11 +880,6 @@
     margin-left: -4.55rem;
     font-size: 1.6rem;
     line-height: 2rem;
-  }
-
-  .catalog-4lvl__filters-slider .noUi-connect,
-.catalog-4lvl__filters-slider .noUi-origin {
-    right: -0.3rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ 668*/
@@ -2302,7 +2295,7 @@
     margin: 0;
   }
   .catalog-4lvl__catalog-item-bottom-buttons-basket form {
-    min-width: 9.7rem;
+    max-width: 9.7rem;
   }
 
   .catalog-4lvl__catalog-item-bottom-buttons-basket-text {

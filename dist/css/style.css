@@ -2762,6 +2762,10 @@ h1 {
   margin-top: 1.6rem;
 }
 
+.noUi-horizontal .noUi-handle {
+  right: -1.7rem;
+}
+
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ*/
 @keyframes fadeEffect {
   0% {
