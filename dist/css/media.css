@@ -2780,6 +2780,9 @@
   .cart__order-head {
     display: flex;
     margin-bottom: 1.6rem;
+    padding: 0 3.6rem 0 10rem;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .cart__order-item {
@@ -2829,6 +2832,10 @@
     margin: 0;
   }
 
+  .cart__order-sum {
+    justify-content: center;
+    max-width: 13.4rem;
+  }
   .cart__order-sum .catalog-4lvl__catalog-item-cost-new {
     font-size: 1.6rem;
     line-height: 2rem;
@@ -2836,6 +2843,32 @@
 
   .cart__order-delete {
     position: static;
+  }
+
+  .cart__order-title {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    color: #A3A8AB;
+    width: 100%;
+    text-align: center;
+  }
+  .cart__order-title:nth-of-type(1) {
+    max-width: 24.3rem;
+  }
+  .cart__order-title:nth-of-type(2) {
+    max-width: 9.9rem;
+  }
+  .cart__order-title:nth-of-type(3) {
+    max-width: 13.8rem;
+  }
+  .cart__order-title:nth-of-type(4) {
+    max-width: 13.4rem;
+  }
+
+  .cart__order-count {
+    min-width: 13.8rem;
+    display: flex;
+    justify-content: center;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
