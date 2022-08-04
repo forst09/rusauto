@@ -3207,6 +3207,106 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ЭНЦИКЛОПЕДИЯ АВТОБУСОВ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ КОРЗИНЫ*/
+.cart__container {
+  margin-top: 4rem;
+}
+
+.cart__condition-log-in {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.cart__condition-log-in a {
+  font-weight: 500;
+  color: #064E8C;
+}
+
+.cart__order-item {
+  position: relative;
+}
+.cart__order-item .catalog-4lvl__catalog-item-name {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 0.8rem;
+  max-width: none;
+}
+.cart__order-item .catalog-4lvl__catalog-item-article {
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.cart__order-item .catalog-4lvl__catalog-item-cost {
+  display: none;
+}
+.cart__order-item .catalog-4lvl__catalog-item-bottom-buttons-basket {
+  display: block;
+  width: fit-content;
+}
+.cart__order-item .catalog-4lvl__catalog-item-bottom-buttons-basket form {
+  padding: 0.45rem 0.4rem;
+  min-width: 10.5rem;
+}
+.cart__order-item .catalog-4lvl__catalog-item-availability {
+  display: none;
+}
+
+.cart__order {
+  margin-top: 3.2rem;
+}
+
+.cart__order-head {
+  display: none;
+}
+
+.cart__order-info {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cart__order-image {
+  width: 6.8rem;
+  height: 6.7rem;
+  flex-shrink: 0;
+}
+.cart__order-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cart__order-values {
+  margin-top: 1.2rem;
+}
+
+.cart__order-sum .catalog-4lvl__catalog-item-cost {
+  display: flex;
+  margin-top: 0.8rem;
+}
+.cart__order-sum .catalog-4lvl__catalog-item-cost-new {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.cart__order-wrapper {
+  padding-right: 2.6rem;
+}
+
+.cart__order-delete {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cart__order-delete svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
