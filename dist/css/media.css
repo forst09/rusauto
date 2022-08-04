@@ -979,26 +979,15 @@
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНЫХ ФИЛЬТРОВ 668*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 668*/
-  .ma-pay-order__container {
+  .ma-pay__container {
     padding: 0 4.4rem;
   }
-  .ma-pay-order__title {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    margin-bottom: 2.4rem !important;
+  .ma-pay__title {
+    font-size: 2rem !important;
+    line-height: 2.6rem !important;
   }
-  .ma-pay-order__top {
-    margin-bottom: 3.2rem;
-  }
-  .ma-pay-order__item-title {
-    font-size: 1.6rem;
-    margin-bottom: 2.4rem;
-  }
-  .ma-pay-order__item-list {
-    margin-bottom: 2.4rem;
-  }
-  .ma-pay-order__item:not(:last-child) {
-    margin-bottom: 2.4rem !important;
+  .ma-pay .ma-production__content h3 {
+    margin: 2.4rem 0;
   }
 
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 668*/
@@ -2705,65 +2694,54 @@
   /*КОНЕЦ СТИЛЕЙ ЭНЦИКЛОПЕДИЯ АВТОБУСОВ 1024*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
-  .ma-pay-order__container {
+  .ma-pay__container {
+    position: relative !important;
     padding: 0 6.4rem;
-    position: relative;
   }
-  .ma-pay-order__body {
-    width: 69.6rem;
-    position: relative;
-    left: 20rem;
+  .ma-pay__item:not(:last-child) {
+    margin-bottom: 4.8rem;
   }
-  .ma-pay-order__title {
-    font-size: 2.4rem;
-    line-height: 3rem;
+  .ma-pay__title {
+    font-size: 2.4rem !important;
+    line-height: 3rem !important;
   }
-  .ma-pay-order__top {
-    margin-bottom: 3.2rem;
+  .ma-pay-left {
+    display: block;
+    position: fixed;
+    width: 17.6rem;
+    left: 6.4rem;
   }
-  .ma-pay-order__item-title {
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-  }
-  .ma-pay-order__item-list {
+  .ma-pay-left__item:not(:last-child) {
     margin-bottom: 2.4rem;
   }
-  .ma-pay-order__item-listItem {
-    line-height: 1.8rem;
-  }
-  .ma-pay-order__item-listItem:not(:last-child) {
-    margin-bottom: 1.6rem;
-  }
-  .ma-pay-order__left {
-    display: block;
-    width: 17.6rem;
-    height: 100vh;
-    flex-shrink: 0;
-    position: fixed;
-  }
-  .ma-pay-order__left-link {
+  .ma-pay-left__link {
     text-decoration: none;
   }
-  .ma-pay-order__left-link span {
+  .ma-pay-left__link span {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2rem;
     color: #064E8C;
   }
-  .ma-pay-order__left-link--active span {
+  .ma-pay-left__link--active span {
     font-weight: 500;
-    display: inline-block;
     position: relative;
-    padding-left: 2rem;
+    padding-left: 2.8rem;
   }
-  .ma-pay-order__left-link--active span::after {
-    content: url(../ma-img/production-auto/icon-link-active.svg);
+  .ma-pay-left__link--active span::after {
     position: absolute;
     left: 0;
     top: -0.5rem;
+    content: url(../ma-img/production-auto/icon-link-active.svg);
+    display: block;
   }
-  .ma-pay-order__left-item:not(:last-child) {
-    margin-bottom: 2.4rem;
+  .ma-pay-body {
+    width: 69.6rem;
+    position: relative;
+    left: 20rem;
+  }
+  .ma-pay .ma-production__content h3 {
+    margin: 2.4rem 0;
   }
 
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
@@ -2791,9 +2769,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  .cart__order-item .catalog-4lvl__catalog-item-manufacturer {
-    width: 100%;
-  }
   .cart__order-item .catalog-4lvl__catalog-item-cost {
     align-items: center;
     max-width: 9.9rem;
@@ -2802,6 +2777,12 @@
     display: block;
     line-height: 2.1rem;
     color: #A3A8AB;
+  }
+  .cart__order-item:nth-of-type(1) {
+    padding-top: 0.8rem;
+  }
+  .cart__order-item .catalog-4lvl__catalog-item-name {
+    min-height: 3.6rem;
   }
 
   .cart__order-info {
@@ -2854,6 +2835,7 @@
   }
   .cart__order-title:nth-of-type(1) {
     max-width: 24.3rem;
+    text-align: left;
   }
   .cart__order-title:nth-of-type(2) {
     max-width: 9.9rem;
@@ -3406,38 +3388,72 @@
   /*КОНЕЦ СТИЛЕЙ ЭНЦИКЛОПЕДИЯ АВТОБУСОВ 1500*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1500*/
-  .ma-pay-order__container {
+  .ma-pay__container {
     padding: 0 8rem;
   }
-  .ma-pay-order__body {
-    width: 88rem;
-    left: 24.4rem;
+  .ma-pay__title {
+    font-size: 2.6rem !important;
+    line-height: 3.2rem !important;
   }
-  .ma-pay-order__title {
-    font-size: 2.6rem;
-    line-height: 3.2rem;
+  .ma-pay-left {
+    width: 19.6rem;
+    left: 8rem;
   }
-  .ma-pay-order__top {
-    margin-bottom: 4.8rem;
-  }
-  .ma-pay-order__item-list {
-    margin-bottom: 3.2rem;
-  }
-  .ma-pay-order__item-text:not(:last-child) {
-    margin-bottom: 1.8rem;
-  }
-  .ma-pay-order__item-listItem:not(:last-child) {
+  .ma-pay-left__item:not(:last-child) {
     margin-bottom: 2.4rem;
   }
-  .ma-pay-order__item-title {
-    font-size: 2rem;
-    line-height: 2.8rem;
-    margin-bottom: 3.2rem;
+  .ma-pay-left__link span {
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
-  .ma-pay-order__left {
-    width: 19.6rem;
+  .ma-pay-body {
+    left: 24.4rem;
+    width: 88rem;
+  }
+  .ma-pay .ma-production__content h3 {
+    margin: 2.4rem 0 3.2rem;
+  }
+  .ma-pay__item:not(:last-child) {
+    margin-bottom: 4.8rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ 1500*/
+  .cart__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.8rem;
+  }
+
+  .cart__condition {
+    max-width: 91rem;
+    width: 100%;
+  }
+
+  .cart__ordering {
+    max-width: 34.6rem;
+    width: 100%;
+    background: #F5FBFE;
+    height: 34.2rem;
+  }
+
+  .cart__condition-log-in {
+    padding: 2rem 0;
+  }
+
+  .cart__order {
+    margin-top: 1.6rem;
+  }
+
+  .cart__order-head {
+    padding: 0 4.4rem 0 10.8rem;
+  }
+
+  .cart__order-item {
+    padding: 0.8rem 0.8rem 2.4rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

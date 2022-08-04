@@ -3894,119 +3894,49 @@ h1 {
 
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА*/
-#ma-pay-body,
-* {
-    scroll-behavior: smooth !important;
-}
+.ma-pay {
+    width: 100%;
 
-.ma-pay-order {
-    font-family: 'Geometria';
-    font-style: normal;
-
-    &__container {
-        padding: 0 1.5rem;
-        display: flex;
-        scroll-behavior: smooth;
+    ul {
+        list-style: none;
     }
 
-    &__left {
+    &__container {
+        padding: 0 1.6rem;
+
+        font-family: 'Geometria';
+        font-style: normal;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &-left {
         display: none;
 
     }
 
     &__title {
-        font-weight: 500;
-        font-size: 1.8rem;
-        line-height: 2.3rem;
-        color: #064E8C;
-
-
+        font-weight: 500 !important;
+        font-size: 1.8rem !important;
+        line-height: 2.3rem !important;
+        color: #064E8C !important;
+        margin: 0 !important;
     }
 
-    &__top {
-        margin-bottom: 3.2rem;
-
-        .ma-pay-order__title {
-            margin-bottom: 1.6rem;
-        }
-
-        .ma-pay-order__item:nth-child(2) {
-            margin-bottom: 1.6rem;
-        }
-
-
-    }
-
-    &__bottom {
-        .ma-pay-order__title {
-            margin-bottom: 2.4rem;
-        }
-
-        .ma-pay-order__item:nth-child(2) {
-            margin-bottom: 2.4rem;
-
-        }
-    }
-
-    &__item {
-
-
-        &-title {
-            font-weight: 500;
-            font-size: 1.4rem;
-            line-height: 2.2rem;
+    .ma-production__content {
+        h3 {
             color: #262B2E;
-            margin-bottom: 1.6rem;
+            margin: 1.6rem 0;
         }
-
-        &-text {
-            p {
-                font-weight: 400;
-                font-size: 1.4rem;
-                line-height: 2.0rem;
-                color: #262B2E;
-
-
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 2rem;
-            }
-
-        }
-
-        &-listItem {
-            font-weight: 400;
-            font-size: 1.4rem;
-            line-height: 2.2rem;
-            color: #262B2E;
-            padding-left: 2.8rem;
-
-            &:not(:last-child) {
-                margin-bottom: 2.4rem;
-            }
-
-            position: relative;
-
-            &::after {
-                position: absolute;
-                left: 0;
-                top: -.5rem;
-                content: url(../ma-img/production-auto/icon-list.svg);
-
-
-            }
-
-
-        }
-
-        &-list {
-            margin-bottom: 1.6rem;
-            list-style: none;
-        }
-
     }
+}
 
+* {
+    scroll-behavior: smooth;
 }
 
 /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА*/

@@ -1125,47 +1125,22 @@
 
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 668*/
-    .ma-pay-order {
-
+    .ma-pay {
         &__container {
             padding: 0 4.4rem;
-
         }
+
 
         &__title {
-
-            font-size: 2rem;
-            line-height: 2.6rem;
-            margin-bottom: 2.4rem !important;
-
+            font-size: 2rem !important;
+            line-height: 2.6rem !important;
         }
 
-        &__top {
-            margin-bottom: 3.2rem;
-
+        .ma-production__content {
+            h3 {
+                margin: 2.4rem 0;
+            }
         }
-
-        &__item {
-
-            &-title {
-
-                font-size: 1.6rem;
-                margin-bottom: 2.4rem;
-            }
-
-
-            &-list {
-                margin-bottom: 2.4rem;
-
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 2.4rem !important;
-
-            }
-
-        }
-
     }
 
     /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 668*/
@@ -3144,80 +3119,41 @@
 
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
-    .ma-pay-order {
-
+    .ma-pay {
         &__container {
+
+            position: relative !important;
             padding: 0 6.4rem;
-            position: relative;
-
-
-        }
-
-        &__body {
-            width: 69.6rem;
-            position: relative;
-            left: 20rem;
-
-        }
-
-        &__title {
-
-            font-size: 2.4rem;
-            line-height: 3rem;
-
-
-        }
-
-        &__top {
-            margin-bottom: 3.2rem;
-
         }
 
         &__item {
-
-            &-title {
-
-                font-size: 1.8rem;
-                line-height: 2.6rem;
-
+            &:not(:last-child) {
+                margin-bottom: 4.8rem;
             }
-
-
-            &-list {
-                margin-bottom: 2.4rem;
-
-            }
-
-            &-listItem {
-
-
-                line-height: 1.8rem;
-
-                &:not(:last-child) {
-                    margin-bottom: 1.6rem;
-                }
-
-
-
-
-
-            }
-
         }
 
-        &__left {
+        &__title {
+            font-size: 2.4rem !important;
+            line-height: 3rem !important;
+        }
+
+        &-left {
             display: block;
-
-            width: 17.6rem;
-            height: 100vh;
-            flex-shrink: 0;
             position: fixed;
+            width: 17.6rem;
 
-            &-link {
+            left: 6.4rem;
+
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 2.4rem;
+                }
+            }
+
+            &__link {
                 text-decoration: none;
 
                 span {
-
                     font-weight: 400;
                     font-size: 1.6rem;
                     line-height: 2.0rem;
@@ -3225,29 +3161,39 @@
                 }
 
                 &--active {
+
                     span {
                         font-weight: 500;
-                        display: inline-block;
                         position: relative;
-                        padding-left: 2rem;
+                        padding-left: 2.8rem;
 
                         &::after {
-                            content: url(../ma-img/production-auto/icon-link-active.svg);
                             position: absolute;
                             left: 0;
                             top: -.5rem;
+                            content: url(../ma-img/production-auto/icon-link-active.svg);
+                            display: block;
                         }
                     }
                 }
             }
+        }
 
-            &-item {
-                &:not(:last-child) {
-                    margin-bottom: 2.4rem;
-                }
-            }
+        &-body {
+
+            width: 69.6rem;
+            position: relative;
+            left: 20rem;
 
         }
+
+        .ma-production__content {
+            h3 {
+
+                margin: 2.4rem 0;
+            }
+        }
+
 
     }
 
@@ -3277,9 +3223,9 @@
         justify-content: space-between;
         align-items: center;
 
-        .catalog-4lvl__catalog-item-manufacturer {
-            width: 100%;
-        }
+        // .catalog-4lvl__catalog-item-manufacturer {
+        //     width: 100%;
+        // }
 
         .catalog-4lvl__catalog-item-cost {
             align-items: center;
@@ -3290,6 +3236,14 @@
             display: block;
             line-height: 2.1rem;
             color: #A3A8AB;
+        }
+
+        &:nth-of-type(1) {
+            padding-top: 0.8rem;
+        }
+
+        .catalog-4lvl__catalog-item-name {
+            min-height: 3.6rem;
         }
     }
 
@@ -3344,6 +3298,7 @@
 
         &:nth-of-type(1) {
             max-width: 24.3rem;
+            text-align: left;
         }
 
         &:nth-of-type(2) {
@@ -4005,77 +3960,99 @@
 
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1500*/
-    .ma-pay-order {
-
+    .ma-pay {
         &__container {
             padding: 0 8rem;
-
-
-        }
-
-        &__body {
-            width: 88rem;
-            left: calc(19.6rem + 4.8rem);
         }
 
         &__title {
-
-            font-size: 2.6rem;
-            line-height: 3.2rem;
-
-
+            font-size: 2.6rem !important;
+            line-height: 3.2rem !important;
         }
 
-        &__top {
-            margin-bottom: 4.8rem;
+        &-left {
 
-        }
+            width: 19.6rem;
+            left: 8rem;
 
-        &__item {
-
-            &-list {
-                margin-bottom: 3.2rem;
-
-            }
-
-            &-text {
-                &:not(:last-child) {
-                    margin-bottom: 1.8rem;
-                }
-            }
-
-            &-listItem {
-
+            &__item {
                 &:not(:last-child) {
                     margin-bottom: 2.4rem;
                 }
-
-
-
-
-
             }
 
-            &-title {
+            &__link {
 
-                font-size: 2rem;
-                line-height: 2.8rem;
-                margin-bottom: 3.2rem;
+                span {
 
+                    font-size: 1.6rem;
+                    line-height: 2.0rem;
+
+                }
             }
+        }
+
+        &-body {
+
+            left: calc(19.6rem + 4.8rem);
+            width: 88rem;
 
         }
 
+        .ma-production__content {
+            h3 {
 
-        &__left {
+                margin: 2.4rem 0 3.2rem;
+            }
+        }
 
-            width: 19.6rem;
-
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 4.8rem;
+            }
         }
 
     }
 
     /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1500*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ 1500*/
+    .cart__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4.8rem;
+    }
+
+    .cart__condition {
+        max-width: 91rem;
+        width: 100%;
+    }
+
+    .cart__ordering {
+        max-width: 34.6rem;
+        width: 100%;
+        background: #F5FBFE;
+        height: 34.2rem;
+    }
+
+    .cart__condition-log-in {
+        padding: 2rem 0;
+    }
+
+    .cart__order {
+        margin-top: 1.6rem;
+    }
+
+    .cart__order-head {
+        padding: 0 4.4rem 0 10.8rem;
+    }
+
+    .cart__order-item {
+        padding: 0.8rem 0.8rem 2.4rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1500*/
 
 }
 

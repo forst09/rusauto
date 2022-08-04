@@ -428,32 +428,35 @@ $(document).ready(function () {
     let imgs = document.querySelectorAll('.ma-production__content img');
     let videoButton = document.querySelector('.ma-production__video svg');
     let content = document.querySelector('.ma-production__content ');
-    let allEltsInContent = [...content.querySelectorAll('*')];
-    let allTagInContent = [];
-    allEltsInContent.forEach(elt => {
-        allTagInContent.push(elt.tagName.toLocaleLowerCase())
+    if (content != null) {
+        let allEltsInContent = [...content.querySelectorAll('*')];
+        let allTagInContent = [];
+        allEltsInContent.forEach(elt => {
+            allTagInContent.push(elt.tagName.toLocaleLowerCase())
 
-    })
-    if (allTagInContent.includes('table')) {
-        let tables = content.querySelectorAll('table');
-        tables.forEach(table => {
-            let wrapper = document.createElement('div')
-            let content = document.createElement('div')
-            wrapper.classList.add('ma-production__scroll')
-            content.classList.add('ma-production__scroll-content')
-            let parent = table.parentNode
-            parent.replaceChild(wrapper, table)
-            content.appendChild(table)
-            wrapper.appendChild(content)
-            console.log(wrapper)
+        })
+        if (allTagInContent.includes('table')) {
+            let tables = content.querySelectorAll('table');
+            tables.forEach(table => {
+                let wrapper = document.createElement('div')
+                let content = document.createElement('div')
+                wrapper.classList.add('ma-production__scroll')
+                content.classList.add('ma-production__scroll-content')
+                let parent = table.parentNode
+                parent.replaceChild(wrapper, table)
+                content.appendChild(table)
+                wrapper.appendChild(content)
+                console.log(wrapper)
+            })
+        }
+        imgs.forEach(img => {
+            let div = document.createElement('div');
+            div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
+            div.classList.add('ma-production__img-auto')
+            img.parentNode.replaceChild(div, img);
         })
     }
-    imgs.forEach(img => {
-        let div = document.createElement('div');
-        div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
-        div.classList.add('ma-production__img-auto')
-        img.parentNode.replaceChild(div, img);
-    })
+
     let url = 'https://www.youtube.com/watch?v=C-g2Kghb4pM';
     let newUrl;
     // replace watch with embed
@@ -462,56 +465,48 @@ $(document).ready(function () {
 
     }
 
-    videoButton.addEventListener('click', e => {
-        $.fancybox.open({
-            src: newUrl,
-            type: 'iframe',
-            opts: {
-                afterShow: function (instance, current) {
-                    console.info('done!');
-                }
-            }
-        });
-    })
+    // videoButton.addEventListener('click', e => {
+    //     $.fancybox.open({
+    //         src: newUrl,
+    //         type: 'iframe',
+    //         opts: {
+    //             afterShow: function (instance, current) {
+    //                 console.info('done!');
+    //             }
+    //         }
+    //     });
+    // })
 
     //СКРОЛЛ ОПЛАТА И ДОСТАВКА
     let payBottomBlock = document.querySelector('#orderSection')
     let payTopBlock = document.querySelector('#paySection')
-    let leftLinks = [...document.querySelectorAll('.ma-pay-order__left-link')];
-    let maxScroll = document.body.clientHeight - window.innerHeight
-    var body = document.body,
-        html = document.documentElement;
+    let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
 
-    var documentHeight = Math.max(body.scrollHeight, body.offsetHeight,
-        html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 
 
     window.addEventListener('scroll', function (e) {
 
-        // if(this.scrollY>=0 &&  this.scrollY < payBottomBlock.offsetTop){
-        //     leftLinks[0].classList.add('ma-pay-order__left-link--active')
-        //     leftLinks[1].classList.remove('ma-pay-order__left-link--active')
-        // }
 
-        // if( ( this.scrollY === 0 ) && this.scrollY < (documentHeight - this.window.outerHeight)){
-        //     leftLinks[0].classList.add('ma-pay-order__left-link--active')
-        //     leftLinks[1].classList.remove('ma-pay-order__left-link--active')
 
-        // }else if(this.scrollY ===  (documentHeight - this.window.outerHeight)){
-        //     leftLinks[1].classList.add('ma-pay-order__left-link--active')
-        //     leftLinks[0].classList.remove('ma-pay-order__left-link--active')
-        // }
-
-        if (this.scrollY > this.document.querySelector('.ma-pay-order__item-title[data-limit=on]').offsetTop) {
-            leftLinks[1].classList.add('ma-pay-order__left-link--active')
-            leftLinks[0].classList.remove('ma-pay-order__left-link--active')
+        if (this.scrollY < 600) {
+            leftLinks[0].classList.add('ma-pay-left__link--active')
+            leftLinks[1].classList.remove('ma-pay-left__link--active')
         } else {
-            leftLinks[0].classList.add('ma-pay-order__left-link--active')
-            leftLinks[1].classList.remove('ma-pay-order__left-link--active')
+            leftLinks[1].classList.add('ma-pay-left__link--active')
+            leftLinks[0].classList.remove('ma-pay-left__link--active')
+
         }
 
     })
+    //     let header = document.querySelector('header');
+    //     let navbar = document.querySelector('.ma-pay-left');
+
+    //     navbar.style.top = parseFloat(getComputedStyle(header).height) + 100 + 'px';
+    //     console.log(getComputedStyle(header).height);
+
+
+    // })
 
 
 
