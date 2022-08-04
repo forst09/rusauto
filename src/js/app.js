@@ -365,6 +365,19 @@ $(document).ready(function () {
         }
     });
 
+
+    //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА В КОРЗИНЕ
+    $(document).on('click', ".catalog-4lvl__catalog-item-bottom-buttons-basket-minus", function () {
+        let val = $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
+        if (val == 1) {
+            $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').removeClass('active');
+            $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.buy').show();
+        }
+        else {
+            $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(--val);
+        }
+    });
+
     //УВЕЛИЧИТЬ СЧЕТЧИК ТОВАРА
     $(document).on('click', ".catalog-4lvl__catalog-item-bottom-buttons-basket-plus", function () {
         let val = $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
