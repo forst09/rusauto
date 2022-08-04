@@ -3224,6 +3224,26 @@ h1 {
 
 .cart__order-item {
   position: relative;
+  padding: 1.6rem 0;
+}
+.cart__order-item::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #A3A8AB;
+  left: 0;
+  top: 0;
+  opacity: 0.1;
+}
+.cart__order-item:nth-of-type(1) {
+  padding-top: 0;
+}
+.cart__order-item:nth-of-type(1)::before {
+  content: none;
+}
+.cart__order-item:nth-last-of-type(1) {
+  padding-bottom: 0;
 }
 .cart__order-item .catalog-4lvl__catalog-item-name {
   font-size: 1.4rem;
@@ -3297,7 +3317,7 @@ h1 {
   height: 1.8rem;
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 1.6rem;
   right: 0;
 }
 .cart__order-delete svg {
