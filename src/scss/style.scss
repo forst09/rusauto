@@ -3782,6 +3782,10 @@ h1 {
         &::before {
             content: none;
         }
+
+        .cart__order-delete {
+            top: 0;
+        }
     }
 
     &:nth-last-of-type(1) {
