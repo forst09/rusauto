@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <title>Корзина</title>
+    <title>Оплата и доставка</title>
 </head>
 
-<body>
+<body id="ma-pay-body">
+
     <!-- НАЧАЛО ШАПКИ -->
 <header class="header">
     <div class="header-top">
@@ -380,265 +381,127 @@
 </div>
 <!-- КОНЕЦ ХЛЕБНЫХ КРОШЕК -->
 
-    <section class="cart">
-        <div class="wrapper">
-            <div class="h1__wrapper">
-                <h1>Корзина</h1><span>486 товаров</span>
+    <section class="ma-pay-order">
+        <div class="ma-pay-order__container wrapper">
+            <div class="ma-pay-order__left">
+                <div class="ma-pay-order__left-content">
+                    <div class="ma-pay-order__left-item">
+                        <a href="#paySection" class="ma-pay-order__left-link ma-pay-order__left-link--active">
+                            <span>Оплата</span>
+                        </a>
+                    </div>
+                    <div class="ma-pay-order__left-item">
+                        <a href="#orderSection" class="ma-pay-order__left-link">
+                            <span>Доставка</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="js-hide">
-                <div class="desc desc-left text-hide">Компания ООО «РусАвтоДеталь» на сегодняшний день является
-                    крупнейшим поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов). Компания ООО
-                    «РусАвтоДеталь» на сегодняшний день является крупнейшим
-                    поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов).</div>
-            </div>
-            <div class="btn-show__wrapper">
-                <a href="javascript:void(0)" class="btn-show">
-                    <span class="btn-show__more">Подробнее</span>
-                    <span class="btn-show__hide">Скрыть</span>
-                </a>
-            </div>
-
-            <div class="cart__container">
-                <div class="cart__condition">
-                    <div class="cart__condition">
-                        <div class="cart__condition-log-in">
-                            <a href="javascript:void(0)">Авторизируйтесь</a>, чтобы не потерять выбранные товары
+            <div class="ma-pay-order__body">
+                <div class="ma-pay-order__top">
+                    <h2 class="ma-pay-order__title" id="paySection">Оплата</h2>
+                    <div class="ma-pay-order__item">
+                        <h3 class="ma-pay-order__item-title">Безналичные платежи</h3>
+                        <div class="ma-pay-order__item-text">
+                            <p>
+                                Безналичный расчет — это самый распространенный способ оплаты автозапчастей при работе с
+                                «РусАвтоДеталь».
+                                Оплата товара в безналичном порядке осуществляется путем перевода денежных средств
+                                банком или иной кредитной
+                                организацией с помощью одной из установленных законом форм (п.п. 2, 3 ст. 861, ст. 862
+                                ГК РФ). Для проведения
+                                оплаты по безналичному расчету, как аванса, так и оплаты по факту поставки покупателю
+                                предоставляется счет на оплату,
+                                с указанием реквизитов платежа, ассортимента,
+                                количества и цены приобретаемого товара. Счет действителен в течение трех дней с даты
+                                предоставления.
+                            </p>
                         </div>
                     </div>
-                    <div class="cart__order">
-                        <div class="cart__order-head">
-                            <div class="cart__order-title">Товар</div>
-                            <div class="cart__order-title">Цена</div>
-                            <div class="cart__order-title">Количество</div>
-                            <div class="cart__order-title">Сумма</div>
+
+                    <div class="ma-pay-order__item">
+                        <h3 class="ma-pay-order__item-title" data-limit="on">Оплата наличными</h3>
+                        <div class="ma-pay-order__item-text">
+                            <p>
+                                На территории оптовых центров запчастей Вы можете оплатить покупку наличными денежными
+                                средствами.
+                                Для приема оплаты наличными денежными средствами или банковскими картами, кассы оптовых
+                                центров
+                                снабжены кассовыми аппаратами и платежными терминалами.
+
+                            </p>
+
                         </div>
-                        <div class="cart__order-products">
-                            <div class="cart__order-item">
-                                <div class="cart__order-info">
-                                    <div class="cart__order-image">
-                                        <img src="img/catalog-page/catalog-page-1.png" alt="">
-                                    </div>
-                                    <div class="cart__order-wrapper">
-                                        <div class="cart__order-name">
-                                            <a href="javascript:void(0)"
-                                                class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
-                                            <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
-                                                первичный
-                                                КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-                                                doloremque.
-                                                Facilis,
-                                                non. In quae a i cumque minima eaque consequuntur quos.
-                                            </a>
-                                            <div class="catalog-4lvl__catalog-item-article">Артикул:
-                                                <span>53-12-1701302</span>
-                                            </div>
-                                        </div>
+                        <div class="ma-pay-order__item-text">
 
-                                        <div class="cart__order-values">
-                                            <div class="catalog-4lvl__catalog-item-cost">
-                                                <div class="catalog-4lvl__catalog-item-cost-old">5 486,08
-                                                    &#8381;
-                                                </div>
-                                                <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
-                                                    &#8381;
-                                                </div>
-                                            </div>
-                                            <div class="cart__order-count">
-                                                <div class="catalog-4lvl__catalog-item-bottom-buttons-basket">
-                                                    <form action="">
-                                                        <button type="button"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-minus">-</button>
-                                                        <input type="text"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-value"
-                                                            value="1" readonly>
-                                                        <button type="button"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-plus">+</button>
-                                                    </form>
-                                                    <div class="catalog-4lvl__catalog-item-availability">В наличии:
-                                                        <span>48
-                                                            шт</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="cart__order-sum">
-                                                <div class="catalog-4lvl__catalog-item-cost">
-                                                    <div class="catalog-4lvl__catalog-item-cost-old">5 486,08
-                                                        &#8381;
-                                                    </div>
-                                                    <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
-                                                        &#8381;
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="javascript:void(0)" class="cart__order-delete">
-                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g opacity="0.5">
-                                            <path
-                                                d="M1.09124 15.6694C0.798346 15.9623 0.798346 16.4372 1.09124 16.73C1.38413 17.0229 1.85901 17.0229 2.1519 16.73L1.09124 15.6694ZM17.2335 1.64849C17.5263 1.3556 17.5263 0.880727 17.2335 0.587834C16.9406 0.294941 16.4657 0.294941 16.1728 0.587834L17.2335 1.64849ZM16.1728 0.587834L1.09124 15.6694L2.1519 16.73L17.2335 1.64849L16.1728 0.587834Z"
-                                                fill="#A3A8AB" />
-                                            <path
-                                                d="M2.1519 0.588311C1.85901 0.295418 1.38413 0.295418 1.09124 0.588311C0.798345 0.881204 0.798345 1.35608 1.09124 1.64897L2.1519 0.588311ZM16.1728 16.7305C16.4657 17.0234 16.9406 17.0234 17.2335 16.7305C17.5263 16.4376 17.5263 15.9628 17.2335 15.6699L16.1728 16.7305ZM17.2335 15.6699L2.1519 0.588311L1.09124 1.64897L16.1728 16.7305L17.2335 15.6699Z"
-                                                fill="#A3A8AB" />
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="cart__order-item">
-                                <div class="cart__order-info">
-                                    <div class="cart__order-image">
-                                        <img src="img/catalog-page/catalog-page-1.png" alt="">
-                                    </div>
-                                    <div class="cart__order-wrapper">
-                                        <div class="cart__order-name">
-                                            <a href="javascript:void(0)"
-                                                class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
-                                            <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
-                                                первичный
-                                                КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-                                                doloremque.
-                                                Facilis,
-                                                non. In quae a i cumque minima eaque consequuntur quos.
-                                            </a>
-                                            <div class="catalog-4lvl__catalog-item-article">Артикул:
-                                                <span>53-12-1701302</span>
-                                            </div>
-                                        </div>
+                            <p>
 
-                                        <div class="cart__order-values">
-                                            <div class="catalog-4lvl__catalog-item-cost">
-                                                <div class="catalog-4lvl__catalog-item-cost-old">5 486,08
-                                                    &#8381;
-                                                </div>
-                                                <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
-                                                    &#8381;
-                                                </div>
-                                            </div>
-                                            <div class="cart__order-count">
-                                                <div class="catalog-4lvl__catalog-item-bottom-buttons-basket">
-                                                    <form action="">
-                                                        <button type="button"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-minus">-</button>
-                                                        <input type="text"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-value"
-                                                            value="1" readonly>
-                                                        <button type="button"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-plus">+</button>
-                                                    </form>
-                                                    <div class="catalog-4lvl__catalog-item-availability">В наличии:
-                                                        <span>48
-                                                            шт</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="cart__order-sum">
-                                                <div class="catalog-4lvl__catalog-item-cost">
-                                                    <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
-                                                        &#8381;
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="javascript:void(0)" class="cart__order-delete">
-                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g opacity="0.5">
-                                            <path
-                                                d="M1.09124 15.6694C0.798346 15.9623 0.798346 16.4372 1.09124 16.73C1.38413 17.0229 1.85901 17.0229 2.1519 16.73L1.09124 15.6694ZM17.2335 1.64849C17.5263 1.3556 17.5263 0.880727 17.2335 0.587834C16.9406 0.294941 16.4657 0.294941 16.1728 0.587834L17.2335 1.64849ZM16.1728 0.587834L1.09124 15.6694L2.1519 16.73L17.2335 1.64849L16.1728 0.587834Z"
-                                                fill="#A3A8AB" />
-                                            <path
-                                                d="M2.1519 0.588311C1.85901 0.295418 1.38413 0.295418 1.09124 0.588311C0.798345 0.881204 0.798345 1.35608 1.09124 1.64897L2.1519 0.588311ZM16.1728 16.7305C16.4657 17.0234 16.9406 17.0234 17.2335 16.7305C17.5263 16.4376 17.5263 15.9628 17.2335 15.6699L16.1728 16.7305ZM17.2335 15.6699L2.1519 0.588311L1.09124 1.64897L16.1728 16.7305L17.2335 15.6699Z"
-                                                fill="#A3A8AB" />
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="cart__order-item">
-                                <div class="cart__order-info">
-                                    <div class="cart__order-image">
-                                        <img src="img/catalog-page/catalog-page-1.png" alt="">
-                                    </div>
-                                    <div class="cart__order-wrapper">
-                                        <div class="cart__order-name">
-                                            <a href="javascript:void(0)"
-                                                class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
-                                            <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
-                                                первичный
-                                                КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-                                                doloremque.
-                                                Facilis,
-                                                non. In quae a i cumque minima eaque consequuntur quos.
-                                            </a>
-                                            <div class="catalog-4lvl__catalog-item-article">Артикул:
-                                                <span>53-12-1701302</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="cart__order-values">
-                                            <div class="catalog-4lvl__catalog-item-cost">
-                                                <div class="catalog-4lvl__catalog-item-cost-old">5 486,08
-                                                    &#8381;
-                                                </div>
-                                                <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
-                                                    &#8381;
-                                                </div>
-                                            </div>
-                                            <div class="cart__order-count">
-                                                <div class="catalog-4lvl__catalog-item-bottom-buttons-basket">
-                                                    <form action="">
-                                                        <button type="button"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-minus">-</button>
-                                                        <input type="text"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-value"
-                                                            value="1" readonly>
-                                                        <button type="button"
-                                                            class="catalog-4lvl__catalog-item-bottom-buttons-basket-plus">+</button>
-                                                    </form>
-                                                    <div class="catalog-4lvl__catalog-item-availability">В наличии:
-                                                        <span>48
-                                                            шт</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="cart__order-sum">
-                                                <div class="catalog-4lvl__catalog-item-cost">
-                                                    <div class="catalog-4lvl__catalog-item-cost-old">5 486,08
-                                                        &#8381;
-                                                    </div>
-                                                    <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
-                                                        &#8381;
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="javascript:void(0)" class="cart__order-delete">
-                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g opacity="0.5">
-                                            <path
-                                                d="M1.09124 15.6694C0.798346 15.9623 0.798346 16.4372 1.09124 16.73C1.38413 17.0229 1.85901 17.0229 2.1519 16.73L1.09124 15.6694ZM17.2335 1.64849C17.5263 1.3556 17.5263 0.880727 17.2335 0.587834C16.9406 0.294941 16.4657 0.294941 16.1728 0.587834L17.2335 1.64849ZM16.1728 0.587834L1.09124 15.6694L2.1519 16.73L17.2335 1.64849L16.1728 0.587834Z"
-                                                fill="#A3A8AB" />
-                                            <path
-                                                d="M2.1519 0.588311C1.85901 0.295418 1.38413 0.295418 1.09124 0.588311C0.798345 0.881204 0.798345 1.35608 1.09124 1.64897L2.1519 0.588311ZM16.1728 16.7305C16.4657 17.0234 16.9406 17.0234 17.2335 16.7305C17.5263 16.4376 17.5263 15.9628 17.2335 15.6699L16.1728 16.7305ZM17.2335 15.6699L2.1519 0.588311L1.09124 1.64897L16.1728 16.7305L17.2335 15.6699Z"
-                                                fill="#A3A8AB" />
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
+                                При работе с юридическими лицами и (или) предпринимателями расчёты производятся с учетом
+                                установленных
+                                законом (банковскими правилами) ограничений (п. 2 ст. 861 ГК РФ).
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="cart__ordering"></div>
+                <div class="ma-pay-order__bottom">
+                    <h2 class="ma-pay-order__title" id="orderSection">Доставка</h2>
+                    <div class="ma-pay-order__item">
+                        <h3 class="ma-pay-order__item-title">Самовывоз</h3>
+                        <ul class="ma-pay-order__item-list">
+                            <li class="ma-pay-order__item-listItem">Время: с 9:00 до 18:00 по местному времени</li>
+                            <li class="ma-pay-order__item-listItem">Срок комплектации заказа (до 50 позиций): от 2 часов
+                            </li>
+                            <li class="ma-pay-order__item-listItem">Срок комплектации небольших заказов на месте (до 10
+                                позиций): 20 минут</li>
+                        </ul>
+                        <div class="ma-pay-order__item-text">
+                            <p>
+                                Самовывоз заказа доступен как для частных лиц, так и для организаций с любого склада
+                                компании «РусАвтоДеталь» с 9:00 до 18:00 по местному времени.
+
+                            </p>
+                        </div>
+                        <div class="ma-pay-order__item-text">
+                            <p>
+                                Это наиболее рациональный способ получения заказа, когда товар требуется максимально
+                                оперативно. В «РусАвтоДеталь» оптимально
+                                разделены потоки под разгрузку и получение товаров, заказ предоставляется полностью
+                                скомплектованным в одном месте на специально
+                                выделенном складе «Комплектация заказов».
+                                Крупногабаритные запасные части и агрегаты хранятся на зарезервированных стеллажах и
+                                подвозятся клиенту в момент погрузки.
+
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="ma-pay-order__item">
+                        <h3 class="ma-pay-order__item-title">Доставка через транспортные компании</h3>
+                        <div class="ma-pay-order__item-text">
+                            <p>
+                                «РусАвтоДеталь» бесплатно доставит Ваш заказ до
+                                терминала любой ТК по Вашему выбору, которая представлена в городе присутствия складов
+                                «РусАвтоДеталь».
+                            </p>
+
+                        </div>
+                        <div class="ma-pay-order__item-text">
+
+                            <p>
+                                Кроме того с рядом транспортных компаний у «РусАвтоДеталь» сложились по-настоящему
+                                партнерские
+                                отношения. При доставке груза такими компаниями клиентам «РусАвтоДеталь» предоставляются
+                                различные
+                                льготы, такие как ускоренная отправка груза или специальные скидки от тарифов ТК.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    </div>
 
     <!-- НАЧАЛО СЕКЦИИ ПОДВАЛ -->
 <footer class="footer">

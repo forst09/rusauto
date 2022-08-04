@@ -474,6 +474,48 @@ $(document).ready(function () {
         });
     })
 
+    //СКРОЛЛ ОПЛАТА И ДОСТАВКА
+    let payBottomBlock = document.querySelector('#orderSection')
+    let payTopBlock = document.querySelector('#paySection')
+    let leftLinks = [...document.querySelectorAll('.ma-pay-order__left-link')];
+    let maxScroll = document.body.clientHeight - window.innerHeight
+    var body = document.body,
+        html = document.documentElement;
+
+    var documentHeight = Math.max(body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+
+
+    window.addEventListener('scroll', function (e) {
+
+        // if(this.scrollY>=0 &&  this.scrollY < payBottomBlock.offsetTop){
+        //     leftLinks[0].classList.add('ma-pay-order__left-link--active')
+        //     leftLinks[1].classList.remove('ma-pay-order__left-link--active')
+        // }
+
+        // if( ( this.scrollY === 0 ) && this.scrollY < (documentHeight - this.window.outerHeight)){
+        //     leftLinks[0].classList.add('ma-pay-order__left-link--active')
+        //     leftLinks[1].classList.remove('ma-pay-order__left-link--active')
+
+        // }else if(this.scrollY ===  (documentHeight - this.window.outerHeight)){
+        //     leftLinks[1].classList.add('ma-pay-order__left-link--active')
+        //     leftLinks[0].classList.remove('ma-pay-order__left-link--active')
+        // }
+
+        if (this.scrollY > this.document.querySelector('.ma-pay-order__item-title[data-limit=on]').offsetTop) {
+            leftLinks[1].classList.add('ma-pay-order__left-link--active')
+            leftLinks[0].classList.remove('ma-pay-order__left-link--active')
+        } else {
+            leftLinks[0].classList.add('ma-pay-order__left-link--active')
+            leftLinks[1].classList.remove('ma-pay-order__left-link--active')
+        }
+
+    })
+
+
+
+
     //СЛАЙДЕР В ФИЛЬТРАХ КАТАЛОГА 4 УРОВНЯ
 
 
