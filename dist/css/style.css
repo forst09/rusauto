@@ -3383,3 +3383,8 @@ h1 {
 .ymaps-2-1-79-map-copyrights-promo {
   display: none !important;
 }
+
+.absolute {
+  position: absolute !important;
+  bottom: 0;
+}

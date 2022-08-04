@@ -478,14 +478,15 @@ $(document).ready(function () {
     // })
 
     //СКРОЛЛ ОПЛАТА И ДОСТАВКА
-    let payBottomBlock = document.querySelector('#orderSection')
-    let payTopBlock = document.querySelector('#paySection')
     let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
+    let body = document.querySelector('.ma-pay-body');
+    let leftBlock = document.querySelector('.ma-pay-left');
 
 
 
 
     window.addEventListener('scroll', function (e) {
+
 
 
 
@@ -496,6 +497,12 @@ $(document).ready(function () {
             leftLinks[1].classList.add('ma-pay-left__link--active')
             leftLinks[0].classList.remove('ma-pay-left__link--active')
 
+        }
+
+        if (this.scrollY >= body.offsetHeight - 105) {
+            leftBlock.classList.add('absolute')
+        } else {
+            leftBlock.classList.remove('absolute')
         }
 
     })
