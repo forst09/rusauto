@@ -3355,6 +3355,22 @@ h1 {
   height: 100%;
   object-fit: contain;
 }
+.cart__order-delete svg path,
+.cart__order-delete svg g {
+  transition: 0.3s ease;
+}
+.cart__order-delete:hover svg path {
+  fill: #00A0E3;
+}
+.cart__order-delete:hover svg g {
+  opacity: 1;
+}
+.cart__order-delete:active svg path, .cart__order-delete:focus svg path, .cart__order-delete:focus-within svg path {
+  fill: #0091CE;
+}
+.cart__order-delete:active svg g, .cart__order-delete:focus svg g, .cart__order-delete:focus-within svg g {
+  opacity: 1;
+}
 
 .cart__ordering-wrapper {
   margin-top: 4rem;
@@ -3423,6 +3439,13 @@ h1 {
   text-align: center;
   font-size: 1.4rem;
   line-height: 1.8rem;
+  transition: 0.3s ease;
+}
+.cart__ordering-checkout:hover {
+  background-color: #00A0E3;
+}
+.cart__ordering-checkout:active, .cart__ordering-checkout:focus, .cart__ordering-checkout:focus-within {
+  background-color: #0091CE;
 }
 
 .cart__ordering-form {
@@ -3431,6 +3454,10 @@ h1 {
 
 .cart__ordering-promocode-wrapper {
   position: relative;
+}
+
+.cart__ordering-promocode-wrapper.active .cart__ordering-submit {
+  display: inline-block;
 }
 
 .cart__ordering-promocode {
@@ -3448,6 +3475,13 @@ h1 {
   color: #A3A8AB;
   font-size: 1.4rem;
   line-height: 1.8rem;
+}
+.cart__ordering-promocode:hover {
+  border: 1px solid #CBD3DC;
+}
+
+.cart__ordering-promocode.active {
+  padding: 1rem 9.5rem 1rem 2rem;
 }
 
 .cart__ordering-submit {
@@ -3493,11 +3527,27 @@ h1 {
   width: 1.6rem;
   height: 1.6rem;
 }
+.cart__remove svg path {
+  transition: 0.3s ease;
+}
 .cart__remove span {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #A3A8AB;
   margin-left: 1.6rem;
+  transition: 0.3s ease;
+}
+.cart__remove:hover svg path {
+  stroke: #00A0E3;
+}
+.cart__remove:hover span {
+  color: #00A0E3;
+}
+.cart__remove:active svg path, .cart__remove:focus svg path, .cart__remove:focus-within svg path {
+  stroke: #0091CE;
+}
+.cart__remove:active span, .cart__remove:focus span, .cart__remove:focus-within span {
+  color: #0091CE;
 }
 
 .cart__remove-wrapper {
@@ -3519,6 +3569,18 @@ h1 {
 
 .cart__item-deleted-reestablish {
   margin-top: 1.2rem;
+}
+
+/*ПУСТАЯ КОРЗИНА*/
+.cart__empty {
+  display: none;
+  margin-top: 3.2rem;
+}
+
+.cart__empty-text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 300;
 }
 
 /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/

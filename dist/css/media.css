@@ -1155,6 +1155,16 @@
     margin: 0;
   }
 
+  /*ПУСТАЯ КОРЗИНА 668*/
+  .cart__empty .btn__wrapper {
+    text-align: left;
+    margin-left: 1.6rem;
+  }
+
+  .cart__empty-text {
+    max-width: 46.4rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
@@ -2989,6 +2999,11 @@
 
   .cart__item-deleted-text {
     max-width: 70%;
+  }
+
+  /*ПУСТАЯ КОРЗИНА 1024*/
+  .cart__empty {
+    margin-top: 4.8rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/

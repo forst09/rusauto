@@ -424,6 +424,17 @@ $(document).ready(function () {
         }
     });
 
+    //
+    $(document).on('input', '.cart__ordering-promocode', function () {
+        $(this).addClass('active');
+        $(this).parents('.cart__ordering-promocode-wrapper').addClass('active');
+    });
+
+    $(document).on('blur', '.cart__ordering-promocode', function () {
+        $(this).removeClass('active');
+        $(this).parents('.cart__ordering-promocode-wrapper').removeClass('active');
+    });
+
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
     let imgs = document.querySelectorAll('.ma-production__content img');
     let videoButton = document.querySelector('.ma-production__video svg');
@@ -523,6 +534,108 @@ $(document).ready(function () {
             }
         })
     })
+
+    window.addEventListener('load', function (e) {
+        let headerFixed = document.querySelector('.header-fixed');
+        let headerFixed_height = parseFloat(this.getComputedStyle(headerFixed).height)
+        console.log(headerFixed_height)
+
+        leftLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault()
+                if (!link.classList.contains('ma-pay-left__link--active')) {
+                    this.document.querySelectorAll('.ma-pay__item').forEach(item => {
+                        if (item.id === link.getAttribute('data-id')) {
+
+                            //   item.scrollIntoView();
+                            this.window.scroll(0, item.offsetTop - headerFixed_height)
+                            console.log(item.offsetTop - headerFixed_height)
+                            this.setTimeout(function () {
+                                // this.window.scroll(0,item.offsetTop- headerFixed_height)
+                            }, 300)
+
+                        }
+
+                    })
+                }
+            })
+        })
+
+
+    })
+
+
+
+    // let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
+    // let body = document.querySelector('.ma-pay-body');
+    // let leftBlock = document.querySelector('.ma-pay-left');
+    // let titles = [...document.querySelectorAll('.ma-pay__title')];
+
+
+
+    // // detect element in viewport
+    // function elementInViewport(el) {
+    //     var top = el.offsetTop;
+    //     var left = el.offsetLeft;
+    //     var width = el.offsetWidth;
+    //     var height = el.offsetHeight;
+
+    //     while (el.offsetParent) {
+    //         el = el.offsetParent;
+    //         top += el.offsetTop;
+    //         left += el.offsetLeft;
+    //     }
+
+    //     return (
+    //         top >= window.pageYOffset &&
+    //         left >= window.pageXOffset &&
+    //         (top + height) <= (window.pageYOffset + window.innerHeight) &&
+    //         (left + width) <= (window.pageXOffset + window.innerWidth)
+    //     );
+    // }
+
+
+    // window.addEventListener('scroll', function (e) {
+    //     this.document.querySelectorAll('.ma-pay__item').forEach(item => {
+
+
+    //         if (elementInViewport(item.lastElementChild)) {
+    //             leftLinks.forEach(link => {
+    //                 link.classList.remove('ma-pay-left__link--active')
+    //                 if (item.id === link.getAttribute('data-id')) {
+    //                     link.classList.add('ma-pay-left__link--active')
+    //                 }
+    //             })
+
+
+    //         }
+    //     })
+    // })
+
+    // window.addEventListener('load', function (e) {
+    //     let headerFixed = document.querySelector('.header-fixed');
+    //     // let headerFixed_height = parseFloat(this.getComputedStyle(headerFixed).height);
+    //     let headerFixed_height = headerFixed.offsetHeight
+    //     // console.log(headerFixed_height + 'mamamamama')
+    //     leftLinks.forEach(link => {
+    //         link.addEventListener('click', e => {
+    //             e.preventDefault()
+    //             if (!link.classList.contains('ma-pay-left__link--active')) {
+    //                 this.document.querySelectorAll('.ma-pay__item').forEach(item => {
+    //                     if (item.id === link.getAttribute('data-id')) {
+
+    //                         // item.scrollIntoView();
+    //                         this.window.scrollTo(0, item.offsetTop);
+
+    //                     }
+
+    //                 })
+    //             }
+    //         })
+    //     })
+
+
+    // })
     // let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
     // let body = document.querySelector('.ma-pay-body');
     // let leftBlock = document.querySelector('.ma-pay-left');
