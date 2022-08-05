@@ -3469,6 +3469,7 @@ h1 {
   color: #064E8C;
   padding: 1rem 1rem 1rem 2rem;
   width: 100%;
+  transition: 0.3s ease;
 }
 .cart__ordering-promocode::placeholder {
   font-family: "Geometria";
@@ -3581,6 +3582,34 @@ h1 {
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 300;
+}
+
+.cart-window {
+  position: fixed;
+  bottom: 4rem;
+  background-color: #FAFAFA;
+  width: 100%;
+}
+.cart-window .cart__ordering-text,
+.cart-window .cart__ordering-dash {
+  display: none;
+}
+.cart-window .cart__ordering-value {
+  font-size: 1.8rem;
+}
+.cart-window .cart__ordering-buttons {
+  margin: 0;
+  max-width: none;
+  width: fit-content;
+}
+.cart-window .cart__ordering-checkout {
+  min-width: 16.5rem;
+}
+
+.cart-window__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/

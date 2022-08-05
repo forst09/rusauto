@@ -2831,7 +2831,7 @@
     position: absolute;
     left: 0;
     top: -0.5rem;
-    content: url(../ma-img/production-auto/icon-link-active.svg);
+    content: url("../img/icon-link-active.svg");
     display: block;
   }
   .ma-pay-body {

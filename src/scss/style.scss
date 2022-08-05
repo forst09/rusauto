@@ -4055,6 +4055,7 @@ h1 {
     color: #064E8C;
     padding: 1rem 1rem 1rem 2rem;
     width: 100%;
+    transition: 0.3s ease;
 
     &::placeholder {
         font-family: 'Geometria';
@@ -4186,6 +4187,39 @@ h1 {
     font-size: 1.4rem;
     line-height: 2rem;
     font-weight: 300;
+}
+
+//ПРИКРЕПЛЯШКА КОРЗИНЫ ВНИЗУ СТРАНИЦЫ
+.cart-window {
+    position: fixed;
+    bottom: 4rem;
+    background-color: #FAFAFA;
+    width: 100%;
+
+    .cart__ordering-text,
+    .cart__ordering-dash {
+        display: none;
+    }
+
+    .cart__ordering-value {
+        font-size: 1.8rem;
+    }
+
+    .cart__ordering-buttons {
+        margin: 0;
+        max-width: none;
+        width: fit-content;
+    }
+
+    .cart__ordering-checkout {
+        min-width: 16.5rem;
+    }
+}
+
+.cart-window__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/
