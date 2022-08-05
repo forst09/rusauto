@@ -996,6 +996,10 @@
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 668*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ 668*/
+  .cart {
+    margin-bottom: 4rem;
+  }
+
   .cart__container {
     margin-top: 4.8rem;
   }
@@ -1130,6 +1134,25 @@
   }
   .cart__ordering-item + .cart__ordering-total {
     margin-top: 2.4rem;
+  }
+
+  .cart__remove-wrapper {
+    margin-top: 3.2rem;
+  }
+
+  .cart__item-deleted {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .cart__item-deleted-text {
+    max-width: 37rem;
+  }
+
+  .cart__item-deleted-reestablish {
+    margin: 0;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 668*/
@@ -2812,6 +2835,10 @@
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ 1024*/
+  .cart {
+    margin-bottom: 5.6rem;
+  }
+
   .cart__container {
     margin-top: 6.8rem;
   }
@@ -2829,6 +2856,7 @@
   }
 
   .cart__order-item {
+    padding: 2.4rem 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -2952,6 +2980,15 @@
   .cart__ordering-promocode::placeholder {
     font-size: 1.4rem;
     line-height: 1.8rem;
+  }
+
+  .cart__item-deleted {
+    width: 100%;
+    padding: 0.9rem 0;
+  }
+
+  .cart__item-deleted-text {
+    max-width: 70%;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
@@ -3523,6 +3560,10 @@
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1500*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ 1500*/
+  .cart {
+    margin-bottom: 6.4rem;
+  }
+
   .cart__container {
     display: flex;
     justify-content: space-between;
@@ -3583,6 +3624,10 @@
 
   .cart__ordering-title {
     font-size: 1.8rem;
+  }
+
+  .cart__item-deleted {
+    padding: 2.6rem 0 1rem 0;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1500*/

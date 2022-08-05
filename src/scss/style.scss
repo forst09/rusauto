@@ -109,6 +109,38 @@ h1 {
     margin: 0 0 3.2rem;
 }
 
+.link-underline {
+    display: inline-block;
+    color: #00A0E3;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #00A0E3;
+        transition: 0.3s ease;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+        color: #0091CE;
+
+        &::after {
+            width: 0;
+        }
+    }
+}
+
 .main-link {
     color: #00A0E3 !important;
 }
@@ -3771,6 +3803,7 @@ h1 {
     &:nth-of-type(1) {
         padding-top: 0;
 
+
         &::before {
             content: none;
         }
@@ -3782,6 +3815,14 @@ h1 {
 
     &:nth-last-of-type(1) {
         padding-bottom: 0;
+    }
+
+    &:nth-of-type(2) {
+
+        .cart__order-delete,
+        .cart__order-info {
+            display: none;
+        }
     }
 
     .catalog-4lvl__catalog-item-name {
@@ -4015,6 +4056,45 @@ h1 {
             object-fit: contain;
         }
     }
+}
+
+.cart__remove {
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    span {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #A3A8AB;
+        margin-left: 1.6rem;
+    }
+}
+
+.cart__remove-wrapper {
+    margin-top: 2.4rem;
+    text-align: right;
+}
+
+.cart__item-deleted {
+    padding: 3.4rem 0;
+}
+
+.cart__item-deleted-text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    a {
+        color: #064E8C;
+    }
+}
+
+.cart__item-deleted-reestablish {
+    margin-top: 1.2rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/
