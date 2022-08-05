@@ -989,6 +989,9 @@
   .ma-pay .ma-production__content h3 {
     margin: 2.4rem 0;
   }
+  .ma-pay .ma-production__content ul {
+    margin-bottom: 2.4rem;
+  }
 
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 668*/
   /*#################################################################################################################################*/
@@ -1071,6 +1074,62 @@
   .cart__order-sum .catalog-4lvl__catalog-item-cost-new {
     font-size: 1.4rem;
     line-height: 1.8rem;
+  }
+
+  .cart__ordering-wrapper {
+    padding: 0 4.4rem;
+  }
+
+  .cart__ordering {
+    padding: 1.6rem 1.6rem 3.6rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .cart__ordering-info {
+    max-width: 28.7rem;
+    width: 100%;
+  }
+
+  .cart__ordering-title {
+    font-size: 1.8rem;
+  }
+
+  .cart__ordering-text {
+    font-size: 1.2rem;
+  }
+
+  .cart__ordering-value {
+    font-size: 1.2rem;
+  }
+
+  .cart__ordering-total .cart__ordering-value {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .cart__ordering-buttons {
+    max-width: 20.3rem;
+    margin: 0;
+  }
+
+  .cart__ordering-promocode {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 1.1rem 1.1rem 1.1rem 2rem;
+    max-height: 3.7rem;
+  }
+  .cart__ordering-promocode::placeholder {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .cart__ordering-item + .cart__ordering-item {
+    margin-top: 0.8rem;
+  }
+  .cart__ordering-item + .cart__ordering-total {
+    margin-top: 2.4rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 668*/
@@ -2695,8 +2754,9 @@
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
   .ma-pay__container {
-    position: relative !important;
     padding: 0 6.4rem;
+    display: flex;
+    column-gap: 2.4rem;
   }
   .ma-pay__item:not(:last-child) {
     margin-bottom: 4.8rem;
@@ -2707,9 +2767,12 @@
   }
   .ma-pay-left {
     display: block;
-    position: fixed;
+    position: sticky;
     width: 17.6rem;
+    height: 10rem;
     left: 6.4rem;
+    top: 9.8rem;
+    transition: all 300ms ease;
   }
   .ma-pay-left__item:not(:last-child) {
     margin-bottom: 2.4rem;
@@ -2722,6 +2785,9 @@
     font-size: 1.6rem;
     line-height: 2rem;
     color: #064E8C;
+  }
+  .ma-pay-left__link--active {
+    pointer-events: none;
   }
   .ma-pay-left__link--active span {
     font-weight: 500;
@@ -2738,7 +2804,6 @@
   .ma-pay-body {
     width: 69.6rem;
     position: relative;
-    left: 20rem;
   }
   .ma-pay .ma-production__content h3 {
     margin: 2.4rem 0;
@@ -2851,6 +2916,42 @@
     min-width: 13.8rem;
     display: flex;
     justify-content: center;
+  }
+
+  .cart__ordering-wrapper {
+    margin-top: 6.4rem;
+    padding: 0 6.4rem;
+  }
+
+  .cart__ordering {
+    padding: 2.4rem 3.2rem 4.4rem;
+  }
+
+  .cart__ordering-info {
+    max-width: 46.3rem;
+  }
+
+  .cart__ordering-buttons {
+    max-width: 28.9rem;
+  }
+
+  .cart__ordering-title {
+    font-size: 1.6rem;
+  }
+
+  .cart__ordering-total .cart__ordering-value {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
+  .cart__ordering-promocode {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: 1rem 1rem 1rem 2rem;
+  }
+  .cart__ordering-promocode::placeholder {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
@@ -3390,6 +3491,7 @@
   /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1500*/
   .ma-pay__container {
     padding: 0 8rem;
+    column-gap: 4.8rem;
   }
   .ma-pay__title {
     font-size: 2.6rem !important;
@@ -3397,7 +3499,6 @@
   }
   .ma-pay-left {
     width: 19.6rem;
-    left: 8rem;
   }
   .ma-pay-left__item:not(:last-child) {
     margin-bottom: 2.4rem;
@@ -3407,11 +3508,13 @@
     line-height: 2rem;
   }
   .ma-pay-body {
-    left: 24.4rem;
     width: 88rem;
   }
   .ma-pay .ma-production__content h3 {
     margin: 2.4rem 0 3.2rem;
+  }
+  .ma-pay .ma-production__content ul {
+    margin-bottom: 3.2rem;
   }
   .ma-pay__item:not(:last-child) {
     margin-bottom: 4.8rem;
@@ -3427,15 +3530,13 @@
   }
 
   .cart__condition {
-    max-width: 91rem;
     width: 100%;
   }
-
-  .cart__ordering {
-    max-width: 34.6rem;
+  .cart__condition .wrapper {
+    max-width: 91rem;
     width: 100%;
-    background: #F5FBFE;
-    height: 34.2rem;
+    padding: 0 0 0 8rem;
+    box-sizing: content-box;
   }
 
   .cart__condition-log-in {
@@ -3452,6 +3553,36 @@
 
   .cart__order-item {
     padding: 0.8rem 0.8rem 2.4rem;
+  }
+
+  .cart__ordering-wrapper {
+    margin: 0;
+    position: sticky;
+    top: 9.6rem;
+    height: fit-content;
+    padding: 0 8rem 0 0;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 34.6rem;
+    box-sizing: content-box;
+  }
+
+  .cart__ordering {
+    padding: 2.4rem 2.4rem 4.4rem;
+    flex-direction: column;
+  }
+
+  .cart__ordering-info,
+.cart__ordering-buttons {
+    max-width: none;
+  }
+
+  .cart__ordering-info {
+    margin-bottom: 2.4rem;
+  }
+
+  .cart__ordering-title {
+    font-size: 1.8rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1500*/

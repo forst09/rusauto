@@ -2948,18 +2948,6 @@ h1 {
     width: fit-content;
     position: relative;
     transition: 0.3s ease;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -ms-line-clamp: 1;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    display: -webkit-box;
-    display: box;
-    word-wrap: break-word;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
 
     &::after {
         content: '';
@@ -3747,6 +3735,10 @@ h1 {
 
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ*/
+.cart {
+    margin-bottom: 2.4rem;
+}
+
 .cart__container {
     margin-top: 4rem;
 }
@@ -3890,6 +3882,141 @@ h1 {
     }
 }
 
+.cart__ordering-wrapper {
+    margin-top: 4rem;
+}
+
+.cart__ordering {
+    padding: 2.4rem 1.6rem;
+    background-color: #F5FBFE;
+}
+
+.cart__ordering-title {
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    color: #064E8C;
+}
+
+.cart__ordering-item {
+    display: flex;
+    align-items: baseline;
+
+    &+.cart__ordering-item {
+        margin-top: 0.8rem;
+    }
+
+    &+.cart__ordering-total {
+        margin-top: 2.4rem;
+    }
+}
+
+.cart__ordering-text {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+}
+
+.cart__ordering-dash {
+    margin: 0 0.8rem;
+    height: 1px;
+    align-self: initial;
+    border-top: 1px dashed #A3A8AB;
+    flex-grow: 1;
+    opacity: 0.5;
+}
+
+.cart__ordering-value {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 700;
+}
+
+.cart__ordering-discount {
+    color: #00A0E3;
+}
+
+.cart__ordering-buttons {
+    max-width: 28.8rem;
+    width: 100%;
+    margin: 3.2rem auto 0;
+}
+
+.cart__ordering-checkout {
+    display: inline-block;
+    width: 100%;
+    background-color: #064E8C;
+    color: #ffffff;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.cart__ordering-form {
+    margin-top: 1.6rem;
+}
+
+.cart__ordering-promocode-wrapper {
+    position: relative;
+}
+
+.cart__ordering-promocode {
+    border: 1px solid #EFF0F1;
+    font-family: 'Geometria';
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #064E8C;
+    padding: 1rem 1rem 1rem 2rem;
+    width: 100%;
+
+    &::placeholder {
+        font-family: 'Geometria';
+        color: #A3A8AB;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+
+.cart__ordering-submit {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #00A0E3;
+}
+
+.cart__ordering-submit,
+.cart__ordering-reset {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+}
+
+.cart__ordering-reset {
+    width: 1.2rem;
+    height: 1.2rem;
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
 /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/
 
 /*#################################################################################################################################*/
@@ -3903,6 +4030,7 @@ h1 {
 
     &__container {
         padding: 0 1.6rem;
+
 
         font-family: 'Geometria';
         font-style: normal;
@@ -3932,6 +4060,10 @@ h1 {
             color: #262B2E;
             margin: 1.6rem 0;
         }
+
+        ul {
+            margin-bottom: 1.6rem;
+        }
     }
 }
 
@@ -3955,9 +4087,4 @@ h1 {
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-map-copyrights-promo {
     display: none !important;
-}
-
-.absolute {
-    position: absolute !important;
-    bottom: 0;
 }

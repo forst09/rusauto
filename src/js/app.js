@@ -481,31 +481,76 @@ $(document).ready(function () {
     let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
     let body = document.querySelector('.ma-pay-body');
     let leftBlock = document.querySelector('.ma-pay-left');
+    let titles = [...document.querySelectorAll('.ma-pay__title')];
+    let linkTexts = [...document.querySelectorAll('.ma-pay-left__link span')];
 
 
+    // detect element in viewport
+    function elementInViewport(el) {
+        var top = el.offsetTop;
+        var left = el.offsetLeft;
+        var width = el.offsetWidth;
+        var height = el.offsetHeight;
+
+        while (el.offsetParent) {
+            el = el.offsetParent;
+            top += el.offsetTop;
+            left += el.offsetLeft;
+        }
+
+        return (
+            top >= window.pageYOffset &&
+            left >= window.pageXOffset &&
+            (top + height) <= (window.pageYOffset + window.innerHeight) &&
+            (left + width) <= (window.pageXOffset + window.innerWidth)
+        );
+    }
 
 
     window.addEventListener('scroll', function (e) {
+        this.document.querySelectorAll('.ma-pay__item').forEach(item => {
 
 
+            if (elementInViewport(item.lastElementChild)) {
+                leftLinks.forEach(link => {
+                    link.classList.remove('ma-pay-left__link--active')
+                    if (item.id === link.getAttribute('data-id')) {
+                        link.classList.add('ma-pay-left__link--active')
+                    }
+                })
 
 
-        if (this.scrollY < 600) {
-            leftLinks[0].classList.add('ma-pay-left__link--active')
-            leftLinks[1].classList.remove('ma-pay-left__link--active')
-        } else {
-            leftLinks[1].classList.add('ma-pay-left__link--active')
-            leftLinks[0].classList.remove('ma-pay-left__link--active')
-
-        }
-
-        if (this.scrollY >= body.offsetHeight - 105) {
-            leftBlock.classList.add('absolute')
-        } else {
-            leftBlock.classList.remove('absolute')
-        }
-
+            }
+        })
     })
+    // let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
+    // let body = document.querySelector('.ma-pay-body');
+    // let leftBlock = document.querySelector('.ma-pay-left');
+
+
+
+
+    // window.addEventListener('scroll', function (e) {
+
+
+
+
+    //     if (this.scrollY < 600) {
+    //         leftLinks[0].classList.add('ma-pay-left__link--active')
+    //         leftLinks[1].classList.remove('ma-pay-left__link--active')
+    //     } else {
+    //         leftLinks[1].classList.add('ma-pay-left__link--active')
+    //         leftLinks[0].classList.remove('ma-pay-left__link--active')
+
+    //     }
+
+    //     if (this.scrollY >= body.offsetHeight - 105) {
+    //         leftBlock.classList.add('absolute')
+    //     } else {
+    //         leftBlock.classList.remove('absolute')
+    //     }
+
+    // })
     //     let header = document.querySelector('header');
     //     let navbar = document.querySelector('.ma-pay-left');
 
