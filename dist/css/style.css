@@ -443,6 +443,10 @@ h1 {
   width: auto;
 }
 
+.swiper-button-lock {
+  display: none !important;
+}
+
 .choice-city {
   display: none;
 }
@@ -554,7 +558,6 @@ h1 {
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
 .swiper-not-mobile {
   display: inline-flex;
-  overflow-x: auto;
 }
 .swiper-not-mobile .swiper-slide {
   width: auto;
@@ -3472,7 +3475,7 @@ h1 {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #064E8C;
-  padding: 1rem 1rem 1rem 2rem;
+  padding: 1rem 9.5rem 1rem 2rem;
   width: 100%;
   transition: 0.3s ease;
 }
@@ -3484,10 +3487,6 @@ h1 {
 }
 .cart__ordering-promocode:hover {
   border: 1px solid #CBD3DC;
-}
-
-.cart__ordering-promocode.active {
-  padding: 1rem 9.5rem 1rem 2rem;
 }
 
 .cart__ordering-submit {
@@ -3618,6 +3617,42 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.cart__promocode-accept-wrapper {
+  margin-top: 0.5rem;
+  position: absolute;
+  display: none;
+  flex-wrap: wrap;
+}
+
+.cart__promocode-accept-wrapper.active {
+  display: flex;
+}
+
+.cart__promocode-accept {
+  cursor: pointer;
+}
+.cart__promocode-accept + .cart__promocode-accept {
+  margin-left: 1.6rem;
+}
+.cart__promocode-accept span {
+  position: relative;
+  padding-right: 2rem;
+  color: #9CCE85;
+}
+.cart__promocode-accept span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  top: calc(50% - 0.6rem);
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url("../img/cart/check.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1.2rem 1.2rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/

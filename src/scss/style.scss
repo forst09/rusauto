@@ -530,6 +530,10 @@ h1 {
     }
 }
 
+.swiper-button-lock {
+    display: none !important;
+}
+
 .choice-city {
     display: none;
 }
@@ -653,7 +657,6 @@ h1 {
 /*КАСТОМИЗАЦИЯ СВАЙПЕРА*/
 .swiper-not-mobile {
     display: inline-flex;
-    overflow-x: auto;
 
     .swiper-slide {
         width: auto;
@@ -4051,7 +4054,7 @@ h1 {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #064E8C;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 9.5rem 1rem 2rem;
     width: 100%;
     transition: 0.3s ease;
 
@@ -4067,9 +4070,9 @@ h1 {
     }
 }
 
-.cart__ordering-promocode.active {
-    padding: 1rem 9.5rem 1rem 2rem;
-}
+// .cart__ordering-promocode.active {
+
+// }
 
 .cart__ordering-submit {
     display: inline-block;
@@ -4220,6 +4223,45 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.cart__promocode-accept-wrapper {
+    margin-top: 0.5rem;
+    position: absolute;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.cart__promocode-accept-wrapper.active {
+    display: flex;
+}
+
+.cart__promocode-accept {
+    cursor: pointer;
+
+    &+.cart__promocode-accept {
+        margin-left: 1.6rem;
+    }
+
+    span {
+        position: relative;
+        padding-right: 2rem;
+        color: #9CCE85;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            right: 0;
+            top: calc(50% - 0.6rem);
+            width: 1.2rem;
+            height: 1.2rem;
+            background-image: url('../img/cart/check.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 1.2rem 1.2rem;
+        }
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ*/

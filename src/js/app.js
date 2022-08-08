@@ -433,7 +433,7 @@ $(document).ready(function () {
         }
     });
 
-    //
+    //ПОКАЗЫВАТЬ КНОПКУ ПРИМЕНИТЬ НА ИНПУТЕ ВВОДА ПРОМОКОДА
     $(document).on('input', '.cart__ordering-promocode', function () {
         $(this).addClass('active');
         if ($(this).val() != '') {
@@ -444,8 +444,17 @@ $(document).ready(function () {
         }
     });
 
+    //УБИРАТЬ КНОПКУ ПРИМЕНИТЬ НА ИНПУТЕ ВВОДА ПРОМОКОДА
     $(document).on('blur', '.cart__ordering-promocode', function () {
         $(this).removeClass('active');
+    });
+
+    //ДОБАВИТЬ ПРОМОКОД СНИЗУ ИНПУТА
+    $(document).on('click', '.cart__ordering-submit', function () {
+        let inputValue = $('.cart__ordering-promocode').val();
+        $(this).parents('.cart__ordering-promocode-wrapper').find('.cart__promocode-accept-wrapper').addClass('active');
+        let layout = `<div class="cart__promocode-accept"><span>${inputValue}</span></div>`;
+        $(this).parents('.cart__ordering-promocode-wrapper').find('.cart__promocode-accept-wrapper').append($(layout));
     });
 
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
