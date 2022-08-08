@@ -340,6 +340,11 @@ $(document).ready(function () {
             $(this).parents('.catalog-4lvl__catalog-buttons').find('.catalog-4lvl__catalog-buttons-sorting-dropdown').addClass('active');
         }
 
+        // const html = `
+        // <span class>${}</span>
+        // `;
+
+
     });
 
     //ПЕРЕДАЧА ТЕКСТА В ВЫПАДАШКУ С СОРТИРОВКОЙ В КАТАЛОГЕ 4 УРОВНЯ 
@@ -518,11 +523,40 @@ $(document).ready(function () {
     }
 
 
-    window.addEventListener('scroll', function (e) {
-        this.document.querySelectorAll('.ma-pay__item').forEach(item => {
+    let blockItems = [...document.querySelectorAll('.ma-pay__item')]
+    let containerItem = document.querySelector('.ma-pay__container');
 
 
+    leftLinks.forEach((link, index, arr) => {
+
+        link.addEventListener('click', function (e) {
+
+            e.preventDefault();
+            blockItems.forEach(item => {
+                if (item.id === link.getAttribute('data-id')) {
+
+                    let prevElt = item.previousElementSibling
+                    if (prevElt != null) {
+                        prevElt.lastElementChild.scrollIntoView();
+                    } else {
+                        if (containerItem.previousElementSibling != null) {
+                            containerItem.previousElementSibling.lastElementChild.scrollIntoView()
+                        } else {
+                            item.scrollIntoView()
+                        }
+                    }
+
+                }
+
+
+
+            })
+        })
+    })
+    window.addEventListener('scroll', function () {
+        blockItems.forEach(item => {
             if (elementInViewport(item.lastElementChild)) {
+                //    item.classList.add('ma-pay-left__link--active');
                 leftLinks.forEach(link => {
                     link.classList.remove('ma-pay-left__link--active')
                     if (item.id === link.getAttribute('data-id')) {
@@ -530,38 +564,8 @@ $(document).ready(function () {
                     }
                 })
 
-
             }
         })
-    })
-
-    window.addEventListener('load', function (e) {
-        let headerFixed = document.querySelector('.header-fixed');
-        let headerFixed_height = parseFloat(this.getComputedStyle(headerFixed).height)
-        console.log(headerFixed_height)
-
-        leftLinks.forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault()
-                if (!link.classList.contains('ma-pay-left__link--active')) {
-                    this.document.querySelectorAll('.ma-pay__item').forEach(item => {
-                        if (item.id === link.getAttribute('data-id')) {
-
-                            //   item.scrollIntoView();
-                            this.window.scroll(0, item.offsetTop - headerFixed_height)
-                            console.log(item.offsetTop - headerFixed_height)
-                            this.setTimeout(function () {
-                                // this.window.scroll(0,item.offsetTop- headerFixed_height)
-                            }, 300)
-
-                        }
-
-                    })
-                }
-            })
-        })
-
-
     })
 
 

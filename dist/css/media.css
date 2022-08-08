@@ -985,9 +985,6 @@
     font-size: 2rem !important;
     line-height: 2.6rem !important;
   }
-  .ma-pay .ma-production__content h3 {
-    margin: 2.4rem 0;
-  }
   .ma-pay .ma-production__content ul {
     margin-bottom: 2.4rem;
   }
@@ -2156,12 +2153,12 @@
   }
 
   .catalog__stock-card {
-    min-height: 20rem;
+    min-height: 29.6rem;
     padding: 5.3rem 1.1rem 2.4rem;
     text-align: center;
   }
   .catalog__stock-card .btn-arrow {
-    margin-top: 5.2rem;
+    margin-top: auto;
   }
 
   .catalog__stock-card-container {
@@ -2178,6 +2175,9 @@
     margin-bottom: 1.6rem;
     font-size: 1.4rem;
     line-height: 1.8rem;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
   }
 
   .catalog__stock-card-cost {
@@ -2221,6 +2221,13 @@
   .catalog__stock-card-cost-old {
     font-size: 1rem;
     line-height: 1.3rem;
+  }
+
+  .catalog__stock-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 13.9rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1024*/
@@ -2882,9 +2889,6 @@
   .ma-pay-body {
     width: 69.6rem;
     position: relative;
-  }
-  .ma-pay .ma-production__content h3 {
-    margin: 2.4rem 0;
   }
 
   /*КОНЕЦ СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
@@ -3623,9 +3627,6 @@
   }
   .ma-pay-body {
     width: 88rem;
-  }
-  .ma-pay .ma-production__content h3 {
-    margin: 2.4rem 0 3.2rem;
   }
   .ma-pay .ma-production__content ul {
     margin-bottom: 3.2rem;

@@ -563,9 +563,6 @@ h1 {
 /*КОНЕЦ КАСТОМИЗАЦИИ СВАЙПЕРА*/
 /*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ*/
 .ma-production__content p {
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
   color: #262B2E;
@@ -574,8 +571,6 @@ h1 {
   margin-top: 2rem;
 }
 .ma-production__content h2 {
-  font-family: "Geometria";
-  font-style: normal;
   font-weight: 700;
   font-size: 2.2rem;
   line-height: 3rem;
@@ -584,8 +579,6 @@ h1 {
   margin-top: 4.8rem;
 }
 .ma-production__content h3 {
-  font-family: "Geometria";
-  font-style: normal;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.3rem;
@@ -595,18 +588,12 @@ h1 {
 }
 .ma-production__content span {
   display: inline-block;
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #064E8C;
   margin-bottom: 1.6rem;
 }
 .ma-production__content ul li {
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
   color: #262B2E;
@@ -629,8 +616,6 @@ h1 {
   margin-top: 1.6rem;
 }
 .ma-production__content h4 {
-  font-family: "Geometria";
-  font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -645,9 +630,6 @@ h1 {
 }
 .ma-production__content ol li {
   padding-left: 0.8rem;
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
   color: #262B2E;
@@ -667,8 +649,6 @@ h1 {
   margin-top: 1.6rem;
 }
 .ma-production__content h5 {
-  font-family: "Geometria";
-  font-style: normal;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2.2rem;
@@ -677,8 +657,6 @@ h1 {
   margin-top: 4rem;
 }
 .ma-production__content h6 {
-  font-family: "Geometria";
-  font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2.2rem;
@@ -687,8 +665,6 @@ h1 {
   margin-top: 4.2rem;
 }
 .ma-production__content b {
-  font-family: "Geometria";
-  font-style: normal;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 1.8rem;
@@ -696,7 +672,6 @@ h1 {
   display: inline-block;
 }
 .ma-production__content i {
-  font-family: "Geometria";
   font-style: italic;
   font-weight: 400;
   font-size: 1.4rem;
@@ -705,9 +680,6 @@ h1 {
   display: inline-block;
 }
 .ma-production__content a {
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.8rem;
   text-decoration-line: underline;
@@ -1951,8 +1923,20 @@ h1 {
 .catalog__stock-card-name {
   font-size: 1.6rem;
   line-height: 2rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 0.8rem;
   font-weight: 500;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 }
 
 .catalog__stock-card-cost {
@@ -3647,8 +3631,6 @@ h1 {
 }
 .ma-pay__container {
   padding: 0 1.6rem;
-  font-family: "Geometria";
-  font-style: normal;
 }
 .ma-pay__item:not(:last-child) {
   margin-bottom: 3.2rem;
@@ -3662,10 +3644,6 @@ h1 {
   line-height: 2.3rem !important;
   color: #064E8C !important;
   margin: 0 !important;
-}
-.ma-pay .ma-production__content h3 {
-  color: #262B2E;
-  margin: 1.6rem 0;
 }
 .ma-pay .ma-production__content ul {
   margin-bottom: 1.6rem;

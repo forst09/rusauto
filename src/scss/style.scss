@@ -666,15 +666,9 @@ h1 {
 .ma-production {
     &__content {
         p {
-            font-family: 'Geometria';
-            font-style: normal;
-            font-weight: 400;
             font-size: 1.4rem;
             line-height: 2.0rem;
             color: #262B2E;
-
-
-
         }
 
         p+p {
@@ -682,8 +676,6 @@ h1 {
         }
 
         h2 {
-            font-family: 'Geometria';
-            font-style: normal;
             font-weight: 700;
             font-size: 2.2rem;
             line-height: 3.0rem;
@@ -693,8 +685,6 @@ h1 {
         }
 
         h3 {
-            font-family: 'Geometria';
-            font-style: normal;
             font-weight: 500;
             font-size: 1.8rem;
             line-height: 2.3rem;
@@ -706,13 +696,9 @@ h1 {
 
         span {
             display: inline-block;
-            font-family: 'Geometria';
-            font-style: normal;
-            font-weight: 400;
             font-size: 1.4rem;
             line-height: 1.8rem;
             color: #064E8C;
-
             margin-bottom: 1.6rem;
         }
 
@@ -720,9 +706,6 @@ h1 {
 
 
             li {
-                font-family: 'Geometria';
-                font-style: normal;
-                font-weight: 400;
                 font-size: 1.4rem;
                 line-height: 2.0rem;
                 color: #262B2E;
@@ -741,7 +724,6 @@ h1 {
                     background-repeat: no-repeat;
                     background-size: 1.6rem .2rem;
                     top: 1rem;
-
                 }
 
             }
@@ -752,8 +734,6 @@ h1 {
         }
 
         h4 {
-            font-family: 'Geometria';
-            font-style: normal;
             font-weight: 500;
             font-size: 1.6rem;
             line-height: 2.2rem;
@@ -768,9 +748,6 @@ h1 {
 
             li {
                 padding-left: .8rem;
-                font-family: 'Geometria';
-                font-style: normal;
-                font-weight: 400;
                 font-size: 1.4rem;
                 line-height: 2rem;
                 color: #262B2E;
@@ -798,8 +775,6 @@ h1 {
         }
 
         h5 {
-            font-family: 'Geometria';
-            font-style: normal;
             font-weight: 500;
             font-size: 1.4rem;
             line-height: 2.2rem;
@@ -809,8 +784,6 @@ h1 {
         }
 
         h6 {
-            font-family: 'Geometria';
-            font-style: normal;
             font-weight: 400;
             font-size: 1.4rem;
             line-height: 2.2rem;
@@ -820,8 +793,6 @@ h1 {
         }
 
         b {
-            font-family: 'Geometria';
-            font-style: normal;
             font-weight: 500;
             font-size: 1.4rem;
             line-height: 1.8rem;
@@ -831,7 +802,6 @@ h1 {
         }
 
         i {
-            font-family: 'Geometria';
             font-style: italic;
             font-weight: 400;
             font-size: 1.4rem;
@@ -842,17 +812,11 @@ h1 {
         }
 
         a {
-            font-family: 'Geometria';
-            font-style: normal;
-            font-weight: 400;
             font-size: 1.4rem;
             line-height: 1.8rem;
             text-decoration-line: underline;
             color: #00A0E3;
             display: inline-block;
-
-
-
         }
 
         table {
@@ -891,8 +855,6 @@ h1 {
         height: 21.6rem;
         margin: auto;
         margin-top: 3.2rem;
-
-
     }
 
     &__video {
@@ -2314,8 +2276,20 @@ h1 {
 .catalog__stock-card-name {
     font-size: 1.6rem;
     line-height: 2rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 0.8rem;
     font-weight: 500;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
 }
 
 .catalog__stock-card-cost {
@@ -4261,10 +4235,6 @@ h1 {
 
     &__container {
         padding: 0 1.6rem;
-
-
-        font-family: 'Geometria';
-        font-style: normal;
     }
 
     &__item {
@@ -4287,11 +4257,6 @@ h1 {
     }
 
     .ma-production__content {
-        h3 {
-            color: #262B2E;
-            margin: 1.6rem 0;
-        }
-
         ul {
             margin-bottom: 1.6rem;
         }
