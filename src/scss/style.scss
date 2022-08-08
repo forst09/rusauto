@@ -476,6 +476,28 @@ h1 {
     margin-left: 2.2rem;
 }
 
+.catalog__stock-other {
+    .catalog__stock-card-img {
+        flex-shrink: 0;
+    }
+
+    .catalog__stock-card-name {
+        margin-bottom: 0;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 3;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        display: -webkit-box;
+        display: box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+    }
+}
+
 .header-top__links-icons-basket,
 .header-top__links-icons-user {
     width: 2rem;
@@ -3767,6 +3789,10 @@ h1 {
 
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ*/
+.body-cart {
+    padding-bottom: 10.6rem;
+}
+
 .cart {
     margin-bottom: 2.4rem;
 }
@@ -4189,7 +4215,7 @@ h1 {
     font-weight: 300;
 }
 
-//ПРИКРЕПЛЯШКА КОРЗИНЫ ВНИЗУ СТРАНИЦЫ
+/* ПРИКРЕПЛЯШКА КОРЗИНЫ ВНИЗУ СТРАНИЦЫ*/
 .cart-window {
     padding: 1.6rem 0;
     position: fixed;
@@ -4214,6 +4240,7 @@ h1 {
 
     .cart__ordering-checkout {
         min-width: 16.5rem;
+        padding: 0.8rem 0;
     }
 }
 
