@@ -140,9 +140,13 @@ $(document).ready(function () {
 
         if (scroll > headerHeight) {
             headerFix.classList.add('active');
+            if ($('body').hasClass('body-cart') && $(window).width() >= 1024) {
+                $('.cart-window').addClass('fixed');
+            }
         }
         else {
             headerFix.classList.remove('active');
+            $('.cart-window').removeClass('fixed');
         }
     };
 
@@ -432,12 +436,16 @@ $(document).ready(function () {
     //
     $(document).on('input', '.cart__ordering-promocode', function () {
         $(this).addClass('active');
-        $(this).parents('.cart__ordering-promocode-wrapper').addClass('active');
+        if ($(this).val() != '') {
+            $(this).parents('.cart__ordering-promocode-wrapper').addClass('active');
+        }
+        else {
+            $(this).parents('.cart__ordering-promocode-wrapper').removeClass('active');
+        }
     });
 
     $(document).on('blur', '.cart__ordering-promocode', function () {
         $(this).removeClass('active');
-        $(this).parents('.cart__ordering-promocode-wrapper').removeClass('active');
     });
 
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ

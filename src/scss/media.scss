@@ -580,11 +580,13 @@
 
     /*КОНЕЦ СТИЛЕЙ ХЛЕБНЫХ КРОШЕК 668*/
 
-    // .catalog__stock-other {
-    //     .catalog__stock-card-name {
-    //         max-width: 29rem;
-    //     }
-    // }
+    .catalog__stock-other {
+        .catalog__stock-card-name {
+            -ms-line-clamp: 2;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+        }
+    }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
@@ -2586,6 +2588,23 @@
         min-height: 13.9rem;
     }
 
+    .catalog__stock-other {
+        .catalog__stock-card-img {
+            width: 100%;
+            height: 11.6rem;
+        }
+
+        .catalog__stock-card-info {
+            min-height: 7.9rem;
+        }
+
+        .catalog__stock-card-name {
+            -ms-line-clamp: 3;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+        }
+    }
+
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ КАТАЛОГ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НАШИ ПАРТНЕРЫ 1024*/
@@ -3367,6 +3386,14 @@
     /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ 1024*/
     .body-cart {
         padding-bottom: 0;
+
+        .header:not(.header-fixed) {
+            padding-bottom: 7rem;
+        }
+
+        .header-fixed {
+            box-shadow: none;
+        }
     }
 
     .cart {
@@ -3548,7 +3575,10 @@
 
     /* ПРИКРЕПЛЯШКА КОРЗИНЫ НАВЕРХУ СТРАНИЦЫ 1024*/
     .cart-window {
+        position: absolute;
+        top: 14.2rem;
         padding: 1.6rem 0;
+        bottom: unset;
 
         .cart__ordering-info {
             margin-right: 4rem;
@@ -3557,6 +3587,13 @@
         .cart__ordering-value {
             font-size: 2rem;
         }
+    }
+
+    .cart-window.fixed {
+        position: fixed;
+        top: 8.8rem;
+        box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+        transition: 0.3s ease;
     }
 
     /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
@@ -3584,6 +3621,16 @@
 
     .wrapper {
         padding: 0 8rem;
+    }
+
+    .body-cart {
+        .header:not(.header-fixed) {
+            padding: 0;
+        }
+
+        .header-fixed {
+            box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+        }
     }
 
     /*КАСТОМИЗАЦИЯ СВАЙПЕРА 1500*/
