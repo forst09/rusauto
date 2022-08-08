@@ -396,9 +396,6 @@ h1 {
   margin-left: 2.2rem;
 }
 
-.catalog__stock-other .catalog__stock-card-img {
-  flex-shrink: 0;
-}
 .catalog__stock-other .catalog__stock-card-name {
   margin-bottom: 0;
   -ms-text-overflow: ellipsis;
@@ -1980,6 +1977,7 @@ h1 {
 .catalog__stock-card-img {
   width: 9.4rem;
   height: 6.1rem;
+  flex-shrink: 0;
 }
 .catalog__stock-card-img img {
   width: 100%;
