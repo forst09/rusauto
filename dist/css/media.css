@@ -1205,6 +1205,24 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АВТОБУСА 668*/
+  .ma-autobus__container {
+    padding: 0 6.4rem;
+  }
+  .ma-autobus__row {
+    row-gap: 2.4rem;
+    column-gap: 3.2rem;
+    flex-wrap: wrap;
+  }
+  .ma-autobus-schema-item {
+    max-width: 27.4rem;
+  }
+  .ma-autobus-schema-item__text {
+    line-height: 1.8rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АВТОБУСА 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -3106,6 +3124,72 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
+  /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АВТОБУСА 1024*/
+  .ma-autobus__container {
+    padding: 0 4.4rem;
+    display: flex;
+    column-gap: 2.4rem;
+  }
+  .ma-autobus__left {
+    display: inline-block;
+    width: 17.6rem;
+    position: sticky;
+    top: 9.8rem;
+    height: fit-content;
+  }
+  .ma-autobus__left-top {
+    margin-bottom: 3.2rem;
+  }
+  .ma-autobus__left-title {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: #262B2E;
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+  .ma-autobus__left-img {
+    max-width: 13.5rem;
+    height: 8.062rem;
+    margin: auto;
+  }
+  .ma-autobus__left-img img {
+    max-width: auto;
+    height: 100%;
+  }
+  .ma-autobus__left-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .ma-autobus__left-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13.3rem;
+    height: 4rem;
+    background: #5CBFE9;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #FFFFFF;
+  }
+  .ma-autobus__content {
+    max-width: 69.6rem;
+  }
+  .ma-autobus__row {
+    flex-direction: row;
+    row-gap: 2.4rem;
+    column-gap: 3.2rem;
+    flex-wrap: wrap;
+  }
+  .ma-autobus-schema-item {
+    max-width: 27.4rem;
+  }
+  .ma-autobus-schema-item__text {
+    line-height: 1.8rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АВТОБУСА 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -3756,5 +3840,37 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1500*/
+  /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АВТОБУСА 1500*/
+  .ma-autobus__container {
+    padding: 0 8rem;
+    column-gap: 4.8rem;
+  }
+  .ma-autobus__left {
+    width: 19.6rem;
+  }
+  .ma-autobus__left-title {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+  .ma-autobus__left-img {
+    max-width: 16rem;
+    height: 9.6rem;
+  }
+  .ma-autobus__content {
+    max-width: 99rem;
+    width: 100%;
+  }
+  .ma-autobus__row {
+    column-gap: 2.4rem;
+    flex-wrap: wrap;
+  }
+  .ma-autobus-schema-item {
+    width: 31.4rem;
+  }
+  .ma-autobus-schema-item__text {
+    line-height: 1.8rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АВТОБУСА 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

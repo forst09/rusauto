@@ -454,7 +454,12 @@ $(document).ready(function () {
         let inputValue = $('.cart__ordering-promocode').val();
         $(this).parents('.cart__ordering-promocode-wrapper').find('.cart__promocode-accept-wrapper').addClass('active');
         let layout = `<div class="cart__promocode-accept"><span>${inputValue}</span></div>`;
-        $(this).parents('.cart__ordering-promocode-wrapper').find('.cart__promocode-accept-wrapper').append($(layout));
+        $(this).parents('.cart__ordering-promocode-wrapper').find('.cart__promocode-accept-wrapper').prepend($(layout));
+    });
+
+    //УДАЛИТЬ ПРОМОКОД
+    $(document).on('click', '.cart__promocode-accept', function () {
+        $(this).remove();
     });
 
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
@@ -483,10 +488,14 @@ $(document).ready(function () {
             })
         }
         imgs.forEach(img => {
-            let div = document.createElement('div');
-            div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
-            div.classList.add('ma-production__img-auto')
-            img.parentNode.replaceChild(div, img);
+            if (img.parentNode === null || img.parentNode === undefined) {
+                imgs.forEach(img => {
+                    let div = document.createElement('div');
+                    div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
+                    div.classList.add('ma-production__img-auto')
+                    img.parentNode.replaceChild(div, img);
+                })
+            }
         })
     }
 
@@ -511,7 +520,7 @@ $(document).ready(function () {
     // })
 
     //СКРОЛЛ ОПЛАТА И ДОСТАВКА
-    let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
+    let leftLinks = [...document.querySelectorAll('.content-left-nav__link')];
     let body = document.querySelector('.ma-pay-body');
     let leftBlock = document.querySelector('.ma-pay-left');
     let titles = [...document.querySelectorAll('.ma-pay__title')];
@@ -541,7 +550,7 @@ $(document).ready(function () {
 
 
     let blockItems = [...document.querySelectorAll('.ma-pay__item')]
-    let containerItem = document.querySelector('.ma-pay__container');
+    let containerItem = document.querySelector('.ma-container');
 
 
     leftLinks.forEach((link, index, arr) => {
