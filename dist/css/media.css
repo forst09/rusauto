@@ -1127,7 +1127,7 @@
   .cart__ordering-promocode {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    padding: 1.1rem 1.1rem 1.1rem 2rem;
+    padding: 1.1rem 9.5rem 1.1rem 2rem;
     max-height: 3.7rem;
   }
   .cart__ordering-promocode::placeholder {
@@ -3081,7 +3081,7 @@
   .cart__ordering-promocode {
     font-size: 1.4rem;
     line-height: 1.8rem;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 9.5rem 1rem 2rem;
   }
   .cart__ordering-promocode::placeholder {
     font-size: 1.4rem;
@@ -3217,6 +3217,10 @@
   }
   .body-cart .header-fixed {
     box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+  }
+
+  .modal .header-fixed {
+    box-shadow: none;
   }
 
   /*КАСТОМИЗАЦИЯ СВАЙПЕРА 1500*/
