@@ -45,10 +45,10 @@
         line-height: 3rem;
     }
 
-    .desc {
-        font-size: 1.4rem;
-        max-width: 50.8rem;
-    }
+    // .desc {
+    //     font-size: 1.4rem;
+    //     max-width: 50.8rem;
+    // }
 
     .desc-left {
         max-width: none;
@@ -586,6 +586,10 @@
             -webkit-line-clamp: 2;
             line-clamp: 2;
         }
+    }
+
+    .to-catalog {
+        margin-top: 2.4rem;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
@@ -1392,20 +1396,41 @@
 
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АВТОБУСА 668*/
+    .bus-head__container {
+        align-items: flex-start;
+    }
+
+    .bus-head__wrapper {
+        flex-direction: row;
+    }
+
+    .bus-head__img {
+        width: 16.2rem;
+        height: 8.9rem;
+        flex-shrink: 0;
+        margin-right: 1.6rem;
+        margin-bottom: 0;
+    }
+
+    .bus-head__text {
+        -ms-line-clamp: 5;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
+
     .ma-autobus {
         &__container {
-            padding: 0 6.4rem;
+            padding: 0 4.4rem;
         }
 
         &__row {
             row-gap: 2.4rem;
             column-gap: 3.2rem;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         &-schema-item {
 
-            max-width: 27.4rem;
 
             &__text {
                 line-height: 1.8rem;
@@ -1457,7 +1482,6 @@
 
     .desc {
         margin-bottom: 4.8rem;
-        font-size: 1.4rem;
         line-height: 2.6rem;
         max-width: 58.6rem;
     }
@@ -3625,19 +3649,47 @@
     /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АВТОБУСА 1024*/
+    .bus-head {
+        .to-catalog {
+            margin-left: 20rem;
+        }
+    }
+
+    .bus-head__img {
+        width: 17.6rem;
+        height: 10.8rem;
+        margin-right: 2.4rem;
+    }
+
+    .bus-head__text {
+        margin-bottom: 0;
+        -ms-line-clamp: 6;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
+        max-width: none;
+    }
+
     .ma-autobus {
+
         &__container {
-            padding: 0 4.4rem;
+            padding: 0 6.4rem;
             display: flex;
             column-gap: 2.4rem;
+
+            .to-catalog {
+                margin-top: 0;
+            }
         }
 
         &__left {
+            margin-top: 4.8rem;
             display: inline-block;
             width: 17.6rem;
             position: sticky;
             top: 9.8rem;
             height: fit-content;
+            text-align: center;
+            flex-shrink: 0;
 
             &-top {
                 margin-bottom: 3.2rem;
@@ -3655,7 +3707,7 @@
 
             &-img {
                 max-width: 13.5rem;
-                height: 8.062rem;
+                height: 8.1rem;
                 margin: auto;
 
                 img {
@@ -3694,17 +3746,19 @@
         &__row {
 
             flex-direction: row;
-            row-gap: 2.4rem;
-            column-gap: 3.2rem;
+            gap: 2.4rem;
             flex-wrap: wrap;
         }
 
         &-schema-item {
 
-            max-width: 27.4rem;
-
             &__text {
                 line-height: 1.8rem;
+            }
+
+            &__body {
+                max-width: 24rem;
+
             }
 
         }
@@ -4504,6 +4558,25 @@
     /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АВТОБУСА 1500*/
+    .bus-head {
+        .to-catalog {
+            margin-left: 24.4rem;
+        }
+    }
+
+    .bus-head__img {
+        width: 21.2rem;
+        height: 13rem;
+        margin-right: 3.2rem;
+    }
+
+    .bus-head__text {
+        max-width: 80.9rem;
+        -ms-line-clamp: 5;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
+
     .ma-autobus {
         &__container {
             padding: 0 8rem;
@@ -4535,12 +4608,11 @@
         }
 
         &__row {
-            column-gap: 2.4rem;
-            flex-wrap: wrap;
+
+            grid-template-columns: repeat(3, 1fr);
         }
 
         &-schema-item {
-            width: 31.4rem;
 
             &__text {
                 line-height: 1.8rem;

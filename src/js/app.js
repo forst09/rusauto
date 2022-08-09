@@ -553,32 +553,32 @@ $(document).ready(function () {
     let containerItem = document.querySelector('.ma-container');
 
 
-    leftLinks.forEach((link, index, arr) => {
+    // leftLinks.forEach((link, index, arr) => {
 
-        link.addEventListener('click', function (e) {
+    //     link.addEventListener('click', function (e) {
 
-            e.preventDefault();
-            blockItems.forEach(item => {
-                if (item.id === link.getAttribute('data-id')) {
+    //         e.preventDefault();
+    //         blockItems.forEach(item => {
+    //             if (item.id === link.getAttribute('data-id')) {
 
-                    let prevElt = item.previousElementSibling
-                    if (prevElt != null) {
-                        prevElt.lastElementChild.scrollIntoView();
-                    } else {
-                        if (containerItem.previousElementSibling != null) {
-                            containerItem.previousElementSibling.lastElementChild.scrollIntoView()
-                        } else {
-                            item.scrollIntoView()
-                        }
-                    }
+    //                 let prevElt = item.previousElementSibling
+    //                 if (prevElt != null) {
+    //                     prevElt.lastElementChild.scrollIntoView();
+    //                 } else {
+    //                     if (containerItem.previousElementSibling != null) {
+    //                         containerItem.previousElementSibling.lastElementChild.scrollIntoView()
+    //                     } else {
+    //                         item.scrollIntoView()
+    //                     }
+    //                 }
 
-                }
+    //             }
 
 
 
-            })
-        })
-    })
+    //         })
+    //     })
+    // })
     window.addEventListener('scroll', function () {
         blockItems.forEach(item => {
             if (elementInViewport(item.lastElementChild)) {
@@ -593,6 +593,20 @@ $(document).ready(function () {
             }
         })
     })
+    const scrollAnchor = function () {
+
+
+        let elementClick = $(this).attr("href");
+        let destination = $(elementClick).offset().top - $('.header-fixed').height();
+        jQuery("html:not(:animated),body:not(:animated)").animate(
+            {
+                scrollTop: destination,
+            },
+            0
+        );
+        return false;
+    };
+    $(".content-left-nav__link").bind("click", {}, scrollAnchor)
 
 
 

@@ -70,6 +70,29 @@ h1 {
     text-align: left;
 }
 
+.to-catalog {
+    margin-top: 1.6rem;
+    width: fit-content;
+    display: inline-block;
+    padding: 1.1rem 3.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #ffffff;
+    background-color: #5CBFE9;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: #00A0E3;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        background-color: #0091CE;
+    }
+}
+
 /*ДОБАВИТЬ КЛАСС .input-error К ОБЕРТКЕ ИНПУТА, ЕСЛИ В ИНПУТЕ ОШИБКА*/
 .input-error {
     input {
@@ -121,33 +144,17 @@ h1 {
 
     /*ДОБАВИТЬ КЛАСС .input-message--correct, ЕСЛИ ПРОМОКОД ВВЕДЕН ВЕРНО*/
     &--correct {
-        .input-message__correct {
-            display: block;
-        }
-
-        .input-message__error {
-            display: none;
+        .input-message__text {
+            color: #9CCE85;
         }
     }
 
     /*ДОБАВИТЬ КЛАСС .input-message--error, ЕСЛИ ПРОМОКОД ВВЕДЕН НЕВЕРНО*/
     &--error {
-        .input-message__correct {
-            display: none;
-        }
-
-        .input-message__error {
-            display: block;
+        .input-message__text {
+            color: #ED9CA1;
         }
     }
-}
-
-.input-message__correct {
-    color: #9CCE85;
-}
-
-.input-message__error {
-    color: #ED9CA1;
 }
 
 .tab-content {
@@ -185,7 +192,7 @@ h1 {
 
 .desc-maxwidth {
     text-align: left;
-    max-width: 42rem;
+    max-width: none;
     margin: 0 0 3.2rem;
 }
 
@@ -4403,6 +4410,46 @@ h1 {
 
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АВТОБУСА*/
+.bus-head__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bus-head__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bus-head__img {
+    width: 25rem;
+    height: 15.3rem;
+    margin-bottom: 1.6rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.bus-head__text {
+    margin: 0;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 6;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
 .ma-autobus {
     &__container {
         padding: 0 1.6rem;
@@ -4420,27 +4467,24 @@ h1 {
     }
 
     &__row {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         row-gap: 3.2rem;
 
     }
 
     &-schema-item {
-
-
-        font-style: normal;
         display: flex;
-        column-gap: 2.95rem;
+        column-gap: 2.4rem;
         align-items: center;
 
         &__img {
-            width: 3.85rem;
-            height: 4.8rem;
+            width: 5rem;
+            height: 5rem;
             flex-shrink: 0;
 
             img {
-                width: auto;
+                width: 100%;
                 height: 100%;
             }
 
@@ -4476,8 +4520,31 @@ h1 {
 
             &-link {
                 font-weight: 500 !important;
+                text-decoration: none !important;
+                position: relative;
 
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    left: 0;
+                    bottom: 0;
+                    background-color: #00A0E3;
+                    transition: 0.3s ease;
+                }
 
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &:active,
+                &:focus,
+                &:focus-within {
+                    width: 0;
+                }
             }
         }
     }
@@ -4498,6 +4565,7 @@ h1 {
 
 .content-left-nav {
     margin-bottom: 3.2rem;
+    text-align: left;
 
     &__item {
         &:not(:last-child) {
