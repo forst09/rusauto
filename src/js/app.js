@@ -488,14 +488,17 @@ $(document).ready(function () {
             })
         }
         imgs.forEach(img => {
-            if (img.parentNode === null || img.parentNode === undefined) {
-                imgs.forEach(img => {
-                    let div = document.createElement('div');
-                    div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
-                    div.classList.add('ma-production__img-auto')
-                    img.parentNode.replaceChild(div, img);
-                })
+            let imgParentClass = img.parentNode.className;
+            if (!imgParentClass.includes('__img')) {
+
+                let div = document.createElement('div');
+                div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
+                div.classList.add('ma-production__img-auto')
+                img.parentNode.replaceChild(div, img);
+
+                console.log(div)
             }
+
         })
     }
 
