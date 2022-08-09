@@ -1960,6 +1960,15 @@ h1 {
   align-items: center;
   margin-bottom: 2.4rem;
 }
+.catalog__stock-card-time--dark .catalog__stock-card-time-item {
+  background-color: rgba(6, 78, 140, 0.8);
+}
+.catalog__stock-card-time--dark .catalog__stock-card-time-item span {
+  color: #ffffff;
+}
+.catalog__stock-card-time--dark .catalog__stock-card-time-item::after {
+  color: #ffffff;
+}
 
 .catalog__stock-card-time-item {
   position: relative;
@@ -3920,6 +3929,72 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АКЦИИ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ СПИСОК АКЦИЙ*/
+.stock-list__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stock-list__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 28.8rem;
+  position: relative;
+}
+.stock-list__item + .stock-list__item {
+  margin-top: 3.2rem;
+}
+.stock-list__item .catalog__stock-card-time {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  margin-bottom: 0;
+}
+.stock-list__item .catalog__stock-card-time-item {
+  width: 2.7rem;
+  height: 2.5rem;
+  padding: 0.3rem 0.4rem 0.3rem;
+  text-align: center;
+}
+.stock-list__item .catalog__stock-card-time-item span {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.stock-list__item-img {
+  display: inline-block;
+  width: 28.8rem;
+  height: 19rem;
+}
+.stock-list__item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stock-list__item-name {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+/*КОНЕЦ СТИЛЕЙ СПИСОК АКЦИЙ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
