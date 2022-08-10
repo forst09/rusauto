@@ -3816,6 +3816,11 @@
 
     .stock-list__item-img {
         width: 39.8rem;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .stock-list__item-name {
@@ -3827,6 +3832,21 @@
     /*КОНЕЦ СТИЛЕЙ СПИСОК АКЦИЙ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АКЦИИ 1024*/
+    .promotion {
+        .catalog-4lvl__catalog-lines {
+            display: none;
+        }
+
+        .catalog-4lvl__catalog-tile {
+            display: block;
+        }
+
+        .catalog-4lvl__catalog-tile-container {
+            grid-template-columns: repeat(4, 3fr);
+            grid-column-gap: 3.2rem;
+            grid-row-gap: 3.2rem;
+        }
+    }
 
     /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АКЦИИ 1024*/
 }
@@ -4687,6 +4707,13 @@
     /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АВТОБУСА 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АКЦИИ 1500*/
+    .promotion {
+        .catalog-4lvl__catalog-tile-container {
+            grid-template-columns: repeat(5, 2.4fr);
+            grid-column-gap: 6.25rem;
+        }
+    }
+
     .ma-promotion {
         &__img {
             height: 35.2rem;
