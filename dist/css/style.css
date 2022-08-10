@@ -3964,14 +3964,17 @@ h1 {
 }
 
 .stock-list__item-img {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   width: 28.8rem;
   height: 19rem;
 }
 .stock-list__item-img img {
-  width: 100%;
+  max-width: none;
+  width: auto;
   height: 100%;
-  object-fit: cover;
 }
 
 .stock-list__item-name {
@@ -3992,6 +3995,13 @@ h1 {
   word-wrap: break-word;
   -webkit-box-orient: vertical;
   box-orient: vertical;
+  transition: 0.3s ease;
+}
+.stock-list__item-name:hover {
+  color: #00A0E3;
+}
+.stock-list__item-name:focus, .stock-list__item-name:focus-within, .stock-list__item-name:active {
+  color: #0091CE;
 }
 
 /*КОНЕЦ СТИЛЕЙ СПИСОК АКЦИЙ*/

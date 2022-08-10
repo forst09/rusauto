@@ -490,12 +490,10 @@ $(document).ready(function () {
         imgs.forEach(img => {
             let imgParentClass = img.parentNode.className;
             if (!imgParentClass.includes('__img')) {
-
                 let div = document.createElement('div');
                 div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
                 div.classList.add('ma-production__img-auto')
                 img.parentNode.replaceChild(div, img);
-
                 console.log(div)
             }
 

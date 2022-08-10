@@ -4664,14 +4664,17 @@ h1 {
 }
 
 .stock-list__item-img {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     width: 28.8rem;
     height: 19rem;
 
     img {
-        width: 100%;
+        max-width: none;
+        width: auto;
         height: 100%;
-        object-fit: cover;
     }
 }
 
@@ -4693,6 +4696,17 @@ h1 {
     word-wrap: break-word;
     -webkit-box-orient: vertical;
     box-orient: vertical;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: #00A0E3;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:active {
+        color: #0091CE;
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ СПИСОК АКЦИЙ*/
