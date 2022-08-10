@@ -1269,9 +1269,12 @@
   /*КОНЕЦ СТИЛЕЙ СПИСОК АКЦИЙ 668*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ СТРАНИЦА АКЦИИ 668*/
-  .ma-promotion__banier-logo {
-    max-width: 11.9rem;
+  .no-image::after {
+    left: 2.5rem;
+    bottom: 2.5rem;
+    width: 11.9rem;
     height: 8.6rem;
+    background-size: 11.9rem 8.6rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АКЦИИ 668*/
@@ -3328,18 +3331,21 @@
     grid-row-gap: 3.2rem;
   }
 
-  .ma-promotion__banier {
+  .no-image {
     height: 27rem;
   }
-  .ma-promotion__banier-logo {
+  .no-image::after {
     left: 2.5rem;
     bottom: 2.5rem;
-    max-width: 18.4rem;
+    width: 18.4rem;
     height: 13.2rem;
+    background-size: 18.4rem 13.2rem;
   }
-  .ma-promotion__banier-img {
-    max-width: 21.6rem;
+  .no-image::before {
+    width: 29.8rem;
     height: 27rem;
+    background-size: 29.8rem 27rem;
+    right: -8rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АКЦИИ 1024*/
@@ -4063,6 +4069,22 @@
   .ma-promotion__banier-img {
     max-width: 28.1rem;
     height: 100%;
+  }
+
+  .no-image {
+    height: 35.2rem;
+  }
+  .no-image::after {
+    left: 3.2rem;
+    bottom: 3.2rem;
+    width: 23.9rem;
+    height: 17.2rem;
+    background-size: 23.9rem 17.2rem;
+  }
+  .no-image::before {
+    width: 28.1rem;
+    height: 35.1rem;
+    background-size: 28.1rem 35.1rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АКЦИИ 1500*/

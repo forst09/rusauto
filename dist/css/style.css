@@ -697,6 +697,10 @@ h1 {
   margin-bottom: 1.6rem;
   margin-top: 4rem;
 }
+.ma-production__content ol,
+.ma-production__content ul {
+  margin-top: 1.6rem;
+}
 .ma-production__content ol {
   list-style: auto;
   margin-left: 1.8rem;
@@ -2381,7 +2385,8 @@ h1 {
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 1 УРОВНЯ*/
 /*КАТАЛОГ АВТОЗАПЧАСТЕЙ*/
-.catalog-1lvl .catalog__sections-item {
+.catalog-1lvl .catalog__sections-item,
+.personal .catalog__sections-item {
   align-items: flex-end;
 }
 
@@ -3950,35 +3955,39 @@ h1 {
   margin-top: 2.4rem;
 }
 .ma-promotion__banier {
+  margin-bottom: 3.2rem;
+}
+
+.no-image {
   width: 100%;
   height: 17.5rem;
   background: #EDF8FD;
   position: relative;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 3.2rem;
+  overflow: hidden;
 }
-.ma-promotion__banier svg {
-  display: inline-block;
-}
-.ma-promotion__banier-img {
-  max-width: 14rem;
-  height: 100%;
-}
-.ma-promotion__banier-img svg {
-  max-width: 100%;
-  height: 100%;
-}
-.ma-promotion__banier-logo {
-  max-width: 6rem;
-  height: 4.3rem;
+.no-image::after, .no-image::before {
+  content: "";
+  display: block;
   position: absolute;
+}
+.no-image::after {
   left: 1.6rem;
   bottom: 1.6rem;
+  width: 6rem;
+  height: 4.3rem;
+  background: url("../img/logo.svg");
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: 6rem 4.3rem;
 }
-.ma-promotion__banier-logo svg {
-  max-width: 100%;
-  height: 100%;
+.no-image::before {
+  width: 19.3rem;
+  height: 17.5rem;
+  right: -5.5rem;
+  top: 0;
+  background: url("../img/stock-page/Vector.svg");
+  background-size: 19.3rem 17.5rem;
+  background-repeat: no-repeat;
 }
 
 /*КОНЕЦ СТИЛЕЙ СТРАНИЦА АКЦИИ*/
@@ -4069,6 +4078,13 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ СПИСОК АКЦИЙ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ЛИЧНЫЙ КАБИНЕТ*/
+.personal__last {
+  display: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ ЛИЧНЫЙ КАБИНЕТ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
