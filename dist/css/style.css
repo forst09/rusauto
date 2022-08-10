@@ -369,6 +369,28 @@ h1 {
   line-height: 1.8rem;
 }
 
+.btn-blue__wrapper {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.btn-blue {
+  display: inline-block;
+  background-color: #064E8C;
+  color: #ffffff;
+  padding: 1.1rem 4.8rem;
+  transition: 0.3s ease;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.btn-blue:active, .btn-blue:focus, .btn-blue:focus-within {
+  background-color: #0091CE;
+}
+.btn-blue:hover {
+  background-color: #00A0E3;
+}
+
+/*СТИЛИ ДЛЯ НАВИГАЦИИ - ПЕРЕКЛЮЧЕНИЕ МЕЖДУ СТРАНИЦАМИ И ПОКАЗАТЬ ЕЩЕ*/
 .navigation {
   margin-top: 2.4rem;
   text-align: center;
@@ -502,7 +524,8 @@ h1 {
 /*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН */
 .about,
 .catalog-about,
-.stock-list {
+.stock-list,
+.personal {
   margin-bottom: 2.4rem;
 }
 
