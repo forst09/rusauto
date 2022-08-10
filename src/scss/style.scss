@@ -4742,15 +4742,18 @@ h1 {
     .plug-image {
         width: 28.8rem;
         height: 19rem;
-    }
 
-    .ma-promotion__banier-logo {
-        max-width: 7rem;
-        height: 5rem;
-    }
+        &::after {
+            width: 7rem;
+            height: 5rem;
+            background-size: 7rem 5rem;
+        }
 
-    .ma-promotion__banier-img {
-        max-width: 15.2rem;
+        &::before {
+            width: 21rem;
+            height: 19rem;
+            background-size: 21rem 19rem;
+        }
     }
 }
 

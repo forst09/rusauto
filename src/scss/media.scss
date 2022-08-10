@@ -3851,6 +3851,18 @@
 
         .plug-image {
             width: 39.8rem;
+
+            &::after {
+                width: 10.4rem;
+                height: 7.5rem;
+                background-size: 10.4rem 7.5rem;
+                left: 1.6rem;
+                bottom: 1.6rem;
+            }
+
+            &::before {
+                right: -4.5rem;
+            }
         }
     }
 
@@ -4005,7 +4017,16 @@
     /*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ 1500*/
     .ma-production {
         &__content {
-            p {
+
+            p,
+            li,
+            span,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 max-width: 88rem;
             }
 

@@ -3302,6 +3302,16 @@
   .stock-list__item .plug-image {
     width: 39.8rem;
   }
+  .stock-list__item .plug-image::after {
+    width: 10.4rem;
+    height: 7.5rem;
+    background-size: 10.4rem 7.5rem;
+    left: 1.6rem;
+    bottom: 1.6rem;
+  }
+  .stock-list__item .plug-image::before {
+    right: -4.5rem;
+  }
 
   .stock-list__item-img {
     width: 39.8rem;
@@ -3424,7 +3434,15 @@
 
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
   /*НАЧАЛО КОНТЕНТНЫХ СТИЛЕЙ 1500*/
-  .ma-production__content p {
+  .ma-production__content p,
+.ma-production__content li,
+.ma-production__content span,
+.ma-production__content h1,
+.ma-production__content h2,
+.ma-production__content h3,
+.ma-production__content h4,
+.ma-production__content h5,
+.ma-production__content h6 {
     max-width: 88rem;
   }
   .ma-production__content h2 {
