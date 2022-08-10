@@ -299,7 +299,8 @@
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 668*/
   /*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН 668*/
   .about,
-.catalog-about {
+.catalog-about,
+.stock-list {
     margin-bottom: 4rem;
   }
 
@@ -2028,7 +2029,8 @@
   /*КОНЕЦ СТИЛЕЙ МОДАЛКИ С ВЫБОРОМ ГОРОДА 1024*/
   /*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН 1024 */
   .about,
-.catalog-about {
+.catalog-about,
+.stock-list {
     margin-bottom: 5.6rem;
   }
 
@@ -3594,7 +3596,8 @@
   /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО КАТАЛОГА 1500*/
   /*СЕКЦИИ, У КОТОРЫХ МЕНЬШЕ МАРДЖИН  1500*/
   .about,
-.catalog-about {
+.catalog-about,
+.stock-list {
     margin-bottom: 6.4rem;
   }
 
