@@ -463,9 +463,16 @@ $(document).ready(function () {
     });
 
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
-    let imgs = document.querySelectorAll('.ma-production__content img');
-    let videoButton = document.querySelector('.ma-production__video svg');
     let content = document.querySelector('.ma-production__content ');
+    let imgs = document.querySelectorAll('.ma-production__content img');
+    let allEltsInContent = [...content.querySelectorAll('*')];
+    let allTagInContent = [];
+    allEltsInContent.forEach(elt => {
+
+        allTagInContent.push(elt.tagName.toLocaleLowerCase())
+
+    })
+
     if (content != null) {
         let allEltsInContent = [...content.querySelectorAll('*')];
         let allTagInContent = [];
@@ -500,25 +507,18 @@ $(document).ready(function () {
         })
     }
 
-    let url = 'https://www.youtube.com/watch?v=C-g2Kghb4pM';
-    let newUrl;
-    // replace watch with embed
-    if (url.includes('watch?v=')) {
-        newUrl = url.replace('/watch?v=', '/embed/')
+    if (allTagInContent.includes('iframe')) {
 
+        let iframes = content.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+            let wrapper = document.createElement('div')
+            let iframeSrc = iframe.src
+            wrapper.classList.add('wrapper-iframe');
+            let parent = iframe.parentNode;
+            parent.replaceChild(wrapper, iframe);
+            wrapper.appendChild(iframe);
+        })
     }
-
-    // videoButton.addEventListener('click', e => {
-    //     $.fancybox.open({
-    //         src: newUrl,
-    //         type: 'iframe',
-    //         opts: {
-    //             afterShow: function (instance, current) {
-    //                 console.info('done!');
-    //             }
-    //         }
-    //     });
-    // })
 
     //СКРОЛЛ ОПЛАТА И ДОСТАВКА
     let leftLinks = [...document.querySelectorAll('.content-left-nav__link')];
