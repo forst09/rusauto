@@ -1392,7 +1392,8 @@
   }
 
   .return-page h1,
-.manager h1 {
+.manager h1,
+.information h1 {
     margin-bottom: 4.8rem;
   }
 
@@ -1436,6 +1437,9 @@
     font-size: 1.6rem;
     margin-bottom: 2.4rem;
     margin-top: 4.8rem;
+  }
+  .ma-production__content span {
+    margin-top: 1.6rem;
   }
   .ma-production__video {
     width: 70rem;

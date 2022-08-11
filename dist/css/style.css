@@ -66,7 +66,8 @@ h1 {
 }
 
 .return-page h1,
-.manager h1 {
+.manager h1,
+.information h1 {
   margin-bottom: 3.2rem;
 }
 
@@ -698,6 +699,7 @@ h1 {
   line-height: 1.8rem;
   color: #064E8C;
   margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
 }
 .ma-production__content ul li {
   font-size: 1.4rem;

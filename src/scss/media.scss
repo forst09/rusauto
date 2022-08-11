@@ -1633,7 +1633,8 @@
     }
 
     .return-page,
-    .manager {
+    .manager,
+    .information {
         h1 {
             margin-bottom: 4.8rem;
         }
@@ -1688,6 +1689,10 @@
                 font-size: 1.6rem;
                 margin-bottom: 2.4rem;
                 margin-top: 4.8rem;
+            }
+
+            span {
+                margin-top: 1.6rem;
             }
         }
 
