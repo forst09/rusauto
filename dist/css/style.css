@@ -526,7 +526,8 @@ h1 {
 .catalog-about,
 .stock-list,
 .personal,
-.ma-condition-page {
+.ma-condition-page,
+.return .ma-subscribe {
   margin-bottom: 2.4rem;
 }
 
@@ -4117,6 +4118,18 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЙ КАБИНЕТ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ*/
+.return-page h1 {
+  margin-bottom: 3.2rem;
+}
+.return-page__row {
+  margin: 4rem 0 4.8rem;
+  display: grid;
+  row-gap: 3.2rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
