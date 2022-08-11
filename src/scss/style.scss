@@ -3536,13 +3536,21 @@ h1 {
         content: "";
         position: absolute;
         right: 0.8rem;
-        top: calc(50% - 0.35rem);
-        width: 0.7rem;
-        height: 0.7rem;
-        border-top: 0.15rem solid #262B2E;
-        border-right: 0.15rem solid #262B2E;
-        transform: rotate(135deg);
+        // top: calc(50% - 0.35rem);
+        // width: 0.7rem;
+        // height: 0.7rem;
+        // border-top: 0.15rem solid #262B2E;
+        // border-right: 0.15rem solid #262B2E;
+        top: 50%;
+        transform: translateY(-50%);
+        // transform: rotate(135deg);
         transition: transform 0.5s ease;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-image: url('../img/catalog-4lvl/dropdown.svg');
+        background-repeat: no-repeat;
+        background-size: 1.2rem 1.2rem;
+        background-position: center center;
     }
 
     span {
@@ -3568,12 +3576,12 @@ h1 {
 .catalog-4lvl__filters-dropdown-link.active {
     &::after {
         margin-top: 0.2rem;
-        transform: rotate(-45deg);
+        transform: rotate(-180deg);
     }
 }
 
 .catalog-4lvl__filters-dropdown-content {
-    // display: none;
+    display: none;
     padding: 1rem 0.8rem 0.6rem;
 }
 
@@ -4871,6 +4879,52 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ*/
+
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ*/
+.personal-data {
+    .catalog-4lvl__filters-radio {
+        margin-bottom: 0;
+    }
+}
+
+.personal-data__radio {
+    margin-bottom: 3.8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.8rem;
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid #EFF0F1;
+    padding: 1rem 2rem;
+    color: #064E8C;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    max-height: 3.8rem;
+
+    &::placeholder {
+        color: #A3A8AB;
+        font-family: 'Geometria';
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within,
+    &:hover {
+        border: 1.28px solid #CBD3DC;
+    }
+}
+
+.personal-data__individual-container {
+    display: grid;
+    grid-row-gap: 1.6rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ*/
 @keyframes fadeEffect {
     0% {
         opacity: 0;

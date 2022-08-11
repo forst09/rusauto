@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+"title": "Личные данные"
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    @@include('html/bread-crumbs.html',{})
+
+    <!-- НАЧАЛО СЕКЦИИ ЛИЧНЫЕ ДАННЫЕ -->
+    <section class="personal-data">
+        <div class="wrapper">
+            <h1>Личные данные</h1>
+            <div class="desc desc-left">Компания ООО «РусАвтоДеталь» на сегодняшний день является крупнейшим
+                поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов).</div>
+
+            <div class="personal-data__form">
+                <form action="">
+                    <div class="personal-data__radio">
+                        <div class="catalog-4lvl__filters-radio">
+                            <input class="catalog-4lvl__filters-radio-input" type="radio" name="personalDataRadio"
+                                id="personalDataRadio1" checked>
+                            <label class="catalog-4lvl__filters-radio-label" for="personalDataRadio1">Физическое
+                                лицо</label>
+                        </div>
+                        <div class="catalog-4lvl__filters-radio">
+                            <input class="catalog-4lvl__filters-radio-input" type="radio" name="personalDataRadio"
+                                id="personalDataRadio2">
+                            <label class="catalog-4lvl__filters-radio-label" for="personalDataRadio2">Юридическое
+                                лицо</label>
+                        </div>
+                    </div>
+                    <!-- ФОРМА ДЛЯ ФИЗ ЛИЦА -->
+                    <div class="personal-data__individual">
+                        <div class="personal-data__individual-container">
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Имя" id="individualName">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Фамилия" id="individualSurname">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input input-phone" placeholder="Телефон"
+                                    id="individualPhone">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Почта" id="individualMail">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ФОРМА ДЛЯ ЮР ЛИЦА -->
+                    <div class="personal-data__entity">
+
+                    </div>
+
+                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                        <a href="javascript:void(0)" class="catalog-4lvl__filters-dropdown-link"><span>Изменение
+                                пароля</span></a>
+                        <div class="catalog-4lvl__filters-dropdown-content">
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Введите новый пароль"
+                                    id="individualPassword">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Повторите пароль"
+                                    id="individualRepeatPassword">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ СЕКЦИИ ЛИЧНЫЕ ДАННЫЕ -->
+
+    @@include('html/footer.html',{})
+
+    @@include('html/tabbar.html',{})
+
+    @@include('html/mobile-menu.html',{})
+
+    @@include('html/catalog.html',{})
+
+    @@include('html/catalog-groups.html',{})
+
+    @@include('html/modal-choice.html',{})
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

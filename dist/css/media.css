@@ -1315,6 +1315,32 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 668*/
+  .personal-data__radio {
+    flex-direction: row;
+    gap: 4.8rem;
+  }
+
+  .personal-data__individual-container {
+    grid-template-columns: repeat(2, 6fr);
+    gap: 1.6rem;
+  }
+
+  .personal-data__form {
+    max-width: 83.2rem;
+    width: 100%;
+  }
+
+  .personal-data__radio {
+    margin-bottom: 4.6rem;
+  }
+
+  .personal-data__individual-container {
+    gap: 3.2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/

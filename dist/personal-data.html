@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <title>Личный кабинет</title>
+    <title>Личные данные</title>
 </head>
 
 <body>
@@ -405,62 +406,72 @@
 </div>
 <!-- КОНЕЦ ХЛЕБНЫХ КРОШЕК -->
 
-    <section class="personal">
+    <!-- НАЧАЛО СЕКЦИИ ЛИЧНЫЕ ДАННЫЕ -->
+    <section class="personal-data">
         <div class="wrapper">
-            <h1>Личный кабинет</h1>
+            <h1>Личные данные</h1>
             <div class="desc desc-left">Компания ООО «РусАвтоДеталь» на сегодняшний день является крупнейшим
                 поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов).</div>
-            <div class="catalog-1lvl__container">
-                <a class="catalog__sections-item" href="personal-data.html">
-                    <div class="catalog__sections-item-title">Личные данные</div>
-                    <div class="catalog__sections-item-image">
-                        <svg width="290" height="290" viewBox="0 0 290 290" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M227.28 263.024C264.42 237.118 288.72 194.077 288.72 145.36C288.72 66.1845 224.536 2 145.36 2C66.1845 2 2 66.1845 2 145.36C2 194.077 26.2998 237.118 63.44 263.024M227.28 263.024C204.059 279.221 175.819 288.72 145.36 288.72C114.901 288.72 86.6609 279.221 63.44 263.024M227.28 263.024V258V247.757C227.28 213.825 199.772 186.32 165.84 186.32H124.88C90.9476 186.32 63.44 213.825 63.44 247.757V261.84V263.024M145.36 63.44C122.738 63.44 104.4 81.7784 104.4 104.4C104.4 127.022 122.738 145.36 145.36 145.36C167.982 145.36 186.32 127.022 186.32 104.4C186.32 81.7784 167.982 63.44 145.36 63.44Z"
-                                stroke="#00A0E3" stroke-width="2.56" />
-                        </svg>
-                    </div>
-                </a>
-                <a class="catalog__sections-item" href="javascript:void(0)">
-                    <div class="personal__last">
-                        <div class="personal__last-title">Последний заказ:</div>
-                        <div class="personal__last-number">№ 248-759562</div>
-                        <div class="personal__last-date">Дата:<span>01.01.2022</span></div>
-                        <div class="personal__last-status personal__last-status--assembly">Статус:<span>Сборка</span>
+
+            <div class="personal-data__form">
+                <form action="">
+                    <div class="personal-data__radio">
+                        <div class="catalog-4lvl__filters-radio">
+                            <input class="catalog-4lvl__filters-radio-input" type="radio" name="personalDataRadio"
+                                id="personalDataRadio1" checked>
+                            <label class="catalog-4lvl__filters-radio-label" for="personalDataRadio1">Физическое
+                                лицо</label>
                         </div>
-                        <div class="personal__last-link link-line">К заказу</div>
+                        <div class="catalog-4lvl__filters-radio">
+                            <input class="catalog-4lvl__filters-radio-input" type="radio" name="personalDataRadio"
+                                id="personalDataRadio2">
+                            <label class="catalog-4lvl__filters-radio-label" for="personalDataRadio2">Юридическое
+                                лицо</label>
+                        </div>
                     </div>
-                    <div class="catalog__sections-item-title">История заказов</div>
-                    <div class="catalog__sections-item-image">
-                        <svg width="287" height="287" viewBox="0 0 287 287" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M72.9301 52.6883L86.8152 66.6946L115.316 37.9448M137.971 53.4255H215.435M72.9301 113.136L86.8152 127.143L115.316 98.393M137.971 113.874H215.435M72.9301 172.11L86.8152 186.117L115.316 157.367M137.971 172.847H215.435M72.9301 232.558L86.8152 246.565L115.316 217.815M137.971 233.296H215.435M37.1211 2.56055V284.161H248.321V2.56055H37.1211Z"
-                                stroke="#00A0E3" stroke-width="2.56" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <!-- ФОРМА ДЛЯ ФИЗ ЛИЦА -->
+                    <div class="personal-data__individual">
+                        <div class="personal-data__individual-container">
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Имя" id="individualName">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Фамилия" id="individualSurname">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input input-phone" placeholder="Телефон"
+                                    id="individualPhone">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Почта" id="individualMail">
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a class="catalog__sections-item" href="javascript:void(0)">
-                    <div class="catalog__sections-item-title">Адреса доставки</div>
-                    <div class="catalog__sections-item-image">
-                        <svg width="287" height="287" viewBox="0 0 287 287" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M250.88 119.469C250.88 203.096 143.36 274.776 143.36 274.776C143.36 274.776 35.8398 203.096 35.8398 119.469C35.8398 90.9531 47.1678 63.605 67.3317 43.4411C87.4956 23.2772 114.844 11.9492 143.36 11.9492C171.876 11.9492 199.224 23.2772 219.388 43.4411C239.552 63.605 250.88 90.9531 250.88 119.469Z"
-                                stroke="#00A0E3" stroke-width="2.56" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M143.36 155.309C163.153 155.309 179.2 139.263 179.2 119.469C179.2 99.675 163.153 83.6289 143.36 83.6289C123.566 83.6289 107.52 99.675 107.52 119.469C107.52 139.263 123.566 155.309 143.36 155.309Z"
-                                stroke="#00A0E3" stroke-width="2.56" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+
+                    <!-- ФОРМА ДЛЯ ЮР ЛИЦА -->
+                    <div class="personal-data__entity">
+
                     </div>
-                </a>
-            </div>
-            <div class="btn-blue__wrapper">
-                <a href="javascript:void(0)" class="btn-blue">Выйти из аккаунта</a>
+
+                    <div class="catalog-4lvl__filters-dropdown-wrapper">
+                        <a href="javascript:void(0)" class="catalog-4lvl__filters-dropdown-link"><span>Изменение
+                                пароля</span></a>
+                        <div class="catalog-4lvl__filters-dropdown-content">
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Введите новый пароль"
+                                    id="individualPassword">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Повторите пароль"
+                                    id="individualRepeatPassword">
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ЛИЧНЫЕ ДАННЫЕ -->
 
     <!-- НАЧАЛО СЕКЦИИ ПОДВАЛ -->
 <div class="footer">
@@ -1269,14 +1280,11 @@
 <!-- КОНЕЦ МОДАЛЬНОГО ОКНА С ВЫБОРОМ ГОРОДА -->
 
 
-
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="js/inputmask.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
     <script src="js/app.js"></script>
-
 </body>
 
 </html>

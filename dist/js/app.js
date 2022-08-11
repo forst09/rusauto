@@ -821,6 +821,11 @@ $(document).ready(function () {
             });
     });
 
+    //МАСКА НА ИНПУТЫ С ТЕЛЕФОНОМ
+    if ($(".input-phone").length !== 0) {
+        Inputmask("+7 (999) 999-99-99").mask(".input-phone");
+    }
+
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
