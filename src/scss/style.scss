@@ -72,7 +72,8 @@ h1 {
 
 .return-page,
 .manager,
-.information {
+.information,
+.ma-perPartner {
     h1 {
         margin-bottom: 3.2rem;
     }
@@ -4998,6 +4999,38 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ НАШИ ПАРТНЕРЫ*/
+
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ СТРАНИЦА ПАРТНЕРА*/
+.ma-perPartner {
+    margin-bottom: 2.4rem;
+
+    &__title {
+        margin-bottom: 3.2rem;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        color: #262B2E;
+
+    }
+
+    &__img {
+        max-width: 13rem;
+        height: 13rem;
+        margin: auto;
+        margin-bottom: 2.4rem;
+
+        img {
+            max-width: 100;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ СТРАНИЦА ПАРТНЕРА*/
 @keyframes fadeEffect {
     0% {
         opacity: 0;
