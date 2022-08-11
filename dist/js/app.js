@@ -465,13 +465,7 @@ $(document).ready(function () {
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
     let content = document.querySelector('.ma-production__content ');
     let imgs = document.querySelectorAll('.ma-production__content img');
-    let allEltsInContent = [...content.querySelectorAll('*')];
     let allTagInContent = [];
-    allEltsInContent.forEach(elt => {
-
-        allTagInContent.push(elt.tagName.toLocaleLowerCase())
-
-    })
 
     if (content != null) {
         let allEltsInContent = [...content.querySelectorAll('*')];

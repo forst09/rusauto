@@ -19,6 +19,22 @@
     line-height: 3.4rem;
   }
 
+  .link-line {
+    position: relative;
+  }
+  .link-line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: 0.3s ease;
+  }
+  .link-line:hover::after, .link-line:focus::after, .link-line:focus-within::after, .link-line:active::after {
+    width: 0;
+  }
+
   .buy {
     max-width: unset;
     min-width: 14.9rem;
@@ -1682,6 +1698,7 @@
 
   .header-top__links-icons-basket,
 .header-top__links-icons-user {
+    display: inline-block;
     width: 2rem;
     height: 2rem;
   }
@@ -1842,6 +1859,48 @@
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.5rem;
+  }
+
+  .header-top__links-icons-user-wrapper {
+    position: relative;
+  }
+  .header-top__links-icons-user-wrapper:hover .header-top__links-icons-user svg path {
+    fill: #064E8C;
+  }
+  .header-top__links-icons-user-wrapper:hover .header__links-personal-wrapper {
+    display: block;
+  }
+
+  .header__links-personal-wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    animation: fadeEffect 0.3s;
+    padding-top: 0.8rem;
+    z-index: 100000;
+  }
+  .header__links-personal-wrapper .btn-blue__wrapper {
+    margin-top: 1.6rem;
+  }
+
+  .header__links-personal {
+    min-width: 25.9rem;
+    padding: 1.6rem 0;
+    background: #FFFFFF;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .header__links-personal-item {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 1.1rem 0.8rem;
+    transition: 0.3s ease;
+    width: 100%;
+  }
+  .header__links-personal-item:hover {
+    background-color: #F5FBFE;
   }
 
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
@@ -3386,6 +3445,54 @@
     top: 1.6rem;
     left: 1.6rem;
     color: #064E8C;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .personal__last-title {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  }
+
+  .personal__last-number {
+    font-weight: 500;
+    margin-top: 0.8rem;
+  }
+
+  .personal__last-date {
+    margin-top: 1.2rem;
+  }
+
+  .personal__last-date span,
+.personal__last-status span {
+    font-weight: 500;
+    margin-left: 0.8rem;
+  }
+
+  .personal__last-status {
+    margin-top: 1.2rem;
+    /*МЕНЯТЬ ЦВЕТ СПАНА В ЗАВИСИМОСТИ ОТ СТАТУСА ЗАКАЗА*/
+  }
+  .personal__last-status--assembly span {
+    color: #E6951C;
+  }
+  .personal__last-status--canceled span {
+    color: #E6281C;
+  }
+  .personal__last-status--delivered span {
+    color: #9CCE85;
+  }
+  .personal__last-status--received span {
+    color: #A3A8AB;
+  }
+
+  .personal__last-link {
+    margin-top: 1.6rem;
+    width: fit-content;
+  }
+  .personal__last-link::after {
+    background-color: #064E8C;
   }
 
   /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЙ КАБИНЕТ 1024*/
@@ -4146,5 +4253,14 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СПИСОК АКЦИЙ 1500*/
+  .personal .catalog-1lvl__container {
+    grid-template-columns: repeat(3, 4fr);
+    grid-column-gap: 7rem;
+    padding: 0;
+  }
+
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ ЛИЧНЫЙ КАБИНЕТ 1500*/
+  /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЙ КАБИНЕТ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

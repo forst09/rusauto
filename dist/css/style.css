@@ -1270,6 +1270,10 @@ h1 {
   text-decoration: underline;
 }
 
+.header__links-personal-wrapper {
+  display: none;
+}
+
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
 /*НАЧАЛО СТИЛЕЙ ТАББАРА*/
 .tab-bar {
