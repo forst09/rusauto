@@ -70,6 +70,13 @@ h1 {
     text-align: left;
 }
 
+.return-page,
+.manager {
+    h1 {
+        margin-bottom: 3.2rem;
+    }
+}
+
 .to-catalog {
     margin-top: 1.6rem;
     width: fit-content;
@@ -633,7 +640,8 @@ h1 {
 .stock-list,
 .personal,
 .ma-condition-page,
-.return .ma-subscribe {
+.return .ma-subscribe,
+.owners .ma-subscribe {
     margin-bottom: 2.4rem;
 }
 
@@ -867,7 +875,7 @@ h1 {
 
         ol,
         ul {
-            margin-top: 1.6rem;
+            margin: 1.6rem 0;
         }
 
         ol {
@@ -4852,9 +4860,6 @@ h1 {
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ*/
 .return-page {
-    h1 {
-        margin-bottom: 3.2rem;
-    }
 
     &__row {
         margin: 4rem 0 4.8rem;

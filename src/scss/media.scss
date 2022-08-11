@@ -391,7 +391,8 @@
     .stock-list,
     .personal,
     .ma-condition-page,
-    .return .ma-subscribe {
+    .return .ma-subscribe,
+    .owners .ma-subscribe {
         margin-bottom: 4rem;
     }
 
@@ -1631,6 +1632,13 @@
         }
     }
 
+    .return-page,
+    .manager {
+        h1 {
+            margin-bottom: 4.8rem;
+        }
+    }
+
     /*НАЧАЛО СТИЛЕЙ ТАББАРА 1024*/
     .tab-bar {
         display: none;
@@ -2480,7 +2488,8 @@
     .stock-list,
     .personal,
     .ma-condition-page,
-    .return .ma-subscribe {
+    .return .ma-subscribe,
+    .owners .ma-subscribe {
         margin-bottom: 5.6rem;
     }
 
@@ -4119,9 +4128,6 @@
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ 1024*/
     .return-page {
-        h1 {
-            margin-bottom: 4.8rem;
-        }
 
         &__row {
             margin: 4.8rem 0 5.6rem;
@@ -4432,7 +4438,8 @@
     .stock-list,
     .personal,
     .ma-condition-page,
-    .return .ma-subscribe {
+    .return .ma-subscribe,
+    .owners .ma-subscribe {
         margin-bottom: 6.4rem;
     }
 
@@ -5076,11 +5083,6 @@
 
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ 1500*/
-    .return-page {
-        h1 {
-            max-width: 88rem;
-        }
-    }
 
     /*КОНЕЦ СТИЛЕЙ ГАРАНТИИ И ВОЗВРАТ 1500*/
 
