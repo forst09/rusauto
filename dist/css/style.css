@@ -4427,6 +4427,59 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ СТРАНИЦА ПАРТНЕРА*/
 /*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ 404*/
+.ma-404 {
+  font-family: "Geometria";
+  font-style: normal;
+}
+.ma-404__content {
+  max-width: 46rem;
+  padding-top: 3.2rem;
+  margin: 0 auto;
+}
+.ma-404__title {
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6.3rem;
+  color: #00A0E3;
+  text-align: center;
+}
+.ma-404__img {
+  width: 28.8rem;
+  height: 12.1rem;
+  margin: 1.6rem auto 0;
+}
+.ma-404__img img {
+  width: 100%;
+  height: auto;
+}
+.ma-404__subtitle {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.ma-btn-simple {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #064E8C;
+}
+
+.ma-btn-row {
+  width: 100%;
+  margin-top: 2.4rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.4rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ 404*/
+/*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ О КОМПАНИИ*/
 /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ*/
 @keyframes fadeEffect {

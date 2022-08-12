@@ -1673,6 +1673,45 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СТРАНИЦА ПАРТНЕРА 668*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ 404 668*/
+    .ma-404 {
+        &__content {
+            max-width: 58rem;
+        }
+
+        &__title {
+            font-size: 10rem;
+            line-height: 12.6rem;
+
+        }
+
+        &__img {
+            width: 51.8rem;
+            height: 21.9rem;
+            margin-top: 3.2rem;
+        }
+
+        &__subtitle {
+            font-size: 1.6rem;
+            margin-top: 4.8rem;
+        }
+
+    }
+
+    .ma-btn-row {
+
+        width: 100%;
+        margin-top: 3.2rem;
+        flex-direction: row;
+        align-items: center;
+        row-gap: unset;
+        justify-content: center;
+        column-gap: 7.2rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ 404 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -4380,6 +4419,50 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 1024*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ 404 1024*/
+    .ma-404 {
+        &__content {
+            max-width: 78.6rem;
+            padding-top: 4.8rem;
+        }
+
+        &__title {
+            font-size: 15rem;
+            line-height: 18.9rem;
+        }
+
+        &__img {
+            width: 64.6rem;
+            height: 27.3rem;
+
+            img {
+                height: 100%;
+                max-width: auto;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            margin-top: 4.8rem;
+        }
+
+    }
+
+    .ma-btn-row {
+
+        width: 100%;
+        margin-top: 3.2rem;
+        flex-direction: row;
+        align-items: center;
+        row-gap: unset;
+        justify-content: center;
+        column-gap: 5.6rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ 404 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
