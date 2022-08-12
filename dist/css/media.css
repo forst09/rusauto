@@ -537,6 +537,23 @@
     height: 1.3rem;
   }
 
+  /*КАРТОЧКИ ДЛЯ НОВОСТЕЙ И ИНФОРМАЦИИ 668*/
+  .ma-news__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+  }
+
+  .item-ma-news {
+    margin: unset;
+  }
+  .item-ma-news:not(:last-child) {
+    margin-bottom: unset;
+  }
+  .item-ma-news__img {
+    max-width: 27.4rem;
+  }
+
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
@@ -2238,6 +2255,28 @@
     margin-bottom: 2.4rem;
   }
 
+  /*КАРТОЧКИ ДЛЯ НОВОСТЕЙ И ИНФОРМАЦИИ 1024*/
+  .ma-news__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+  }
+
+  .item-ma-news {
+    max-width: 27.6rem;
+    margin: unset;
+  }
+  .item-ma-news:not(:last-child) {
+    margin-bottom: unset;
+  }
+  .item-ma-news__img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .item-ma-news__text {
+    line-height: 1.8rem;
+  }
+
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
   .main {
@@ -3928,6 +3967,28 @@
 .return .ma-subscribe,
 .owners .ma-subscribe {
     margin-bottom: 6.4rem;
+  }
+
+  /*КАРТОЧКИ ДЛЯ НОВОСТЕЙ И ИНФОРМАЦИИ 1500*/
+  .ma-news__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.8rem;
+  }
+
+  .item-ma-news {
+    max-width: 29.9rem;
+    margin: unset;
+  }
+  .item-ma-news:not(:last-child) {
+    margin-bottom: unset;
+  }
+  .item-ma-news__img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .item-ma-news__text {
+    line-height: 1.8rem;
   }
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/

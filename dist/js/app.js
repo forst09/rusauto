@@ -827,7 +827,16 @@ $(document).ready(function () {
     }
 
     //ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ
-
+    $(document).on('click', '.personal-data__label', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('.form-input__wrapper').find('.form-input').attr('type', 'password');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).parents('.form-input__wrapper').find('.form-input').attr('type', 'text');
+        }
+    });
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {

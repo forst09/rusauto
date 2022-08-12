@@ -1774,6 +1774,72 @@ h1 {
   display: none;
 }
 
+/*КАРТОЧКИ ДЛЯ НОВОСТЕЙ И ИНФОРМАЦИИ*/
+.item-ma-news {
+  font-family: "Geometria";
+  font-style: normal;
+  max-width: 28.8rem;
+  height: 32rem;
+  overflow: hidden;
+  margin: auto;
+  display: block;
+}
+.item-ma-news:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.item-ma-news__img {
+  max-width: 100%;
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 1.6rem;
+}
+.item-ma-news__img img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.item-ma-news__title {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #262B2E;
+  margin-bottom: 1.6rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  transition: all 300ms ease;
+}
+.item-ma-news__title:hover {
+  color: #064E8C;
+}
+.item-ma-news__text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #262B2E;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
@@ -4220,6 +4286,19 @@ h1 {
   height: auto;
   min-width: 100%;
   min-height: 100%;
+}
+.personal-data__label .eyeShow {
+  display: none;
+}
+.personal-data__label .eyeHide {
+  display: block;
+}
+
+.personal-data__label.active .eyeShow {
+  display: block;
+}
+.personal-data__label.active .eyeHide {
+  display: none;
 }
 
 .personal-data__password-container {
