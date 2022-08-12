@@ -545,6 +545,7 @@
   }
 
   .item-ma-news {
+    max-width: 27.4rem;
     margin: unset;
   }
   .item-ma-news:not(:last-child) {
@@ -3982,10 +3983,6 @@
   }
   .item-ma-news:not(:last-child) {
     margin-bottom: unset;
-  }
-  .item-ma-news__img {
-    max-width: 100%;
-    width: 100%;
   }
   .item-ma-news__text {
     line-height: 1.8rem;

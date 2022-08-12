@@ -838,6 +838,18 @@ $(document).ready(function () {
         }
     });
 
+    //УБИРАТЬ С КНОПКИ САБМИТ DISABLED, ЕСЛИ В ФОРМУ БЫЛИ ВНЕСЕНЫ ИЗМЕНЕНИЯ
+    function handle(event) {
+        if (event.target.className === 'form-input') {
+            console.log(event.type, event.target);
+
+        }
+    }
+    // console.log($())
+
+    document.querySelector('.personal-data__form form').addEventListener('change', handle);
+    document.querySelector('.personal-data__form form').addEventListener('input', handle);
+
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ"

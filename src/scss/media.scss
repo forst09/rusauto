@@ -657,6 +657,7 @@
     }
 
     .item-ma-news {
+        max-width: 27.4rem;
         margin: unset;
 
         &:not(:last-child) {
@@ -4700,11 +4701,6 @@
 
         &:not(:last-child) {
             margin-bottom: unset
-        }
-
-        &__img {
-            max-width: 100%;
-            width: 100%;
         }
 
         &__text {

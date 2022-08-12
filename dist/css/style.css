@@ -1776,25 +1776,27 @@ h1 {
 
 /*КАРТОЧКИ ДЛЯ НОВОСТЕЙ И ИНФОРМАЦИИ*/
 .item-ma-news {
-  font-family: "Geometria";
-  font-style: normal;
-  max-width: 28.8rem;
+  width: 28.8rem;
+  width: 100%;
   height: 32rem;
   overflow: hidden;
-  margin: auto;
-  display: block;
+  margin: 0 auto;
 }
 .item-ma-news:not(:last-child) {
   margin-bottom: 2.4rem;
 }
+.item-ma-news .news__item-date {
+  margin-bottom: unset;
+  margin-top: 1.6rem;
+}
 .item-ma-news__img {
-  max-width: 100%;
   width: 100%;
   height: 15rem;
-  margin-bottom: 1.6rem;
+  display: block;
+  text-align: center;
+  overflow: hidden;
 }
 .item-ma-news__img img {
-  max-width: 100%;
   width: 100%;
   height: auto;
 }
@@ -1803,7 +1805,7 @@ h1 {
   font-size: 1.6rem;
   line-height: 2rem;
   color: #262B2E;
-  margin-bottom: 1.6rem;
+  margin-top: 0.8rem;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -1821,11 +1823,16 @@ h1 {
 .item-ma-news__title:hover {
   color: #064E8C;
 }
+.item-ma-news__title--info {
+  margin-top: 1.6rem;
+}
 .item-ma-news__text {
+  width: 100%;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
   color: #262B2E;
+  margin-top: 1.6rem;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
