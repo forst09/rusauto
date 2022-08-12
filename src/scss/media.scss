@@ -1712,6 +1712,26 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ 404 668*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ О КОМПАНИИ 668*/
+    .about-company__video {
+        max-width: none;
+        height: 30.5rem;
+    }
+
+    .about-company__video-link {
+        width: 8.4rem;
+        height: 8.4rem;
+
+        &::after {
+            width: 2.6rem;
+            height: 2.9rem;
+            background-size: 2.6rem 2.9rem;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -1809,7 +1829,8 @@
     .return-page,
     .manager,
     .information,
-    .ma-perPartner {
+    .ma-perPartner,
+    .about-company {
         h1 {
             margin-bottom: 4.8rem;
         }
@@ -4463,6 +4484,27 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ 404 1024*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ О КОМПАНИИ 1024*/
+    .about-company__video {
+        width: 59.6rem;
+        height: 31.2rem;
+        margin-top: 4rem;
+    }
+
+    .about-company__video-link {
+        width: 11.2rem;
+        height: 11.2rem;
+
+        &::after {
+            width: 3.4rem;
+            height: 3.8rem;
+            background-size: 3.4rem 3.8rem;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -5483,6 +5525,27 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 1500*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ О КОМПАНИИ 1500*/
+    .about-company {
+        .ma-production__content {
+            max-width: 60.4rem;
+            width: 100%;
+        }
+    }
+
+    .about-company__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-company__video {
+        margin: 0;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 1500*/
 
 }
 

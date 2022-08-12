@@ -839,21 +839,38 @@ $(document).ready(function () {
     });
 
     //УБИРАТЬ С КНОПКИ САБМИТ DISABLED, ЕСЛИ В ФОРМУ БЫЛИ ВНЕСЕНЫ ИЗМЕНЕНИЯ
-
-    // $(document).on('input', '.form-input', function () {
-    //     console.log('input');
-    // });
     function handle(event) {
         if (event.target.classList.contains('form-input')) {
             document.querySelector('.personal-data__submit').classList.add('undisabled');
         }
     }
-    // // console.log($())
 
     if (document.querySelector('.personal-data__form form') != null) {
         document.querySelector('.personal-data__form form').addEventListener('change', handle);
         document.querySelector('.personal-data__form form').addEventListener('input', handle);
     }
+
+    //ОТКРЫТИЕ ВИДЕО НА СТРАНИЦЕ О КОМПАНИИ
+    $(document).on('click', '.about-company__video-link', function (e) {
+        e.preventDefault();
+        let firstString = 'https://www.youtube.com/embed/';
+        let link = $(this).attr('href');
+        let newLink;
+        if (link.indexOf('v=') !== -1) {
+            let arrayLinks = link.split('v=');
+            let secondString = arrayLinks[arrayLinks.length - 1];
+            newLink = firstString + secondString;
+        }
+        else {
+            newLink = link;
+        }
+
+        $.fancybox.open({
+            src: newLink,
+            type: 'iframe'
+        });
+
+    });
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {

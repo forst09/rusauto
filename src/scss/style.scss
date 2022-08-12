@@ -73,7 +73,8 @@ h1 {
 .return-page,
 .manager,
 .information,
-.ma-perPartner {
+.ma-perPartner,
+.about-company {
     h1 {
         margin-bottom: 3.2rem;
     }
@@ -5292,6 +5293,46 @@ h1 {
 
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ О КОМПАНИИ*/
+.about-company__video {
+    max-width: 28.8rem;
+    width: 100%;
+    height: 15.1rem;
+    margin: 3.2rem auto 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about-company__video-link {
+    display: inline-block;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    &::after {
+        content: '';
+        margin-left: 0.5rem;
+        position: absolute;
+        display: block;
+        width: 1.5rem;
+        height: 1.7rem;
+        background-image: url('../img/about/triangle.svg');
+        background-size: 1.5rem 1.7rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
 
 /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ*/
 
