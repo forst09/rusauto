@@ -552,10 +552,13 @@ h1 {
 
 /*КАСТОМИЗАЦИЯ СВАЙПЕРОВ*/
 .recently .swiper-button-prev,
-.recently .swiper-button-next {
+.recently .swiper-button-next,
+.rewards .swiper-button-prev,
+.rewards .swiper-button-next {
   display: none;
 }
-.recently .swiper-slide {
+.recently .swiper-slide,
+.rewards .swiper-slide {
   width: auto;
 }
 
@@ -4521,6 +4524,24 @@ h1 {
   background-position: center center;
 }
 
+/*НАЧАЛО СТИЛЕЙ НАШИ НАГРАДЫ*/
+.swiper-rewards .swiper-wrapper {
+  gap: 3.2rem;
+}
+
+.rewards__item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16.4rem;
+  height: 23.3rem;
+}
+.rewards__item img {
+  width: 100%;
+  height: auto;
+}
+
+/*КОНЕЦ СТИЛЕЙ НАШИ НАГРАДЫ*/
 /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ*/
 @keyframes fadeEffect {
   0% {

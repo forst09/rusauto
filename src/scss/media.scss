@@ -2463,7 +2463,8 @@
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
 
     /*КАСТОМИЗАЦИЯ СВАЙПЕРОВ 1024*/
-    .recently {
+    .recently,
+    .rewards {
 
         .swiper-button-prev,
         .swiper-button-next {
@@ -4502,6 +4503,11 @@
             height: 3.8rem;
             background-size: 3.4rem 3.8rem;
         }
+    }
+
+    .rewards__item {
+        width: 20rem;
+        height: 28.5rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 1024*/

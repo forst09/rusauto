@@ -659,7 +659,8 @@ h1 {
 }
 
 /*КАСТОМИЗАЦИЯ СВАЙПЕРОВ*/
-.recently {
+.recently,
+.rewards {
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -5333,6 +5334,29 @@ h1 {
         background-position: center center;
     }
 }
+
+/*НАЧАЛО СТИЛЕЙ НАШИ НАГРАДЫ*/
+.swiper-rewards {
+
+    .swiper-wrapper {
+        gap: 3.2rem;
+    }
+}
+
+.rewards__item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.4rem;
+    height: 23.3rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ НАШИ НАГРАДЫ*/
 
 /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ*/
 

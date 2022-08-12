@@ -913,15 +913,7 @@ $(document).ready(function () {
             }
         });
 
-        // console.log(swiperPartners.realIndex);
-
-        // swiperPartners.on('slideChange', function () {
-        //     console.log(swiperPartners.realIndex);
-        // });
-
-
-
-        //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "НАШИ ПАРТНЕРЫ"
+        //ВЫ НЕДАВНО СМОТРЕЛИ
         const swiperRecently = new Swiper('.swiper-recently', {
             speed: 700,
             slidesPerView: 'auto',
@@ -938,6 +930,17 @@ $(document).ready(function () {
             navigation: {
                 nextEl: '.swiper-recently-button-next',
                 prevEl: '.swiper-recently-button-prev',
+            }
+        });
+
+        //СТРАНИЦА О КОМПАНИИ СЕКЦИЯ "НАШИ НАГРАДЫ"
+        const swiperRewards = new Swiper('.swiper-rewards', {
+            speed: 700,
+            slidesPerView: 'auto',
+            spaceBetween: 85,
+            navigation: {
+                nextEl: '.swiper-rewards-button-next',
+                prevEl: '.swiper-rewards-button-prev',
             }
         });
 
