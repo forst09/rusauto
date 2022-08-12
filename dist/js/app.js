@@ -839,13 +839,16 @@ $(document).ready(function () {
     });
 
     //УБИРАТЬ С КНОПКИ САБМИТ DISABLED, ЕСЛИ В ФОРМУ БЫЛИ ВНЕСЕНЫ ИЗМЕНЕНИЯ
-    function handle(event) {
-        if (event.target.className === 'form-input') {
-            console.log(event.type, event.target);
 
+    // $(document).on('input', '.form-input', function () {
+    //     console.log('input');
+    // });
+    function handle(event) {
+        if (event.target.classList.contains('form-input')) {
+            document.querySelector('.personal-data__submit').classList.add('undisabled');
         }
     }
-    // console.log($())
+    // // console.log($())
 
     document.querySelector('.personal-data__form form').addEventListener('change', handle);
     document.querySelector('.personal-data__form form').addEventListener('input', handle);
