@@ -156,6 +156,16 @@ h1 {
   margin-bottom: 0;
 }
 
+.form-input__wrapper {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .desc {
   margin: 0 auto 3.2rem;
   max-width: 40.4rem;
@@ -1760,6 +1770,10 @@ h1 {
   margin-bottom: 2.4rem;
 }
 
+.btn-to-personal__wrapper {
+  display: none;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
@@ -2652,13 +2666,11 @@ h1 {
   color: #064E8C;
 }
 
-.catalog-4lvl__catalog-tile.active,
-.catalog-4lvl__catalog-lines.active {
+.tab-content.active {
   display: block;
 }
 
-.catalog-4lvl__catalog-tile,
-.catalog-4lvl__catalog-lines {
+.tab-content {
   display: none;
 }
 
@@ -3072,7 +3084,7 @@ h1 {
 }
 
 .catalog-4lvl__filters-dropdown-link.active::after {
-  margin-top: 0.2rem;
+  margin-top: -0.6rem;
   transform: rotate(-180deg);
 }
 
@@ -4144,6 +4156,26 @@ h1 {
 .personal-data .catalog-4lvl__filters-radio {
   margin-bottom: 0;
 }
+.personal-data .catalog-4lvl__filters-dropdown-link {
+  padding: 0;
+}
+.personal-data .catalog-4lvl__filters-dropdown-link::after {
+  background-image: url("../img/personal-data/dropdown.svg");
+  width: 2rem;
+  height: 1rem;
+  background-size: 2rem 1rem;
+}
+.personal-data .catalog-4lvl__filters-dropdown-link span {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #064E8C;
+}
+.personal-data .catalog-4lvl__filters-dropdown-content {
+  padding: 3.2rem 0 0;
+}
+.personal-data .catalog-4lvl__filters-dropdown-link.active::after {
+  margin-top: -0.5rem;
+}
 
 .personal-data__radio {
   margin-bottom: 3.8rem;
@@ -4171,9 +4203,49 @@ h1 {
   border: 1.28px solid #CBD3DC;
 }
 
-.personal-data__individual-container {
+.personal-data__individual-container,
+.personal-data__password {
   display: grid;
   grid-row-gap: 1.6rem;
+}
+
+.personal-data__label {
+  right: 2rem;
+  margin-top: 0.2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.personal-data__label svg {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.personal-data__password-container {
+  margin-top: 4.8rem;
+}
+
+.personal-data__submit-wrapper {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.personal-data__submit {
+  display: inline-block;
+  width: 100%;
+  max-width: 28.8rem;
+  border: none;
+  padding: 1.1rem;
+  color: #ffffff;
+  background-color: rgba(163, 168, 171, 0.5);
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  pointer-events: none;
+}
+
+.personal-data__password .form-input {
+  padding-right: 6rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ*/

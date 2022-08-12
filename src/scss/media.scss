@@ -624,6 +624,29 @@
         margin-top: 2.4rem;
     }
 
+    .btn-to-personal__wrapper {
+        display: block;
+        margin-bottom: 1.6rem;
+    }
+
+    .btn-to-personal {
+        display: inline-flex;
+        align-items: center;
+        gap: 1.6rem;
+
+        span {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: #064E8C;
+            font-weight: 500;
+        }
+
+        svg {
+            width: 2rem;
+            height: 1.3rem;
+        }
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
 
@@ -1541,6 +1564,24 @@
 
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 668*/
+    .personal-data {
+        .catalog-4lvl__filters-dropdown-link {
+            max-width: fit-content;
+            padding-right: 5.2rem;
+
+            &::after {
+                margin-top: 0.2rem;
+                right: 0;
+            }
+
+            span {
+                max-width: none;
+                font-size: 2rem;
+                line-height: 2.6rem;
+            }
+        }
+    }
+
     .personal-data__radio {
         flex-direction: row;
         gap: 4.8rem;
@@ -1560,8 +1601,17 @@
         margin-bottom: 4.6rem;
     }
 
-    .personal-data__individual-container {
-        gap: 3.2rem;
+    .personal-data__password-container {
+        margin-top: 3.2rem;
+    }
+
+    .personal-data__password {
+        max-width: 28.2rem;
+        grid-row-gap: 2.4rem;
+    }
+
+    .personal-data__submit-wrapper {
+        margin-top: 5.6rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 668*/
@@ -2570,6 +2620,10 @@
 
     .wrapper-iframe {
         margin-top: 3.2rem;
+    }
+
+    .btn-to-personal__wrapper {
+        margin-bottom: 2.4rem;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
@@ -4240,11 +4294,41 @@
             min-width: 20rem;
             height: 20rem;
             position: sticky;
-            top: 0;
+            top: 8.8rem;
         }
     }
 
     /*КОНЕЦ СТИЛЕЙ СТРАНИЦА ПАРТНЕРА 1024*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 1024*/
+
+    .personal-data {
+        .catalog-4lvl__filters-dropdown-link {
+            span {
+                font-size: 2.4rem;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    .personal-data__individual-container {
+        gap: 3.2rem;
+    }
+
+    .personal-data__password {
+        max-width: 40rem;
+    }
+
+    .personal-data__password-container {
+        margin-top: 4.8rem;
+    }
+
+    .personal-data__submit-wrapper {
+        text-align: left;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -5230,6 +5314,19 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СТРАНИЦА ПАРТНЕРА 1500*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 1500*/
+    .personal-data {
+        .catalog-4lvl__filters-dropdown-link {
+            span {
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+            }
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ 1500*/
 
 }
 
