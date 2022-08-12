@@ -850,8 +850,10 @@ $(document).ready(function () {
     }
     // // console.log($())
 
-    document.querySelector('.personal-data__form form').addEventListener('change', handle);
-    document.querySelector('.personal-data__form form').addEventListener('input', handle);
+    if (document.querySelector('.personal-data__form form') != null) {
+        document.querySelector('.personal-data__form form').addEventListener('change', handle);
+        document.querySelector('.personal-data__form form').addEventListener('input', handle);
+    }
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
