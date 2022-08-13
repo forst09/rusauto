@@ -4339,6 +4339,9 @@ h1 {
   background-color: #00A0E3;
   pointer-events: all;
 }
+.personal-data__submit.undisabled:hover, .personal-data__submit.undisabled:active, .personal-data__submit.undisabled:focus, .personal-data__submit.undisabled:focus-within {
+  background-color: #0091CE;
+}
 
 .personal-data__password .form-input {
   padding-right: 6rem;

@@ -5113,6 +5113,13 @@ h1 {
 .personal-data__submit.undisabled {
     background-color: #00A0E3;
     pointer-events: all;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+        background-color: #0091CE;
+    }
 }
 
 .personal-data__password {

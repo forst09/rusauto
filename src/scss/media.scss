@@ -634,16 +634,43 @@
         align-items: center;
         gap: 1.6rem;
 
+        &:focus,
+        &:focus-within,
+        &:active {
+            span {
+                color: #0091CE;
+            }
+
+            svg path {
+                stroke: #0091CE;
+            }
+        }
+
+        &:hover {
+            span {
+                color: #00A0E3;
+            }
+
+            svg path {
+                stroke: #00A0E3;
+            }
+        }
+
         span {
             font-size: 1.6rem;
             line-height: 2rem;
             color: #064E8C;
             font-weight: 500;
+            transition: 0.3s ease;
         }
 
         svg {
             width: 2rem;
             height: 1.3rem;
+
+            path {
+                transition: 0.3s ease;
+            }
         }
     }
 

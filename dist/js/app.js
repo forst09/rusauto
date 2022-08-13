@@ -846,7 +846,6 @@ $(document).ready(function () {
     }
 
     if (document.querySelector('.personal-data__form form') != null) {
-        document.querySelector('.personal-data__form form').addEventListener('change', handle);
         document.querySelector('.personal-data__form form').addEventListener('input', handle);
     }
 

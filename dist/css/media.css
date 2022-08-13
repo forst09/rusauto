@@ -526,15 +526,31 @@
     align-items: center;
     gap: 1.6rem;
   }
+  .btn-to-personal:focus span, .btn-to-personal:focus-within span, .btn-to-personal:active span {
+    color: #0091CE;
+  }
+  .btn-to-personal:focus svg path, .btn-to-personal:focus-within svg path, .btn-to-personal:active svg path {
+    stroke: #0091CE;
+  }
+  .btn-to-personal:hover span {
+    color: #00A0E3;
+  }
+  .btn-to-personal:hover svg path {
+    stroke: #00A0E3;
+  }
   .btn-to-personal span {
     font-size: 1.6rem;
     line-height: 2rem;
     color: #064E8C;
     font-weight: 500;
+    transition: 0.3s ease;
   }
   .btn-to-personal svg {
     width: 2rem;
     height: 1.3rem;
+  }
+  .btn-to-personal svg path {
+    transition: 0.3s ease;
   }
 
   /*КАРТОЧКИ ДЛЯ НОВОСТЕЙ И ИНФОРМАЦИИ 668*/
