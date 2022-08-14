@@ -944,6 +944,9 @@ $(document).ready(function () {
         });
 
     }
+
+    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА КАРТОЧКИ ТОВАРА
+
     // ПОДКЛЮЧЕНИЕ КАРТЫ
     const jsMap = document.querySelector("#map");
     const renderMap = function () {

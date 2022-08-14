@@ -1931,18 +1931,21 @@ h1 {
   display: none;
 }
 
-.swiper-main__pagination {
+.swiper-main__pagination,
+.swiper-card__pagination {
   position: static;
   margin-top: 1.6rem;
 }
-.swiper-main__pagination .swiper-pagination-bullet {
+.swiper-main__pagination .swiper-pagination-bullet,
+.swiper-card__pagination .swiper-pagination-bullet {
   width: 0.4rem;
   height: 0.4rem;
   margin: 0 0.6rem;
   background-color: #00A0E3;
   opacity: 0.4;
 }
-.swiper-main__pagination .swiper-pagination-bullet-active {
+.swiper-main__pagination .swiper-pagination-bullet-active,
+.swiper-card__pagination .swiper-pagination-bullet-active {
   background-color: #00A0E3;
   opacity: 1;
 }

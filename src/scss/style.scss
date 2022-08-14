@@ -2294,7 +2294,8 @@ h1 {
     display: none;
 }
 
-.swiper-main__pagination {
+.swiper-main__pagination,
+.swiper-card__pagination {
     position: static;
     margin-top: 1.6rem;
 
