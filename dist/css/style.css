@@ -4611,6 +4611,9 @@ h1 {
 .card-desc .catalog-4lvl__catalog-item-image-label {
   margin-bottom: 0.4rem;
 }
+.card-desc .catalog-4lvl__catalog-item-article {
+  font-weight: 500;
+}
 
 .card-desc__buttons {
   margin-top: 1.6rem;

@@ -1799,6 +1799,48 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 668*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КАРТОЧКИ ТОВАРА 668*/
+    .swiper-card {
+        margin-bottom: 2.4rem;
+    }
+
+    .card-desc {
+        .catalog-4lvl__catalog-item-article {
+            margin-top: 2.4rem;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+
+        .catalog-4lvl__catalog-item-cost-new {
+            font-size: 2.4rem;
+        }
+
+        .catalog-4lvl__catalog-item-image-label {
+            position: static;
+        }
+    }
+
+    .card-desc__buttons {
+        gap: 1.6rem;
+    }
+
+    .card__login {
+        padding: 2rem 1.6rem;
+    }
+
+    .card__receive-ways-container {
+        display: flex;
+        gap: 2.4rem;
+        align-items: center;
+    }
+
+    .card__receive-ways-item+.card__receive-ways-item {
+        margin: 0;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -4614,6 +4656,66 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 1024*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
+    .card-desc {
+        .catalog-4lvl__catalog-item-article {
+            margin: 0;
+        }
+
+        .catalog-4lvl__catalog-item-cost {
+            margin-top: 0.7rem;
+        }
+
+        .catalog-4lvl__catalog-item-cost-new {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+        }
+    }
+
+    .card-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-image {
+        max-width: 23.4rem;
+        width: 100%;
+    }
+
+    .card-desc {
+        max-width: 61.4rem;
+        width: 100%;
+    }
+
+    .card-desc__buttons {
+        gap: 2.4rem;
+    }
+
+    .card__receive {
+        margin-top: 4rem;
+    }
+
+    .card__login {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .card__receive-ways-container {
+        gap: 1.6rem;
+    }
+
+    .card__receive-ways-item-text {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .swiper-card-thumbs {
+        display: block;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/

@@ -871,6 +871,17 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
+
+    const swiperCardThumbs = new Swiper('.swiper-card-thumbs', {
+        speed: 700,
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        navigation: {
+            nextEl: '.swiper-card-next',
+            prevEl: '.swiper-card-prev',
+        }
+    });
+
     //ПОДКЛЮЧЕНИЕ СВАЙПЕРА КАРТОЧКА ТОВАРА
     const swiperCard = new Swiper('.swiper-card', {
         speed: 700,
@@ -881,7 +892,17 @@ $(document).ready(function () {
             type: 'bullets',
             clickable: true,
         },
+        breakpoints: {
+            1024: {
+                thumbs: {
+                    swiper: swiperCardThumbs
+                }
+            },
+        }
     });
+
+
+
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
@@ -954,6 +975,11 @@ $(document).ready(function () {
                 prevEl: '.swiper-rewards-button-prev',
             }
         });
+
+
+        //УБРАТЬ ПАГИНАЦИЮ НА СЛАЙДЕРЕ КАРТОЧКИ ТОВАРА
+        swiperCard.pagination.destroy();
+        $('.swiper-card__pagination').remove();
 
     }
 
