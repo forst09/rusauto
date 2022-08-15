@@ -202,6 +202,18 @@ h1 {
     text-align: center;
     width: 100%;
     font-size: 1.4rem;
+
+    a {
+        color: #00A0E3;
+    }
+
+    p+p {
+        margin-top: 1.2rem;
+    }
+
+    .link-underline {
+        font-weight: 400;
+    }
 }
 
 .desc-left {

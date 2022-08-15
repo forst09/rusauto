@@ -176,6 +176,15 @@ h1 {
   width: 100%;
   font-size: 1.4rem;
 }
+.desc a {
+  color: #00A0E3;
+}
+.desc p + p {
+  margin-top: 1.2rem;
+}
+.desc .link-underline {
+  font-weight: 400;
+}
 
 .desc-left {
   max-width: none;
