@@ -4064,6 +4064,11 @@
     margin-bottom: 0;
   }
 
+  .livraison__content-empty .livraison__row {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
