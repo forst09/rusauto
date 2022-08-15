@@ -1496,6 +1496,36 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 668*/
+  .ma-thanks__content {
+    padding-top: 9.5rem;
+    overflow: hidden;
+  }
+  .ma-thanks__row {
+    margin-top: 4rem;
+    justify-content: flex-start;
+    padding-left: 1.6rem;
+    column-gap: 7.2rem;
+  }
+  .ma-thanks__container-img {
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-top: 4.8rem;
+    z-index: -1;
+  }
+  .ma-thanks__img {
+    width: 66.3rem;
+    height: 39.2rem;
+    margin-right: -18rem;
+  }
+  .ma-thanks__img img {
+    height: 100%;
+    width: auto;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -3854,6 +3884,34 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 1024*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 1024*/
+  .ma-thanks__content {
+    padding-top: 9.5rem;
+    overflow: hidden;
+  }
+  .ma-thanks__row {
+    margin-top: 5.6rem;
+    justify-content: flex-start;
+    column-gap: 7.2rem;
+  }
+  .ma-thanks__container-img {
+    height: 49.8rem;
+    margin-top: 0rem;
+  }
+  .ma-thanks__img {
+    width: 84.2rem;
+    height: 100%;
+    margin-right: -24rem;
+  }
+  .ma-thanks__img img {
+    height: 100%;
+  }
+  .ma-thanks__text {
+    margin-bottom: 0;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -4699,5 +4757,25 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 1500*/
+  .ma-thanks__content {
+    padding-top: 9.5rem;
+    overflow: hidden;
+  }
+  .ma-thanks__container-img {
+    margin-top: -10rem;
+    position: relative;
+  }
+  .ma-thanks__img {
+    margin-right: -5rem;
+    margin-top: -5rem;
+  }
+  .ma-thanks__img img {
+    max-width: auto;
+    height: 100%;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ! 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

@@ -4701,6 +4701,26 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ!*/
+.ma-thanks {
+  overflow-x: hidden;
+}
+.ma-thanks__content {
+  padding-top: 9.8rem;
+}
+.ma-thanks__text {
+  text-align: left;
+  margin: 1.2rem 0 0;
+}
+.ma-thanks__row {
+  margin-top: 3.2rem;
+}
+.ma-thanks__container-img {
+  display: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ!*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;

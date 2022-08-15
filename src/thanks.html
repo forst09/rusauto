@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Спасибо за заявку"
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <section class="ma-thanks">
+        <div class="ma-thanks__container ">
+            <div class="ma-thanks__content wrapper">
+                <h1>Спасибо за заявку!</h1>
+                <div class="desc desc-left ma-thanks__text">
+                    В ближайшее время наш менеджер с Вами свяжется.
+                </div>
+                <div class="ma-thanks__row ma-btn-row">
+                    <a href="#" class="btn">Назад</a>
+                    <a href="#" class="ma-404__btn ma-btn-simple"> На главную</a>
+                </div>
+            </div>
+        </div>
+        <div class="ma-thanks__container-img">
+            <div class="ma-thanks__img">
+                <img src="img/thanks/bus.png" alt="thanks">
+            </div>
+        </div>
+
+    </section>
+
+    @@include('html/distribution.html',{})
+
+    @@include('html/footer.html',{})
+
+    @@include('html/tabbar.html',{})
+
+    @@include('html/mobile-menu.html',{})
+
+    @@include('html/catalog.html',{})
+
+    @@include('html/catalog-groups.html',{})
+
+    @@include('html/modal-choice.html',{})
+</body>
+
+</html>
