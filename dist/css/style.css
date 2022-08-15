@@ -4733,6 +4733,86 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ!*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ*/
+.livraison__text {
+  margin: 1.2rem 0 0;
+  text-align: left;
+}
+.livraison__button-wrapper {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+.livraison__address-wrapper {
+  margin-top: 3.2rem;
+}
+.livraison__address {
+  width: 100%;
+}
+
+.ma-button {
+  background: #00A0E3;
+  font-family: "Geometria";
+  min-width: 21rem;
+  display: inline-block;
+  padding: 1.1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.ma-address-livraison:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.ma-address-livraison svg {
+  cursor: pointer;
+}
+.ma-address-livraison__row {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+.ma-address-livraison__body {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #EFF0F1;
+  min-height: 7.4rem;
+  padding: 1rem 1.2rem;
+  transition: all 300ms linear;
+}
+.ma-address-livraison__body:hover {
+  background: #F5FBFE;
+}
+.ma-address-livraison__body-text {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #064E8C;
+  max-width: 32.8rem;
+}
+.ma-address-livraison__body-text--comment {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+  font-weight: 400;
+}
+.ma-address-livraison__body-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.ma-address-livraison__body-icon svg {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+/*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
