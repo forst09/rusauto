@@ -854,6 +854,19 @@ $(document).ready(function () {
 
     });
 
+    //УДАЛИТЬ АДРЕС
+    let LivraisonDeleteIcons = [...document.querySelectorAll('.livraison-delete-icon')];
+
+    let LivraisonOpenIcons = [...document.querySelectorAll('.livraison-open-icon')];
+    let livraisonAddressItems = [...document.querySelectorAll('.livraison__address')];
+    LivraisonDeleteIcons.forEach((LivraisonDeleteIcon, index, tab) => {
+        LivraisonDeleteIcon.addEventListener('click', e => {
+            livraisonAddressItems[index].remove()
+
+        })
+    })
+
+
     //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ГЛАВНАЯ СТРАНИЦА ГЛАВНЫЙ ЭКРАН
     const swiperMain = new Swiper('.swiper-main', {
         speed: 700,
@@ -871,13 +884,6 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
-
-
-    // if ($(window).width() < 1024) {
-    //     swiperCardThumbs.destroy();
-    //     $('.swiper-card-thumbs').remove();
-    // }
-
     let thumbsCard;
 
     if ($(window).width() < 1024) {
@@ -888,10 +894,8 @@ $(document).ready(function () {
             speed: 700,
             slidesPerView: 'auto',
             spaceBetween: 8,
-            navigation: {
-                nextEl: '.swiper-card-next',
-                prevEl: '.swiper-card-prev',
-            }
+            freeMode: true,
+            watchSlidesProgress: true
         });
         thumbsCard = {
             swiper: swiperCardThumbs
@@ -909,6 +913,10 @@ $(document).ready(function () {
             el: '.swiper-card__pagination',
             type: 'bullets',
             clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-card-next',
+            prevEl: '.swiper-card-prev',
         },
         thumbs: thumbsCard
         // thumbs: {

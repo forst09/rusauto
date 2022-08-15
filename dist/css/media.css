@@ -3991,6 +3991,7 @@
   .card-image {
     max-width: 23.4rem;
     width: 100%;
+    position: relative;
   }
 
   .card-desc {
@@ -4022,6 +4023,8 @@
 
   .swiper-card-thumbs {
     display: block;
+    max-width: 13.6rem;
+    width: 100%;
   }
   .swiper-card-thumbs .swiper-slide {
     width: 4rem;
@@ -4030,6 +4033,40 @@
     width: 4rem;
     height: 4rem;
     margin: unset;
+  }
+  .swiper-card-thumbs .swiper-slide-thumb-active {
+    opacity: 0.4;
+  }
+
+  .swiper-card-next,
+.swiper-card-prev {
+    top: calc(100% - 3.3rem);
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 0;
+  }
+  .swiper-card-next::after,
+.swiper-card-prev::after {
+    content: "";
+    width: 2.6rem;
+    height: 2.6rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 2.6rem 2.6rem;
+  }
+
+  .swiper-card-next {
+    right: 0;
+  }
+  .swiper-card-next::after {
+    background-image: url("../img/card/arrow-right.svg");
+  }
+
+  .swiper-card-prev {
+    left: 0;
+  }
+  .swiper-card-prev::after {
+    background-image: url("../img/card/arrow-left.svg");
   }
 
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
