@@ -613,10 +613,12 @@
     object-fit: cover;
   }
 
-  .swiper-main__pagination {
+  .swiper-main__pagination,
+.swiper-card__pagination {
     margin-top: 2.4rem;
   }
-  .swiper-main__pagination .swiper-pagination-bullet {
+  .swiper-main__pagination .swiper-pagination-bullet,
+.swiper-card__pagination .swiper-pagination-bullet {
     width: 0.6rem;
     height: 0.6rem;
   }

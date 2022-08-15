@@ -747,7 +747,8 @@
         }
     }
 
-    .swiper-main__pagination {
+    .swiper-main__pagination,
+    .swiper-card__pagination {
         margin-top: 2.4rem;
 
         .swiper-pagination-bullet {
