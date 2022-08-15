@@ -872,15 +872,33 @@ $(document).ready(function () {
     });
 
 
-    const swiperCardThumbs = new Swiper('.swiper-card-thumbs', {
-        speed: 700,
-        slidesPerView: 'auto',
-        spaceBetween: 8,
-        navigation: {
-            nextEl: '.swiper-card-next',
-            prevEl: '.swiper-card-prev',
-        }
-    });
+
+    // if ($(window).width() < 1024) {
+    //     swiperCardThumbs.destroy();
+    //     $('.swiper-card-thumbs').remove();
+    // }
+
+    let thumbsCard;
+
+    if ($(window).width() < 1024) {
+        thumbsCard = {};
+    }
+    else {
+        const swiperCardThumbs = new Swiper('.swiper-card-thumbs', {
+            speed: 700,
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            navigation: {
+                nextEl: '.swiper-card-next',
+                prevEl: '.swiper-card-prev',
+            }
+        });
+        thumbsCard = {
+            swiper: swiperCardThumbs
+        };
+    }
+
+    console.log(thumbsCard);
 
     //ПОДКЛЮЧЕНИЕ СВАЙПЕРА КАРТОЧКА ТОВАРА
     const swiperCard = new Swiper('.swiper-card', {
@@ -892,17 +910,11 @@ $(document).ready(function () {
             type: 'bullets',
             clickable: true,
         },
-        breakpoints: {
-            1024: {
-                thumbs: {
-                    swiper: swiperCardThumbs
-                }
-            },
-        }
+        thumbs: thumbsCard
+        // thumbs: {
+        //     swiper: swiperCardThumbs
+        // }
     });
-
-
-
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
@@ -980,6 +992,16 @@ $(document).ready(function () {
         //УБРАТЬ ПАГИНАЦИЮ НА СЛАЙДЕРЕ КАРТОЧКИ ТОВАРА
         swiperCard.pagination.destroy();
         $('.swiper-card__pagination').remove();
+
+        // const swiperCardThumbs = new Swiper('.swiper-card-thumbs', {
+        //     speed: 700,
+        //     slidesPerView: 'auto',
+        //     spaceBetween: 8,
+        //     navigation: {
+        //         nextEl: '.swiper-card-next',
+        //         prevEl: '.swiper-card-prev',
+        //     }
+        // });
 
     }
 

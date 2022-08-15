@@ -4002,6 +4002,14 @@
   .swiper-card-thumbs {
     display: block;
   }
+  .swiper-card-thumbs .swiper-slide {
+    width: 4rem;
+  }
+  .swiper-card-thumbs .swiper-card__image {
+    width: 4rem;
+    height: 4rem;
+    margin: unset;
+  }
 
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
 }
