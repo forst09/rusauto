@@ -150,23 +150,6 @@ $(document).ready(function () {
         }
     };
 
-    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ГЛАВНАЯ СТРАНИЦА ГЛАВНЫЙ ЭКРАН
-    const swiperMain = new Swiper('.swiper-main', {
-        speed: 700,
-        slidesPerView: 1,
-        autoHeight: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-        },
-    });
-
-    //ВОЗМОЖНОСТЬ КЛИКАТЬ ПО КНОПКЕ ГЛАВНОЙ СТРАНИЦЫ ГЛАВНОГО ЭКРАНА
-    $('.btn-main').on('mousedown touchstart pointerdown', function (e) {
-        e.stopPropagation();
-    });
-
     //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ НА ПК
     $(document).click(function (e) {
         if ($(window).width() >= 1024) {
@@ -869,6 +852,35 @@ $(document).ready(function () {
             type: 'iframe'
         });
 
+    });
+
+    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ГЛАВНАЯ СТРАНИЦА ГЛАВНЫЙ ЭКРАН
+    const swiperMain = new Swiper('.swiper-main', {
+        speed: 700,
+        slidesPerView: 1,
+        autoHeight: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
+
+    //ВОЗМОЖНОСТЬ КЛИКАТЬ ПО КНОПКЕ ГЛАВНОЙ СТРАНИЦЫ ГЛАВНОГО ЭКРАНА
+    $('.btn-main').on('mousedown touchstart pointerdown', function (e) {
+        e.stopPropagation();
+    });
+
+    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА КАРТОЧКА ТОВАРА
+    const swiperCard = new Swiper('.swiper-card', {
+        speed: 700,
+        slidesPerView: 1,
+        autoHeight: true,
+        pagination: {
+            el: '.swiper-card__pagination',
+            type: 'bullets',
+            clickable: true,
+        },
     });
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024

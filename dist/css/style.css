@@ -4549,6 +4549,158 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ НАШИ НАГРАДЫ*/
 /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ КАРТОЧКИ ТОВАРА*/
+.card h1 {
+  margin-bottom: 1.6rem;
+}
+
+.swiper-card-thumbs {
+  display: none;
+}
+
+.swiper-card__image {
+  width: 23.4rem;
+  height: 23.4rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-card__image img {
+  height: auto;
+  width: 100%;
+}
+
+.swiper-card {
+  margin-bottom: 3.2rem;
+}
+.swiper-card .swiper-card__pagination {
+  margin-top: 2.4rem;
+}
+
+.card-desc__characteristics {
+  display: none;
+}
+
+.card-desc .catalog-4lvl__catalog-item-cost {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-top: 4rem;
+  align-items: center;
+  gap: 1.6rem;
+  min-height: fit-content;
+}
+.card-desc .catalog-4lvl__catalog-item-cost-old {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.card-desc .catalog-4lvl__catalog-item-cost-new {
+  font-size: 2.1rem;
+  line-height: 3rem;
+}
+.card-desc .catalog-4lvl__catalog-item-image-label {
+  margin-bottom: 0.4rem;
+}
+
+.card-desc__buttons {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.card-desc__buttons-buy {
+  position: relative;
+}
+.card-desc__buttons-buy .buy {
+  min-width: 16.8rem;
+  padding: 1.1rem;
+}
+
+.card-desc__buttons-remaining {
+  position: absolute;
+  margin-top: 0.8rem;
+  color: #00A0E3;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.buy-1click {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #064E8C;
+  position: relative;
+}
+.buy-1click::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #064E8C;
+  transition: 0.3s ease;
+}
+
+.card__receive {
+  margin-top: 6.6rem;
+}
+
+.card__login {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  background-color: #F5FBFE;
+  padding: 1.6rem 0.8rem;
+}
+.card__login a {
+  font-weight: 500;
+  color: #064E8C;
+}
+
+.card__receive-ways {
+  margin-top: 2.4rem;
+}
+
+.card__receive-title {
+  color: #064E8C;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.card__receive-ways-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.card__receive-ways-item + .card__receive-ways-item {
+  margin-top: 1.6rem;
+}
+
+.card__receive-ways-item-img {
+  width: 3rem;
+  height: 3rem;
+}
+.card__receive-ways-item-img svg {
+  width: 100%;
+  height: auto;
+}
+
+.card__receive-ways-item-text {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.card__receive-ways-item-text a {
+  font-weight: 500;
+  margin-right: 0.8rem;
+  text-decoration: underline;
+}
+
+/*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
