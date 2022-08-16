@@ -5,7 +5,7 @@
 "title": "Адреса доставки"
 })
 
-<body>
+<body id="livraison-page">
 
     @@include('html/header.html',{})
 
@@ -13,15 +13,6 @@
 
     <section class="livraison">
         <div class="livraison__container wrapper">
-            <div class="btn-to-personal__wrapper">
-                <a class="btn-to-personal" href="personal.html">
-                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 7.99935L1 7.99935M1 7.99935L8.22222 14.666M1 7.99935L8.22222 1.33268"
-                            stroke="#064E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>В личный кабинет</span>
-                </a>
-            </div>
             <div class="livraison__content">
                 <div class="livraison__row">
                     <div class="livraison__body">
@@ -32,13 +23,13 @@
                         </div>
                     </div>
                     <div class="livraison__button-wrapper">
-                        <a href="#" class="livraison__button ma-button">Добавить адрес</a>
+                        <a href="#editAddress" class="livraison__button ma-button" data-fancybox="">Добавить адрес</a>
                     </div>
                 </div>
                 <div class="livraison__address-wrapper">
                     <div class="livraison__address ma-address-livraison">
                         <div class="ma-address-livraison__row">
-                            <a class="ma-address-livraison__body" data-fancybox href="#editAddress">
+                            <a href="#editAddress" class="ma-address-livraison__body" data-fancybox>
                                 <div class="ma-address-livraison__body-texts">
                                     <div class="ma-address-livraison__body-text">
                                         Нижний Новгород, ул. Горького, д. 34
@@ -50,7 +41,7 @@
                                     </div>
                                 </div>
 
-                                <div class="ma-address-livraison__body-icon ">
+                                <div class="ma-address-livraison__body-icon livraison-open-icon">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -59,7 +50,7 @@
                                     </svg>
                                 </div>
                             </a>
-                            <div class="ma-address-livraison__body-icon livraison-delete-icon">
+                            <div class="ma-address-livraison__icon livraison-delete-icon">
                                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -71,14 +62,14 @@
                     </div>
                     <div class="livraison__address ma-address-livraison">
                         <div class="ma-address-livraison__row">
-                            <a class="ma-address-livraison__body" data-fancybox href="#editAddress">
+                            <a href="#editAddress" class="ma-address-livraison__body" data-fancybox>
                                 <div class="ma-address-livraison__body-texts">
                                     <div class="ma-address-livraison__body-text">
                                         Нижний Новгород, ул. Верхнепечерская, д. 34
                                     </div>
                                 </div>
 
-                                <div class="ma-address-livraison__body-icon ">
+                                <div class="ma-address-livraison__body-icon livraison-open-icon">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -87,7 +78,7 @@
                                     </svg>
                                 </div>
                             </a>
-                            <div class="ma-address-livraison__body-icon livraison-delete-icon">
+                            <div class="ma-address-livraison__icon livraison-delete-icon">
                                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -100,7 +91,6 @@
                 </div>
 
             </div>
-
             <!-- ЕСЛИ НЕТ АДРЕСОВ -->
             <!-- <div class="livraison__content livraison__content-empty">
                 <div class="livraison__row">
@@ -116,10 +106,35 @@
                     </div>
                 </div>
             </div> -->
-
         </div>
 
     </section>
+
+    <!--modal  -->
+    <div id="editAddress" class="livraison-modal">
+        <div class="livraison-modal__container">
+            <div class="livraison-modal__content">
+                <h2 class="livraison-modal__title">Адрес доставки</h2>
+                <form action="#" class="livraison-modal__form">
+                    <div class="livraison-modal__input">
+                        <input type="text" class="form-input" placeholder="Нижний Новгород">
+                    </div>
+                    <div class="livraison-modal__input">
+                        <input type="text" class="form-input" placeholder="ул. Верхнепечерская">
+                    </div>
+                    <div class="livraison-modal__input">
+                        <input type="text" class="form-input" placeholder="д. 34">
+                    </div>
+                    <div class="livraison-modal__textarea">
+                        <textarea placeholder="Комментарий" class="form-input"></textarea>
+                    </div>
+                    <div class="livraison-modal__submit">
+                        <button type="submit" class="btn-simple btn btn-main"> Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     @@include('html/footer.html',{})
 

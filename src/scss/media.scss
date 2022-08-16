@@ -322,6 +322,7 @@
             font-size: 1.4rem;
             line-height: 1.8rem;
             min-height: fit-content;
+            min-height: moz-fit-content;
         }
 
         .spares__item-info-models-item {
@@ -1164,6 +1165,7 @@
     .catalog-4lvl__catalog-lines-item-info-top {
         max-width: 19.6rem;
         height: fit-content;
+        height: moz-fit-content;
     }
 
     .catalog-4lvl__catalog-item-name {
@@ -1310,8 +1312,8 @@
             align-items: flex-start;
             max-width: 8.7rem;
             width: 100%;
-            min-height: 3rem;
             min-height: fit-content;
+            min-height: moz-fit-content;
         }
 
         .catalog-4lvl__catalog-item-cost-old {
@@ -1326,6 +1328,7 @@
 
         .catalog-4lvl__catalog-item-bottom-buttons-basket {
             height: fit-content;
+            height: moz-fit-content;
             padding: 0;
             margin: 0;
         }
@@ -1343,6 +1346,7 @@
 
     .cart__order-count {
         height: fit-content;
+        height: moz-fit-content;
     }
 
     .cart__order-sum {
@@ -1355,6 +1359,7 @@
             margin: 0;
             max-width: none;
             width: fit-content;
+            width: -moz-fit-content;
         }
 
         .catalog-4lvl__catalog-item-cost-new {
@@ -1618,6 +1623,7 @@
     .personal-data {
         .catalog-4lvl__filters-dropdown-link {
             max-width: fit-content;
+            max-width: -moz-fit-content;
             padding-right: 5.2rem;
 
             &::after {
@@ -1847,12 +1853,11 @@
     .ma-address-livraison {
         &__row {
             column-gap: 4.8rem;
-            padding-right: 1.6rem;
         }
 
         &__body {
             min-height: 5.6rem;
-            padding: 1rem 1.6rem;
+            padding: 0 1.6rem;
 
             &-text {
                 &--comment {
@@ -1864,8 +1869,27 @@
         }
     }
 
-    .livraison__button-wrapper {
-        text-align: left;
+    .livraison-modal {
+        width: 44.8rem;
+        height: 48.6rem;
+        background: #FFFFFF;
+        box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+
+        &.fancybox-content {
+            padding: 0;
+        }
+
+        &__container {
+            padding: 5.6rem 2.4rem 0;
+        }
+    }
+
+    #livraison-page {
+        .fancybox-close-small {
+            top: 2.4rem;
+            right: 2.4rem;
+
+        }
     }
 
     /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ 668*/
@@ -2210,6 +2234,7 @@
         align-items: center;
         gap: 0.8rem;
         height: fit-content;
+        height: moz-fit-content;
     }
 
     .choice-city {
@@ -2938,6 +2963,7 @@
         .swiper-main__pagination {
             position: absolute;
             width: fit-content;
+            width: -moz-fit-content;
             left: 6.4rem;
             bottom: 1.7rem;
             margin-top: 0;
@@ -3319,6 +3345,7 @@
         line-height: 1.8rem;
         display: block;
         width: fit-content;
+        width: -moz-fit-content;
 
         &:nth-last-of-type(1) {
             margin-bottom: 0;
@@ -3393,6 +3420,7 @@
     .footer__copyright-upfly-wrapper {
         margin-top: 1rem;
         height: fit-content;
+        height: moz-fit-content;
     }
 
     .footer__info-contacts-text {
@@ -3676,6 +3704,7 @@
         .catalog-4lvl__catalog-item-bottom-buttons-basket {
             padding: 0.45rem 0;
             height: fit-content;
+            height: moz-fit-content;
         }
     }
 
@@ -3867,6 +3896,8 @@
         padding: 0.6rem 0;
         max-height: 19.2rem;
         overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #00A0E3 transparent;
 
         &::-webkit-scrollbar {
             width: 2px;
@@ -4224,6 +4255,7 @@
             position: sticky;
             top: 9.8rem;
             height: fit-content;
+            height: moz-fit-content;
             text-align: center;
             flex-shrink: 0;
 
@@ -4487,6 +4519,7 @@
     .personal__last-link {
         margin-top: 1.6rem;
         width: fit-content;
+        width: -moz-fit-content;
 
         &::after {
             background-color: #064E8C;
@@ -4801,10 +4834,10 @@
 
         &__row {
             column-gap: 1.6rem;
-            padding-right: 0;
         }
 
         &__body {
+            padding: 0 1.6rem;
 
             &-text {
                 &--comment {
@@ -4813,10 +4846,12 @@
                     column-gap: .8rem;
                 }
             }
+
         }
     }
 
     .livraison {
+
         &__row {
             display: flex;
             justify-content: space-between;
@@ -4829,23 +4864,31 @@
 
         &__address-wrapper {
             margin-top: 4.8rem;
+
         }
 
         &__address {
             max-width: 43.2rem;
         }
-
     }
 
-    .livraison__text {
-        margin-bottom: 0;
-    }
+    .livraison-modal {
+        height: 53rem;
 
-    .livraison__content-empty {
-        .livraison__row {
-            flex-direction: column;
-            gap: 4.8rem;
+        &__container {
+            padding: 5.6rem 2.4rem 0;
         }
+
+        form {
+            margin-top: 4rem;
+
+            &__input {
+                &:not(:last-child) {
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+
     }
 
     /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ 1024*/
@@ -5088,6 +5131,7 @@
 
         .spares__item-info {
             width: fit-content;
+            width: -moz-fit-content;
         }
     }
 
@@ -5641,6 +5685,7 @@
         position: sticky;
         top: 9.6rem;
         height: fit-content;
+        height: moz-fit-content;
         padding: 0 8rem 0 0;
         flex-shrink: 0;
         width: 100%;
@@ -5928,6 +5973,10 @@
         }
     }
 
+    .livraison-modal {
+        height: 53.2rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ 1500*/
 
     /*#################################################################################################################################*/
@@ -5956,6 +6005,144 @@
         .swiper-slide {
             width: 5rem;
         }
+    }
+
+    .swiper-card-next,
+    .swiper-card-prev {
+        top: calc(100% - 3.8rem);
+    }
+
+    .swiper-card-prev {
+        left: 4.15rem;
+    }
+
+    .swiper-card-next {
+        right: 4.15rem;
+    }
+
+    .card-desc {
+        max-width: 58.2rem;
+    }
+
+    .card {
+        h1 {
+            margin-bottom: 0.8rem;
+        }
+
+
+        .cart__ordering-text,
+        .cart__ordering-value {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            font-weight: 400;
+        }
+
+        .cart__ordering-text {
+            color: #A3A8AB;
+        }
+
+        .cart__ordering-value {
+            color: #064E8C;
+        }
+
+        .cart__ordering-item+.cart__ordering-item {
+            margin-top: 1.6rem;
+        }
+    }
+
+    .card-desc__characteristics {
+        display: block;
+        margin-top: 3.2rem;
+        max-width: 32.8rem;
+    }
+
+    .all-characteristics {
+        display: inline-block;
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #00A0E3;
+        position: relative;
+        transition: 0.3s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #00A0E3;
+            transition: 0.3s ease;
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            color: #0091CE;
+
+            &::after {
+                width: 0;
+            }
+        }
+    }
+
+    .card-desc {
+        .catalog-4lvl__catalog-item-cost {
+            margin-top: 3.2rem;
+        }
+
+        .catalog-4lvl__catalog-item-cost-old {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+
+        .catalog-4lvl__catalog-item-cost-new {
+            font-size: 3rem;
+            line-height: 4.2rem;
+        }
+    }
+
+    .card-desc__buttons {
+        margin-top: 3.2rem;
+        gap: 3.2rem;
+    }
+
+    .card__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-info {
+        justify-content: flex-start;
+        gap: 5.6rem;
+    }
+
+    .card__receive {
+        margin: 0;
+        max-width: 31.4rem;
+        width: 100%;
+    }
+
+    .card__receive-ways {
+        margin-top: 4.8rem;
+    }
+
+    .card__receive-title {
+        font-size: 1.8rem;
+        margin-bottom: 2.4rem;
+    }
+
+    .card__receive-ways-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.4rem;
+    }
+
+    .card__receive-ways-item-text {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1500*/

@@ -76,6 +76,7 @@ h1 {
 .to-catalog {
   margin-top: 1.6rem;
   width: fit-content;
+  width: -moz-fit-content;
   display: inline-block;
   padding: 1.1rem 3.2rem;
   font-size: 1.4rem;
@@ -112,6 +113,7 @@ h1 {
   transform: translateX(-50%);
   bottom: calc(100% - 0.5rem);
   max-width: fit-content;
+  max-width: -moz-fit-content;
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff;
@@ -375,6 +377,7 @@ h1 {
   font-size: 1.4rem;
   line-height: 1.8rem;
   height: fit-content;
+  height: moz-fit-content;
   transition: 0.3s ease;
 }
 .buy svg {
@@ -1609,6 +1612,7 @@ h1 {
   line-height: 2.6rem;
   position: relative;
   width: fit-content;
+  width: -moz-fit-content;
 }
 .modal-choice__city-item::before {
   content: "";
@@ -2741,6 +2745,7 @@ h1 {
 
 .catalog-4lvl__catalog-buttons-filters {
   height: fit-content;
+  height: moz-fit-content;
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
@@ -2795,6 +2800,7 @@ h1 {
   line-height: 1.5rem;
   display: inline-block;
   width: fit-content;
+  width: -moz-fit-content;
   position: relative;
   transition: 0.3s ease;
 }
@@ -2925,6 +2931,7 @@ h1 {
   gap: 0.2rem;
   min-height: 12.9rem;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto;
 }
 
@@ -3540,6 +3547,7 @@ h1 {
 .cart__order-item .catalog-4lvl__catalog-item-bottom-buttons-basket {
   display: block;
   width: fit-content;
+  width: -moz-fit-content;
 }
 .cart__order-item .catalog-4lvl__catalog-item-bottom-buttons-basket form {
   padding: 0.45rem 0.4rem;
@@ -3585,6 +3593,7 @@ h1 {
   display: flex;
   margin-top: 0.8rem;
   min-height: fit-content;
+  min-height: moz-fit-content;
 }
 .cart__order-sum .catalog-4lvl__catalog-item-cost-new {
   font-size: 1.4rem;
@@ -3852,6 +3861,7 @@ h1 {
   margin: 0;
   max-width: none;
   width: fit-content;
+  width: -moz-fit-content;
 }
 .cart-window .cart__ordering-checkout {
   min-width: 16.5rem;
@@ -4599,6 +4609,7 @@ h1 {
   align-items: center;
   gap: 1.6rem;
   min-height: fit-content;
+  min-height: moz-fit-content;
 }
 .card-desc .catalog-4lvl__catalog-item-cost-old {
   font-size: 1.4rem;
@@ -4638,6 +4649,7 @@ h1 {
   line-height: 1.8rem;
   width: 100%;
   text-align: center;
+  font-weight: 500;
 }
 
 .buy-1click {
@@ -4655,6 +4667,9 @@ h1 {
   height: 1px;
   background-color: #064E8C;
   transition: 0.3s ease;
+}
+.buy-1click:hover::after, .buy-1click:active::after, .buy-1click:focus::after, .buy-1click:focus-within::after {
+  width: 0;
 }
 
 .card__receive {
@@ -4709,7 +4724,16 @@ h1 {
 .card__receive-ways-item-text a {
   font-weight: 500;
   margin-right: 0.8rem;
-  text-decoration: underline;
+  position: relative;
+}
+.card__receive-ways-item-text a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #262B2E;
+  left: 0;
+  bottom: 0;
 }
 
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/
@@ -4753,15 +4777,16 @@ h1 {
 .ma-button {
   background: #00A0E3;
   font-family: "Geometria";
-  min-width: 21rem;
-  display: inline-block;
-  padding: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21rem;
+  height: 4rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1.4em;
+  line-height: 1.8em;
   color: #FFFFFF;
-  text-align: center;
 }
 
 .ma-address-livraison:not(:last-child) {
@@ -4780,9 +4805,10 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #EFF0F1;
+  column-gap: 1.2rem;
+  border: 0.128rem solid #EFF0F1;
   min-height: 7.4rem;
-  padding: 1rem 1.2rem;
+  padding: 0 1.2rem;
   transition: all 300ms linear;
 }
 .ma-address-livraison__body:hover {
@@ -4800,16 +4826,91 @@ h1 {
   display: flex;
   flex-direction: column;
   row-gap: 0.4rem;
-  font-weight: 400;
+  font-weight: 400 !important;
 }
-.ma-address-livraison__body-icon {
+.ma-address-livraison__body-texts {
+  margin: 1rem 0;
+}
+.ma-address-livraison__icon {
   width: 1.6rem;
   height: 1.6rem;
 }
-.ma-address-livraison__body-icon svg {
+.ma-address-livraison__icon svg {
   display: inline-block;
   width: auto;
   height: auto;
+}
+
+#livraison-page .fancybox-slide--html {
+  padding: 0 !important;
+}
+#livraison-page .fancybox-close-small {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: block !important;
+  background: url("../img/menu/close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 2.4rem;
+  right: 1.6rem;
+}
+#livraison-page .fancybox-close-small svg {
+  display: none !important;
+}
+
+.livraison-delete-icon svg path {
+  transition: all 300ms ease;
+}
+.livraison-delete-icon:hover svg path {
+  stroke: #00A0E3;
+}
+
+.livraison-modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: #FFFFFF;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+}
+.livraison-modal.fancybox-content {
+  padding: 0;
+}
+.livraison-modal__container {
+  padding: 9.9rem 1.6rem 0;
+}
+.livraison-modal__title {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: #262B2E;
+}
+.livraison-modal form {
+  margin-top: 3.2rem;
+}
+.livraison-modal__input {
+  height: 3.8rem;
+}
+.livraison-modal__input:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.livraison-modal__textarea {
+  height: 9rem;
+  margin-top: 1.6rem;
+}
+.livraison-modal__textarea textarea {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  resize: none;
+}
+.livraison-modal__submit {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+.livraison-modal__submit button {
+  border: none;
 }
 
 /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ*/
