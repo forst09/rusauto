@@ -377,6 +377,18 @@ $(document).ready(function () {
         $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(++val);
     });
 
+    //УДАЛЕНИЕ КУКОВ
+
+    let cookieCloseBtns = [document.querySelector('.ma-cookie__close'), document.querySelector('.ma-cookie__button')];
+    console.log(typeof (cookieCloseBtns));
+    cookieCloseBtns.forEach(buttonClose => {
+        if (buttonClose != null) {
+            buttonClose.addEventListener('click', function (e) {
+                document.querySelector('.ma-cookie').remove();
+            })
+        }
+    });
+
     //РАСКРЫТИЕ ТАБА
     $(document).on('click', ".catalog-4lvl__filters-dropdown-link", function () {
         if ($(this).hasClass('active')) {

@@ -698,6 +698,40 @@
 
     }
 
+    /*КУКИ 668*/
+    .ma-cookie {
+        bottom: 2.4rem;
+
+        &__content {
+
+            padding: 1.6rem 1.2rem 1.6rem 1.6rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            column-gap: 4.6rem;
+
+        }
+
+        &__row {
+            display: unset;
+            column-gap: unset;
+        }
+
+        &__close {
+            position: absolute;
+            top: .8rem;
+            right: 1.2rem;
+
+        }
+
+        &__text {
+            margin-bottom: unset;
+            max-width: 38rem;
+
+        }
+
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
 
@@ -2898,6 +2932,42 @@
             line-height: 1.8rem;
         }
 
+    }
+
+    /*КУКИ 1024*/
+    .ma-cookie {
+        bottom: 3.2rem;
+
+        &__content {
+            column-gap: 7.2rem;
+        }
+
+        &__close {
+            top: 1.6rem;
+            right: 1.6rem;
+        }
+
+        &__text {
+            max-width: 64rem;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+
+        }
+
+    }
+
+    .ma-btn-close {
+        cursor: pointer;
+
+        svg path {
+            transition: all 300ms ease;
+        }
+
+        &:hover {
+            svg path {
+                fill: #00A0E3;
+            }
+        }
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
@@ -5219,6 +5289,19 @@
         &__text {
             line-height: 1.8rem;
         }
+    }
+
+    /*КУКИ 1500*/
+    .ma-cookie {
+        &__content {
+            column-gap: 9.5rem;
+            padding: 2.4rem;
+        }
+
+        &__text {
+            max-width: 103.2rem;
+        }
+
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/

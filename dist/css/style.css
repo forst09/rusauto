@@ -1870,6 +1870,47 @@ h1 {
   box-orient: vertical;
 }
 
+/*КУКИ*/
+.ma-cookie {
+  position: fixed;
+  width: 100%;
+  z-index: 99991;
+  bottom: 1.6rem;
+  left: 0;
+}
+.ma-cookie__content {
+  background: #EDF8FD;
+  box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+  padding: 1.6rem 0.8rem;
+}
+.ma-cookie__row {
+  display: flex;
+  column-gap: 0.8rem;
+}
+.ma-cookie__close {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: -0.8rem;
+}
+.ma-cookie__close svg {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+.ma-cookie__text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #064E8C;
+  margin-bottom: 2.4rem;
+}
+.ma-cookie__text a {
+  color: #00A0E3;
+}
+.ma-cookie__button-wrapper {
+  text-align: center;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
@@ -4745,6 +4786,9 @@ h1 {
 .card__tabs {
   margin-top: 4rem;
 }
+.card__tabs .scroll {
+  margin-bottom: 3.2rem;
+}
 
 .card__tabs-item {
   display: inline-block;
@@ -4753,6 +4797,15 @@ h1 {
   font-size: 1.4rem;
   line-height: 1.8rem;
   font-weight: 500;
+  transition: 0.3s ease;
+}
+.card__tabs-item:hover {
+  background-color: #F5FBFE;
+}
+
+.card__tabs-item.active {
+  color: #064E8C;
+  background-color: #EDF8FD;
 }
 
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/

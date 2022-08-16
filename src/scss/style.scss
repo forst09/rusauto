@@ -2208,6 +2208,57 @@ h1 {
     }
 }
 
+/*КУКИ*/
+.ma-cookie {
+    position: fixed;
+    width: 100%;
+    z-index: 99991;
+    bottom: 1.6rem;
+    left: 0;
+
+    &__content {
+        background: #EDF8FD;
+        box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+        padding: 1.6rem .8rem;
+
+    }
+
+    &__row {
+        display: flex;
+        column-gap: .8rem;
+    }
+
+    &__close {
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        top: -.8rem;
+
+        svg {
+            display: inline-block;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: #064E8C;
+        margin-bottom: 2.4rem;
+
+        a {
+            color: #00A0E3;
+        }
+    }
+
+    &__button-wrapper {
+        text-align: center;
+    }
+
+}
+
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -5586,6 +5637,10 @@ h1 {
 
 .card__tabs {
     margin-top: 4rem;
+
+    .scroll {
+        margin-bottom: 3.2rem;
+    }
 }
 
 .card__tabs-item {
@@ -5595,6 +5650,16 @@ h1 {
     font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 500;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: #F5FBFE;
+    }
+}
+
+.card__tabs-item.active {
+    color: #064E8C;
+    background-color: #EDF8FD;
 }
 
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/
