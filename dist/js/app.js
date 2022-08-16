@@ -985,6 +985,26 @@ $(document).ready(function () {
             }
         });
 
+        //СОПУТСТВУЮЩИЕ ТОВАРЫ
+        const swiperRelated = new Swiper('.swiper-related', {
+            speed: 700,
+            slidesPerView: 'auto',
+            breakpoints: {
+
+                1024: {
+                    spaceBetween: 32,
+                },
+
+                1500: {
+                    spaceBetween: 62,
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-related-button-next',
+                prevEl: '.swiper-related-button-prev',
+            }
+        });
+
         //СТРАНИЦА О КОМПАНИИ СЕКЦИЯ "НАШИ НАГРАДЫ"
         const swiperRewards = new Swiper('.swiper-rewards', {
             speed: 700,
