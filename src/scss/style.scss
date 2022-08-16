@@ -675,7 +675,9 @@ h1 {
 
 /*КАСТОМИЗАЦИЯ СВАЙПЕРОВ*/
 .recently,
-.rewards {
+.rewards,
+.related,
+.card {
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -5582,6 +5584,19 @@ h1 {
     }
 }
 
+.card__tabs {
+    margin-top: 4rem;
+}
+
+.card__tabs-item {
+    display: inline-block;
+    padding: 1.6rem;
+    background-color: #FAFAFA;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/
 
 /*#################################################################################################################################*/
@@ -5750,6 +5765,7 @@ h1 {
     width: 100vw;
     height: 100vh;
     background: #FFFFFF;
+    -webkit-box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
 
     &.fancybox-content {

@@ -566,11 +566,17 @@ h1 {
 .recently .swiper-button-prev,
 .recently .swiper-button-next,
 .rewards .swiper-button-prev,
-.rewards .swiper-button-next {
+.rewards .swiper-button-next,
+.related .swiper-button-prev,
+.related .swiper-button-next,
+.card .swiper-button-prev,
+.card .swiper-button-next {
   display: none;
 }
 .recently .swiper-slide,
-.rewards .swiper-slide {
+.rewards .swiper-slide,
+.related .swiper-slide,
+.card .swiper-slide {
   width: auto;
 }
 
@@ -4736,6 +4742,19 @@ h1 {
   bottom: 0;
 }
 
+.card__tabs {
+  margin-top: 4rem;
+}
+
+.card__tabs-item {
+  display: inline-block;
+  padding: 1.6rem;
+  background-color: #FAFAFA;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ!*/
@@ -4872,6 +4891,7 @@ h1 {
   width: 100vw;
   height: 100vh;
   background: #FFFFFF;
+  -webkit-box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
 }
 .livraison-modal.fancybox-content {

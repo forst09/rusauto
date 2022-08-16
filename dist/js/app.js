@@ -362,12 +362,12 @@ $(document).ready(function () {
     $(document).on('click', ".catalog-4lvl__catalog-item-bottom-buttons-basket-minus", function () {
         let val = $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
         if (val == 1) {
-            $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').removeClass('active');
+            $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').removeClass('active');
             $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.buy').show();
         }
-        else {
-            $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(--val);
-        }
+        // else {
+        //     $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(--val);
+        // }
     });
 
     //УВЕЛИЧИТЬ СЧЕТЧИК ТОВАРА
@@ -1002,8 +1002,18 @@ $(document).ready(function () {
             navigation: {
                 nextEl: '.swiper-related-button-next',
                 prevEl: '.swiper-related-button-prev',
-            }
+            },
         });
+
+        //УБРАТЬ ОТСТУП ОБЕРТКИ ДЛЯ КНОПОК СВАЙПЕРА, ЕСЛИ СЛАЙДОВ НЕДОСТАТОЧНО ДЛЯ ПРОЛИСТЫВАНИЯ
+        let swipers = $('.swiper');
+        if (swipers.length != 0) {
+            swipers.each(function () {
+                if ($(this).find($('.swiper-button-prev')).hasClass('swiper-button-lock')) {
+                    $(this).find('.swiper-buttons').css('margin', 0);
+                }
+            });
+        }
 
         //СТРАНИЦА О КОМПАНИИ СЕКЦИЯ "НАШИ НАГРАДЫ"
         const swiperRewards = new Swiper('.swiper-rewards', {
@@ -1031,9 +1041,18 @@ $(document).ready(function () {
         //     }
         // });
 
-    }
 
-    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА КАРТОЧКИ ТОВАРА
+
+        //СВАЙПЕР ДЛЯ ТАБОВ КАРТОЧКИ ТОВАРА
+        const swiperCardTabs = new Swiper('.swiper-card-tabs', {
+            speed: 700,
+            slidesPerView: 'auto',
+            mousewheel: {
+                invert: true,
+            },
+        });
+
+    }
 
     // ПОДКЛЮЧЕНИЕ КАРТЫ
     const jsMap = document.querySelector("#map");
