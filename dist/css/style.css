@@ -4806,6 +4806,10 @@ h1 {
   font-size: 1.4em;
   line-height: 1.8em;
   color: #FFFFFF;
+  transition: 0.3s ease;
+}
+.ma-button:hover, .ma-button:active, .ma-button:focus, .ma-button:focus-within {
+  background: #0091CE;
 }
 
 .ma-address-livraison:not(:last-child) {
@@ -4864,18 +4868,6 @@ h1 {
   padding: 0 !important;
 }
 #livraison-page .fancybox-close-small {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  padding: 0;
-  display: block !important;
-  background: url("../img/menu/close.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 2.4rem;
-  right: 1.6rem;
-}
-#livraison-page .fancybox-close-small svg {
   display: none !important;
 }
 
@@ -4891,11 +4883,32 @@ h1 {
   width: 100vw;
   height: 100vh;
   background: #FFFFFF;
-  -webkit-box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+}
+.livraison-modal__close {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1.6rem;
+  top: 2.4rem;
+  cursor: pointer;
+}
+.livraison-modal__close svg {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+.livraison-modal__close svg path {
+  transition: all 300ms ease;
+}
+.livraison-modal__close:hover svg path {
+  fill: #00A0E3;
 }
 .livraison-modal.fancybox-content {
   padding: 0;
+}
+.livraison-modal.fancybox-content:hover {
+  cursor: auto;
 }
 .livraison-modal__container {
   padding: 9.9rem 1.6rem 0;
@@ -4915,15 +4928,48 @@ h1 {
 .livraison-modal__input:not(:last-child) {
   margin-bottom: 1.6rem;
 }
+.livraison-modal__input input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #EFF0F1;
+  padding: 1rem 2rem;
+  color: #064E8C;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  max-height: 3.8rem;
+}
+.livraison-modal__input input::placeholder {
+  color: #A3A8AB;
+  font-family: "Geometria";
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.livraison-modal__input input:active, .livraison-modal__input input:focus, .livraison-modal__input input:focus-within, .livraison-modal__input input:hover {
+  border: 1.28px solid #CBD3DC;
+}
 .livraison-modal__textarea {
   height: 9rem;
   margin-top: 1.6rem;
 }
 .livraison-modal__textarea textarea {
+  max-height: none;
   width: 100%;
   height: 100%;
-  max-height: none;
   resize: none;
+  border: 1px solid #EFF0F1;
+  padding: 1rem 2rem;
+  color: #064E8C;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.livraison-modal__textarea textarea::placeholder {
+  color: #A3A8AB;
+  font-family: "Geometria";
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.livraison-modal__textarea textarea:active, .livraison-modal__textarea textarea:focus, .livraison-modal__textarea textarea:focus-within, .livraison-modal__textarea textarea:hover {
+  border: 1.28px solid #CBD3DC;
 }
 .livraison-modal__submit {
   margin-top: 3.2rem;
