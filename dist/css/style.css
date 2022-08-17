@@ -144,10 +144,6 @@ h1 {
   color: #ED9CA1;
 }
 
-.tab-content {
-  animation: fadeEffect 0.5s;
-}
-
 .text {
   font-size: 1.4rem;
   line-height: 2rem;
@@ -2875,6 +2871,7 @@ h1 {
 }
 
 .tab-content {
+  animation: fadeEffect 0.5s;
   display: none;
 }
 
@@ -4420,7 +4417,6 @@ h1 {
 
 .personal-data__label {
   right: 2rem;
-  margin-top: 0.2rem;
   width: 2rem;
   height: 2rem;
 }
@@ -5101,6 +5097,37 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ИЗМЕНЕНИЕ ПАРОЛЯ*/
+.change-password__instruction {
+  margin: 3.2rem auto 0;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #262B2E;
+  max-width: 40rem;
+  line-height: 1.8rem;
+}
+.change-password__instruction p + p {
+  margin-top: 1.8rem;
+}
+.change-password form {
+  max-width: 40rem;
+  margin: 3.2rem auto 0;
+}
+.change-password .form-input__wrapper:nth-child(1) {
+  margin-bottom: 2.4rem;
+}
+.change-password .form-btn__wrapper {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+.change-password .form-btn__wrapper button {
+  border: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ ИЗМЕНЕНИЕ ПАРОЛЯ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
