@@ -459,10 +459,12 @@ $(document).ready(function () {
 
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
     let content = document.querySelector('.ma-production__content ');
+
     let imgs = document.querySelectorAll('.ma-production__content img');
     let allTagInContent = [];
 
     if (content != null) {
+
         let allEltsInContent = [...content.querySelectorAll('*')];
         let allTagInContent = [];
         allEltsInContent.forEach(elt => {
@@ -494,20 +496,24 @@ $(document).ready(function () {
             }
 
         })
+
+        if (allTagInContent.includes('iframe')) {
+
+            let iframes = content.querySelectorAll('iframe');
+            console.log(iframes)
+            iframes.forEach(iframe => {
+                let wrapper = document.createElement('div')
+                let iframeSrc = iframe.src
+                wrapper.classList.add('wrapper-iframe');
+                let parent = iframe.parentNode;
+                parent.replaceChild(wrapper, iframe);
+                wrapper.appendChild(iframe);
+
+            })
+        }
     }
 
-    if (allTagInContent.includes('iframe')) {
 
-        let iframes = content.querySelectorAll('iframe');
-        iframes.forEach(iframe => {
-            let wrapper = document.createElement('div')
-            let iframeSrc = iframe.src
-            wrapper.classList.add('wrapper-iframe');
-            let parent = iframe.parentNode;
-            parent.replaceChild(wrapper, iframe);
-            wrapper.appendChild(iframe);
-        })
-    }
 
     //СКРОЛЛ ОПЛАТА И ДОСТАВКА
     let leftLinks = [...document.querySelectorAll('.content-left-nav__link')];
