@@ -169,10 +169,6 @@ h1 {
     }
 }
 
-.tab-content {
-    animation: fadeEffect 0.5s;
-}
-
 .text {
     font-size: 1.4rem;
     line-height: 2rem;
@@ -3354,15 +3350,13 @@ h1 {
     }
 }
 
-// .catalog-4lvl__catalog-tile.active,
-// .catalog-4lvl__catalog-lines.active
+
 .tab-content.active {
     display: block;
 }
 
-// .catalog-4lvl__catalog-tile,
-// .catalog-4lvl__catalog-lines
 .tab-content {
+    animation: fadeEffect 0.5s;
     display: none;
 }
 
@@ -5208,7 +5202,6 @@ h1 {
 
 .personal-data__label {
     right: 2rem;
-    margin-top: 0.2rem;
     width: 2rem;
     height: 2rem;
 
@@ -5775,13 +5768,6 @@ h1 {
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ*/
 .livraison {
-    &__container {}
-
-    &__content {}
-
-    &__row {}
-
-    &__body {}
 
     &__text {
         margin: 1.2rem 0 0;
@@ -6063,6 +6049,47 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ*/
+
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ИЗМЕНЕНИЕ ПАРОЛЯ*/
+.change-password {
+    &__instruction {
+        margin: 3.2rem auto 0;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        text-align: center;
+        color: #262B2E;
+        max-width: 40rem;
+        line-height: 1.8rem;
+
+        p+p {
+            margin-top: 1.8rem;
+        }
+
+    }
+
+    form {
+        max-width: 40rem;
+        margin: 3.2rem auto 0;
+    }
+
+    .form-input__wrapper:nth-child(1) {
+        margin-bottom: 2.4rem;
+    }
+
+    .form-btn__wrapper {
+        margin-top: 3.2rem;
+        text-align: center;
+
+        button {
+            border: none;
+        }
+    }
+
+}
+
+/*КОНЕЦ СТИЛЕЙ ИЗМЕНЕНИЕ ПАРОЛЯ*/
 
 
 @keyframes fadeEffect {
