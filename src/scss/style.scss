@@ -3189,6 +3189,81 @@ h1 {
     }
 }
 
+.catalog-4lvl__catalog-item {
+    padding: 0.8rem 0.8rem 1.6rem;
+    min-height: 34.7rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 20rem;
+    max-width: 20rem;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: #F5FBFE;
+    }
+
+    .buy {
+        min-width: unset;
+        width: 100%;
+        padding: 0.7rem;
+    }
+
+    .catalog-4lvl__catalog-item-image {
+        margin: 0;
+        width: 17.2rem;
+        height: 10.8rem;
+    }
+
+    .catalog-4lvl__catalog-item-manufacturer {
+        text-align: center;
+        margin: 0.4rem auto 0;
+    }
+
+    .catalog-4lvl__catalog-item-name {
+        margin-top: 0.8rem;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    .catalog-4lvl__catalog-item-article {
+        margin-top: 1.6rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .catalog-4lvl__catalog-item-bottom {
+        gap: 0.4rem;
+    }
+
+    .catalog-4lvl__catalog-item-image-label {
+        position: static;
+        margin: 0;
+    }
+
+    .catalog-4lvl__catalog-item-bottom {
+        margin-top: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog-4lvl__catalog-item-bottom-buttons-basket {
+        padding: 0.45rem 0;
+        height: fit-content;
+        height: moz-fit-content;
+    }
+
+    .catalog-4lvl__catalog-item-availability {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .catalog-4lvl__catalog-item-cost {
+        align-items: center;
+    }
+}
+
 .category {
     margin-top: 3.2rem;
 }
@@ -5660,6 +5735,13 @@ h1 {
 .card__tabs-item.active {
     color: #064E8C;
     background-color: #EDF8FD;
+}
+
+/*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
+.swiper-related {
+    .swiper-wrapper {
+        gap: 3.2rem;
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/

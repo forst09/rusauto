@@ -2660,11 +2660,20 @@
 
     /*КАСТОМИЗАЦИЯ СВАЙПЕРОВ 1024*/
     .recently,
-    .rewards {
+    .rewards,
+    .related {
 
         .swiper-button-prev,
         .swiper-button-next {
             display: block;
+        }
+    }
+
+    .card {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: flex;
         }
     }
 
@@ -3721,62 +3730,62 @@
         margin-top: 1.2rem;
     }
 
-    .catalog-4lvl__catalog-item {
-        padding: 0.8rem 0.8rem 1.6rem;
-        min-height: 34.7rem;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        min-width: 20rem;
-        transition: 0.3s ease;
+    // .catalog-4lvl__catalog-item {
+    //     padding: 0.8rem 0.8rem 1.6rem;
+    //     min-height: 34.7rem;
+    //     display: flex;
+    //     flex-direction: column;
+    //     overflow: hidden;
+    //     min-width: 20rem;
+    //     transition: 0.3s ease;
 
-        &:hover {
-            background-color: #F5FBFE;
-        }
+    //     &:hover {
+    //         background-color: #F5FBFE;
+    //     }
 
-        .buy {
-            min-width: unset;
-            width: 100%;
-        }
+    //     .buy {
+    //         min-width: unset;
+    //         width: 100%;
+    //     }
 
-        .catalog-4lvl__catalog-item-image {
-            margin: 0;
-        }
+    //     .catalog-4lvl__catalog-item-image {
+    //         margin: 0;
+    //     }
 
-        .catalog-4lvl__catalog-item-manufacturer {
-            text-align: center;
-            margin: 0.4rem auto 0;
-        }
+    //     .catalog-4lvl__catalog-item-manufacturer {
+    //         text-align: center;
+    //         margin: 0.4rem auto 0;
+    //     }
 
-        .catalog-4lvl__catalog-item-name {
-            text-align: center;
-            font-size: 1.4rem;
-            line-height: 1.8rem;
-        }
+    //     .catalog-4lvl__catalog-item-name {
+    //         text-align: center;
+    //         font-size: 1.4rem;
+    //         line-height: 1.8rem;
+    //     }
 
-        .catalog-4lvl__catalog-item-article {
-            margin-top: 1.6rem;
-        }
+    //     .catalog-4lvl__catalog-item-article {
+    //         margin-top: 1.6rem;
+    //     }
 
-        .catalog-4lvl__catalog-item-bottom {
-            gap: 0.4rem;
-        }
+    //     .catalog-4lvl__catalog-item-bottom {
+    //         gap: 0.4rem;
+    //     }
 
-        .catalog-4lvl__catalog-item-image-label {
-            position: static;
-            margin: 0;
-        }
+    //     .catalog-4lvl__catalog-item-image-label {
+    //         position: static;
+    //         margin: 0;
+    //     }
 
-        .catalog-4lvl__catalog-item-bottom {
-            margin-top: auto;
-        }
+    //     .catalog-4lvl__catalog-item-bottom {
+    //         margin-top: auto;
+    //     }
 
-        .catalog-4lvl__catalog-item-bottom-buttons-basket {
-            padding: 0.45rem 0;
-            height: fit-content;
-            height: moz-fit-content;
-        }
-    }
+    //     .catalog-4lvl__catalog-item-bottom-buttons-basket {
+    //         padding: 0.45rem 0;
+    //         height: fit-content;
+    //         height: moz-fit-content;
+    //     }
+    // }
 
     .catalog-4lvl__catalog-lines-item-card {
         gap: 2.4rem;
@@ -4896,6 +4905,12 @@
         }
     }
 
+    /*СОПУТСТВУЮЩИЕ ТОВАРЫ 1024*/
+    .swiper-related {
+        padding: 0;
+        max-width: 89.6rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
 
     /*#################################################################################################################################*/
@@ -5655,6 +5670,13 @@
         width: 27rem;
     }
 
+    .catalog-4lvl__catalog-item {
+        .catalog-4lvl__catalog-item-name {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+    }
+
     /*КОНЕЦ СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1500*/
 
     /*#################################################################################################################################*/
@@ -6226,6 +6248,12 @@
     .card__receive-ways-item-text {
         font-size: 1.4rem;
         line-height: 1.8rem;
+    }
+
+    /*СОПУТСТВУЮЩИЕ ТОВАРЫ 1500*/
+    .swiper-related {
+        padding: 0;
+        max-width: 134rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1500*/
