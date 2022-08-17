@@ -1593,6 +1593,22 @@
     margin: 0;
   }
 
+  .card-desc__characteristics {
+    width: 31.7rem;
+  }
+
+  .card-desc__characteristics-container {
+    gap: 4.8rem;
+  }
+
+  .card-tab__characteristics {
+    padding: 0 4.4rem;
+    width: 100%;
+  }
+  .card-tab__characteristics .cart__ordering-item {
+    width: 31.7rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 668*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ 668*/
@@ -4126,6 +4142,32 @@
     max-width: 89.6rem;
   }
 
+  .card-desc__characteristics-container {
+    padding: 0 6.4rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .card-desc__characteristics-container .cart__ordering-value {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .card-tab__characteristics {
+    padding: 0 0 0 6.4rem;
+    max-height: none;
+    max-width: 68.2rem;
+    box-sizing: content-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4.8rem;
+    grid-row-gap: 1.6rem;
+  }
+  .card-tab__characteristics .cart__ordering-value {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ 1024*/
@@ -5116,26 +5158,8 @@
   .card h1 {
     margin-bottom: 0.8rem;
   }
-  .card .cart__ordering-text,
-.card .cart__ordering-value {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    font-weight: 400;
-  }
-  .card .cart__ordering-text {
-    color: #A3A8AB;
-  }
-  .card .cart__ordering-value {
-    color: #064E8C;
-  }
-  .card .cart__ordering-item + .cart__ordering-item {
-    margin-top: 1.6rem;
-  }
-
-  .card-desc__characteristics {
-    display: block;
-    margin-top: 3.2rem;
-    max-width: 32.8rem;
+  .card .ma-production__scroll {
+    max-width: 88rem;
   }
 
   .all-characteristics {
@@ -5174,6 +5198,11 @@
   .card-desc .catalog-4lvl__catalog-item-cost-new {
     font-size: 3rem;
     line-height: 4.2rem;
+  }
+  .card-desc .card-desc__characteristics {
+    display: block;
+    margin-top: 3.2rem;
+    max-width: 32.8rem;
   }
 
   .card-desc__buttons {
@@ -5215,6 +5244,10 @@
   .card__receive-ways-item-text {
     font-size: 1.4rem;
     line-height: 1.8rem;
+  }
+
+  .card-tab__characteristics {
+    padding: 0 0 0 8rem;
   }
 
   /*СОПУТСТВУЮЩИЕ ТОВАРЫ 1500*/

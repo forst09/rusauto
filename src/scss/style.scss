@@ -983,16 +983,13 @@ h1 {
         }
 
         table {
-            width: 60.4rem;
             margin: auto;
             border-collapse: collapse;
             margin-top: 4rem;
 
-            td,
-            th {
-                // width: 50%;
+            td {
                 border: 1px solid #A3A8AB;
-                padding: .8rem 1.4rem;
+                padding: 0.8rem 2.4rem;
                 font-family: 'Geometria';
                 font-style: normal;
                 font-weight: 300;
@@ -1002,8 +999,12 @@ h1 {
                 text-align: center;
             }
 
-            th {
-                color: #064E8C;
+            tr {
+                &:nth-of-type(1) {
+                    td {
+                        color: #064E8C;
+                    }
+                }
             }
         }
 
@@ -5516,6 +5517,37 @@ h1 {
     }
 }
 
+.card-desc__characteristics {
+    max-height: 15.4rem;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    .cart__ordering-item {
+        width: 26.9rem;
+    }
+
+    .cart__ordering-text,
+    .cart__ordering-value {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+    }
+
+    .cart__ordering-text {
+        color: #A3A8AB;
+    }
+
+    .cart__ordering-value {
+        color: #064E8C;
+    }
+
+    .cart__ordering-item+.cart__ordering-item {
+        margin-top: 0;
+    }
+}
+
 .swiper-card-thumbs {
     display: none;
 }
@@ -5540,10 +5572,6 @@ h1 {
     .swiper-card__pagination {
         margin-top: 2.4rem;
     }
-}
-
-.card-desc__characteristics {
-    display: none;
 }
 
 .card-desc {
@@ -5573,6 +5601,10 @@ h1 {
 
     .catalog-4lvl__catalog-item-article {
         font-weight: 500;
+    }
+
+    .card-desc__characteristics {
+        display: none;
     }
 }
 
@@ -5701,10 +5733,10 @@ h1 {
 
 .card__tabs {
     margin-top: 4rem;
+}
 
-    .scroll {
-        margin-bottom: 3.2rem;
-    }
+.swiper-card-tabs {
+    margin-bottom: 3.2rem;
 }
 
 .card__tabs-item {
@@ -5724,6 +5756,23 @@ h1 {
 .card__tabs-item.active {
     color: #064E8C;
     background-color: #EDF8FD;
+}
+
+.card-desc__characteristics-container {
+    display: inline-flex;
+    gap: 1.6rem;
+    width: 100%;
+}
+
+.card-tab__characteristics {
+    padding: 0 1.6rem;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
 }
 
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/

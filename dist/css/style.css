@@ -828,15 +828,13 @@ h1 {
   display: inline-block;
 }
 .ma-production__content table {
-  width: 60.4rem;
   margin: auto;
   border-collapse: collapse;
   margin-top: 4rem;
 }
-.ma-production__content table td,
-.ma-production__content table th {
+.ma-production__content table td {
   border: 1px solid #A3A8AB;
-  padding: 0.8rem 1.4rem;
+  padding: 0.8rem 2.4rem;
   font-family: "Geometria";
   font-style: normal;
   font-weight: 300;
@@ -845,7 +843,7 @@ h1 {
   color: #262B2E;
   text-align: center;
 }
-.ma-production__content table th {
+.ma-production__content table tr:nth-of-type(1) td {
   color: #064E8C;
 }
 .ma-production__img-auto {
@@ -4677,6 +4675,32 @@ h1 {
   margin-bottom: 1.6rem;
 }
 
+.card-desc__characteristics {
+  max-height: 15.4rem;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.card-desc__characteristics .cart__ordering-item {
+  width: 26.9rem;
+}
+.card-desc__characteristics .cart__ordering-text,
+.card-desc__characteristics .cart__ordering-value {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+.card-desc__characteristics .cart__ordering-text {
+  color: #A3A8AB;
+}
+.card-desc__characteristics .cart__ordering-value {
+  color: #064E8C;
+}
+.card-desc__characteristics .cart__ordering-item + .cart__ordering-item {
+  margin-top: 0;
+}
+
 .swiper-card-thumbs {
   display: none;
 }
@@ -4701,10 +4725,6 @@ h1 {
   margin-top: 2.4rem;
 }
 
-.card-desc__characteristics {
-  display: none;
-}
-
 .card-desc .catalog-4lvl__catalog-item-cost {
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -4727,6 +4747,9 @@ h1 {
 }
 .card-desc .catalog-4lvl__catalog-item-article {
   font-weight: 500;
+}
+.card-desc .card-desc__characteristics {
+  display: none;
 }
 
 .card-desc__buttons {
@@ -4842,7 +4865,8 @@ h1 {
 .card__tabs {
   margin-top: 4rem;
 }
-.card__tabs .scroll {
+
+.swiper-card-tabs {
   margin-bottom: 3.2rem;
 }
 
@@ -4862,6 +4886,22 @@ h1 {
 .card__tabs-item.active {
   color: #064E8C;
   background-color: #EDF8FD;
+}
+
+.card-desc__characteristics-container {
+  display: inline-flex;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.card-tab__characteristics {
+  padding: 0 1.6rem;
+  overflow-x: auto;
+}
+.card-tab__characteristics::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
 }
 
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
