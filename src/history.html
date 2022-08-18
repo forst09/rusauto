@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "История заказов"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <section class="history">
+        <div class="wrapper">
+            <div class="btn-to-personal__wrapper">
+                <a class="btn-to-personal" href="personal.html">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 7.99935L1 7.99935M1 7.99935L8.22222 14.666M1 7.99935L8.22222 1.33268"
+                            stroke="#064E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>В личный кабинет</span>
+                </a>
+            </div>
+            <h1>История заказов</h1>
+            <div class="desc desc-left">Компания ООО «РусАвтоДеталь» на сегодняшний день является крупнейшим
+                поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов).</div>
+
+            <div class="history__container">
+                <div class="history__card">
+                    <div class="history__card-info">
+                        <div class="history__card-number">
+                            <a href="order.html" class="history__card-item">Заказ от 01.01.2022</a>
+                            <div class="history__card-number-number">№ 248-759562</div>
+                            <div class="history__card-status">Статус:<span>Сборка</span></div>
+                        </div>
+                        <div class="history__card-sum">
+                            <div class="history__card-sum-text">Сумма заказа:</div>
+                            <div class="history__card-sum-value">1 114 &#8381;</div>
+                        </div>
+                    </div>
+                    <div class="history__card-btn">
+                        <a href="order.html">Подробности заказа</a>
+                    </div>
+                </div>
+                <div class="history__card">
+                    <div class="history__card-info">
+                        <div class="history__card-number">
+                            <a href="order.html" class="history__card-item">Заказ от 01.01.2022</a>
+                            <div class="history__card-number-number">№ 248-759562</div>
+                            <div class="history__card-status">Статус:<span>Сборка</span></div>
+                        </div>
+                        <div class="history__card-sum">
+                            <div class="history__card-sum-text">Сумма заказа:</div>
+                            <div class="history__card-sum-value">1 114 &#8381;</div>
+                        </div>
+                    </div>
+                    <div class="history__card-btn">
+                        <a href="order.html">Подробности заказа</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/footer.html',{})
+
+    @@include('html/tabbar.html',{})
+
+    @@include('html/mobile-menu.html',{})
+
+    @@include('html/catalog.html',{})
+
+    @@include('html/catalog-groups.html',{})
+
+    @@include('html/modal-choice.html',{})
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

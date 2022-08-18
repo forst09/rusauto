@@ -1169,6 +1169,10 @@ $(document).ready(function () {
         threshold: 0.15,
     });
     if (jsMap) mapObserver.observe(jsMap);
+
+    let mapText = document.getElementsByClassName("ymaps-2-1-79-gotoymaps__text");
+    console.log(mapText);
+    $(mapText).html('jj');    // console.log($('.ymaps-2-1-79-gotoymaps__text'));
 });
 
 

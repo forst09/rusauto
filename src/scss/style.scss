@@ -6516,6 +6516,40 @@ h1 {
 
 // ymaps
 .ymaps-2-1-79-copyright__content-cell,
-.ymaps-2-1-79-map-copyrights-promo {
+.ymaps-2-1-79-gototaxi,
+.ymaps-2-1-79-gotoymaps__pin,
+.ymaps-2-1-79-gototech {
     display: none !important;
+}
+
+.ymaps-2-1-79-gotoymaps__container {
+    box-shadow: none !important;
+    background: #00A0E3 !important;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: unset !important;
+    height: fit-content !important;
+}
+
+.ymaps-2-1-79-gotoymaps__text-container {
+    margin: 0 !important;
+    height: fit-content;
+}
+
+.ymaps-2-1-79-gotoymaps__text {
+    font-family: 'Geometria';
+    font-size: 1.2rem;
+    line-height: 1.5rem !important;
+    height: fit-content !important;
+    margin: unset !important;
+    font-weight: 500;
+}
+
+.ymaps-2-1-79-gotoymaps {
+    margin-left: 1.6rem !important;
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+    height: fit-content !important;
+    bottom: 1.6rem !important;
 }
