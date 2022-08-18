@@ -426,23 +426,34 @@
                 <form action="">
                     <div class="personal-data__radio">
                         <div class="catalog-4lvl__filters-radio">
-                            <input class="catalog-4lvl__filters-radio-input" type="radio" name="personalDataRadio"
-                                id="personalDataRadio1" checked>
-                            <label class="catalog-4lvl__filters-radio-label tab" for="personalDataRadio1"
-                                data-tab="personalDataIndividual">Физическое
+                            <input class="catalog-4lvl__filters-radio-input form-radio" type="radio"
+                                name="personalDataRadio" id="personalDataRadio1" checked>
+                            <label class="catalog-4lvl__filters-radio-label" for="personalDataRadio1">Физическое
                                 лицо</label>
                         </div>
                         <div class="catalog-4lvl__filters-radio">
-                            <input class="catalog-4lvl__filters-radio-input" type="radio" name="personalDataRadio"
-                                id="personalDataRadio2">
-                            <label class="catalog-4lvl__filters-radio-label tab" for="personalDataRadio2"
-                                data-tab="personalDataEntity">Юридическое
+                            <input class="catalog-4lvl__filters-radio-input form-radio form-entity-radio" type="radio"
+                                name="personalDataRadio" id="personalDataRadio2">
+                            <label class="catalog-4lvl__filters-radio-label" for="personalDataRadio2">Юридическое
                                 лицо</label>
                         </div>
                     </div>
-                    <!-- ФОРМА ДЛЯ ФИЗ ЛИЦА -->
-                    <div class="personal-data__individual tab-content active" id="personalDataIndividual">
+                    <!--КЛАСС .form-entity - ДЛЯ ПОЛЕЙ ЮРИДИЧЕСКОГО ЛИЦА-->
+                    <div class="personal-data__individual">
                         <div class="personal-data__individual-container">
+                            <div class="form-input__wrapper form-entity">
+                                <input type="text" class="form-input" placeholder="Название организации"
+                                    id="entityNameOrganization">
+                            </div>
+                            <div class="form-input__wrapper form-entity">
+                                <input type="text" class="form-input" placeholder="ИНН" id="entityTIN">
+                            </div>
+                            <div class="form-input__wrapper form-entity">
+                                <input type="text" class="form-input" placeholder="КПП" id="entityKPP">
+                            </div>
+                            <div class="form-input__wrapper form-entity">
+                                <input type="text" class="form-input" placeholder="БИК" id="entityBIC">
+                            </div>
                             <div class="form-input__wrapper">
                                 <input type="text" class="form-input" placeholder="Имя" id="individualName">
                             </div>
@@ -459,38 +470,6 @@
                         </div>
                     </div>
 
-                    <!-- ФОРМА ДЛЯ ЮР ЛИЦА -->
-                    <div class="personal-data__entity tab-content" id="personalDataEntity">
-                        <div class="personal-data__individual-container">
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Название организации"
-                                    id="entityNameOrganization">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="ИНН" id="entityTIN">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input input-phone" placeholder="КПП" id="entityKPP">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="БИК" id="entityBIC">
-                            </div>
-
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Имя" id="entityName">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Фамилия" id="entitySurname">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input input-phone" placeholder="Телефон"
-                                    id="entityPhone">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Почта" id="entityMail">
-                            </div>
-                        </div>
-                    </div>
                     <div class="personal-data__password-container">
                         <div class="catalog-4lvl__filters-dropdown-wrapper">
                             <a href="javascript:void(0)" class="catalog-4lvl__filters-dropdown-link"><span>Изменение
@@ -498,8 +477,8 @@
                             <div class="catalog-4lvl__filters-dropdown-content">
                                 <div class="personal-data__password">
                                     <div class="form-input__wrapper">
-                                        <input type="password" class="form-input" placeholder="Введите новый пароль"
-                                            id="individualPassword1">
+                                        <input type="password" class="form-input input-password"
+                                            placeholder="Введите новый пароль" id="individualPassword1">
                                         <label for="individualPassword1" class="form-label personal-data__label">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -513,8 +492,8 @@
                                         </label>
                                     </div>
                                     <div class="form-input__wrapper">
-                                        <input type="password" class="form-input" placeholder="Повторите пароль"
-                                            id="individualRepeatPassword2">
+                                        <input type="password" class="form-input input-password"
+                                            placeholder="Повторите пароль" id="individualRepeatPassword2">
                                         <label for="individualPassword2" class="form-label personal-data__label">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">

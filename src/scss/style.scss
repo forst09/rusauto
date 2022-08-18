@@ -280,6 +280,7 @@ h1 {
     font-weight: 500;
     transition: 0.3s ease;
     font-family: 'Geometria';
+    border: none;
 
     &::before,
     &::after {
@@ -5263,10 +5264,16 @@ h1 {
     }
 }
 
-.personal-data__password {
-    .form-input {
-        padding-right: 6rem;
-    }
+.input-password {
+    padding-right: 6rem;
+}
+
+.form-entity {
+    display: none;
+}
+
+.form-entity.active {
+    display: block;
 }
 
 /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ*/
@@ -6135,6 +6142,148 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ИЗМЕНЕНИЕ ПАРОЛЯ*/
+
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ*/
+.ma-session {
+
+    &__navigation {
+        margin-top: 3.2rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    form {
+        max-width: 40rem;
+        margin: 2.4rem auto 0;
+
+        .form-input__wrapper+.form-input__wrapper {
+            margin-top: 2.4rem;
+
+        }
+
+        .catalog-4lvl__filters-checkbox {
+            margin-top: 2.4rem;
+        }
+
+        .form-btn__wrapper {
+            margin-top: 3.2rem;
+            text-align: center;
+        }
+
+    }
+
+    &__bottom {
+        margin-top: 2.4rem;
+        text-align: center;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        text-decoration-line: underline;
+        color: #00A0E3;
+
+
+    }
+
+    &__signIn {
+
+        .catalog-4lvl__filters-checkbox-label {
+            color: #064E8C;
+            padding-left: 2.4rem;
+        }
+
+
+        .link-underline {
+            font-weight: 400;
+        }
+    }
+
+
+
+}
+
+.ma-session__signUp {
+
+    .btn {
+        background-color: #00A0E3;
+
+        &::after {
+            border-top: 3.8rem solid #00A0E3;
+        }
+
+        &::before {
+            border-bottom: 3.8rem solid #00A0E3;
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            background-color: #0091CE;
+
+            &::after {
+                border-top: 3.8rem solid #0091CE;
+            }
+
+            &::before {
+                border-bottom: 3.8rem solid #0091CE;
+            }
+        }
+    }
+
+    .catalog-4lvl__filters-checkbox-label {
+        color: #064E8C;
+        padding-left: 2.4rem;
+    }
+
+    .ma-form-labels {
+        margin-bottom: 3.2rem;
+
+        .catalog-4lvl__filters-radio {
+            margin-bottom: 0;
+        }
+
+        .catalog-4lvl__filters-radio+.catalog-4lvl__filters-radio {
+            margin-top: 2.4rem;
+        }
+    }
+
+    .ma-form-info {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: #00A0E3;
+        margin-top: .8rem;
+
+    }
+
+    .catalog-4lvl__filters-checkbox {
+        margin-top: 1.6rem !important;
+    }
+
+    .ma-session__bottom {
+        p {
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            color: #262B2E;
+            text-align: left;
+
+            a {
+                color: #00A0E3;
+            }
+
+        }
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ*/
 
 
 @keyframes fadeEffect {

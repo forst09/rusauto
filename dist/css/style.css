@@ -244,6 +244,7 @@ h1 {
   font-weight: 500;
   transition: 0.3s ease;
   font-family: "Geometria";
+  border: none;
 }
 .btn::before, .btn::after {
   content: "";
@@ -4466,8 +4467,16 @@ h1 {
   background-color: #0091CE;
 }
 
-.personal-data__password .form-input {
+.input-password {
   padding-right: 6rem;
+}
+
+.form-entity {
+  display: none;
+}
+
+.form-entity.active {
+  display: block;
 }
 
 /*КОНЕЦ СТИЛЕЙ ЛИЧНЫЕ ДАННЫЕ*/
@@ -5165,6 +5174,100 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ИЗМЕНЕНИЕ ПАРОЛЯ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ*/
+.ma-session__navigation {
+  margin-top: 3.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.ma-session form {
+  max-width: 40rem;
+  margin: 2.4rem auto 0;
+}
+.ma-session form .form-input__wrapper + .form-input__wrapper {
+  margin-top: 2.4rem;
+}
+.ma-session form .catalog-4lvl__filters-checkbox {
+  margin-top: 2.4rem;
+}
+.ma-session form .form-btn__wrapper {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+.ma-session__bottom {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+.ma-session__link {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-decoration-line: underline;
+  color: #00A0E3;
+}
+.ma-session__signIn .catalog-4lvl__filters-checkbox-label {
+  color: #064E8C;
+  padding-left: 2.4rem;
+}
+.ma-session__signIn .link-underline {
+  font-weight: 400;
+}
+
+.ma-session__signUp .btn {
+  background-color: #00A0E3;
+}
+.ma-session__signUp .btn::after {
+  border-top: 3.8rem solid #00A0E3;
+}
+.ma-session__signUp .btn::before {
+  border-bottom: 3.8rem solid #00A0E3;
+}
+.ma-session__signUp .btn:hover, .ma-session__signUp .btn:active, .ma-session__signUp .btn:focus, .ma-session__signUp .btn:focus-within {
+  background-color: #0091CE;
+}
+.ma-session__signUp .btn:hover::after, .ma-session__signUp .btn:active::after, .ma-session__signUp .btn:focus::after, .ma-session__signUp .btn:focus-within::after {
+  border-top: 3.8rem solid #0091CE;
+}
+.ma-session__signUp .btn:hover::before, .ma-session__signUp .btn:active::before, .ma-session__signUp .btn:focus::before, .ma-session__signUp .btn:focus-within::before {
+  border-bottom: 3.8rem solid #0091CE;
+}
+.ma-session__signUp .catalog-4lvl__filters-checkbox-label {
+  color: #064E8C;
+  padding-left: 2.4rem;
+}
+.ma-session__signUp .ma-form-labels {
+  margin-bottom: 3.2rem;
+}
+.ma-session__signUp .ma-form-labels .catalog-4lvl__filters-radio {
+  margin-bottom: 0;
+}
+.ma-session__signUp .ma-form-labels .catalog-4lvl__filters-radio + .catalog-4lvl__filters-radio {
+  margin-top: 2.4rem;
+}
+.ma-session__signUp .ma-form-info {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #00A0E3;
+  margin-top: 0.8rem;
+}
+.ma-session__signUp .catalog-4lvl__filters-checkbox {
+  margin-top: 1.6rem !important;
+}
+.ma-session__signUp .ma-session__bottom p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  color: #262B2E;
+  text-align: left;
+}
+.ma-session__signUp .ma-session__bottom p a {
+  color: #00A0E3;
+}
+
+/*КОНЕЦ СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;

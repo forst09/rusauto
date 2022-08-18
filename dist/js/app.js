@@ -428,6 +428,25 @@ $(document).ready(function () {
         }
     });
 
+    //ПОКАЗАТЬ ПОЛЯ ДЛЯ ЮРИДИЧЕСКОГО ЛИЦА
+    let entityInputs = [...document.querySelectorAll('.form-radio')];
+    entityInputs.forEach(entityInput => {
+        entityInput.addEventListener('change', function (e) {
+
+            if (entityInput !== null) {
+                if (this.checked === true && this.classList.contains('form-entity-radio')) {
+                    document.querySelectorAll('.form-entity').forEach(el => {
+                        el.classList.add('active');
+                    })
+                } else {
+                    document.querySelectorAll('.form-entity').forEach(el => {
+                        el.classList.remove('active');
+                    })
+                }
+            }
+        })
+    })
+
     //ПОКАЗЫВАТЬ КНОПКУ ПРИМЕНИТЬ НА ИНПУТЕ ВВОДА ПРОМОКОДА
     $(document).on('input', '.cart__ordering-promocode', function () {
         $(this).addClass('active');
@@ -1095,9 +1114,9 @@ $(document).ready(function () {
                             // Необходимо указать данный тип макета.
                             iconLayout: "default#imageWithContent",
                             // Своё изображение иконки метки.
-                            iconImageHref: "/upload/imgs_new/map-icon.png",
+                            iconImageHref: "../img/map.svg",
                             // Размеры метки.
-                            iconImageSize: [150, 68],
+                            iconImageSize: [82, 51],
                             // Смещение левого верхнего угла иконки относительно
                             // её "ножки" (точки привязки).
                             iconImageOffset: [-76, -68],
