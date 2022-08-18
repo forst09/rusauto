@@ -1614,6 +1614,57 @@
     line-height: 2rem;
   }
 
+  .card__availability-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+  }
+
+  .card__availability-head-item {
+    color: #A3A8AB;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .card__availability-head-item:nth-of-type(1) {
+    width: 20.4rem;
+  }
+  .card__availability-head-item:nth-of-type(2) {
+    width: 10.1rem;
+    text-align: center;
+  }
+  .card__availability-head-item:nth-of-type(3) {
+    width: 13.3rem;
+  }
+
+  .card__availability-item {
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__availability-item + .card__availability-item {
+    margin-top: 1.6rem;
+  }
+
+  .card__availability-address {
+    width: 20.4rem;
+  }
+
+  .card__availability-availability,
+.card__availability-contacts {
+    margin: 0;
+  }
+
+  .card__availability-contacts {
+    margin: 0;
+    width: 13.3rem;
+  }
+
+  .card__availability-availability {
+    width: 10.1rem;
+    text-align: center;
+  }
+
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 668*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ 668*/
@@ -4188,6 +4239,14 @@
     line-height: 1.8rem;
   }
 
+  .card__availability-head-item:nth-of-type(1) {
+    width: 24rem;
+  }
+
+  .card__availability-address {
+    width: 24rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ 1024*/
@@ -5288,6 +5347,17 @@
 
   .card__tabs-item {
     padding: 2rem 3.2rem;
+    font-size: 1.6rem;
+  }
+
+  .card-tab-availability .wrapper {
+    max-width: 94rem;
+    padding-right: 0;
+    box-sizing: content-box;
+  }
+
+  .card__availability-item + .card__availability-item {
+    margin-top: 3.2rem;
   }
 
   /*СОПУТСТВУЮЩИЕ ТОВАРЫ 1500*/

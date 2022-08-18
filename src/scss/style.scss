@@ -5782,6 +5782,44 @@ h1 {
     }
 }
 
+.card__availability-item {
+    max-width: 23.7rem;
+
+    &+.card__availability-item {
+        margin-top: 4rem;
+    }
+}
+
+.card__availability-head {
+    display: none;
+}
+
+.card__availability-address-name,
+.card__availability-availability,
+.card__availability-contacts a {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #064E8C;
+    font-weight: 500;
+}
+
+.card__availability-address-address {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.card__availability-availability,
+.card__availability-contacts {
+    margin-top: 1.6rem;
+}
+
+.card__availability-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
 .swiper-related {
     .swiper-wrapper {
