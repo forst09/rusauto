@@ -4950,6 +4950,83 @@ h1 {
 
 .card__applicability-item {
   display: inline-block;
+  width: 100%;
+  max-width: none;
+}
+.card__applicability-item:not(:nth-last-of-type(1)) {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(163, 168, 171, 0.1);
+}
+.card__applicability-item + .card__applicability-item {
+  margin-top: 1.6rem;
+}
+
+.card__applicability-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__applicability-brand {
+  display: flex;
+  align-items: center;
+}
+
+.card__applicability-brand-img {
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.card__applicability-brand-name {
+  margin-left: 1.2rem;
+  max-width: 9.7rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.card__applicability-place {
+  margin-top: 1.6rem;
+  display: flex;
+}
+
+.card__applicability-place-left {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #A3A8AB;
+  margin-right: 1.6rem;
+}
+
+.card__applicability-place-right {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.card__applicability-model {
+  max-width: 11.5rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 }
 
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
@@ -5307,6 +5384,80 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ КОНТАКТЫ*/
+.ma-contact {
+  margin-bottom: 2.4rem;
+}
+.ma-contact .ma-session__navigation {
+  margin-top: 0;
+}
+.ma-contact__navigation {
+  margin-bottom: 3.2rem;
+}
+.ma-contact__title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #064E8C;
+}
+.ma-contact__workingMode-content {
+  margin-top: 1.6rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #262B2E;
+}
+.ma-contact__workingMode-item + .ma-contact__workingMode-item {
+  margin-top: 3.2rem;
+}
+.ma-contact__workingMode-map {
+  margin-top: 2.4rem;
+}
+.ma-contact__workingMode-map .contacts__map {
+  width: 100%;
+  height: 21.4rem;
+}
+.ma-contact__sale {
+  margin-top: 3.2rem;
+}
+.ma-contact__sale-wrapper + .ma-contact__sale-wrapper {
+  margin-top: 4rem;
+}
+.ma-contact__sale-row {
+  margin-top: 1.6rem;
+}
+.ma-contact__sale-listItem {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #262B2E;
+}
+.ma-contact__sale-listItem--title {
+  margin-bottom: 1.6rem;
+}
+.ma-contact__sale-listItem--name {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-bottom: 1.6rem;
+}
+.ma-contact__sale-listItem--data + .ma-contact__sale-listItem--data {
+  margin-top: 1.2rem;
+}
+.ma-contact__sale-listItem--data a {
+  font-weight: 500;
+  line-height: 2rem;
+}
+.ma-contact__sale-listItem--data span {
+  padding-right: 0.8rem;
+  font-weight: 400;
+}
+.ma-contact__sale-list + .ma-contact__sale-list {
+  margin-top: 3.2rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;

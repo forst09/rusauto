@@ -1726,6 +1726,59 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КОНТАКТЫ 668*/
+  .ma-contact {
+    margin-bottom: 4rem;
+  }
+  .ma-contact .ma-session__navigation {
+    justify-content: flex-start;
+  }
+  .ma-contact__title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+  .ma-contact__workingMode-row {
+    display: flex;
+    column-gap: 1rem;
+  }
+  .ma-contact__workingMode-body {
+    padding-top: 2.8rem;
+  }
+  .ma-contact__workingMode-item + .ma-contact__workingMode-item {
+    margin-top: 4rem;
+  }
+  .ma-contact__workingMode-map {
+    margin-top: 0;
+    width: 37rem;
+  }
+  .ma-contact__sale {
+    margin-top: 4.8rem;
+  }
+  .ma-contact__sale-wrapper + .ma-contact__sale-wrapper {
+    margin-top: 4.8rem;
+  }
+  .ma-contact__sale-row {
+    margin-top: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem 6rem;
+  }
+  .ma-contact__sale-listItem {
+    font-size: 1.4rem;
+  }
+  .ma-contact__sale-listItem--title {
+    font-size: 1.6rem;
+  }
+  .ma-contact__sale-list {
+    max-width: 26rem;
+    min-height: 14.8rem;
+  }
+  .ma-contact__sale-list + .ma-contact__sale-list {
+    margin-top: 0rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -4315,6 +4368,40 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ 1024*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КОНТАКТЫ 1024*/
+  .ma-contact {
+    margin-bottom: 5.6rem;
+  }
+  .ma-contact__navigation {
+    margin-bottom: 4.8rem;
+  }
+  .ma-contact__title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  .ma-contact__workingMode-row {
+    justify-content: space-between;
+  }
+  .ma-contact__workingMode-body {
+    padding-top: 6.9rem;
+  }
+  .ma-contact__workingMode-map {
+    width: 47.3rem;
+  }
+  .ma-contact__sale-row {
+    margin-top: 2.4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 5.8rem;
+  }
+  .ma-contact__sale-listItem {
+    line-height: 1.8rem;
+  }
+  .ma-contact__sale-listItem--title {
+    line-height: 2.2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -5367,5 +5454,35 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ КОНТАКТЫ 1500*/
+  .ma-contact {
+    margin-bottom: 6.4rem;
+  }
+  .ma-contact__title {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+  .ma-contact__workingMode-body {
+    padding-top: 7.7rem;
+  }
+  .ma-contact__workingMode-map {
+    width: 72rem;
+    height: 40.4rem;
+  }
+  .ma-contact__sale-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.8rem;
+  }
+  .ma-contact__sale-listItem {
+    line-height: 1.8rem;
+  }
+  .ma-contact__sale-listItem--title {
+    line-height: 2.2rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

@@ -2044,6 +2044,85 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ 668*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КОНТАКТЫ 668*/
+    .ma-contact {
+        margin-bottom: 4rem;
+
+        .ma-session__navigation {
+
+            justify-content: flex-start;
+        }
+
+        &__title {
+            font-size: 2rem;
+            line-height: 2.6rem;
+        }
+
+        &__workingMode {
+            &-row {
+                display: flex;
+                column-gap: 1rem;
+
+            }
+
+            &-body {
+                padding-top: 2.8rem;
+            }
+
+            &-item+&-item {
+                margin-top: 4rem;
+
+            }
+
+            &-map {
+                margin-top: 0;
+                width: 37rem;
+            }
+        }
+
+        &__sale {
+            margin-top: 4.8rem;
+
+            &-wrapper+&-wrapper {
+                margin-top: 4.8rem;
+
+            }
+
+            &-row {
+                margin-top: 2.4rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3.2rem 6rem;
+
+
+            }
+
+            &-listItem {
+                font-size: 1.4rem;
+
+                &--title {
+                    font-size: 1.6rem;
+                }
+
+
+            }
+
+            &-list {
+
+                max-width: 26rem;
+                min-height: 14.8rem;
+
+            }
+
+            &-list+&-list {
+                margin-top: 0rem;
+            }
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -5166,6 +5245,57 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ВХОД/РЕГИСТРАЦИЯ 1024*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КОНТАКТЫ 1024*/
+    .ma-contact {
+        margin-bottom: 5.6rem;
+
+        &__navigation {
+            margin-bottom: 4.8rem;
+        }
+
+        &__title {
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+
+        &__workingMode {
+            &-row {
+                justify-content: space-between;
+            }
+
+            &-body {
+                padding-top: 6.9rem;
+            }
+
+            &-map {
+                width: 47.3rem;
+            }
+        }
+
+        &__sale {
+
+            &-row {
+                margin-top: 2.4rem;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4rem 5.8rem;
+            }
+
+            &-listItem {
+
+                line-height: 1.8rem;
+
+                &--title {
+                    line-height: 2.2rem;
+                }
+
+            }
+
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -6451,6 +6581,51 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1500*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ КОНТАКТЫ 1500*/
+    .ma-contact {
+        margin-bottom: 6.4rem;
+
+        &__title {
+            font-size: 2.6rem;
+            line-height: 3.2rem;
+        }
+
+        &__workingMode {
+
+            &-body {
+                padding-top: 7.7rem;
+            }
+
+            &-map {
+                width: 72rem;
+                height: 40.4rem;
+            }
+        }
+
+        &__sale {
+
+            &-row {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 4.8rem;
+            }
+
+            &-listItem {
+
+                line-height: 1.8rem;
+
+                &--title {
+                    line-height: 2.2rem;
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
+                }
+            }
+
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1500*/
 
 }
 
