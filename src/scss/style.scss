@@ -5794,9 +5794,7 @@ h1 {
     display: none;
 }
 
-.card__availability-address-name,
-.card__availability-availability,
-.card__availability-contacts a {
+.card-tabs-blue {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #064E8C;
@@ -5818,6 +5816,10 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+}
+
+.card__applicability-item {
+    display: inline-block;
 }
 
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
