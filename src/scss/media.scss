@@ -1157,7 +1157,8 @@
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 668*/
     .catalog-4lvl,
-    .cart {
+    .cart,
+    .checkout {
         .js-hide {
             height: 4.4rem;
         }
@@ -2128,6 +2129,24 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 668*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
+    .checkout {
+        .title-left {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-textarea__wrapper {
+            grid-column: 1 / -1;
+        }
+    }
+
+    .contacts-details__inputs {
+        margin-top: 5.8rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -3898,7 +3917,8 @@
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ 1024*/
     .catalog-4lvl,
-    .cart {
+    .cart,
+    .checkout {
         .js-hide {
             height: 5.2rem;
         }
@@ -5318,6 +5338,62 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
+    .checkout {
+        counter-reset: section;
+        list-style-type: none;
+
+        .personal-data__form {
+            max-width: 89.6rem;
+        }
+
+        .title-left {
+            margin-bottom: 6.5rem;
+        }
+
+        h2.title {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                position: absolute;
+                counter-increment: section;
+                content: counters(section, ".") " ";
+                font-family: 'Geometria';
+                font-weight: 800;
+                font-size: 9.6rem;
+                line-height: 12.1rem;
+                color: #EDF8FD;
+                left: 0;
+                top: calc(50%);
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+        }
+    }
+
+    .checkout-details__radio {
+        padding: 0 6.4rem;
+        width: 100%;
+    }
+
+    .contacts-details__inputs {
+        .wrapper {
+            padding-right: 0;
+        }
+    }
+
+    .contacts-details__inputs {
+        margin-top: 5rem;
+    }
+
+    .contacts-details__login {
+        padding-top: 0;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/

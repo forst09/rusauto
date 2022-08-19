@@ -2704,15 +2704,18 @@ h1 {
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ КАТАЛОГА 4 УРОВНЯ*/
 .catalog-4lvl .js-hide,
-.cart .js-hide {
+.cart .js-hide,
+.checkout .js-hide {
   height: 11rem;
 }
 .catalog-4lvl .btn-show__wrapper,
-.cart .btn-show__wrapper {
+.cart .btn-show__wrapper,
+.checkout .btn-show__wrapper {
   margin-top: 1.2rem;
 }
 .catalog-4lvl .desc,
-.cart .desc {
+.cart .desc,
+.checkout .desc {
   margin-bottom: 0;
 }
 
@@ -3365,6 +3368,10 @@ h1 {
 }
 .catalog-4lvl__filters-checkbox-label:hover::before {
   border: 1px solid #00A0E3;
+}
+
+.catalog-4lvl__filters-radio-input {
+  display: none;
 }
 
 .catalog-4lvl__filters-checkbox-input.not-found + .catalog-4lvl__filters-checkbox-label {
@@ -4881,6 +4888,7 @@ h1 {
 
 .card__tabs-item {
   display: inline-block;
+  width: max-content;
   padding: 1.6rem;
   background-color: #FAFAFA;
   font-size: 1.4rem;
@@ -5458,6 +5466,42 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/
+.checkout .title-left {
+  margin-bottom: 1.6rem;
+}
+
+.checkout-details__radio {
+  display: inline-flex;
+}
+
+.contacts-details {
+  margin-top: 3.2rem;
+}
+
+.contacts-details__inputs {
+  margin-top: 3.2rem;
+}
+
+.contacts-details__login {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.6rem;
+  padding: 2rem 0;
+}
+.contacts-details__login a {
+  font-weight: 500;
+  color: #064E8C;
+}
+
+.form-textarea {
+  resize: none;
+  max-height: unset;
+  height: 9rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;

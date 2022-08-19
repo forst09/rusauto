@@ -1137,7 +1137,6 @@ $(document).ready(function () {
                 myMap.geoObjects
                     // .add(myPlacemark)
                     .add(myPlacemarkWithContent);
-                ($('.contacts__map').find('.ymaps-2-1-79-gotoymaps__text').html('j'));
             });
         }
     };
@@ -1155,6 +1154,7 @@ $(document).ready(function () {
         // jsMap.insertAdjacentHTML("afterbegin", loader);
         scriptYMAPS.onload = function () {
             renderMap();
+            ($('.contacts__map').find('.ymaps-2-1-79-gotoymaps__text').html('j'));
         };
     };
 

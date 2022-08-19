@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Оформление заказа"
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    @@include('html/bread-crumbs.html',{})
+
+    <section class="checkout">
+        <div class="wrapper">
+            <div class="h1__wrapper">
+                <h1>Оформление заказа</h1>
+            </div>
+            <div class="js-hide">
+                <div class="desc desc-left text-hide">Компания ООО «РусАвтоДеталь» на сегодняшний день является
+                    крупнейшим поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов). Компания ООО
+                    «РусАвтоДеталь» на сегодняшний день является крупнейшим
+                    поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов). Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Mollitia nostrum repellendus blanditiis iusto maiores accusantium
+                    aliquam, esse explicabo corporis non? Nulla cupiditate dolores eum cumque reiciendis natus fugit
+                    corrupti commodi.</div>
+            </div>
+            <div class="btn-show__wrapper">
+                <a href="javascript:void(0)" class="btn-show">
+                    <span class="btn-show__more">Подробнее</span>
+                    <span class="btn-show__hide">Скрыть</span>
+                </a>
+            </div>
+        </div>
+        <div class="contacts-details">
+            <div class="personal-data__form">
+                <form action="">
+                    <div class="scroll">
+                        <div class="checkout-details__radio">
+                            <div class="checkout-details__radio-item">
+                                <input class="catalog-4lvl__filters-radio-input form-radio" type="radio"
+                                    name="personalDataRadio" id="personalDataRadio1" checked>
+                                <label class="card__tabs-item tab active" for="personalDataRadio1">Физическое
+                                    лицо</label>
+                            </div>
+                            <div class="checkout-details__radio-item">
+                                <input class="catalog-4lvl__filters-radio-input form-radio form-entity-radio"
+                                    type="radio" name="personalDataRadio" id="personalDataRadio2">
+                                <label class="card__tabs-item tab" for="personalDataRadio2">Юридическое
+                                    лицо</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-details__inputs">
+                        <!--КЛАСС .form-entity - ДЛЯ ПОЛЕЙ ЮРИДИЧЕСКОГО ЛИЦА-->
+                        <div class="wrapper">
+                            <h2 class="title title-left">Контактные данные</h2>
+                            <div class="contacts-details__login">Есть учетная запись? <a href="login.html">Войти</a>
+                            </div>
+                            <div class="personal-data__individual">
+                                <div class="personal-data__individual-container">
+                                    <div class="form-input__wrapper form-entity">
+                                        <input type="text" class="form-input" placeholder="Название организации*"
+                                            id="entityNameOrganization">
+                                    </div>
+                                    <div class="form-input__wrapper form-entity">
+                                        <input type="text" class="form-input" placeholder="ИНН*" id="entityTIN">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Имя" id="individualName">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Фамилия*"
+                                            id="individualSurname">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input input-phone" placeholder="Телефон*"
+                                            id="individualPhone">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Почта*" id="individualMail">
+                                    </div>
+                                    <div class="form-input__wrapper form-textarea__wrapper">
+                                        <textarea class="form-input form-textarea" placeholder="Комментарий к заказу"
+                                            id="checkoutTextarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <h2 class="title title-left">Контактные данные</h2>
+        <h2 class="title title-left">Контактные данные</h2>
+        <h2 class="title title-left">Контактные данные</h2>
+        <h2 class="title title-left">Контактные данные</h2>
+        <h2 class="title title-left">Контактные данные</h2>
+    </section>
+
+
+    @@include('html/footer.html',{})
+
+    @@include('html/tabbar.html',{})
+
+    @@include('html/mobile-menu.html',{})
+
+    @@include('html/catalog.html',{})
+
+    @@include('html/catalog-groups.html',{})
+
+    @@include('html/modal-choice.html',{})
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
