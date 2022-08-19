@@ -328,12 +328,7 @@ $(document).ready(function () {
     //     }
 
     // })
-    $(document).on('click', ".tab", function () {
-        $('.tab-content').removeClass('active');
-        $('#' + $(this).attr("data-tab")).addClass('active');
-        $('.tab').removeClass('active');
-        $(this).addClass('active');
-    });
+
 
     // ТАБЫ, НА МОБИЛКАХ ВКЛЮЧАТЬ ДЛИННЫЕ КАРТОЧКИ
     if (($(window).width() >= 320) && ($(window).width() < 1023)) {
@@ -1122,12 +1117,13 @@ $(document).ready(function () {
 
     // ПОДКЛЮЧЕНИЕ КАРТЫ
     const jsMap = document.querySelector("#map");
-    const renderMap = function () {
-        if ($("#map").length !== 0) {
+    const jsMapNew = document.querySelector("#map_new");
+    const renderMap = function (mapId = "map") {
+        if ($("#map").length !== 0 || $("#map_new").length !== 0) {
             ymaps.ready(function () {
-                let myMap = new ymaps.Map("map", {
-                    center: [$(jsMap).attr("data-coords").split(",")[0],
-                    $(jsMap).attr("data-coords").split(",")[1]],
+                let myMap = new ymaps.Map(`${mapId}`, {
+                    center: [$(`#${mapId}`).attr("data-coords").split(",")[0],
+                    $(`#${mapId}`).attr("data-coords").split(",")[1]],
                     zoom: $(window).width() > 667 ? 17 : 14,
                 }),
 
@@ -1136,8 +1132,8 @@ $(document).ready(function () {
                         '<div class="icon-map">$[properties.iconContent]</div>'
                     ),
                     myPlacemarkWithContent = new ymaps.Placemark(
-                        [$(jsMap).attr("data-coords").split(",")[0],
-                        $(jsMap).attr("data-coords").split(",")[1]],
+                        [$(`#${mapId}`).attr("data-coords").split(",")[0],
+                        $(`#${mapId}`).attr("data-coords").split(",")[1]],
                         {},
                         {
                             // Опции.
@@ -1149,7 +1145,7 @@ $(document).ready(function () {
                             iconImageSize: [82, 51],
                             // Смещение левого верхнего угла иконки относительно
                             // её "ножки" (точки привязки).
-                            iconImageOffset: [-76, -68],
+                            iconImageOffset: [-48, -51],
 
                             // Макет содержимого.
                             iconContentLayout: MyIconContentLayout,
@@ -1198,6 +1194,24 @@ $(document).ready(function () {
         threshold: 0.15,
     });
     if (jsMap) mapObserver.observe(jsMap);
+
+
+
+
+
+
+    $(document).on('click', ".tab", function () {
+        $('.tab-content').removeClass('active');
+        $('#' + $(this).attr("data-tab")).addClass('active');
+        $('.tab').removeClass('active');
+        $(this).addClass('active');
+
+        $.map([...$(".contacts__map")], function (map) {
+            $(map).empty();
+        });
+        renderMap($(this).attr('data-map').split("#")[1]);
+
+    });
 });
 
 
