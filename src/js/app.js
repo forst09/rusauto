@@ -1101,6 +1101,7 @@ $(document).ready(function () {
                     $(jsMap).attr("data-coords").split(",")[1]],
                     zoom: $(window).width() > 667 ? 17 : 14,
                 }),
+
                     // Создаём макет содержимого.
                     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
                         '<div class="icon-map">$[properties.iconContent]</div>'
@@ -1125,7 +1126,6 @@ $(document).ready(function () {
                             iconContentLayout: MyIconContentLayout,
                         }
                     );
-
                 myMap.controls.remove("zoomControl");
                 myMap.controls.remove("rulerControl");
                 myMap.controls.remove("trafficControl");
@@ -1137,6 +1137,7 @@ $(document).ready(function () {
                 myMap.geoObjects
                     // .add(myPlacemark)
                     .add(myPlacemarkWithContent);
+                ($('.contacts__map').find('.ymaps-2-1-79-gotoymaps__text').html('j'));
             });
         }
     };
@@ -1170,9 +1171,9 @@ $(document).ready(function () {
     });
     if (jsMap) mapObserver.observe(jsMap);
 
-    let mapText = document.getElementsByClassName("ymaps-2-1-79-gotoymaps__text");
-    console.log(mapText);
-    $(mapText).html('jj');    // console.log($('.ymaps-2-1-79-gotoymaps__text'));
+
+    ($('.contacts__map').find('.ymaps-2-1-79-gotoymaps__text').html('j'));
+    // $(mapText).html('jj');    // console.log($('.ymaps-2-1-79-gotoymaps__text'));
 });
 
 

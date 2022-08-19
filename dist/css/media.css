@@ -1752,6 +1752,10 @@
     margin-top: 0;
     width: 37rem;
   }
+  .ma-contact__workingMode-map .contacts__map {
+    width: 37rem;
+    height: 27.5rem;
+  }
   .ma-contact__sale {
     margin-top: 4.8rem;
   }
@@ -4389,6 +4393,10 @@
   .ma-contact__workingMode-map {
     width: 47.3rem;
   }
+  .ma-contact__workingMode-map .contacts__map {
+    width: 47.3rem;
+    height: 35.2rem;
+  }
   .ma-contact__sale-row {
     margin-top: 2.4rem;
     grid-template-columns: repeat(3, 1fr);
@@ -4399,6 +4407,18 @@
   }
   .ma-contact__sale-listItem--title {
     line-height: 2.2rem;
+  }
+
+  .ymaps-2-1-79-gotoymaps__container {
+    padding: 0.5rem 1.6rem;
+  }
+
+  .ymaps-2-1-79-gotoymaps {
+    margin-left: 2.4rem !important;
+  }
+
+  .ymaps-2-1-79-map-copyrights-promo {
+    bottom: 2.4rem !important;
   }
 
   /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/
@@ -5467,6 +5487,10 @@
     padding-top: 7.7rem;
   }
   .ma-contact__workingMode-map {
+    width: 72rem;
+    height: 40.4rem;
+  }
+  .ma-contact__workingMode-map .contacts__map {
     width: 72rem;
     height: 40.4rem;
   }
