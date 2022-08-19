@@ -6547,6 +6547,134 @@ h1 {
     height: 9rem;
 }
 
+.delivery__cards-item {
+    padding: 1.2rem;
+    background-color: #FAFAFA;
+    min-height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 22.8rem;
+    transition: 0.3s ease;
+}
+
+.delivery__cards-delivery-title {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+    }
+
+    span {
+        margin-left: 0.8rem;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: 500;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 2;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        display: -webkit-box;
+        display: box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+    }
+}
+
+.delivery__cards-delivery-terms {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.6rem;
+}
+
+.delivery__cards-delivery-date {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.delivery__cards-delivery-cost-text {
+    color: #00A0E3;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+
+.delivery__cards-delivery-cost-min {
+    line-height: 1.3rem;
+    margin-bottom: 0.2rem;
+}
+
+.delivery__cards-companie-img {
+    width: 6.2rem;
+    height: 6.2rem;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: 500;
+    }
+}
+
+.delivery__cards {
+    display: inline-flex;
+    gap: 1.6rem;
+}
+
+.delivery__cards-radio {
+    input[type=radio] {
+        display: none;
+    }
+
+    label.active {
+        .delivery__cards-item {
+            background-color: #EDF8FD;
+        }
+    }
+}
+
+.checkout-item {
+    &+& {
+        margin-top: 3.2rem;
+    }
+}
+
+.delivery__cards-companie {
+    align-items: center;
+    justify-content: center;
+}
+
 /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/
 
 

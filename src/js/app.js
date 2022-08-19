@@ -300,6 +300,34 @@ $(document).ready(function () {
     });
 
     // ПЕРЕКЛЮЧЕНИЕ ТАБОВ
+    // let tabs = [...document.querySelectorAll('.tab')];
+    // let tabContents = [...document.querySelectorAll('.tab-content')];
+
+    // tabs.forEach((tab, index, arTab) => {
+
+    //     if (tab !== null) {
+    //         tab.addEventListener('click', function () {
+    //             let id = this.dataset.id;
+
+    //             arTab.forEach(el => {
+    //                 if (id === el.dataset.id) {
+    //                     el.classList.remove('active');
+    //                 }
+    //             })
+    //             this.classList.add('active');
+    //             // handler active content
+    //             if (tabContents.length != 0) {
+    //                 tabContents.forEach(tabContent => {
+    //                     if (tabContent.dataset.id === this.dataset.id) {
+    //                         tabContent.classList.remove('active');
+    //                     }
+    //                 })
+    //                 tabContents[index].classList.add('active');
+    //             }
+    //         })
+    //     }
+
+    // })
     $(document).on('click', ".tab", function () {
         $('.tab-content').removeClass('active');
         $('#' + $(this).attr("data-tab")).addClass('active');
@@ -378,7 +406,6 @@ $(document).ready(function () {
     });
 
     //УДАЛЕНИЕ КУКОВ
-
     let cookieCloseBtns = [document.querySelector('.ma-cookie__close'), document.querySelector('.ma-cookie__button')];
     console.log(typeof (cookieCloseBtns));
     cookieCloseBtns.forEach(buttonClose => {
@@ -430,9 +457,10 @@ $(document).ready(function () {
 
     //ПОКАЗАТЬ ПОЛЯ ДЛЯ ЮРИДИЧЕСКОГО ЛИЦА
     let entityInputs = [...document.querySelectorAll('.form-radio')];
-    entityInputs.forEach(entityInput => {
-        entityInput.addEventListener('change', function (e) {
 
+    entityInputs.forEach(entityInput => {
+
+        entityInput.addEventListener('change', function () {
             if (entityInput !== null) {
                 if (this.checked === true && this.classList.contains('form-entity-radio')) {
                     document.querySelectorAll('.form-entity').forEach(el => {
@@ -446,6 +474,7 @@ $(document).ready(function () {
             }
         })
     })
+
 
     //ПОКАЗЫВАТЬ КНОПКУ ПРИМЕНИТЬ НА ИНПУТЕ ВВОДА ПРОМОКОДА
     $(document).on('input', '.cart__ordering-promocode', function () {
@@ -1154,7 +1183,6 @@ $(document).ready(function () {
         // jsMap.insertAdjacentHTML("afterbegin", loader);
         scriptYMAPS.onload = function () {
             renderMap();
-            ($('.contacts__map').find('.ymaps-2-1-79-gotoymaps__text').html('j'));
         };
     };
 
@@ -1170,10 +1198,6 @@ $(document).ready(function () {
         threshold: 0.15,
     });
     if (jsMap) mapObserver.observe(jsMap);
-
-
-    ($('.contacts__map').find('.ymaps-2-1-79-gotoymaps__text').html('j'));
-    // $(mapText).html('jj');    // console.log($('.ymaps-2-1-79-gotoymaps__text'));
 });
 
 

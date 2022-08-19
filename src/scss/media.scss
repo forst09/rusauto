@@ -2133,6 +2133,9 @@
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
     .checkout {
+        counter-reset: section;
+        list-style-type: none;
+
         .title-left {
             margin-bottom: 2.5rem;
         }
@@ -2140,10 +2143,46 @@
         .form-textarea__wrapper {
             grid-column: 1 / -1;
         }
+
+        h2.title {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                position: absolute;
+                counter-increment: section;
+                content: counters(section, ".") " ";
+                font-family: 'Geometria';
+                font-weight: 800;
+                font-size: 6.4rem;
+                line-height: 8.1rem;
+                color: #EDF8FD;
+                left: 0;
+                top: calc(50%);
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+        }
     }
 
     .contacts-details__inputs {
         margin-top: 5.8rem;
+    }
+
+    .delivery__cards-item {
+        padding: 1.6rem;
+        min-height: 9.8rem;
+        min-width: 23.6rem;
+    }
+
+    .delivery__cards-delivery-cost-min {
+        font-size: 1rem;
+    }
+
+    .checkout-item {
+        &+& {
+            margin-top: 5.8rem;
+        }
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
@@ -5342,8 +5381,10 @@
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
     .checkout {
-        counter-reset: section;
-        list-style-type: none;
+        h2.title::before {
+            font-size: 9.6rem;
+            line-height: 12.1rem;
+        }
 
         .personal-data__form {
             max-width: 89.6rem;
@@ -5353,25 +5394,6 @@
             margin-bottom: 6.5rem;
         }
 
-        h2.title {
-            position: relative;
-            z-index: 1;
-
-            &::before {
-                position: absolute;
-                counter-increment: section;
-                content: counters(section, ".") " ";
-                font-family: 'Geometria';
-                font-weight: 800;
-                font-size: 9.6rem;
-                line-height: 12.1rem;
-                color: #EDF8FD;
-                left: 0;
-                top: calc(50%);
-                transform: translate(-50%, -50%);
-                z-index: -1;
-            }
-        }
     }
 
     .checkout-details__radio {
@@ -5391,6 +5413,27 @@
 
     .contacts-details__login {
         padding-top: 0;
+    }
+
+    .checkout-item {
+        &+& {
+            margin-top: 7.2rem;
+        }
+    }
+
+    .delivery__cards {
+        padding: 0 6.4rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .delivery__cards-item {
+        min-height: 11.4rem;
+        min-width: auto;
+    }
+
+    .delivery__cards-delivery-terms {
+        gap: 1.3rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
@@ -6729,6 +6772,25 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1500*/
+
+    /*#################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1500*/
+    .checkout {
+        .personal-data__form {
+            max-width: 91.2rem;
+        }
+    }
+
+    .delivery__cards {
+        padding: 0 0 0 8rem;
+        max-width: 72.6rem;
+        grid-template-columns: repeat(3, 1fr);
+        box-sizing: content-box;
+        grid-row-gap: 2.4rem;
+        grid-column-gap: 2.4rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1500*/
 
 }
 
