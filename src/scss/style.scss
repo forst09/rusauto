@@ -6705,6 +6705,19 @@ h1 {
     }
 }
 
+.checkout__couruier-text {
+    padding: 1.2rem 0;
+    font-size: 1.4rem;
+    color: #064E8D;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.checkout__couruier-container {
+    display: grid;
+    grid-row-gap: 1.6rem;
+}
+
 /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/
 
 

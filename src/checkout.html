@@ -103,8 +103,7 @@
                 <div class="delivery__cards">
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryPickup1">
-                        <label for="deliveryPickup1" class="tab active" data-id="deliveryMethod"
-                            data-tab="deliveryPickup">
+                        <label for="deliveryPickup1" class="tab" data-id="deliveryMethod" data-tab="deliveryPickup">
                             <div class="delivery__cards-item delivery__cards-delivery">
                                 <div class="delivery__cards-delivery-title">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -125,8 +124,9 @@
                         </label>
                     </div>
                     <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCouruier">
-                        <label for="deliveryCouruier" class="tab" data-id="deliveryMethod">
+                        <input type="radio" name="delivery" id="deliveryCouruier1">
+                        <label for="deliveryCouruier" class="tab active" data-id="deliveryMethod"
+                            data-tab="deliveryCouruier">
                             <div class="delivery__cards-item delivery__cards-delivery">
                                 <div class="delivery__cards-delivery-title">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -221,7 +221,8 @@
             </div>
 
             <div class="delivery__content">
-                <div class="tab-content active" data-tab="deliveryPickup" data-id="deliveryMethod">
+                <!-- ТАБА С САМОВЫВОЗОМ -->
+                <div class="tab-content" data-tab="deliveryPickup" data-id="deliveryMethod">
                     <div class="wrapper wrapper-pickup">
                         <div class="delivery__pickup-container">
                             <div class="delivery__title">Выберите пункт самовывоза</div>
@@ -252,6 +253,31 @@
                             <div class="checkout__pickup-map ">
                                 <div id="map_new" data-coords="55.98564811400813, 43.10444608749817" class="js-map">
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБА С КУРЬЕРОМ -->
+                <div class="tab-content active" data-id="deliveryMethod" data-tab="deliveryCouruier">
+                    <div class="wrapper wrapper-couruier">
+                        <div class="checkout__couruier-text">
+                            <p>После оформления заказа наши мнеджеры свяжутся с Вами для выбора времени доставки.</p>
+                        </div>
+                        <div class="checkout__couruier-container">
+                            <div class="form-input__wrapper checkout__couruier-street">
+                                <input type="text" class="form-input" placeholder="Улица и дом"
+                                    id="deliveryCouruierStreet">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Квартира" id="deliveryCouruierFlat">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Подъезд"
+                                    id="deliveryCouruierEntrance">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Этаж" id="deliveryCouruierFloor">
                             </div>
                         </div>
                     </div>
