@@ -2185,6 +2185,18 @@
         }
     }
 
+    .delivery__pickup-container {
+        max-width: unset;
+
+        .catalog-4lvl__filters-radio {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .checkout__pickup-map {
+        height: 31.3rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
 }
 
@@ -5434,6 +5446,12 @@
 
     .delivery__cards-delivery-terms {
         gap: 1.3rem;
+    }
+
+    .wrapper-pickup {
+        max-width: 60rem;
+        padding-right: 0;
+        box-sizing: content-box;
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
