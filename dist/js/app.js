@@ -458,13 +458,15 @@ $(document).ready(function () {
             $(this).addClass('active');
             $(this).parents('.catalog-4lvl__catalog-buttons').find('.catalog-4lvl__catalog-buttons-sorting-dropdown').addClass('active');
         }
-
-        // const html = `
-        // <span class>${}</span>
-        // `;
-
-
     });
+
+    //УБРАТЬ ВЫПАДАШКУ ПО КЛИКУ ВНЕ ЕЕ ОБЛАСТИ
+    window.onclick = e => {
+        if (e.target != document.querySelector('.catalog-4lvl__catalog-buttons-sorting-span')) {
+            document.querySelector('.catalog-4lvl__catalog-buttons-sorting-btn').classList.remove('active');
+            document.querySelector('.catalog-4lvl__catalog-buttons-sorting-dropdown').classList.remove('active');
+        }
+    }
 
     //ПЕРЕДАЧА ТЕКСТА В ВЫПАДАШКУ С СОРТИРОВКОЙ В КАТАЛОГЕ 4 УРОВНЯ 
     $(document).on('click', ".catalog-4lvl__catalog-buttons-sorting-dropdown-item", function () {
@@ -1034,7 +1036,23 @@ $(document).ready(function () {
             livraisonAddressItems[index].remove()
 
         })
-    })
+    });
+
+    //ВЫПАДАШКА С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
+    $(document).on('click', ".checkout__company-region", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).find('.checkout__company-region-content').removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).find('.checkout__company-region-content').addClass('active');
+        }
+    });
+    //ПЕРЕДАЧА ТЕКСТА В ВЫПАДАШКУ С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
+    $(document).on('click', ".catalog-4lvl__catalog-buttons-sorting-dropdown-item", function () {
+        $(this).parents('.catalog-4lvl__catalog-buttons-sorting-btn').find('.catalog-4lvl__catalog-buttons-sorting-span').html($(this).attr('data-text'));
+    });
 
 
     //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ГЛАВНАЯ СТРАНИЦА ГЛАВНЫЙ ЭКРАН
