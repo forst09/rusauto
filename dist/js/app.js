@@ -402,8 +402,21 @@ $(document).ready(function () {
                 if (tabContents.length != 0) {
                     tabContents.forEach(tabContent => {
                         if (tabContent.dataset.id === this.dataset.id) {
-                            if (tabContent.dataset.tab === this.dataset.tab)
+                            if (tabContent.dataset.tab === this.dataset.tab) {
                                 tabContent.classList.add('active');
+                                $(tabContent).find('.tab.active').trigger('click');
+                                // if ($(tabContent).find('.tab-content').hasClass('active')) {
+
+                                // let dataTab = $(tabContent).find('.tab-content.active').attr('data-tab');
+                                // console.log(dataTab);
+                                // $($(tabContent).find('.tab-content.active').attr('data-tab'));
+                                // console.log($(tabContent).find('.tab').attr('data-tab', dataTab));
+                                // console.log($(tabContent).find('.tab').attr('data-tab') == dataTab);
+                                // if ($(tabContent).find('.js-map') != null) {
+                                //     console.log($(tabContent).find('.js-map').parents('.tab-content').attr('data-tab'));
+                                // }
+                                // }
+                            }
                             else {
                                 tabContent.classList.remove('active');
                             }
@@ -413,10 +426,10 @@ $(document).ready(function () {
                 }
 
                 // if($('.contacts__map'))
-                $.map([...$(".js-map")], function (map) {
-                    $(map).empty();
-                });
                 if (this.hasAttribute('data-map')) {
+                    $.map([...$(".js-map")], function (map) {
+                        $(map).empty();
+                    });
                     renderMap($(this).attr('data-map').split("#")[1]);
                 }
                 // console.log($(this).attr('data-map'));
