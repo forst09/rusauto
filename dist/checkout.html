@@ -555,8 +555,9 @@
                         </label>
                     </div>
                     <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
+                        <input type="radio" name="delivery" id="deliveryDL1">
+                        <label for="deliveryDL1" class="tab" data-id="deliveryMethod" data-tab="deliveryDL"
+                            data-map="#map_dl">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-1.png" alt="">
@@ -565,8 +566,9 @@
                         </label>
                     </div>
                     <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
+                        <input type="radio" name="delivery" id="deliveryEnergy1">
+                        <label for="deliveryEnergy1" class="tab" data-id="deliveryMethod" data-tab="deliveryEnergy"
+                            data-map="#map_energy">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-3.png" alt="">
@@ -575,8 +577,9 @@
                         </label>
                     </div>
                     <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
+                        <input type="radio" name="delivery" id="deliveryLove1">
+                        <label for="deliveryLove1" class="tab" data-id="deliveryMethod" data-tab="deliveryLove"
+                            data-map="#map_love">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-5.png" alt="">
@@ -585,8 +588,9 @@
                         </label>
                     </div>
                     <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
+                        <input type="radio" name="delivery" id="deliveryGTD1">
+                        <label for="deliveryGTD1" class="tab" data-id="deliveryMethod" data-tab="deliveryGTD"
+                            data-map="#map_gtd">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-6.png" alt="">
@@ -596,7 +600,8 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
+                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod" data-tab="deliveryPAC"
+                            data-map="#map_pac">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-4.png" alt="">
@@ -605,8 +610,8 @@
                         </label>
                     </div>
                     <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryOther">
-                        <label for="deliveryOther" class="tab" data-id="deliveryMethod">
+                        <input type="radio" name="delivery" id="deliveryOther1">
+                        <label for="deliveryOther1" class="tab" data-id="deliveryMethod" data-tab="deliveryOther">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <p>Другая</p>
@@ -707,6 +712,184 @@
 
                         <div class="checkout__company-map">
                             <div id="map_cdek" data-coords="63.5669296530831, 53.664043664566535" class="js-map"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБА ДЕЛОВЫЕ ЛИНИИ -->
+                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryDL">
+                    <div class="wrapper wrapper-company">
+                        <div class="checkout__company-container">
+                            <div class="form-input__wrapper checkout__company-region">
+                                <input type="text" class="form-input checkout__company-region-input"
+                                    placeholder="Выберите регион*" id="deliveryDLRegion">
+                                <div class="checkout__company-region-content">
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Нижегородская область">Нижегородская
+                                        область</a>
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Республика Коми">Республика
+                                        Коми</a>
+                                </div>
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Район" id="deliveryDLArea">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                    id="deliveryDLLocality">
+                            </div>
+                        </div>
+
+                        <div class="checkout__company-map">
+                            <div id="map_dl" data-coords="63.54787604660868, 53.800099502701066" class="js-map"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБА ЭНЕРГИЯ -->
+                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryEnergy">
+                    <div class="wrapper wrapper-company">
+                        <div class="checkout__company-container">
+                            <div class="form-input__wrapper checkout__company-region">
+                                <input type="text" class="form-input checkout__company-region-input"
+                                    placeholder="Выберите регион*" id="deliveryEnergyRegion">
+                                <div class="checkout__company-region-content">
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Нижегородская область">Нижегородская
+                                        область</a>
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Республика Коми">Республика
+                                        Коми</a>
+                                </div>
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Район" id="deliveryEnergyArea">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                    id="deliveryEnergyLocality">
+                            </div>
+                        </div>
+
+                        <div class="checkout__company-map">
+                            <div id="map_energy" data-coords="63.56254672989881, 53.672423003643146" class="js-map">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБА С ЛЮБОВЬЮ -->
+                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryLove">
+                    <div class="wrapper wrapper-company">
+                        <div class="checkout__company-container">
+                            <div class="form-input__wrapper checkout__company-region">
+                                <input type="text" class="form-input checkout__company-region-input"
+                                    placeholder="Выберите регион*" id="deliveryLoveRegion">
+                                <div class="checkout__company-region-content">
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Нижегородская область">Нижегородская
+                                        область</a>
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Республика Коми">Республика
+                                        Коми</a>
+                                </div>
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Район" id="deliveryLoveArea">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                    id="deliveryLoveLocality">
+                            </div>
+                        </div>
+
+                        <div class="checkout__company-map">
+                            <div id="map_love" data-coords="63.57526131592826, 53.68345836003135" class="js-map">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБА ГТД -->
+                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryGTD">
+                    <div class="wrapper wrapper-company">
+                        <div class="checkout__company-container">
+                            <div class="form-input__wrapper checkout__company-region">
+                                <input type="text" class="form-input checkout__company-region-input"
+                                    placeholder="Выберите регион*" id="deliveryGTDRegion">
+                                <div class="checkout__company-region-content">
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Нижегородская область">Нижегородская
+                                        область</a>
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Республика Коми">Республика
+                                        Коми</a>
+                                </div>
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Район" id="deliveryGTDArea">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                    id="deliveryGTDLocality">
+                            </div>
+                        </div>
+
+                        <div class="checkout__company-map">
+                            <div id="map_gtd" data-coords="63.564991460556, 53.666541932521945" class="js-map">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБА ПЭК -->
+                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryPAC">
+                    <div class="wrapper wrapper-company">
+                        <div class="checkout__company-container">
+                            <div class="form-input__wrapper checkout__company-region">
+                                <input type="text" class="form-input checkout__company-region-input"
+                                    placeholder="Выберите регион*" id="deliveryPACRegion">
+                                <div class="checkout__company-region-content">
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Нижегородская область">Нижегородская
+                                        область</a>
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Республика Коми">Республика
+                                        Коми</a>
+                                </div>
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Район" id="deliveryPACArea">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                    id="deliveryPACLocality">
+                            </div>
+                        </div>
+
+                        <div class="checkout__company-map">
+                            <div id="map_pac" data-coords="56.248213487222785, 43.87546559710951" class="js-map">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБА ДРУГАЯ КОМПАНИЯ -->
+                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryOther">
+                    <div class="wrapper wrapper-other">
+                        <div class="checkout__couruier-text">
+                            <p>После оформления заказа мы свяжемся с выбранной транспортной компанией.</p>
+                        </div>
+                        <div class="checkout__other-container">
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Название компании"
+                                    id="deliveryOtherName">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input input-phone" placeholder="Телефон"
+                                    id="deliveryOtherPhone">
+                            </div>
                         </div>
                     </div>
                 </div>

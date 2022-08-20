@@ -2219,6 +2219,11 @@
         height: 36.8rem;
     }
 
+    .checkout__other-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.6rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
 }
 
@@ -5498,6 +5503,20 @@
 
     .checkout__company-region {
         grid-column: unset;
+    }
+
+    .wrapper-other {
+        padding-right: 0;
+        max-width: 83.2rem;
+        box-sizing: content-box;
+
+        .checkout__couruier-text {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .checkout__other-container {
+        grid-column-gap: 3.2rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/

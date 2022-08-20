@@ -5742,6 +5742,11 @@ h1 {
   display: none !important;
 }
 
+.checkout__other-container {
+  display: grid;
+  grid-row-gap: 1.6rem;
+}
+
 /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/
 @keyframes fadeEffect {
   0% {
