@@ -416,7 +416,9 @@ $(document).ready(function () {
                 $.map([...$(".js-map")], function (map) {
                     $(map).empty();
                 });
-                renderMap($(this).attr('data-map').split("#")[1]);
+                if (this.hasAttribute('data-map')) {
+                    renderMap($(this).attr('data-map').split("#")[1]);
+                }
                 // console.log($(this).attr('data-map'));
             })
         }
