@@ -6720,57 +6720,56 @@ h1 {
 
 .checkout__company-region {
     position: relative;
-    border: 1px solid #EFF0F1;
-    padding: 1rem 2rem;
-    height: auto;
-    transition: height 5s ease;
 
-    span {
+    &::after {
+        content: '';
+        position: absolute;
+        right: 2rem;
+        top: calc(50% - 0.6rem);
+        background-image: url('../img/checkout/dropdown.svg');
+        width: 1.2rem;
+        height: 1.2rem;
+        display: block;
+        background-size: 1.2rem 1.2rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: 0.3s ease;
+    }
+
+    input {
         position: relative;
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        color: #A3A8AB;
-        width: 100%;
-        display: inline-block;
-        padding-right: 2.5rem;
-
-        &::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: calc(50% - 0.6rem);
-            background-image: url('../img/checkout/dropdown.svg');
-            width: 1.2rem;
-            height: 1.2rem;
-            display: block;
-            background-size: 1.2rem 1.2rem;
-            background-position: center center;
-            background-repeat: no-repeat;
-            transition: 0.3s ease;
-        }
+        padding-right: 4.5rem;
     }
 }
 
 .checkout__company-region.active {
-    span::after {
+    &::after {
         transform: rotate(-180deg);
+    }
+}
+
+.checkout__company-region.blue {
+    span {
+        color: #064E8D;
     }
 }
 
 .checkout__company-region-content {
     display: none;
     position: absolute;
-    left: -1px;
-    top: 100%;
-    width: calc(100% + 2px);
+    left: 0;
+    top: calc(100% - 1px);
+    width: 100%;
+    // width: calc(100% + 2px);
 }
 
 .checkout__company-region-content.active {
     padding: 1rem 2rem;
-    display: block;
+    display: grid;
+    grid-row-gap: 1.6rem;
     z-index: 100;
     background-color: #FFFFFF;
-    border: 1px solid #EFF0F1;
+    border: 1.28px solid #CBD3DC;
     border-top: none;
 }
 
@@ -6784,17 +6783,34 @@ h1 {
     &:active,
     &:focus,
     &:focus-within {
-        color: #064E8C;
-    }
-
-    &+& {
-        margin-top: 1.6rem;
+        color: #064E8D;
     }
 }
 
 .checkout__company-container {
     display: grid;
     grid-row-gap: 1.6rem;
+}
+
+.checkout__company-region-input.active {
+    border: 1.28px solid #CBD3DC;
+    border-bottom: none;
+}
+
+.checkout__company-map {
+    width: 100%;
+    height: 32.5rem;
+    margin-top: 3.2rem;
+
+    .js-map {
+        width: 100%;
+        height: 100%;
+
+        .ymaps-2-1-79-image-with-content,
+        .ymaps-2-1-79-map-copyrights-promo {
+            display: none !important;
+        }
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/

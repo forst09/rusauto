@@ -103,7 +103,8 @@
                 <div class="delivery__cards">
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryPickup1">
-                        <label for="deliveryPickup1" class="tab" data-id="deliveryMethod" data-tab="deliveryPickup">
+                        <label for="deliveryPickup1" class="tab active" data-id="deliveryMethod"
+                            data-tab="deliveryPickup">
                             <div class="delivery__cards-item delivery__cards-delivery">
                                 <div class="delivery__cards-delivery-title">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -148,7 +149,8 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek1">
-                        <label for="deliveryCdek1" class="tab active" data-id="deliveryMethod" data-tab="deliveryCdek">
+                        <label for="deliveryCdek1" class="tab" data-id="deliveryMethod" data-tab="deliveryCdek"
+                            data-map="#map_cdek">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-2.png" alt="">
@@ -221,7 +223,7 @@
 
             <div class="delivery__content">
                 <!-- ТАБА С САМОВЫВОЗОМ -->
-                <div class="tab-content" data-tab="deliveryPickup" data-id="deliveryMethod">
+                <div class="tab-content active" data-tab="deliveryPickup" data-id="deliveryMethod">
                     <div class="wrapper wrapper-pickup">
                         <div class="delivery__pickup-container">
                             <div class="delivery__title">Выберите пункт самовывоза</div>
@@ -283,15 +285,18 @@
                 </div>
 
                 <!-- ТАБА СДЭКА -->
-                <div class="tab-content active" data-id="deliveryMethod" data-tab="deliveryCdek">
+                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryCdek">
                     <div class="wrapper wrapper-company">
                         <div class="checkout__company-container">
-                            <div class="checkout__company-region">
-                                <span>Выберите регион*</span>
+                            <div class="form-input__wrapper checkout__company-region">
+                                <input type="text" class="form-input checkout__company-region-input"
+                                    placeholder="Выберите регион*" id="deliveryCdekRegion">
                                 <div class="checkout__company-region-content">
-                                    <a href="javascript:void(0)" class="checkout__company-region-item">Нижегородская
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Нижегородская область">Нижегородская
                                         область</a>
-                                    <a href="javascript:void(0)" class="checkout__company-region-item">Республика
+                                    <a href="javascript:void(0)" class="checkout__company-region-item"
+                                        data-text="Республика Коми">Республика
                                         Коми</a>
                                 </div>
                             </div>
@@ -303,8 +308,9 @@
                                     id="deliveryCdekLocality">
                             </div>
                         </div>
+
                         <div class="checkout__company-map">
-                            <div id="map" data-coords="63.5669296530831, 53.664043664566535" class="js-map"></div>
+                            <div id="map_cdek" data-coords="63.5669296530831, 53.664043664566535" class="js-map"></div>
                         </div>
                     </div>
                 </div>

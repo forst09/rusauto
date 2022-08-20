@@ -427,8 +427,10 @@ $(document).ready(function () {
 
                 // if($('.contacts__map'))
                 if (this.hasAttribute('data-map')) {
+                    console.log(this);
                     $.map([...$(".js-map")], function (map) {
                         $(map).empty();
+                        console.log($(map));
                     });
                     renderMap($(this).attr('data-map').split("#")[1]);
                 }
@@ -462,9 +464,11 @@ $(document).ready(function () {
 
     //УБРАТЬ ВЫПАДАШКУ ПО КЛИКУ ВНЕ ЕЕ ОБЛАСТИ
     window.onclick = e => {
-        if (e.target != document.querySelector('.catalog-4lvl__catalog-buttons-sorting-span')) {
-            document.querySelector('.catalog-4lvl__catalog-buttons-sorting-btn').classList.remove('active');
-            document.querySelector('.catalog-4lvl__catalog-buttons-sorting-dropdown').classList.remove('active');
+        if (document.querySelector('.catalog-4lvl__catalog-buttons-sorting-span') != null) {
+            if (e.target != document.querySelector('.catalog-4lvl__catalog-buttons-sorting-span')) {
+                document.querySelector('.catalog-4lvl__catalog-buttons-sorting-btn').classList.remove('active');
+                document.querySelector('.catalog-4lvl__catalog-buttons-sorting-dropdown').classList.remove('active');
+            }
         }
     }
 
@@ -958,7 +962,7 @@ $(document).ready(function () {
         });
     }
 
-
+    //ПОИСК ПО ПРОИЗВОДИТЕЛЯМ В КАТАЛОГЕ 4 УРОВНЯ
     $(".catalog-4lvl__filters-search .header-bottom__search-input").keyup(function () {
         let filter = $(this).val(),
             count = 0;
@@ -1039,19 +1043,37 @@ $(document).ready(function () {
     });
 
     //ВЫПАДАШКА С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
-    $(document).on('click', ".checkout__company-region", function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).find('.checkout__company-region-content').removeClass('active');
-        }
-        else {
-            $(this).addClass('active');
-            $(this).find('.checkout__company-region-content').addClass('active');
-        }
+    $(document).on('input', ".checkout__company-region-input", function () {
+        $(this).addClass('active');
+        $(this).parents('.checkout__company-region').addClass('active');
+        $(this).parents('.checkout__company-region').find('.checkout__company-region-content').addClass('active');
+    });
+    //ВЫПАДАШКА С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
+    $(document).on('blur', ".checkout__company-region-input", function () {
+        $(this).removeClass('active');
+        $(this).parents('.checkout__company-region').find('.checkout__company-region-content').removeClass('active');
+        $(this).parents('.checkout__company-region').removeClass('active');
     });
     //ПЕРЕДАЧА ТЕКСТА В ВЫПАДАШКУ С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
-    $(document).on('click', ".catalog-4lvl__catalog-buttons-sorting-dropdown-item", function () {
-        $(this).parents('.catalog-4lvl__catalog-buttons-sorting-btn').find('.catalog-4lvl__catalog-buttons-sorting-span').html($(this).attr('data-text'));
+    $(document).on('click', ".checkout__company-region-item", function () {
+        $(this).parents('.checkout__company-region').find('input').val($(this).attr('data-text'));
+    });
+    //ПОИСК ПО РЕГИОНАМ В ОФОРМЛЕНИИ ЗАКАЗА
+    $(".checkout__company-region-input").keyup(function () {
+        let filter = $(this).val(),
+            count = 0;
+        $(this)
+            .parents(".checkout__company-region")
+            .find(".checkout__company-region-item")
+            .each(function () {
+                if ($(this).attr("data-text").search(new RegExp(filter, "i")) < 0) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+
+                    count++;
+                }
+            });
     });
 
 

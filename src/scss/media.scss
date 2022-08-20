@@ -2206,6 +2206,19 @@
         grid-column: 1 / -1;
     }
 
+    .checkout__company-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.6rem;
+    }
+
+    .checkout__company-region {
+        grid-column: 1 / -1;
+    }
+
+    .checkout__company-map {
+        height: 36.8rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
 }
 
@@ -5478,6 +5491,15 @@
         max-width: 83.2rem;
     }
 
+    .checkout__company-container {
+        grid-template-columns: repeat(3, 25.6rem);
+        grid-column-gap: 3.2rem;
+    }
+
+    .checkout__company-region {
+        grid-column: unset;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
 }
 
@@ -6830,6 +6852,12 @@
         box-sizing: content-box;
         grid-row-gap: 2.4rem;
         grid-column-gap: 2.4rem;
+    }
+
+    .wrapper-company {
+        padding-right: 0;
+        box-sizing: content-box;
+        max-width: 83.2rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1500*/
