@@ -299,35 +299,129 @@ $(document).ready(function () {
         }
     });
 
+
+
+    // ПОДКЛЮЧЕНИЕ КАРТЫ
+    const jsMap = document.querySelector("#map");
+    const jsMapNew = document.querySelector("#map_new");
+    const renderMap = function (mapId = "map") {
+        if ($("#map").length !== 0 || $("#map_new").length !== 0) {
+            ymaps.ready(function () {
+                let myMap = new ymaps.Map(`${mapId}`, {
+                    center: [$(`#${mapId}`).attr("data-coords").split(",")[0],
+                    $(`#${mapId}`).attr("data-coords").split(",")[1]],
+                    zoom: $(window).width() > 667 ? 17 : 14,
+                }),
+
+                    // Создаём макет содержимого.
+                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div class="icon-map">$[properties.iconContent]</div>'
+                    ),
+                    myPlacemarkWithContent = new ymaps.Placemark(
+                        [$(`#${mapId}`).attr("data-coords").split(",")[0],
+                        $(`#${mapId}`).attr("data-coords").split(",")[1]],
+                        {},
+                        {
+                            // Опции.
+                            // Необходимо указать данный тип макета.
+                            iconLayout: "default#imageWithContent",
+                            // Своё изображение иконки метки.
+                            iconImageHref: "../img/map.svg",
+                            // Размеры метки.
+                            iconImageSize: [82, 51],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-48, -51],
+
+                            // Макет содержимого.
+                            iconContentLayout: MyIconContentLayout,
+                        }
+                    );
+                myMap.controls.remove("zoomControl");
+                myMap.controls.remove("rulerControl");
+                myMap.controls.remove("trafficControl");
+                myMap.controls.remove("typeSelector");
+                myMap.controls.remove("fullscreenControl");
+                myMap.controls.remove("geolocationControl");
+                myMap.controls.remove("searchControl");
+                // jsMap.firstChild.remove();
+                myMap.geoObjects
+                    // .add(myPlacemark)
+                    .add(myPlacemarkWithContent);
+            });
+        }
+    };
+    // renderMap();
+    //check scroll to map block
+    const creatMapsScript = function () {
+        let scriptYMAPS = document.createElement("script");
+        scriptYMAPS.src =
+            "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<ваш API-ключ>";
+        scriptYMAPS.setAttribute("async", "");
+        document
+            .querySelector("body")
+            .insertAdjacentElement("beforeend", scriptYMAPS);
+        // let loader = `<div class="loader-catalog"><img src="/upload/imgs_new/loader.gif" alt="preloader"></div>`;
+        // jsMap.insertAdjacentHTML("afterbegin", loader);
+        scriptYMAPS.onload = function () {
+            renderMap();
+        };
+    };
+
+    const revealMapBlock = function (entries, observer) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        creatMapsScript();
+        observer.unobserve(entry.target);
+    };
+
+    const mapObserver = new IntersectionObserver(revealMapBlock, {
+        root: null,
+        threshold: 0.15,
+    });
+    if (jsMap) mapObserver.observe(jsMap);
+
     // ПЕРЕКЛЮЧЕНИЕ ТАБОВ
-    // let tabs = [...document.querySelectorAll('.tab')];
-    // let tabContents = [...document.querySelectorAll('.tab-content')];
+    let tabs = [...document.querySelectorAll('.tab')];
+    let tabContents = [...document.querySelectorAll('.tab-content')];
 
-    // tabs.forEach((tab, index, arTab) => {
+    tabs.forEach((tab, index, arTab) => {
 
-    //     if (tab !== null) {
-    //         tab.addEventListener('click', function () {
-    //             let id = this.dataset.id;
+        if (tab !== null) {
+            tab.addEventListener('click', function () {
+                let id = this.dataset.id;
+                let tab = this.dataset.tab;
 
-    //             arTab.forEach(el => {
-    //                 if (id === el.dataset.id) {
-    //                     el.classList.remove('active');
-    //                 }
-    //             })
-    //             this.classList.add('active');
-    //             // handler active content
-    //             if (tabContents.length != 0) {
-    //                 tabContents.forEach(tabContent => {
-    //                     if (tabContent.dataset.id === this.dataset.id) {
-    //                         tabContent.classList.remove('active');
-    //                     }
-    //                 })
-    //                 tabContents[index].classList.add('active');
-    //             }
-    //         })
-    //     }
+                arTab.forEach(el => {
+                    if (id === el.dataset.id) {
+                        el.classList.remove('active');
+                    }
+                })
+                this.classList.add('active');
+                // handler active content
+                if (tabContents.length != 0) {
+                    tabContents.forEach(tabContent => {
+                        if (tabContent.dataset.id === this.dataset.id) {
+                            if (tabContent.dataset.tab === this.dataset.tab)
+                                tabContent.classList.add('active');
+                            else {
+                                tabContent.classList.remove('active');
+                            }
+                        }
+                    })
+                    // tabContents[index].classList.add('active');
+                }
 
-    // })
+                // if($('.contacts__map'))
+                $.map([...$(".js-map")], function (map) {
+                    $(map).empty();
+                });
+                renderMap($(this).attr('data-map').split("#")[1]);
+                // console.log($(this).attr('data-map'));
+            })
+        }
+
+    })
 
 
     // ТАБЫ, НА МОБИЛКАХ ВКЛЮЧАТЬ ДЛИННЫЕ КАРТОЧКИ
@@ -1115,103 +1209,23 @@ $(document).ready(function () {
 
     }
 
-    // ПОДКЛЮЧЕНИЕ КАРТЫ
-    const jsMap = document.querySelector("#map");
-    const jsMapNew = document.querySelector("#map_new");
-    const renderMap = function (mapId = "map") {
-        if ($("#map").length !== 0 || $("#map_new").length !== 0) {
-            ymaps.ready(function () {
-                let myMap = new ymaps.Map(`${mapId}`, {
-                    center: [$(`#${mapId}`).attr("data-coords").split(",")[0],
-                    $(`#${mapId}`).attr("data-coords").split(",")[1]],
-                    zoom: $(window).width() > 667 ? 17 : 14,
-                }),
-
-                    // Создаём макет содержимого.
-                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                        '<div class="icon-map">$[properties.iconContent]</div>'
-                    ),
-                    myPlacemarkWithContent = new ymaps.Placemark(
-                        [$(`#${mapId}`).attr("data-coords").split(",")[0],
-                        $(`#${mapId}`).attr("data-coords").split(",")[1]],
-                        {},
-                        {
-                            // Опции.
-                            // Необходимо указать данный тип макета.
-                            iconLayout: "default#imageWithContent",
-                            // Своё изображение иконки метки.
-                            iconImageHref: "../img/map.svg",
-                            // Размеры метки.
-                            iconImageSize: [82, 51],
-                            // Смещение левого верхнего угла иконки относительно
-                            // её "ножки" (точки привязки).
-                            iconImageOffset: [-48, -51],
-
-                            // Макет содержимого.
-                            iconContentLayout: MyIconContentLayout,
-                        }
-                    );
-                myMap.controls.remove("zoomControl");
-                myMap.controls.remove("rulerControl");
-                myMap.controls.remove("trafficControl");
-                myMap.controls.remove("typeSelector");
-                myMap.controls.remove("fullscreenControl");
-                myMap.controls.remove("geolocationControl");
-                myMap.controls.remove("searchControl");
-                // jsMap.firstChild.remove();
-                myMap.geoObjects
-                    // .add(myPlacemark)
-                    .add(myPlacemarkWithContent);
-            });
-        }
-    };
-    // renderMap();
-    //check scroll to map block
-    const creatMapsScript = function () {
-        let scriptYMAPS = document.createElement("script");
-        scriptYMAPS.src =
-            "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<ваш API-ключ>";
-        scriptYMAPS.setAttribute("async", "");
-        document
-            .querySelector("body")
-            .insertAdjacentElement("beforeend", scriptYMAPS);
-        // let loader = `<div class="loader-catalog"><img src="/upload/imgs_new/loader.gif" alt="preloader"></div>`;
-        // jsMap.insertAdjacentHTML("afterbegin", loader);
-        scriptYMAPS.onload = function () {
-            renderMap();
-        };
-    };
-
-    const revealMapBlock = function (entries, observer) {
-        const [entry] = entries;
-        if (!entry.isIntersecting) return;
-        creatMapsScript();
-        observer.unobserve(entry.target);
-    };
-
-    const mapObserver = new IntersectionObserver(revealMapBlock, {
-        root: null,
-        threshold: 0.15,
-    });
-    if (jsMap) mapObserver.observe(jsMap);
 
 
 
 
 
+    // $(document).on('click', ".tab", function () {
+    //     $('.tab-content').removeClass('active');
+    //     $('#' + $(this).attr("data-tab")).addClass('active');
+    //     $('.tab').removeClass('active');
+    //     $(this).addClass('active');
 
-    $(document).on('click', ".tab", function () {
-        $('.tab-content').removeClass('active');
-        $('#' + $(this).attr("data-tab")).addClass('active');
-        $('.tab').removeClass('active');
-        $(this).addClass('active');
+    //     $.map([...$(".contacts__map")], function (map) {
+    //         $(map).empty();
+    //     });
+    //     renderMap($(this).attr('data-map').split("#")[1]);
 
-        $.map([...$(".contacts__map")], function (map) {
-            $(map).empty();
-        });
-        renderMap($(this).attr('data-map').split("#")[1]);
-
-    });
+    // });
 });
 
 

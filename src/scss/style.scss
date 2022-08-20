@@ -3957,6 +3957,7 @@ h1 {
     line-height: 2rem;
     position: relative;
     padding-left: 2rem;
+    display: flex;
 
     &::before {
         content: '';
@@ -3967,7 +3968,8 @@ h1 {
         border: 1px solid #A3A8AB;
         border-radius: 50%;
         left: 0;
-        top: calc(50% - 0.8rem);
+        top: 0;
+        margin-top: 0.2rem;
         transition: 0.3s ease;
     }
 
@@ -3980,7 +3982,8 @@ h1 {
         background-color: #00A0E3;
         border-radius: 50%;
         left: 0.32rem;
-        top: calc(50% - 0.48rem);
+        top: 0;
+        margin-top: 0.52rem;
     }
 
     &:hover {
@@ -6673,6 +6676,33 @@ h1 {
 .delivery__cards-companie {
     align-items: center;
     justify-content: center;
+}
+
+.delivery__content {
+    margin-top: 4rem;
+}
+
+.delivery__title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #064E8C;
+    margin-bottom: 2.2rem;
+}
+
+.delivery__pickup-container {
+    max-width: 28.8rem;
+}
+
+.checkout__pickup-map {
+    margin-top: 3rem;
+    width: 100%;
+    height: 23.6rem;
+
+    .js-map {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/

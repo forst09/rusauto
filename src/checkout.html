@@ -102,8 +102,9 @@
             <div class="scroll">
                 <div class="delivery__cards">
                     <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryPickup">
-                        <label for="deliveryPickup" class="tab" data-id="1">
+                        <input type="radio" name="delivery" id="deliveryPickup1">
+                        <label for="deliveryPickup1" class="tab active" data-id="deliveryMethod"
+                            data-tab="deliveryPickup">
                             <div class="delivery__cards-item delivery__cards-delivery">
                                 <div class="delivery__cards-delivery-title">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -125,7 +126,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCouruier">
-                        <label for="deliveryCouruier" class="tab" data-id="1">
+                        <label for="deliveryCouruier" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-delivery">
                                 <div class="delivery__cards-delivery-title">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -148,7 +149,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="1">
+                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-2.png" alt="">
@@ -158,7 +159,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="1">
+                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-1.png" alt="">
@@ -168,7 +169,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="1">
+                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-3.png" alt="">
@@ -178,7 +179,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="1">
+                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-5.png" alt="">
@@ -188,7 +189,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="1">
+                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-6.png" alt="">
@@ -198,7 +199,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="1">
+                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <img src="img/companies/companies-4.png" alt="">
@@ -208,7 +209,7 @@
                     </div>
                     <div class="delivery__cards-radio">
                         <input type="radio" name="delivery" id="deliveryOther">
-                        <label for="deliveryOther" class="tab" data-id="1">
+                        <label for="deliveryOther" class="tab" data-id="deliveryMethod">
                             <div class="delivery__cards-item delivery__cards-companie">
                                 <div class="delivery__cards-companie-img">
                                     <p>Другая</p>
@@ -219,7 +220,43 @@
                 </div>
             </div>
 
-            <div class="delivery__title">Выберите пункт самовывоза</div>
+            <div class="delivery__content">
+                <div class="tab-content active" data-tab="deliveryPickup" data-id="deliveryMethod">
+                    <div class="wrapper">
+                        <div class="delivery__pickup-container">
+                            <div class="delivery__title">Выберите пункт самовывоза</div>
+                            <div class="catalog-4lvl__filters-radio">
+                                <input class="catalog-4lvl__filters-radio-input" type="radio" name="pickupAddress"
+                                    id="pickupAddress1" checked>
+                                <label class="catalog-4lvl__filters-radio-label tab active" for="pickupAddress1"
+                                    data-tab="pickupAddressNino" data-id="deliveryMethodChoice" data-map="#map">г.
+                                    Нижний Новгород ул. Плотникова,
+                                    д. 2/1</label>
+                            </div>
+                            <div class="catalog-4lvl__filters-radio">
+                                <input class="catalog-4lvl__filters-radio-input" type="radio" name="pickupAddress"
+                                    id="pickupAddress2">
+                                <label class="catalog-4lvl__filters-radio-label tab" for="pickupAddress2"
+                                    data-id="deliveryMethodChoice" data-tab="pickupAddressPavlovo"
+                                    data-map="#map_new">г. Павлово, ул. 1-я Северная, д.
+                                    39</label>
+                            </div>
+                        </div>
+
+                        <div class="tab-content active" data-id="deliveryMethodChoice" data-tab="pickupAddressNino">
+                            <div class="checkout__pickup-map ">
+                                <div id="map" data-coords="56.26201438137114, 43.863453" class="js-map"></div>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab="pickupAddressPavlovo" data-id="deliveryMethodChoice">
+                            <div class="checkout__pickup-map ">
+                                <div id="map_new" data-coords="55.98564811400813, 43.10444608749817" class="js-map">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -14,12 +14,13 @@
         <div class="ma-contact__container wrapper">
             <div class="ma-contact__content">
                 <div class="ma-contact__navigation ma-session__navigation">
-                    <a href="#" class="card__tabs-item tab active" data-tab="ma-pavlovo" data-map="#map"
-                        data-id="0">Павлово</a>
-                    <a href="#" class="card__tabs-item tab " data-tab="ma-nijni" data-map="#map_new" data-id="0">Нижний
+                    <a href="javascript:void(0)" class="card__tabs-item tab active" data-tab="ma-pavlovo"
+                        data-map="#map" data-id="0">Павлово</a>
+                    <a href="javascript:void(0)" class="card__tabs-item tab " data-tab="ma-nijni" data-map="#map_new"
+                        data-id="0">Нижний
                         Новгород</a>
                 </div>
-                <div class="tab-content active" id="ma-pavlovo" data-id="0">
+                <div class="tab-content active" id="ma-pavlovo" data-id="0" data-tab="ma-pavlovo">
                     <div class="ma-contact__workingMode-row">
                         <div class="ma-contact__workingMode-body">
                             <!-- <div class="ma-contact__workingMode-item">
@@ -40,7 +41,7 @@
                             </div>
                         </div>
                         <div class="ma-contact__workingMode-map">
-                            <div id="map" class="contacts__map" data-coords="56.262053,43.863334">
+                            <div id="map" class="contacts__map js-map" data-coords="56.262053,43.863334">
                             </div>
                         </div>
                     </div>
@@ -192,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-content" id="ma-nijni" data-id="0">
+                <div class="tab-content" id="ma-nijni" data-id="0" data-tab="ma-nijni">
                     <div class="ma-contact__workingMode-row">
                         <div class="ma-contact__workingMode-body">
                             <div class="ma-contact__workingMode-item">
@@ -211,7 +212,7 @@
                             </div>
                         </div>
                         <div class="ma-contact__workingMode-map">
-                            <div id="map_new" class="contacts__map" data-coords="52.262053,43.863334">
+                            <div id="map_new" class="contacts__map js-map" data-coords="52.262053,43.863334">
                             </div>
                         </div>
                     </div>
