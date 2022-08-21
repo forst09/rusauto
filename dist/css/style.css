@@ -1267,7 +1267,7 @@ h1 {
 .header-bottom__search-input-buttons {
   position: absolute;
   right: 0.4rem;
-  top: 0.4rem;
+  top: 0.45rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -6045,6 +6045,44 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ИСТОРИЯ ЗАКАЗОВ*/
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ПОИСКА*/
+.search__not-result {
+  display: none;
+}
+
+.search h2.title span {
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  margin-left: 1.6rem;
+  font-weight: 400;
+  color: #A3A8AB;
+}
+
+.search__quantity {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #064E8C;
+}
+
+.search__input {
+  margin: 3.2rem 0;
+}
+.search__input .header-bottom__search-input {
+  border: 1px solid #EFF0F1;
+  width: 100%;
+}
+
+.search__category-container {
+  display: grid;
+  grid-row-gap: 1.2rem;
+}
+
+.search__item + .search__item {
+  margin-top: 4.8rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ ПОИСКА*/
 @keyframes fadeEffect {
   0% {
     opacity: 0;
