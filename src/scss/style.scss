@@ -6818,6 +6818,74 @@ h1 {
     grid-row-gap: 1.6rem;
 }
 
+.payment-method__container {
+    display: inline-flex;
+    column-gap: 1.6rem;
+}
+
+.payment-method__item {
+    background-color: #FAFAFA;
+    padding: 1.8rem 1.2rem;
+    min-height: 7.2rem;
+    min-width: 16.5rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+    }
+}
+
+.payment-method__text {
+    margin-left: 0.8rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.payment-method__radio {
+    input[type="radio"] {
+        display: none;
+    }
+
+    label.active {
+        .payment-method__item {
+            background-color: #EDF8FD;
+        }
+    }
+}
+
+.payment-method__account-radio {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.2rem;
+    gap: 2rem;
+
+    .catalog-4lvl__filters-radio {
+        margin-bottom: 0;
+    }
+}
+
+.payment-method__account-inputs {
+    display: grid;
+    grid-row-gap: 1.6rem;
+}
+
 /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА*/
 
 

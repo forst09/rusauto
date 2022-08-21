@@ -499,6 +499,96 @@
                 </div>
             </div>
         </div>
+
+        <!-- СПОСОБ ОПЛАТЫ -->
+        <div class="payment-method checkout-item">
+            <div class="wrapper">
+                <h2 class="title title-left">Способ оплаты</h2>
+            </div>
+            <div class="scroll">
+                <div class="payment-method__container">
+                    <div class="payment-method__radio">
+                        <input type="radio" name="paymentMethod" id="paymentMethodCash1">
+                        <label for="paymentMethodCash1" class="tab active" data-id="paymentMethod"
+                            data-tab="paymentMethodCash">
+                            <div class="payment-method__item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.9514 10.376V10.8422H12.3672V11.2803H12.9514V12.0218H13.5692V11.2803H15.1027V10.8422H13.5692V10.376H14.5859C14.996 10.376 15.3161 10.2692 15.5464 10.0614C15.7823 9.85359 15.9003 9.57274 15.9003 9.2301C15.9003 8.89308 15.7823 8.61784 15.5464 8.41001C15.3161 8.19657 14.996 8.08984 14.5859 8.08984H12.9514V9.93784H12.3672V10.376H12.9514ZM13.5692 8.64593H14.5297C15.0016 8.64593 15.2824 8.88184 15.2824 9.29189C15.2824 9.69631 15.0016 9.93784 14.5297 9.93784H13.5692V8.64593Z"
+                                        fill="#00A0E3" />
+                                    <path
+                                        d="M5.21277 7.34043V5H23V14.8298H20.6596M5.21277 7.34043V14.8298H20.6596M5.21277 7.34043H2.87234V9.21277M20.6596 14.8298V17.1702H18.3191M2.87234 9.21277V17.1702H18.3191M2.87234 9.21277H1V19.0426H18.3191V17.1702M8.02128 6.40426H20.1915C20.4281 7.19541 20.6774 7.56499 21.5957 7.80851V12.0213C20.6596 12.0213 20.1915 12.4894 20.1915 13.4255H8.02128C8.02128 12.4894 7.55319 12.0213 6.61702 12.0213V7.80851C7.40768 7.59012 7.77578 7.26469 8.02128 6.40426Z"
+                                        stroke="#00A0E3" stroke-width="0.8" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div class="payment-method__text">Наличными</div>
+                            </div>
+                        </label>
+                    </div>
+                    <!-- ОПЛАТА ПО СЧЕТУ ПОЯВЛЯЕТСЯ ТОЛЬКО У ЮРИДИЧЕСКОГО ЛИЦА? -->
+                    <div class="payment-method__radio form-entity">
+                        <input type="radio" name="paymentMethod" id="paymentMethodAccount1">
+                        <label for="paymentMethodAccount1" class="tab" data-id="paymentMethod"
+                            data-tab="paymentMethodAccount">
+                            <div class="payment-method__item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 7.5H18.5M14 10.5H20.5M20.5 13.5H16M12 13.5H13M12 16H18.5M20 16H20.5M14 13.5H14.5M12 10.5H12.5M19.5 7.5H20M2 1H23V22L22 20.5L19.5 23L17 20.5L14.5 23L12 20.5L9.5 23L7 20.5L4.5 23L2.5 21L2 22V1Z"
+                                        stroke="#00A0E3" stroke-width="0.8" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M4.50763 12.73V13.39H3.5V14.42H4.50763V15.5H5.81756V14.42H8.14427V13.39H5.81756V12.73H7.26489C7.95191 12.73 8.49237 12.53 8.89542 12.14C9.29847 11.75 9.5 11.24 9.5 10.61C9.5 9.98 9.29847 9.48 8.89542 9.09C8.49237 8.7 7.95191 8.5 7.26489 8.5H4.50763V11.7H3.5V12.73H4.50763ZM5.81756 9.76H7.09084C7.75954 9.76 8.17176 10.1 8.17176 10.73C8.17176 11.34 7.75954 11.7 7.09084 11.7H5.81756V9.76Z"
+                                        fill="#00A0E3" />
+                                </svg>
+                                <div class="payment-method__text">Оплата по счету</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery__content">
+                <div class="tab-content" data-tab="paymentMethodAccount" data-id="paymentMethod">
+                    <div class="wrapper wrapper-payment-method">
+                        <div class="payment-method__account-radio">
+                            <div class="catalog-4lvl__filters-radio">
+                                <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                    name="paymentMethodChoiceAccount" id="paymentMethodChoiceAccount1" checked>
+                                <label class="catalog-4lvl__filters-radio-label"
+                                    for="paymentMethodChoiceAccount1">Плательщик</label>
+                            </div>
+                            <div class="catalog-4lvl__filters-radio">
+                                <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                    name="paymentMethodChoiceAccount" id="paymentMethodChoiceAccount2">
+                                <label class="catalog-4lvl__filters-radio-label"
+                                    for="paymentMethodChoiceAccount2">Другой
+                                    плательщик</label>
+                            </div>
+                        </div>
+                        <div class="payment-method__account-inputs">
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="Название компании*"
+                                    id="paymentMethodChoiceAccountName">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="ИНН*"
+                                    id="paymentMethodChoiceAccountTIN">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="КПП*"
+                                    id="paymentMethodChoiceAccountKPP">
+                            </div>
+                            <div class="form-input__wrapper">
+                                <input type="text" class="form-input" placeholder="БИК*"
+                                    id="paymentMethodChoiceAccountBIC">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 

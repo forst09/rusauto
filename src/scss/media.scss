@@ -2224,6 +2224,21 @@
         grid-column-gap: 1.6rem;
     }
 
+    .payment-method__item {
+        min-width: 24.7rem;
+    }
+
+    .payment-method__account-radio {
+        flex-direction: row;
+        gap: 3.2rem;
+        padding-top: 0.6rem;
+    }
+
+    .payment-method__account-inputs {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.6rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
 }
 
@@ -5519,6 +5534,31 @@
         grid-column-gap: 3.2rem;
     }
 
+    .checkout__pickup-map {
+        height: 32.4rem;
+    }
+
+    .payment-method__container {
+        padding: 0 6.4rem;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+    }
+
+    .wrapper-payment-method {
+        padding-right: 0;
+        box-sizing: content-box;
+        max-width: 83.2rem;
+    }
+
+    .payment-method__account-radio {
+        margin-bottom: 3.8rem;
+    }
+
+    .payment-method__account-inputs {
+        grid-gap: 3.2rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
 }
 
@@ -6859,6 +6899,10 @@
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1500*/
     .checkout {
+        h2.title {
+            max-width: 85.2rem;
+        }
+
         .personal-data__form {
             max-width: 91.2rem;
         }
@@ -6877,6 +6921,13 @@
         padding-right: 0;
         box-sizing: content-box;
         max-width: 83.2rem;
+    }
+
+    .payment-method__container {
+        padding: 0 8rem;
+        padding-right: 0;
+        box-sizing: content-box;
+        max-width: 85.2rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1500*/
