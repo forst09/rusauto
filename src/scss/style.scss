@@ -4906,7 +4906,7 @@ h1 {
             column-gap: .8rem;
 
             &-size {
-                font-weight: 400;
+                font-weight: 400 !important;
                 font-size: 1.4rem;
                 line-height: 1.8rem;
                 color: #A3A8AB !important;
@@ -4915,13 +4915,12 @@ h1 {
 
             &-link {
                 font-weight: 500 !important;
-                text-decoration: none !important;
                 position: relative;
 
                 &::after {
                     content: '';
                     position: absolute;
-                    width: 0;
+                    width: 100%;
                     height: 1px;
                     left: 0;
                     bottom: 0;
@@ -4931,7 +4930,7 @@ h1 {
 
                 &:hover {
                     &::after {
-                        width: 100%;
+                        width: 0;
                     }
                 }
 
@@ -7255,6 +7254,149 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ ВОССТАНОВЛЕНИЕ ПАРОЛЯ*/
 
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ СТРАНИЦА ЗАКАЗА*/
+
+.order__date {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.2rem;
+}
+
+/*МЕНЯТЬ ЦВЕТ В ЗАВИСИМОСТИ ОТ СТАТУСА ЗАКАЗА*/
+.order__status {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+    width: fit-content;
+    margin-bottom: 0.8rem;
+
+    &--assembly {
+        background-color: #E6951C;
+    }
+
+    &--canceled {
+        background-color: #E6281C;
+    }
+
+    &--delivered {
+        background-color: #9CCE85;
+    }
+
+    &--received {
+        background-color: #A3A8AB;
+    }
+}
+
+.order__title-btn {
+    text-align: center;
+
+    a {
+        min-width: 21.5rem;
+        padding: 1.1rem;
+        text-align: center;
+        background-color: #00A0E3;
+        color: #ffffff;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        display: inline-block;
+    }
+}
+
+.order__sum {
+    margin-top: 3.2rem;
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+}
+
+.order__sum-text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #064E8C;
+    margin-right: 2.5rem;
+}
+
+.order__sum-value {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+
+.order__container {
+    margin-top: 2.4rem;
+    display: grid;
+    grid-gap: 3.2rem;
+}
+
+.order__item {
+    padding: 1.6rem;
+    background-color: #FAFAFA;
+    min-height: 25.1rem;
+}
+
+.order__item-title {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+}
+
+.order__item-text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #064E8C;
+
+    &+& {
+        margin-top: 1.6rem;
+    }
+
+    span {
+        font-weight: 500;
+        display: inline-block;
+        margin-left: 0.8rem;
+    }
+}
+
+.order__item-payment {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+
+    &--assembly {
+        color: #E6951C;
+    }
+
+    &--canceled {
+        color: #E6281C;
+    }
+
+    &--delivered {
+        color: #9CCE85;
+    }
+
+    &--received {
+        color: #A3A8AB;
+    }
+}
+
+.order__item-address,
+.order__item-recipient {
+    span {
+        display: block;
+        margin-top: 0.8rem;
+        margin-left: 0;
+    }
+}
+
+.order-list {
+    .navigation {
+        margin-top: 4rem;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ СТРАНИЦА ЗАКАЗА*/
 
 @keyframes fadeEffect {
     0% {

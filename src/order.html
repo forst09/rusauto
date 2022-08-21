@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Страница заказа"
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    @@include('html/bread-crumbs.html',{})
+
+    <!-- НАЧАЛО СЕКЦИИ СТРАНИЦА ЗАКАЗА -->
+    <section class="order">
+        <div class="wrapper">
+            <div class="btn-to-personal__wrapper">
+                <a class="btn-to-personal" href="personal.html">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 7.99935L1 7.99935M1 7.99935L8.22222 14.666M1 7.99935L8.22222 1.33268"
+                            stroke="#064E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Ко всем заказам</span>
+                </a>
+            </div>
+            <div class="order__title">
+                <div class="order__title-info">
+                    <div class="order__title-wrapper">
+                        <div class="order__status order__status--assembly">Сборка</div>
+                        <h1>Заказ №248-759562</h1>
+                        <div class="order__date">от 01.01.2022</div>
+                    </div>
+                    <div class="desc desc-left">Компания ООО «РусАвтоДеталь» на сегодняшний день является крупнейшим
+                        поставщиком на рынке СНГ запчастей для пассажирской техники (автобусов).</div>
+                </div>
+                <div class="order__title-btn">
+                    <a href="javascript:void(0)">Повторить заказ</a>
+                </div>
+            </div>
+            <div class="order__sum">
+                <div class="order__sum-text">Сумма заказа:</div>
+                <div class="order__sum-value">6 777 098,68 &#8381;</div>
+            </div>
+            <div class="order__container">
+                <div class="order__item order__delivery">
+                    <div class="order__item-title">Доставка</div>
+                    <div class="order__item-text order__item-address">Адрес доставки:<span>г. Н.Новгород, ул. Горького,
+                            д. 105</span></div>
+                    <div class="order__item-text order__item-recipient">Получатель:<span>Потапов Александр
+                            Максимович</span></div>
+                    <div class="order__item-text">Транспортная компания:<span>СДЕК</span></div>
+                    <div class="order__item-text">Накладная №:<span>123456-78949</span></div>
+                </div>
+                <div class="order__item order__payment">
+                    <div class="order__item-title">Оплата</div>
+                    <div class="order__item-text">Тип оплаты:<span>Наличными</span></div>
+                    <div class="order__item-text order__item-payment order__item-payment--canceled">Заказ не оплачен
+                    </div>
+                </div>
+                <!-- ЕСЛИ ТИП ОПЛАТЫ - РАСЧЕТНЫЙ СЧЕТ -->
+                <!-- <div class="order__item order__payment">
+                    <div class="order__item-title">Оплата</div>
+                    <div class="order__item-text">Тип оплаты:<span>Расчетный счет</span></div>
+                    <div class="ma-autobus-schema-item order__item-text">
+                        <div class="ma-autobus-schema-item__img">
+                            <img src="img/bus-page/document.svg" alt=" pdf file">
+                        </div>
+                        <div class="ma-autobus-schema-item__body">
+                            <div class="ma-autobus-schema-item__text">Счет №1459-87456
+                            </div>
+                            <div class="ma-autobus-schema-item__file">
+                                <span class="ma-autobus-schema-item__file-size">127 МБ</span>
+                                <a href="#" class="ma-autobus-schema-item__file-link link-underline">Скачать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__item-text order__item-payment order__item-payment--canceled">Заказ не оплачен
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ СЕКЦИИ СТРАНИЦА ЗАКАЗА -->
+
+    <!-- НАЧАЛО СЕКЦИИ СОСТАВ ЗАКАЗА -->
+    <section class="order-list">
+        <div class="wrapper">
+            <h2 class="title title-left">Состав заказа</h2>
+            <div class="product-list__wrapper">
+                <div class="product-list__head">
+                    <div class="product-list__head__item">Товар</div>
+                    <div class="product-list__head__item">Количество</div>
+                    <div class="product-list__head__item">Сумма</div>
+                </div>
+                <div class="product-list__container">
+                    <div class="product-list__item">
+                        <div class="cart__order-info">
+                            <div class="cart__order-image">
+                                <img src="img/catalog-page/catalog-page-2.png" alt="">
+                            </div>
+                            <div class="cart__order-wrapper">
+                                <div class="cart__order-name">
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                        первичный
+                                        КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        doloremque.
+                                        Facilis,
+                                        non. In quae a i cumque minima eaque consequuntur quos.
+                                    </a>
+                                    <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                        <span>53-12-1701302</span>
+                                    </div>
+                                </div>
+
+                                <div class="cart__order-values">
+                                    <div class="product-list__item-quantity">2 шт</div>
+                                    <div class="cart__order-sum">
+                                        <div class="catalog-4lvl__catalog-item-cost">
+                                            <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
+                                                &#8381;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="cart__order-info">
+                            <div class="cart__order-image">
+                                <img src="img/catalog-page/catalog-page-2.png" alt="">
+                            </div>
+                            <div class="cart__order-wrapper">
+                                <div class="cart__order-name">
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                        первичный
+                                        КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        doloremque.
+                                        Facilis,
+                                        non. In quae a i cumque minima eaque consequuntur quos.
+                                    </a>
+                                    <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                        <span>53-12-1701302</span>
+                                    </div>
+                                </div>
+
+                                <div class="cart__order-values">
+                                    <div class="product-list__item-quantity">2 шт</div>
+                                    <div class="cart__order-sum">
+                                        <div class="catalog-4lvl__catalog-item-cost">
+                                            <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
+                                                &#8381;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="cart__order-info">
+                            <div class="cart__order-image">
+                                <img src="img/catalog-page/catalog-page-3.png" alt="">
+                            </div>
+                            <div class="cart__order-wrapper">
+                                <div class="cart__order-name">
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                        первичный
+                                        КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        doloremque.
+                                        Facilis,
+                                        non. In quae a i cumque minima eaque consequuntur quos.
+                                    </a>
+                                    <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                        <span>53-12-1701302</span>
+                                    </div>
+                                </div>
+
+                                <div class="cart__order-values">
+                                    <div class="product-list__item-quantity">2 шт</div>
+                                    <div class="cart__order-sum">
+                                        <div class="catalog-4lvl__catalog-item-cost">
+                                            <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
+                                                &#8381;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="cart__order-info">
+                            <div class="cart__order-image">
+                                <img src="img/catalog-page/catalog-page-2.png" alt="">
+                            </div>
+                            <div class="cart__order-wrapper">
+                                <div class="cart__order-name">
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                        первичный
+                                        КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        doloremque.
+                                        Facilis,
+                                        non. In quae a i cumque minima eaque consequuntur quos.
+                                    </a>
+                                    <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                        <span>53-12-1701302</span>
+                                    </div>
+                                </div>
+
+                                <div class="cart__order-values">
+                                    <div class="product-list__item-quantity">2 шт</div>
+                                    <div class="cart__order-sum">
+                                        <div class="catalog-4lvl__catalog-item-cost">
+                                            <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
+                                                &#8381;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list__item">
+                        <div class="cart__order-info">
+                            <div class="cart__order-image">
+                                <img src="img/catalog-page/catalog-page-3.png" alt="">
+                            </div>
+                            <div class="cart__order-wrapper">
+                                <div class="cart__order-name">
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                    <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                        первичный
+                                        КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        doloremque.
+                                        Facilis,
+                                        non. In quae a i cumque minima eaque consequuntur quos.
+                                    </a>
+                                    <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                        <span>53-12-1701302</span>
+                                    </div>
+                                </div>
+
+                                <div class="cart__order-values">
+                                    <div class="product-list__item-quantity">2 шт</div>
+                                    <div class="cart__order-sum">
+                                        <div class="catalog-4lvl__catalog-item-cost">
+                                            <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
+                                                &#8381;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <a href="javascript:void(0)" class="navigation__btn-more">
+                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 1L5 13M5 13L9 8.66667M5 13L0.999999 8.66667" stroke="#00A0E3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Показать еще</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ СЕКЦИИ СОСТАВ ЗАКАЗА -->
+
+    @@include('html/footer.html',{})
+
+    @@include('html/tabbar.html',{})
+
+    @@include('html/mobile-menu.html',{})
+
+    @@include('html/catalog.html',{})
+
+    @@include('html/catalog-groups.html',{})
+
+    @@include('html/modal-choice.html',{})
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

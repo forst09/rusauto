@@ -2050,6 +2050,63 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ВОССТАНОВЛЕНИЕ ПАРОЛЯ 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ СТРАНИЦА ЗАКАЗА 668*/
+  .order__title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  .order__title-wrapper h1 {
+    margin-bottom: 0;
+  }
+
+  .order__status {
+    margin-bottom: 0;
+    margin-right: 1.6rem;
+  }
+
+  .order__date {
+    margin-bottom: 0;
+    margin-left: 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .order__title-btn {
+    text-align: left;
+  }
+
+  .order__sum {
+    justify-content: flex-end;
+  }
+
+  .order__sum-text {
+    margin-right: 3.2rem;
+  }
+
+  .order__sum-value {
+    font-size: 2.4rem;
+  }
+
+  .order__container {
+    padding: 0 7.8rem;
+    grid-gap: 4rem;
+  }
+
+  .order__item {
+    padding: 2.4rem;
+    min-height: 30.3rem;
+  }
+
+  .order__item-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .order__item-text + .order__item-text {
+    margin-top: 2.4rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СТРАНИЦА ЗАКАЗА 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -5012,6 +5069,53 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ВОССТАНОВЛЕНИЕ ПАРОЛЯ 1024*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ СТРАНИЦА ЗАКАЗА 1024*/
+  .order__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .order__status {
+    margin-right: 0.8rem;
+  }
+
+  .order__sum {
+    margin-top: 0;
+  }
+
+  .order__sum-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .order__sum-value {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+
+  .order__container {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3.2rem;
+    grid-gap: 4.8rem;
+  }
+
+  .order__item {
+    min-height: 32.1rem;
+  }
+
+  .order__item-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .order-list .navigation {
+    margin-top: 5.6rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СТРАНИЦА ЗАКАЗА 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -6261,5 +6365,59 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ПОИСКА 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ СТРАНИЦА ЗАКАЗА 1500*/
+  .order__status {
+    margin-right: 1.6rem;
+  }
+
+  .order__date {
+    margin-left: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .order__sum-value {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+
+  .order__container {
+    grid-gap: 7.6rem;
+  }
+
+  .order__item {
+    min-height: 30rem;
+  }
+
+  .order__item-title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .order__item-address span,
+.order__item-recipient span {
+    display: inline-block;
+    margin-left: 0.8rem;
+    margin-top: 0;
+  }
+
+  .order-list .product-list__head__item:nth-of-type(1) {
+    min-width: 35.8rem;
+  }
+  .order-list .product-list__head__item:nth-of-type(2) {
+    margin-left: 15.2rem;
+  }
+  .order-list .cart__order-wrapper {
+    gap: 15.2rem;
+  }
+  .order-list .cart__order-name {
+    max-width: 35.8rem;
+  }
+  .order-list .product-list__wrapper {
+    max-width: none;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СТРАНИЦА ЗАКАЗА 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/
