@@ -1984,6 +1984,48 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ ИСТОРИЯ ЗАКАЗОВ 668*/
+  .history__card {
+    padding: 2.4rem;
+  }
+  .history__card + .history__card {
+    margin-top: 3.2rem;
+  }
+
+  .history__card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .history__card-item {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  .history__card-status {
+    margin-top: 1.6rem;
+  }
+
+  .history__card-sum {
+    margin: 0;
+    align-items: baseline;
+  }
+
+  .history__card-sum-text {
+    margin-right: 3.2rem;
+  }
+
+  .history__card-sum-value {
+    font-size: 2.4rem;
+  }
+
+  .history__card-btn {
+    margin-top: 4.8rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ИСТОРИЯ ЗАКАЗОВ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -4177,36 +4219,12 @@
     font-weight: 500;
   }
 
-  .personal__last-number {
-    font-weight: 500;
-    margin-top: 0.8rem;
-  }
-
   .personal__last-date {
     margin-top: 1.2rem;
   }
 
-  .personal__last-date span,
-.personal__last-status span {
-    font-weight: 500;
-    margin-left: 0.8rem;
-  }
-
   .personal__last-status {
     margin-top: 1.2rem;
-    /*МЕНЯТЬ ЦВЕТ СПАНА В ЗАВИСИМОСТИ ОТ СТАТУСА ЗАКАЗА*/
-  }
-  .personal__last-status--assembly span {
-    color: #E6951C;
-  }
-  .personal__last-status--canceled span {
-    color: #E6281C;
-  }
-  .personal__last-status--delivered span {
-    color: #9CCE85;
-  }
-  .personal__last-status--received span {
-    color: #A3A8AB;
   }
 
   .personal__last-link {
@@ -4907,6 +4925,36 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ ИСТОРИЯ ЗАКАЗОВ 1024*/
+  .history .navigation {
+    margin-top: 5.6rem;
+  }
+
+  .history__card-item {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .history__card-number-number {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .history__card-status {
+    margin-top: 1.6rem;
+  }
+
+  .history__card-sum-value {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+
+  .history__container {
+    padding: 0 6.5rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ИСТОРИЯ ЗАКАЗОВ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -5981,7 +6029,7 @@
     width: 23.7rem;
   }
 
-  /* ПРИКРЕПЛЯШКА НАВЕРХУ СТРАНИЦЫ 1024*/
+  /* ПРИКРЕПЛЯШКА НАВЕРХУ СТРАНИЦЫ 1500*/
   .card-window .catalog-4lvl__catalog-item-cost-new {
     font-size: 3rem;
     line-height: 4.2rem;
@@ -6113,5 +6161,26 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1500*/
+  /*#################################################################################################################################*/
+  /*НАЧАЛО СТИЛЕЙ ИСТОРИЯ ЗАКАЗОВ 1500*/
+  .history__container {
+    padding: 0 24.2rem;
+  }
+
+  .history__card {
+    padding: 3.2rem;
+  }
+
+  .history__card-item {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+
+  .history__card-sum-value {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ИСТОРИЯ ЗАКАЗОВ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/
