@@ -145,10 +145,14 @@ $(document).ready(function () {
             if ($('body').hasClass('body-cart') && $(window).width() >= 1024) {
                 $('.cart-window').addClass('fixed');
             }
+            if ($('body').hasClass('body-card') && $(window).width() >= 1024) {
+                $('.card-window').addClass('fixed');
+            }
         }
         else {
             headerFix.classList.remove('active');
             $('.cart-window').removeClass('fixed');
+            $('.card-window').removeClass('fixed');
         }
     };
 

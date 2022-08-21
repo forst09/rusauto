@@ -4,7 +4,7 @@
 "title": "Карточка товара"
 })
 
-<body>
+<body class="body-card">
     @@include('html/header.html',{})
 
     @@include('html/bread-crumbs.html',{})
@@ -1886,6 +1886,41 @@
 
 
     @@include('html/footer.html',{})
+    <!-- НАЧАЛО ЗАКРЕПЛЯШКИ -->
+    <div class="card-window">
+        <div class="wrapper">
+            <div class="card-window__container">
+                <div class="card-window__product">
+                    <div class="card-window__product-img">
+                        <img src="img/catalog-page/catalog-page-2.png" alt="">
+                    </div>
+                    <div class="card-window__product-name">Ступица муфты 3-4 передачи КПП</div>
+                </div>
+                <div class="card-window-buttons">
+                    <div class="catalog-4lvl__catalog-item-cost">
+                        <div class="catalog-4lvl__catalog-item-cost-old">2 000 &#8381;</div>
+                        <div class="catalog-4lvl__catalog-item-cost-new">1 114 &#8381;</div>
+                    </div>
+                    <div class="buy-wrapper">
+                        <a href="javascript:void(0)" class="buy">В корзину</a>
+                        <div class="catalog-4lvl__catalog-item-bottom-buttons-basket">
+                            <div class="catalog-4lvl__catalog-item-bottom-buttons-basket-text">
+                                В корзине</div>
+                            <form action="">
+                                <button type="button"
+                                    class="catalog-4lvl__catalog-item-bottom-buttons-basket-minus">-</button>
+                                <input type="text" class="catalog-4lvl__catalog-item-bottom-buttons-basket-value"
+                                    value="1" readonly>
+                                <button type="button"
+                                    class="catalog-4lvl__catalog-item-bottom-buttons-basket-plus">+</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КОНЕЦ ЗАКРЕПЛЯШКИ -->
 
     @@include('html/tabbar.html',{})
 

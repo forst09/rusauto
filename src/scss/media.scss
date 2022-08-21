@@ -2016,6 +2016,32 @@
         width: 16.2rem;
     }
 
+    /*ПРИКРЕПЛЯШКА*/
+    .card-window {
+        padding: 2.4rem 0;
+        bottom: 5.7rem;
+
+        .catalog-4lvl__catalog-item-cost-new {
+            font-size: 2.4rem;
+        }
+
+        .buy-wrapper {
+            min-height: 4rem;
+        }
+
+        .buy {
+            min-width: 16.8rem;
+            padding: 1.1rem;
+        }
+
+        .catalog-4lvl__catalog-item-bottom-buttons-basket {
+            min-width: 13.7rem;
+            padding: 0.9rem 2rem;
+            margin: 0;
+            max-height: 4rem;
+        }
+    }
+
     /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 668*/
 
     /*#################################################################################################################################*/
@@ -4483,7 +4509,8 @@
 
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ 1024*/
-    .body-cart {
+    .body-cart,
+    .body-card {
         padding-bottom: 0;
 
         .header:not(.header-fixed) {
@@ -5401,6 +5428,87 @@
         .catalog-4lvl__catalog-item-bottom-buttons-basket form {
             width: 9.1rem;
         }
+    }
+
+    /* ПРИКРЕПЛЯШКА НАВЕРХУ СТРАНИЦЫ 1024*/
+    .card-window {
+        position: absolute;
+        top: 14.2rem;
+        bottom: unset;
+        padding: 0.8rem 0;
+
+        .catalog-4lvl__catalog-item-cost {
+            gap: 1.6rem;
+            width: 100%;
+        }
+
+        .catalog-4lvl__catalog-item-cost-old {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+
+        .catalog-4lvl__catalog-item-cost-new {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+        }
+
+        .buy-wrapper {
+            max-width: fit-content;
+            margin-left: 2.4rem;
+        }
+
+        .catalog-4lvl__catalog-item-bottom-buttons-basket {
+            padding: 0.4rem 1.6rem;
+
+            form {
+                min-width: 9.7rem;
+                padding: 0.5rem 0.45rem;
+                box-sizing: content-box;
+            }
+        }
+
+        .catalog-4lvl__catalog-item-bottom-buttons-basket-text {
+            margin-right: 2.4rem;
+            width: max-content;
+        }
+    }
+
+    .card-window.fixed {
+        position: fixed;
+        top: 8.8rem;
+        box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+        transition: 0.3s ease;
+    }
+
+    .card-window__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-window__product {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-window__product-img {
+        width: 7.4rem;
+        height: 7.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-window__product-name {
+        margin-left: 2.4rem;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        font-weight: 700;
     }
 
     /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
@@ -7067,6 +7175,23 @@
 
     .card__applicability-place-right {
         width: 23.7rem;
+    }
+
+    /* ПРИКРЕПЛЯШКА НАВЕРХУ СТРАНИЦЫ 1024*/
+    .card-window {
+        .catalog-4lvl__catalog-item-cost-new {
+            font-size: 3rem;
+            line-height: 4.2rem;
+        }
+    }
+
+    .card-window.fixed {
+        top: 8rem;
+    }
+
+    .card-window__product-img {
+        width: 7.8rem;
+        height: 7.6rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1500*/

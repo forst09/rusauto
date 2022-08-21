@@ -3596,7 +3596,8 @@ h1 {
 /*КОНЕЦ СТИЛЕЙ ЭНЦИКЛОПЕДИЯ АВТОБУСОВ*/
 /*#################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ КОРЗИНЫ*/
-.body-cart {
+.body-cart,
+.body-card {
   padding-bottom: 10.6rem;
 }
 
@@ -5059,6 +5060,47 @@ h1 {
 }
 .card-desc__buttons-buy .catalog-4lvl__catalog-item-bottom-buttons-basket form {
   width: 9.1rem;
+}
+
+/*ПРИКРЕПЛЯШКА*/
+.card-window {
+  padding: 2rem 0;
+  position: fixed;
+  bottom: 4rem;
+  background-color: #FAFAFA;
+  width: 100%;
+  z-index: 10;
+}
+.card-window .catalog-4lvl__catalog-item-cost {
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: unset;
+}
+.card-window .catalog-4lvl__catalog-item-cost-new {
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+.card-window .buy-wrapper {
+  max-width: 13.6rem;
+  min-height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-window .buy {
+  width: 100%;
+  padding: 0.7rem;
+}
+
+.card-window__product {
+  display: none;
+}
+
+.card-window-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
