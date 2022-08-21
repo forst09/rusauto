@@ -7214,6 +7214,47 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ ПОИСКА*/
 
+/*#################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ ВОССТАНОВЛЕНИЕ ПАРОЛЯ*/
+.change-password {
+    &__instruction {
+        margin: 3.2rem auto 0;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        text-align: center;
+        color: #262B2E;
+        max-width: 40rem;
+        line-height: 1.8rem;
+
+        p+p {
+            margin-top: 1.8rem;
+        }
+
+    }
+
+    form {
+        max-width: 40rem;
+        margin: 3.2rem auto 0;
+    }
+
+    .form-input__wrapper:nth-child(1) {
+        margin-bottom: 2.4rem;
+    }
+
+    .form-btn__wrapper {
+        margin-top: 3.2rem;
+        text-align: center;
+
+        button {
+            border: none;
+        }
+    }
+
+}
+
+/*КОНЕЦ СТИЛЕЙ ВОССТАНОВЛЕНИЕ ПАРОЛЯ*/
+
 
 @keyframes fadeEffect {
     0% {
