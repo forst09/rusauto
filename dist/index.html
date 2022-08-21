@@ -210,7 +210,7 @@
                                 fill="#00A0E3" />
                         </svg>
                         <span>8 (800) 511-10-45</span></a>
-                    <a href="javascript:void(0)" class="header-bottom__request-btn">Оформить заявку</a>
+                    <a href="#ma-modal2" class="header-bottom__request-btn" data-fancybox>Оформить заявку</a>
                 </div>
             </div>
         </div>
@@ -1017,6 +1017,47 @@
         </div>
     </div>
     <!-- КОНЕЦ КУКОВ -->
+
+    <!-- МОДАЛКА ОФОРМИТЬ ЗАЯВКУ -->
+    <div class="ma-modal2" id="ma-modal2">
+        <div class="ma-modal2__container">
+            <div class="ma-modal2__content">
+                <button class="ma-modal2__closeBtn modal-button" data-fancybox-close>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.712384 17.4691C0.419491 17.762 0.419491 18.2369 0.712384 18.5298C1.00528 18.8227 1.48015 18.8227 1.77304 18.5298L0.712384 17.4691ZM18.5303 1.77252C18.8232 1.47962 18.8232 1.00475 18.5303 0.711857C18.2374 0.418964 17.7626 0.418964 17.4697 0.711857L18.5303 1.77252ZM17.4697 0.711857L0.712384 17.4691L1.77304 18.5298L18.5303 1.77252L17.4697 0.711857Z"
+                            fill="#A3A8AB" />
+                        <path
+                            d="M1.77304 0.712385C1.48015 0.419492 1.00528 0.419492 0.712383 0.712385C0.419489 1.00528 0.41949 1.48015 0.712383 1.77305L1.77304 0.712385ZM17.4697 18.5303C17.7626 18.8232 18.2374 18.8232 18.5303 18.5303C18.8232 18.2374 18.8232 17.7626 18.5303 17.4697L17.4697 18.5303ZM18.5303 17.4697L1.77304 0.712385L0.712383 1.77305L17.4697 18.5303L18.5303 17.4697Z"
+                            fill="#A3A8AB" />
+                    </svg>
+
+                </button>
+                <h2 class="ma-modal2__title">Оформить заявку</h2>
+                <div class="ma-modal2__text">
+                    Оставьте сви контактные данные и в ближайшее время наш менеджер с Вами свяжется.
+                </div>
+                <form action="#">
+                    <div class="form-input__wrapper">
+                        <input type="text" class="form-input" placeholder="Имя">
+                    </div>
+                    <div class="form-input__wrapper">
+                        <input type="tel" class="form-input input-phone" placeholder="Телефон*" required>
+                    </div>
+                    <div class="form-btn__wrapper">
+                        <button type="submit" class="btn">Отправить</button>
+                    </div>
+                    <div class="ma-session__bottom">
+                        <p class="ma-form-text">
+                            Нажимая кнопку “Отправить”, вы соглашаетесь со
+                            <a href="#" class="">сбором и обработкой персональных данных</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- КОНЕЦ МОДАЛКА ОФОРМИТЬ ЗАЯВКУ -->
 
     <!-- НАЧАЛО СЕКЦИИ ПОДВАЛ -->
 <footer class="footer">

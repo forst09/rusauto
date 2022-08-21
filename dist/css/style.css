@@ -97,6 +97,291 @@ h1 {
   background-color: #0091CE;
 }
 
+/*МОДАЛКА ОФОРМИТЬ ЗАЯВКУ*/
+.ma-modal2 {
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+.ma-modal2__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.ma-modal2__content {
+  margin: auto;
+  max-width: 28rem;
+}
+.ma-modal2__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #262B2E;
+}
+.ma-modal2__text {
+  margin-top: 0.4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #064E8C;
+}
+.ma-modal2 form {
+  margin-top: 3.2rem;
+}
+.ma-modal2 form .form-input__wrapper + .form-input__wrapper {
+  margin-top: 1.6rem;
+}
+.ma-modal2 form .form-btn__wrapper {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+.ma-modal2 form .ma-form-text {
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  color: #262B2E;
+}
+.ma-modal2 form .ma-form-text a {
+  color: #00A0E3;
+}
+.ma-modal2 form .ma-session__bottom {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+.modal-button {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 2.4rem;
+  right: 1.6rem;
+}
+.modal-button svg {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.modal-button svg path {
+  transition: all 300ms ease;
+}
+.modal-button:hover svg path {
+  fill: #0091CE;
+}
+
+.fancybox-close-small {
+  display: none !important;
+}
+
+.fancybox-active {
+  overflow: hidden;
+}
+
+.fancybox-content {
+  padding: 0;
+}
+
+.fancybox-slide--html {
+  padding: 0;
+}
+
+/*КОНЕЦ МОДАЛКА ОФОРМИТЬ ЗАЯВКУ*/
+/*МОДАЛКА КУПИТЬ В 1 КЛИК*/
+.ma-modal3 {
+  display: none;
+}
+.ma-modal3__container {
+  width: 100vw;
+  height: 100vh;
+  background: #FFFFFF;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+}
+.ma-modal3__content {
+  padding: 0 1.6rem;
+}
+.ma-modal3__content form.ma-form {
+  max-width: 40rem;
+  margin: 2.4rem auto 0;
+}
+.ma-modal3__content form.ma-form .form-input__wrapper + .form-input__wrapper {
+  margin-top: 1.6rem;
+}
+.ma-modal3__content form.ma-form .form-price {
+  display: flex;
+  column-gap: 3.2rem;
+  margin: 2.4rem 0;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #262B2E;
+}
+.ma-modal3__content form.ma-form .form-price__money {
+  line-height: 2.2rem;
+}
+.ma-modal3__content form.ma-form .form-btn__wrapper {
+  text-align: center;
+}
+.ma-modal3__content form.ma-form .ma-form-text {
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  color: #262B2E;
+}
+.ma-modal3__content form.ma-form .ma-form-text a {
+  color: #00A0E3;
+}
+.ma-modal3__content form.ma-form .ma-session__bottom {
+  margin-top: 1.6rem;
+  text-align: center;
+}
+.ma-modal3 .cart__order-image {
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto;
+}
+.ma-modal3 .cart__order-wrapper {
+  margin-top: 1.6rem;
+  padding: 0;
+}
+.ma-modal3 .catalog-4lvl__catalog-item-name {
+  margin-top: 0;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+}
+.ma-modal3 .catalog-4lvl__catalog-item-article {
+  font-weight: 500;
+}
+.ma-modal3 .cart__order-values {
+  margin-top: 2.2rem;
+}
+.ma-modal3 .catalog-4lvl__catalog-item-cost {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: unset;
+  gap: 1.6rem;
+}
+.ma-modal3 .catalog-4lvl__catalog-item-cost-old {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.ma-modal3 .catalog-4lvl__catalog-item-cost-new {
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+.ma-modal3 .cart__order-count {
+  margin-top: 2.2rem;
+  margin-bottom: 4rem;
+}
+.ma-modal3 .catalog-4lvl__catalog-item-bottom-buttons-basket {
+  display: flex;
+  width: 9.7rem;
+  justify-content: space-between;
+  padding: 0.45rem 0.4rem;
+}
+
+/*КОНЕЦ МОДАЛКА КУПИТЬ В 1 КЛИК*/
+/*МОДАЛКА ПОВТОРИТЬ ЗАКАЗ*/
+.ma-modal4 {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+.ma-modal4__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.ma-modal4__content {
+  max-width: 40rem;
+  padding: 0 1.6rem;
+}
+.ma-modal4__text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #064E8C;
+}
+.ma-modal4__wrapper-row {
+  display: flex;
+  justify-content: center;
+}
+.ma-modal4__row {
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  max-width: 14.4rem;
+  margin: 3.2rem auto 0;
+  justify-content: center;
+}
+.ma-modal4__row .btn {
+  min-width: 14.4rem;
+  background: #00A0E3;
+}
+.ma-modal4__row .btn::after {
+  border-top: 3.8rem solid #00A0E3;
+}
+.ma-modal4__row .btn::before {
+  border-bottom: 3.8rem solid #00A0E3;
+}
+.ma-modal4__btn-simple {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: #00A0E3;
+  display: inline-block;
+  padding: 0.7rem 3.8rem;
+}
+
+/*КОНЕЦ МОДАЛКА ПОВТОРИТЬ ЗАКАЗ*/
+/*ТОВАР ДОБАВЛЕН В КОРЗИНУ*/
+.ma-notification {
+  display: none;
+  width: 26.1rem;
+  min-height: 6.8rem;
+  background: #EDF8FD;
+  box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+  position: fixed;
+  right: 1.6rem;
+  top: 6rem;
+  padding: 2.4rem 1.6rem;
+}
+.ma-notification__text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #064E8C;
+}
+.ma-notification__text a {
+  color: #00A0E3;
+}
+.ma-notification button {
+  top: 0.8rem;
+  right: 0.8rem;
+}
+.ma-notification button svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ma-notification.active {
+  z-index: 1000;
+}
+
+/*КОНЕЦ ТОВАР ДОБАВЛЕН В КОРЗИНУ*/
 /*ДОБАВИТЬ КЛАСС .input-error К ОБЕРТКЕ ИНПУТА, ЕСЛИ В ИНПУТЕ ОШИБКА*/
 .input-error input {
   border: 1px solid #ED9CA1 !important;

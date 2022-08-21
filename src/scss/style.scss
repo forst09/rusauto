@@ -108,6 +108,367 @@ h1 {
     }
 }
 
+/*МОДАЛКА ОФОРМИТЬ ЗАЯВКУ*/
+.ma-modal2 {
+    height: 100vh;
+    width: 100%;
+    display: none;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+
+        // padding: 0 1.6rem ;
+        margin: auto;
+        max-width: 28rem;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: #262B2E;
+    }
+
+    &__text {
+        margin-top: .4rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: #064E8C;
+
+    }
+
+    form {
+        margin-top: 3.2rem;
+
+        .form-input__wrapper+.form-input__wrapper {
+            margin-top: 1.6rem;
+        }
+
+        .form-btn__wrapper {
+            margin-top: 3.2rem;
+            text-align: center;
+        }
+
+        .ma-form-text {
+            text-align: left;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            color: #262B2E;
+
+            a {
+                color: #00A0E3;
+            }
+
+        }
+
+        .ma-session__bottom {
+            margin-top: .8rem;
+            text-align: center;
+        }
+    }
+}
+
+.modal-button {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 2.4rem;
+    right: 1.6rem;
+
+    svg {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+
+        path {
+            transition: all 300ms ease;
+        }
+    }
+
+    &:hover {
+        svg path {
+            fill: #0091CE;
+        }
+    }
+}
+
+.fancybox-close-small {
+    display: none !important;
+}
+
+.fancybox-active {
+    overflow: hidden;
+}
+
+.fancybox-content {
+    padding: 0;
+}
+
+.fancybox-slide--html {
+    padding: 0;
+}
+
+/*КОНЕЦ МОДАЛКА ОФОРМИТЬ ЗАЯВКУ*/
+
+/*МОДАЛКА КУПИТЬ В 1 КЛИК*/
+.ma-modal3 {
+    display: none;
+
+    &__container {
+        width: 100vw;
+        height: 100vh;
+        background: #FFFFFF;
+        box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    &__content {
+
+        padding: 0 1.6rem;
+
+        form.ma-form {
+
+            max-width: 40rem;
+            margin: 2.4rem auto 0;
+
+            .form-input__wrapper+.form-input__wrapper {
+                margin-top: 1.6rem;
+            }
+
+            .form-price {
+                display: flex;
+                column-gap: 3.2rem;
+                margin: 2.4rem 0;
+                justify-content: center;
+
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                color: #262B2E;
+
+                &__money {
+                    line-height: 2.2rem;
+                }
+
+
+
+            }
+
+            .form-btn__wrapper {
+                text-align: center;
+            }
+
+            .ma-form-text {
+                text-align: left;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 2.1rem;
+                color: #262B2E;
+
+                a {
+                    color: #00A0E3;
+                }
+
+            }
+
+            .ma-session__bottom {
+                margin-top: 1.6rem;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .cart__order-image {
+        width: 12rem;
+        height: 12rem;
+        margin: 0 auto;
+    }
+
+    .cart__order-wrapper {
+        margin-top: 1.6rem;
+        padding: 0;
+    }
+
+    .catalog-4lvl__catalog-item-name {
+        margin-top: 0;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        font-weight: 500;
+    }
+
+    .catalog-4lvl__catalog-item-article {
+        font-weight: 500;
+    }
+
+    .cart__order-values {
+        margin-top: 2.2rem;
+    }
+
+    .catalog-4lvl__catalog-item-cost {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: unset;
+        gap: 1.6rem;
+    }
+
+    .catalog-4lvl__catalog-item-cost-old {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .catalog-4lvl__catalog-item-cost-new {
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .cart__order-count {
+        margin-top: 2.2rem;
+        margin-bottom: 4rem;
+    }
+
+    .catalog-4lvl__catalog-item-bottom-buttons-basket {
+        display: flex;
+        width: 9.7rem;
+        justify-content: space-between;
+        padding: 0.45rem 0.4rem;
+    }
+
+}
+
+/*КОНЕЦ МОДАЛКА КУПИТЬ В 1 КЛИК*/
+
+/*МОДАЛКА ПОВТОРИТЬ ЗАКАЗ*/
+.ma-modal4 {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__content {
+        max-width: 40rem;
+        padding: 0 1.6rem;
+
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+        text-align: center;
+        color: #064E8C;
+    }
+
+    &__wrapper-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__row {
+
+        display: inline-flex;
+        flex-direction: column;
+        row-gap: 1.6rem;
+        max-width: 14.4rem;
+        margin: 3.2rem auto 0;
+        justify-content: center;
+
+        .btn {
+            min-width: 14.4rem;
+            background: #00A0E3;
+
+            &::after {
+
+                border-top: 3.8rem solid #00A0E3;
+
+            }
+
+            &::before {
+
+                border-bottom: 3.8rem solid #00A0E3;
+
+            }
+        }
+
+
+    }
+
+    &__btn-simple {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        text-align: center;
+        color: #00A0E3;
+        display: inline-block;
+        // border: 1px solid red;
+        padding: .7rem 3.8rem;
+    }
+}
+
+/*КОНЕЦ МОДАЛКА ПОВТОРИТЬ ЗАКАЗ*/
+
+/*ТОВАР ДОБАВЛЕН В КОРЗИНУ*/
+.ma-notification {
+    display: none;
+    width: 26.1rem;
+    min-height: 6.8rem;
+    background: #EDF8FD;
+    box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
+    position: fixed;
+    right: 1.6rem;
+    top: 6rem;
+    padding: 2.4rem 1.6rem;
+
+    &__text {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        color: #064E8C;
+
+        a {
+            color: #00A0E3;
+        }
+    }
+
+    button {
+
+        top: .8rem;
+        right: .8rem;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+.ma-notification.active {
+    z-index: 1000;
+}
+
+/*КОНЕЦ ТОВАР ДОБАВЛЕН В КОРЗИНУ*/
+
 /*ДОБАВИТЬ КЛАСС .input-error К ОБЕРТКЕ ИНПУТА, ЕСЛИ В ИНПУТЕ ОШИБКА*/
 .input-error {
     input {

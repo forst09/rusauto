@@ -597,6 +597,118 @@
     max-width: 38rem;
   }
 
+  /*МОДАЛКА ОФОРМИТЬ ЗАЯВКУ 668*/
+  .ma-modal2 {
+    width: 44.8rem;
+    height: 42.4rem;
+  }
+  .ma-modal2__container {
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+  }
+  .ma-modal2__content {
+    padding: 5.6rem 2.4rem 0;
+    margin: unset;
+    max-width: none;
+  }
+  .ma-modal2__title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  .modal-button {
+    right: 2.4rem;
+  }
+
+  /*КОНЕЦ МОДАЛКА ОФОРМИТЬ ЗАЯВКУ 668*/
+  /*МОДАЛКА КУПИТЬ В 1 КЛИК 668*/
+  .ma-modal3__container {
+    width: 52.8rem;
+    height: 57.6rem;
+  }
+  .ma-modal3__content {
+    padding: 0 2.4rem;
+  }
+  .ma-modal3__content form.ma-form .form-price__money {
+    font-size: 1.6rem;
+  }
+  .ma-modal3__content form.ma-form .ma-form-text {
+    text-align: center;
+  }
+  .ma-modal3 .buy-1click__product {
+    margin-top: 2.4rem;
+  }
+  .ma-modal3 .catalog-4lvl__catalog-item-name {
+    max-width: none;
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+  .ma-modal3 .catalog-4lvl__catalog-item-article {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .ma-modal3 .cart__order-values {
+    margin-top: 1.6rem;
+    justify-content: flex-start;
+    margin-bottom: 4rem;
+  }
+  .ma-modal3 .catalog-4lvl__catalog-item-cost {
+    margin-right: 4rem;
+  }
+  .ma-modal3 .catalog-4lvl__catalog-item-cost-old {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .ma-modal3 .catalog-4lvl__catalog-item-cost-new {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .ma-modal3 .cart__order-count {
+    margin: 0;
+  }
+
+  .ma-notification {
+    right: 4.4rem;
+    top: 7.1rem;
+  }
+
+  /*КОНЕЦ МОДАЛКА КУПИТЬ В 1 КЛИК 668*/
+  /*ТОВАР ДОБАВЛЕН В КОРЗИНУ 668*/
+  .ma-notification {
+    right: 4.4rem;
+    top: 7.1rem;
+  }
+
+  /*КОНЕЦ ТОВАР ДОБАВЛЕН В КОРЗИНУ 668*/
+  /*МОДАЛКА ПОВТОРИТЬ ЗАКАЗ 668*/
+  .ma-modal4 {
+    width: 58rem;
+    height: 19.8rem;
+    background: #FFFFFF;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.04);
+  }
+  .ma-modal4__container {
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+    height: unset;
+  }
+  .ma-modal4__content {
+    max-width: 100%;
+    padding: 7.6rem 2.4rem 0;
+  }
+  .ma-modal4__row {
+    flex-direction: row;
+    gap: 0 4rem;
+    max-width: 32.8rem;
+    width: 100%;
+    padding: 0rem;
+    margin-top: 4rem;
+  }
+
+  /*КОНЕЦ МОДАЛКА ПОВТОРИТЬ ЗАКАЗ 668*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
@@ -2993,6 +3105,71 @@
     fill: #00A0E3;
   }
 
+  /*МОДАЛКА ОФОРМИТЬ ЗАЯВКУ 1024*/
+  .ma-modal2 {
+    height: 46.8rem;
+  }
+  .ma-modal2 form {
+    margin-top: 4rem;
+  }
+  .ma-modal2 form .form-input__wrapper + .form-input__wrapper {
+    margin-top: 2.4rem;
+  }
+  .ma-modal2 form .form-btn__wrapper {
+    margin-top: 4rem;
+  }
+  .ma-modal2 form .ma-session__bottom {
+    margin-top: 1.6rem;
+  }
+  .ma-modal2__title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  .ma-modal2__text {
+    line-height: 2.6rem;
+  }
+
+  /*КОНЕЦ МОДАЛКА ОФОРМИТЬ ЗАЯВКУ 1024*/
+  /*МОДАЛКА КУПИТЬ В 1 КЛИК 1024*/
+  .ma-modal3__container {
+    height: 62rem;
+  }
+  .ma-modal3__content form .form-price {
+    margin: 4rem 0;
+  }
+  .ma-modal3__content form .form-input__wrapper + .form-input__wrapper {
+    margin-top: 2.4rem;
+  }
+  .ma-modal3 .cart__order-wrapper {
+    display: block;
+  }
+  .ma-modal3 .cart__order-name {
+    max-width: none;
+  }
+  .ma-modal3 .catalog-4lvl__catalog-item-name {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .ma-notification {
+    right: 6.4rem;
+    top: 4.7rem;
+  }
+  .ma-notification__text {
+    line-height: 1.8rem;
+  }
+
+  /*КОНЕЦ МОДАЛКА КУПИТЬ В 1 КЛИК 1024*/
+  /*ТОВАР ДОБАВЛЕН В КОРЗИНУ 1024*/
+  .ma-notification {
+    right: 6.4rem;
+    top: 4.7rem;
+  }
+  .ma-notification__text {
+    line-height: 1.8rem;
+  }
+
+  /*КОНЕЦ ТОВАР ДОБАВЛЕН В КОРЗИНУ 1024*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
   .main {
@@ -5388,6 +5565,46 @@
     max-width: 103.2rem;
   }
 
+  /*МОДАЛКА ОФОРМИТЬ ЗАЯВКУ 1500*/
+  .ma-modal2 {
+    height: 47rem;
+  }
+  .ma-modal2__title {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+
+  /*КОНЕЦ МОДАЛКА ОФОРМИТЬ ЗАЯВКУ 1500*/
+  /*МОДАЛКА КУПИТЬ В 1 КЛИК 1500*/
+  .ma-modal3__container {
+    height: 63.4rem;
+  }
+  .ma-modal3__content form .form-price {
+    margin: 4rem 0;
+  }
+  .ma-modal3__content form .form-price__monney {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  .ma-modal3__content form .form-input__wrapper + .form-input__wrapper {
+    margin-top: 2.4rem;
+  }
+  .ma-modal3 .catalog-4lvl__catalog-item-name {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+
+  .ma-notification {
+    right: 8rem;
+  }
+
+  /*КОНЕЦ МОДАЛКА КУПИТЬ В 1 КЛИК 1500*/
+  /*ТОВАР ДОБАВЛЕН В КОРЗИНУ 1500*/
+  .ma-notification {
+    right: 8rem;
+  }
+
+  /*КОНЕЦ ТОВАР ДОБАВЛЕН В КОРЗИНУ 1500*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
   .main {
