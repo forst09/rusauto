@@ -16,7 +16,7 @@
     <title>Оформление заказа</title>
 </head>
 
-<body>
+<body class="body-cart">
     <!-- НАЧАЛО ШАПКИ -->
 <header class="header">
     <div class="header-top">
@@ -427,569 +427,746 @@
             </div>
         </div>
 
-        <!-- КОНТАКТНЫЕ ДАННЫЕ -->
-        <div class="contacts-details checkout-item">
-            <div class="personal-data__form">
-                <form action="">
+        <div class="checkout__wrapper">
+            <div class="checkout__info">
+                <!-- КОНТАКТНЫЕ ДАННЫЕ -->
+                <div class="contacts-details checkout-item">
+                    <div class="personal-data__form">
+                        <form action="">
+                            <div class="scroll">
+                                <div class="checkout-details__radio">
+                                    <div class="checkout-details__radio-item">
+                                        <input class="catalog-4lvl__filters-radio-input form-radio" type="radio"
+                                            name="personalDataRadio" id="personalDataRadio1" checked>
+                                        <label class="card__tabs-item tab active" for="personalDataRadio1"
+                                            data-id="0">Физическое
+                                            лицо</label>
+                                    </div>
+                                    <div class="checkout-details__radio-item">
+                                        <input class="catalog-4lvl__filters-radio-input form-radio form-entity-radio"
+                                            type="radio" name="personalDataRadio" id="personalDataRadio2">
+                                        <label class="card__tabs-item tab" for="personalDataRadio2"
+                                            data-id="0">Юридическое
+                                            лицо</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts-details__inputs">
+                                <!--КЛАСС .form-entity - ДЛЯ ПОЛЕЙ ЮРИДИЧЕСКОГО ЛИЦА-->
+                                <div class="wrapper">
+                                    <h2 class="title title-left">Контактные данные</h2>
+                                    <div class="contacts-details__login">Есть учетная запись? <a
+                                            href="login.html">Войти</a>
+                                    </div>
+                                    <div class="personal-data__individual">
+                                        <div class="personal-data__individual-container">
+                                            <div class="form-input__wrapper form-entity">
+                                                <input type="text" class="form-input"
+                                                    placeholder="Название организации*" id="entityNameOrganization">
+                                            </div>
+                                            <div class="form-input__wrapper form-entity">
+                                                <input type="text" class="form-input" placeholder="ИНН*" id="entityTIN">
+                                            </div>
+                                            <div class="form-input__wrapper">
+                                                <input type="text" class="form-input" placeholder="Имя"
+                                                    id="individualName">
+                                            </div>
+                                            <div class="form-input__wrapper">
+                                                <input type="text" class="form-input" placeholder="Фамилия*"
+                                                    id="individualSurname">
+                                            </div>
+                                            <div class="form-input__wrapper">
+                                                <input type="text" class="form-input input-phone" placeholder="Телефон*"
+                                                    id="individualPhone">
+                                            </div>
+                                            <div class="form-input__wrapper">
+                                                <input type="text" class="form-input" placeholder="Почта*"
+                                                    id="individualMail">
+                                            </div>
+                                            <div class="form-input__wrapper form-textarea__wrapper">
+                                                <textarea class="form-input form-textarea"
+                                                    placeholder="Комментарий к заказу" id="checkoutTextarea"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- СПОСОБ ДОСТАВКИ -->
+                <div class="delivery checkout-item">
+                    <div class="wrapper">
+                        <h2 class="title title-left">Способ доставки</h2>
+                    </div>
+
                     <div class="scroll">
-                        <div class="checkout-details__radio">
-                            <div class="checkout-details__radio-item">
-                                <input class="catalog-4lvl__filters-radio-input form-radio" type="radio"
-                                    name="personalDataRadio" id="personalDataRadio1" checked>
-                                <label class="card__tabs-item tab active" for="personalDataRadio1"
-                                    data-id="0">Физическое
-                                    лицо</label>
+                        <div class="delivery__cards">
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryPickup1">
+                                <label for="deliveryPickup1" class="tab active" data-id="deliveryMethod"
+                                    data-tab="deliveryPickup">
+                                    <div class="delivery__cards-item delivery__cards-delivery">
+                                        <div class="delivery__cards-delivery-title">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M1.20312 6.45327V17.156L10.3491 22.41M1.20312 6.45327L10.3491 11.8046M1.20312 6.45327L6.16529 3.60267M10.3491 22.41V11.8046M10.3491 22.41L13.7796 20.4601M10.3491 11.8046L14.7274 9.26977M19.5923 6.45327L10.3491 1.19922L6.16529 3.60267M19.5923 6.45327L14.7274 9.26977M19.5923 6.45327V13.3579M6.16529 3.60267L14.7274 9.26977M14.7274 9.26977V11.8695M15.7977 17.7398L17.4518 19.6857L20.1761 16.0857M19.5923 13.3579C19.076 13.1712 18.519 13.0695 17.9383 13.0695C15.2515 13.0695 13.0734 15.2476 13.0734 17.9344C13.0734 18.8592 13.3315 19.7238 13.7796 20.4601M19.5923 13.3579C21.4649 14.0348 22.8031 15.8283 22.8031 17.9344C22.8031 20.6211 20.625 22.7992 17.9383 22.7992C16.1763 22.7992 14.6332 21.8626 13.7796 20.4601"
+                                                    stroke="#00A0E3" stroke-linecap="round" />
+                                            </svg>
+                                            <span>Самовывоз</span>
+                                        </div>
+                                        <div class="delivery__cards-delivery-terms">
+                                            <div class="delivery__cards-delivery-date">Завтра и позже</div>
+                                            <div class="delivery__cards-delivery-cost">
+                                                <div class="delivery__cards-delivery-cost-text">Бесплатно</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
                             </div>
-                            <div class="checkout-details__radio-item">
-                                <input class="catalog-4lvl__filters-radio-input form-radio form-entity-radio"
-                                    type="radio" name="personalDataRadio" id="personalDataRadio2">
-                                <label class="card__tabs-item tab" for="personalDataRadio2" data-id="0">Юридическое
-                                    лицо</label>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryCouruier1">
+                                <label for="deliveryCouruier1" class="tab" data-id="deliveryMethod"
+                                    data-tab="deliveryCouruier">
+                                    <div class="delivery__cards-item delivery__cards-delivery">
+                                        <div class="delivery__cards-delivery-title">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.3564 13.3448H6.9564C6.9564 13.3592 6.95718 13.3737 6.95875 13.388L7.3564 13.3448ZM10.3887 14.2408C10.3887 14.0199 10.2096 13.8408 9.98866 13.8408C9.76775 13.8408 9.58866 14.0199 9.58866 14.2408H10.3887ZM10.8661 13.3448H10.4661C10.4661 13.4116 10.4828 13.4773 10.5147 13.5359L10.8661 13.3448ZM8.62235 7.87366C8.56981 7.65909 8.35328 7.52772 8.1387 7.58025C7.92413 7.63279 7.79276 7.84932 7.84529 8.0639L8.62235 7.87366ZM10.4274 9.76078L10.0388 9.8559C10.0776 10.0141 10.2084 10.1331 10.3696 10.1566L10.4274 9.76078ZM10.3772 7.87366C10.3247 7.65909 10.1081 7.52772 9.89354 7.58025C9.67896 7.63279 9.5476 7.84932 9.60013 8.0639L10.3772 7.87366ZM12.1822 7.96878V7.56878C11.9613 7.56878 11.7822 7.74787 11.7822 7.96878H12.1822ZM19.2016 7.96878H19.6016C19.6016 7.74787 19.4225 7.56878 19.2016 7.56878V7.96878ZM19.2016 11.1048V11.5048C19.4225 11.5048 19.6016 11.3257 19.6016 11.1048H19.2016ZM12.1822 10.0168L12.1245 10.4126L12.1822 10.0168ZM12.6117 10.0794L12.6695 9.68363L12.6117 10.0794ZM10.7034 18.0236L10.3685 18.2423L10.7034 18.0236ZM8.26196 22.152L8.62739 22.3146L8.26196 22.152ZM7.68537 17.6233L8.0508 17.786L7.68537 17.6233ZM9.90224 18.4669L9.53681 18.3043L9.90224 18.4669ZM12.8165 16.9298L12.4651 17.121L12.8165 16.9298ZM6.9564 7.03562V13.3448H7.7564V7.03562H6.9564ZM6.95875 13.388L7.36827 17.1518L8.16357 17.0652L7.75405 13.3015L6.95875 13.388ZM7.31994 17.4607L5.73284 21.0262L6.46371 21.3515L8.0508 17.786L7.31994 17.4607ZM8.62739 22.3146L10.2677 18.6296L9.53681 18.3043L7.89652 21.9893L8.62739 22.3146ZM10.3887 18.0603V16.9288H9.58866V18.0603H10.3887ZM10.3887 16.9288V14.2408H9.58866V16.9288H10.3887ZM9.65372 17.1474L10.3685 18.2423L11.0384 17.805L10.3236 16.7101L9.65372 17.1474ZM10.4661 18.5703V22.104H11.2661V18.5703H10.4661ZM13.4596 22.104V17.8856H12.6596V22.104H13.4596ZM13.1678 16.7387L11.2174 13.1536L10.5147 13.5359L12.4651 17.121L13.1678 16.7387ZM7.84529 8.0639L8.53611 10.8857L9.31317 10.6955L8.62235 7.87366L7.84529 8.0639ZM10.8159 9.66566L10.3772 7.87366L9.60013 8.0639L10.0388 9.8559L10.8159 9.66566ZM12.1822 8.36878H19.2016V7.56878H12.1822V8.36878ZM18.8016 7.96878V11.1048H19.6016V7.96878H18.8016ZM12.5822 10.0168V7.96878H11.7822V10.0168H12.5822ZM12.6695 9.68363L12.2399 9.62097L12.1245 10.4126L12.554 10.4753L12.6695 9.68363ZM19.2016 10.7048H13.4983V11.5048H19.2016V10.7048ZM9.89596 11.9528H10.8661V11.1528H9.89596V11.9528ZM10.8661 11.9528H13.0503V11.1528H10.8661V11.9528ZM11.2661 13.3448V11.5528H10.4661V13.3448H11.2661ZM11.2661 9.82478V7.03562H10.4661V9.82478H11.2661ZM12.2399 9.62097L10.9238 9.42897L10.8083 10.2206L12.1245 10.4126L12.2399 9.62097ZM10.9238 9.42897L10.4851 9.36497L10.3696 10.1566L10.8083 10.2206L10.9238 9.42897ZM11.3435 3.04078C11.3435 4.06493 10.5326 4.88078 9.54995 4.88078V5.68078C10.9902 5.68078 12.1435 4.49087 12.1435 3.04078H11.3435ZM9.54995 4.88078C8.56726 4.88078 7.7564 4.06493 7.7564 3.04078H6.9564C6.9564 4.49087 8.10971 5.68078 9.54995 5.68078V4.88078ZM7.7564 3.04078C7.7564 2.01663 8.56726 1.20078 9.54995 1.20078V0.400781C8.10971 0.400781 6.9564 1.59069 6.9564 3.04078H7.7564ZM9.54995 1.20078C10.5326 1.20078 11.3435 2.01663 11.3435 3.04078H12.1435C12.1435 1.59069 10.9902 0.400781 9.54995 0.400781V1.20078ZM12.554 10.4753C12.8666 10.5208 13.0983 10.7889 13.0983 11.1048H13.8983C13.8983 10.3917 13.3751 9.78657 12.6695 9.68363L12.554 10.4753ZM13.0983 11.1048C13.0983 11.1313 13.0768 11.1528 13.0503 11.1528V11.9528C13.5187 11.9528 13.8983 11.5731 13.8983 11.1048H13.0983ZM11.9629 23.6008C12.7895 23.6008 13.4596 22.9307 13.4596 22.104H12.6596C12.6596 22.4888 12.3477 22.8008 11.9629 22.8008V23.6008ZM10.4661 22.104C10.4661 22.9307 11.1362 23.6008 11.9629 23.6008V22.8008C11.578 22.8008 11.2661 22.4888 11.2661 22.104H10.4661ZM10.3685 18.2423C10.4322 18.3399 10.4661 18.4538 10.4661 18.5703H11.2661C11.2661 18.2985 11.187 18.0326 11.0384 17.805L10.3685 18.2423ZM8.53611 10.8857C8.68948 11.5122 9.25099 11.9528 9.89596 11.9528V11.1528C9.61954 11.1528 9.3789 10.9639 9.31317 10.6955L8.53611 10.8857ZM6.58108 23.137C7.37333 23.4606 8.27938 23.0965 8.62739 22.3146L7.89652 21.9893C7.72426 22.3763 7.27576 22.5566 6.88359 22.3964L6.58108 23.137ZM5.73284 21.0262C5.36923 21.8431 5.75331 22.7988 6.58108 23.137L6.88359 22.3964C6.47384 22.229 6.28372 21.7559 6.46371 21.3515L5.73284 21.0262ZM9.11124 5.68078C9.8595 5.68078 10.4661 6.28736 10.4661 7.03562H11.2661C11.2661 5.84553 10.3013 4.88078 9.11124 4.88078V5.68078ZM7.36827 17.1518C7.37974 17.2572 7.36306 17.3638 7.31994 17.4607L8.0508 17.786C8.15143 17.5599 8.19034 17.3112 8.16357 17.0652L7.36827 17.1518ZM10.2677 18.6296C10.3474 18.4504 10.3887 18.2564 10.3887 18.0603H9.58866C9.58866 18.1443 9.57099 18.2275 9.53681 18.3043L10.2677 18.6296ZM13.4596 17.8856C13.4596 17.4849 13.3593 17.0906 13.1678 16.7387L12.4651 17.121C12.5928 17.3556 12.6596 17.6185 12.6596 17.8856H13.4596ZM7.7564 7.03562C7.7564 6.28736 8.36298 5.68078 9.11124 5.68078V4.88078C7.92116 4.88078 6.9564 5.84553 6.9564 7.03562H7.7564Z"
+                                                    fill="#00A0E3" />
+                                            </svg>
+                                            <span>Доставка курьером</span>
+                                        </div>
+                                        <div class="delivery__cards-delivery-terms">
+                                            <div class="delivery__cards-delivery-date">Завтра и позже</div>
+                                            <div class="delivery__cards-delivery-cost">
+                                                <div class="delivery__cards-delivery-cost-min">от 10 000&#8381;</div>
+                                                <div class="delivery__cards-delivery-cost-text">Бесплатно</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryCdek1">
+                                <label for="deliveryCdek1" class="tab" data-id="deliveryMethod" data-tab="deliveryCdek"
+                                    data-map="#map_cdek">
+                                    <div class="delivery__cards-item delivery__cards-companie">
+                                        <div class="delivery__cards-companie-img">
+                                            <img src="img/companies/companies-2.png" alt="">
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryDL1">
+                                <label for="deliveryDL1" class="tab" data-id="deliveryMethod" data-tab="deliveryDL"
+                                    data-map="#map_dl">
+                                    <div class="delivery__cards-item delivery__cards-companie">
+                                        <div class="delivery__cards-companie-img">
+                                            <img src="img/companies/companies-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryEnergy1">
+                                <label for="deliveryEnergy1" class="tab" data-id="deliveryMethod"
+                                    data-tab="deliveryEnergy" data-map="#map_energy">
+                                    <div class="delivery__cards-item delivery__cards-companie">
+                                        <div class="delivery__cards-companie-img">
+                                            <img src="img/companies/companies-3.png" alt="">
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryLove1">
+                                <label for="deliveryLove1" class="tab" data-id="deliveryMethod" data-tab="deliveryLove"
+                                    data-map="#map_love">
+                                    <div class="delivery__cards-item delivery__cards-companie">
+                                        <div class="delivery__cards-companie-img">
+                                            <img src="img/companies/companies-5.png" alt="">
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryGTD1">
+                                <label for="deliveryGTD1" class="tab" data-id="deliveryMethod" data-tab="deliveryGTD"
+                                    data-map="#map_gtd">
+                                    <div class="delivery__cards-item delivery__cards-companie">
+                                        <div class="delivery__cards-companie-img">
+                                            <img src="img/companies/companies-6.png" alt="">
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryCdek">
+                                <label for="deliveryCdek" class="tab" data-id="deliveryMethod" data-tab="deliveryPAC"
+                                    data-map="#map_pac">
+                                    <div class="delivery__cards-item delivery__cards-companie">
+                                        <div class="delivery__cards-companie-img">
+                                            <img src="img/companies/companies-4.png" alt="">
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="delivery__cards-radio">
+                                <input type="radio" name="delivery" id="deliveryOther1">
+                                <label for="deliveryOther1" class="tab" data-id="deliveryMethod"
+                                    data-tab="deliveryOther">
+                                    <div class="delivery__cards-item delivery__cards-companie">
+                                        <div class="delivery__cards-companie-img">
+                                            <p>Другая</p>
+                                        </div>
+                                    </div>
+                                </label>
                             </div>
                         </div>
                     </div>
-                    <div class="contacts-details__inputs">
-                        <!--КЛАСС .form-entity - ДЛЯ ПОЛЕЙ ЮРИДИЧЕСКОГО ЛИЦА-->
-                        <div class="wrapper">
-                            <h2 class="title title-left">Контактные данные</h2>
-                            <div class="contacts-details__login">Есть учетная запись? <a href="login.html">Войти</a>
+
+                    <div class="delivery__content">
+                        <!-- ТАБА С САМОВЫВОЗОМ -->
+                        <div class="tab-content active" data-tab="deliveryPickup" data-id="deliveryMethod">
+                            <div class="wrapper wrapper-pickup">
+                                <div class="delivery__pickup-container">
+                                    <div class="delivery__title">Выберите пункт самовывоза</div>
+                                    <div class="catalog-4lvl__filters-radio">
+                                        <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                            name="pickupAddress" id="pickupAddress1" checked>
+                                        <label class="catalog-4lvl__filters-radio-label tab active" for="pickupAddress1"
+                                            data-tab="pickupAddressNino" data-id="deliveryMethodChoice"
+                                            data-map="#map">г.
+                                            Нижний Новгород ул. Плотникова,
+                                            д. 2/1</label>
+                                    </div>
+                                    <div class="catalog-4lvl__filters-radio">
+                                        <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                            name="pickupAddress" id="pickupAddress2">
+                                        <label class="catalog-4lvl__filters-radio-label tab" for="pickupAddress2"
+                                            data-id="deliveryMethodChoice" data-tab="pickupAddressPavlovo"
+                                            data-map="#map_new">г. Павлово, ул. 1-я Северная, д.
+                                            39</label>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content active" data-id="deliveryMethodChoice"
+                                    data-tab="pickupAddressNino">
+                                    <div class="checkout__pickup-map ">
+                                        <div id="map" data-coords="56.26201438137114, 43.863453" class="js-map"></div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" data-tab="pickupAddressPavlovo" data-id="deliveryMethodChoice">
+                                    <div class="checkout__pickup-map ">
+                                        <div id="map_new" data-coords="55.98564811400813, 43.10444608749817"
+                                            class="js-map">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="personal-data__individual">
-                                <div class="personal-data__individual-container">
-                                    <div class="form-input__wrapper form-entity">
-                                        <input type="text" class="form-input" placeholder="Название организации*"
-                                            id="entityNameOrganization">
-                                    </div>
-                                    <div class="form-input__wrapper form-entity">
-                                        <input type="text" class="form-input" placeholder="ИНН*" id="entityTIN">
-                                    </div>
-                                    <div class="form-input__wrapper">
-                                        <input type="text" class="form-input" placeholder="Имя" id="individualName">
-                                    </div>
-                                    <div class="form-input__wrapper">
-                                        <input type="text" class="form-input" placeholder="Фамилия*"
-                                            id="individualSurname">
-                                    </div>
-                                    <div class="form-input__wrapper">
-                                        <input type="text" class="form-input input-phone" placeholder="Телефон*"
-                                            id="individualPhone">
+                        </div>
+
+                        <!-- ТАБА С КУРЬЕРОМ -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryCouruier">
+                            <div class="wrapper wrapper-couruier">
+                                <div class="checkout__couruier-text">
+                                    <p>После оформления заказа наши мнеджеры свяжутся с Вами для выбора времени
+                                        доставки.
+                                    </p>
+                                </div>
+                                <div class="checkout__couruier-container">
+                                    <div class="form-input__wrapper checkout__couruier-street">
+                                        <input type="text" class="form-input" placeholder="Улица и дом"
+                                            id="deliveryCouruierStreet">
                                     </div>
                                     <div class="form-input__wrapper">
-                                        <input type="text" class="form-input" placeholder="Почта*" id="individualMail">
+                                        <input type="text" class="form-input" placeholder="Квартира"
+                                            id="deliveryCouruierFlat">
                                     </div>
-                                    <div class="form-input__wrapper form-textarea__wrapper">
-                                        <textarea class="form-input form-textarea" placeholder="Комментарий к заказу"
-                                            id="checkoutTextarea"></textarea>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Подъезд"
+                                            id="deliveryCouruierEntrance">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Этаж"
+                                            id="deliveryCouruierFloor">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ТАБА СДЭКА -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryCdek">
+                            <div class="wrapper wrapper-company">
+                                <div class="checkout__company-container">
+                                    <div class="form-input__wrapper checkout__company-region">
+                                        <input type="text" class="form-input checkout__company-region-input"
+                                            placeholder="Выберите регион*" id="deliveryCdekRegion">
+                                        <div class="checkout__company-region-content">
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Нижегородская область">Нижегородская
+                                                область</a>
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Республика Коми">Республика
+                                                Коми</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Район" id="deliveryCdekArea">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                            id="deliveryCdekLocality">
+                                    </div>
+                                </div>
+
+                                <div class="checkout__company-map">
+                                    <div id="map_cdek" data-coords="63.5669296530831, 53.664043664566535"
+                                        class="js-map">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ТАБА ДЕЛОВЫЕ ЛИНИИ -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryDL">
+                            <div class="wrapper wrapper-company">
+                                <div class="checkout__company-container">
+                                    <div class="form-input__wrapper checkout__company-region">
+                                        <input type="text" class="form-input checkout__company-region-input"
+                                            placeholder="Выберите регион*" id="deliveryDLRegion">
+                                        <div class="checkout__company-region-content">
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Нижегородская область">Нижегородская
+                                                область</a>
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Республика Коми">Республика
+                                                Коми</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Район" id="deliveryDLArea">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                            id="deliveryDLLocality">
+                                    </div>
+                                </div>
+
+                                <div class="checkout__company-map">
+                                    <div id="map_dl" data-coords="63.54787604660868, 53.800099502701066" class="js-map">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ТАБА ЭНЕРГИЯ -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryEnergy">
+                            <div class="wrapper wrapper-company">
+                                <div class="checkout__company-container">
+                                    <div class="form-input__wrapper checkout__company-region">
+                                        <input type="text" class="form-input checkout__company-region-input"
+                                            placeholder="Выберите регион*" id="deliveryEnergyRegion">
+                                        <div class="checkout__company-region-content">
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Нижегородская область">Нижегородская
+                                                область</a>
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Республика Коми">Республика
+                                                Коми</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Район"
+                                            id="deliveryEnergyArea">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                            id="deliveryEnergyLocality">
+                                    </div>
+                                </div>
+
+                                <div class="checkout__company-map">
+                                    <div id="map_energy" data-coords="63.56254672989881, 53.672423003643146"
+                                        class="js-map">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ТАБА С ЛЮБОВЬЮ -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryLove">
+                            <div class="wrapper wrapper-company">
+                                <div class="checkout__company-container">
+                                    <div class="form-input__wrapper checkout__company-region">
+                                        <input type="text" class="form-input checkout__company-region-input"
+                                            placeholder="Выберите регион*" id="deliveryLoveRegion">
+                                        <div class="checkout__company-region-content">
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Нижегородская область">Нижегородская
+                                                область</a>
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Республика Коми">Республика
+                                                Коми</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Район" id="deliveryLoveArea">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                            id="deliveryLoveLocality">
+                                    </div>
+                                </div>
+
+                                <div class="checkout__company-map">
+                                    <div id="map_love" data-coords="63.57526131592826, 53.68345836003135"
+                                        class="js-map">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ТАБА ГТД -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryGTD">
+                            <div class="wrapper wrapper-company">
+                                <div class="checkout__company-container">
+                                    <div class="form-input__wrapper checkout__company-region">
+                                        <input type="text" class="form-input checkout__company-region-input"
+                                            placeholder="Выберите регион*" id="deliveryGTDRegion">
+                                        <div class="checkout__company-region-content">
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Нижегородская область">Нижегородская
+                                                область</a>
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Республика Коми">Республика
+                                                Коми</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Район" id="deliveryGTDArea">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                            id="deliveryGTDLocality">
+                                    </div>
+                                </div>
+
+                                <div class="checkout__company-map">
+                                    <div id="map_gtd" data-coords="63.564991460556, 53.666541932521945" class="js-map">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ТАБА ПЭК -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryPAC">
+                            <div class="wrapper wrapper-company">
+                                <div class="checkout__company-container">
+                                    <div class="form-input__wrapper checkout__company-region">
+                                        <input type="text" class="form-input checkout__company-region-input"
+                                            placeholder="Выберите регион*" id="deliveryPACRegion">
+                                        <div class="checkout__company-region-content">
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Нижегородская область">Нижегородская
+                                                область</a>
+                                            <a href="javascript:void(0)" class="checkout__company-region-item"
+                                                data-text="Республика Коми">Республика
+                                                Коми</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Район" id="deliveryPACArea">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Населенный пункт*"
+                                            id="deliveryPACLocality">
+                                    </div>
+                                </div>
+
+                                <div class="checkout__company-map">
+                                    <div id="map_pac" data-coords="56.248213487222785, 43.87546559710951"
+                                        class="js-map">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ТАБА ДРУГАЯ КОМПАНИЯ -->
+                        <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryOther">
+                            <div class="wrapper wrapper-other">
+                                <div class="checkout__couruier-text">
+                                    <p>После оформления заказа мы свяжемся с выбранной транспортной компанией.</p>
+                                </div>
+                                <div class="checkout__other-container">
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Название компании"
+                                            id="deliveryOtherName">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input input-phone" placeholder="Телефон"
+                                            id="deliveryOtherPhone">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
+
+                <!-- СПОСОБ ОПЛАТЫ -->
+                <div class="payment-method checkout-item">
+                    <div class="wrapper">
+                        <h2 class="title title-left">Способ оплаты</h2>
+                    </div>
+                    <div class="scroll">
+                        <div class="payment-method__container">
+                            <div class="payment-method__radio">
+                                <input type="radio" name="paymentMethod" id="paymentMethodCash1">
+                                <label for="paymentMethodCash1" class="tab active" data-id="paymentMethod"
+                                    data-tab="paymentMethodCash">
+                                    <div class="payment-method__item">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.9514 10.376V10.8422H12.3672V11.2803H12.9514V12.0218H13.5692V11.2803H15.1027V10.8422H13.5692V10.376H14.5859C14.996 10.376 15.3161 10.2692 15.5464 10.0614C15.7823 9.85359 15.9003 9.57274 15.9003 9.2301C15.9003 8.89308 15.7823 8.61784 15.5464 8.41001C15.3161 8.19657 14.996 8.08984 14.5859 8.08984H12.9514V9.93784H12.3672V10.376H12.9514ZM13.5692 8.64593H14.5297C15.0016 8.64593 15.2824 8.88184 15.2824 9.29189C15.2824 9.69631 15.0016 9.93784 14.5297 9.93784H13.5692V8.64593Z"
+                                                fill="#00A0E3" />
+                                            <path
+                                                d="M5.21277 7.34043V5H23V14.8298H20.6596M5.21277 7.34043V14.8298H20.6596M5.21277 7.34043H2.87234V9.21277M20.6596 14.8298V17.1702H18.3191M2.87234 9.21277V17.1702H18.3191M2.87234 9.21277H1V19.0426H18.3191V17.1702M8.02128 6.40426H20.1915C20.4281 7.19541 20.6774 7.56499 21.5957 7.80851V12.0213C20.6596 12.0213 20.1915 12.4894 20.1915 13.4255H8.02128C8.02128 12.4894 7.55319 12.0213 6.61702 12.0213V7.80851C7.40768 7.59012 7.77578 7.26469 8.02128 6.40426Z"
+                                                stroke="#00A0E3" stroke-width="0.8" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <div class="payment-method__text">Наличными</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <!-- ОПЛАТА ПО СЧЕТУ ПОЯВЛЯЕТСЯ ТОЛЬКО У ЮРИДИЧЕСКОГО ЛИЦА? -->
+                            <div class="payment-method__radio form-entity">
+                                <input type="radio" name="paymentMethod" id="paymentMethodAccount1">
+                                <label for="paymentMethodAccount1" class="tab" data-id="paymentMethod"
+                                    data-tab="paymentMethodAccount">
+                                    <div class="payment-method__item">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 7.5H18.5M14 10.5H20.5M20.5 13.5H16M12 13.5H13M12 16H18.5M20 16H20.5M14 13.5H14.5M12 10.5H12.5M19.5 7.5H20M2 1H23V22L22 20.5L19.5 23L17 20.5L14.5 23L12 20.5L9.5 23L7 20.5L4.5 23L2.5 21L2 22V1Z"
+                                                stroke="#00A0E3" stroke-width="0.8" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M4.50763 12.73V13.39H3.5V14.42H4.50763V15.5H5.81756V14.42H8.14427V13.39H5.81756V12.73H7.26489C7.95191 12.73 8.49237 12.53 8.89542 12.14C9.29847 11.75 9.5 11.24 9.5 10.61C9.5 9.98 9.29847 9.48 8.89542 9.09C8.49237 8.7 7.95191 8.5 7.26489 8.5H4.50763V11.7H3.5V12.73H4.50763ZM5.81756 9.76H7.09084C7.75954 9.76 8.17176 10.1 8.17176 10.73C8.17176 11.34 7.75954 11.7 7.09084 11.7H5.81756V9.76Z"
+                                                fill="#00A0E3" />
+                                        </svg>
+                                        <div class="payment-method__text">Оплата по счету</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__content">
+                        <div class="tab-content" data-tab="paymentMethodAccount" data-id="paymentMethod">
+                            <div class="wrapper wrapper-payment-method">
+                                <div class="payment-method__account-radio">
+                                    <div class="catalog-4lvl__filters-radio">
+                                        <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                            name="paymentMethodChoiceAccount" id="paymentMethodChoiceAccount1" checked>
+                                        <label class="catalog-4lvl__filters-radio-label"
+                                            for="paymentMethodChoiceAccount1">Плательщик</label>
+                                    </div>
+                                    <div class="catalog-4lvl__filters-radio">
+                                        <input class="catalog-4lvl__filters-radio-input" type="radio"
+                                            name="paymentMethodChoiceAccount" id="paymentMethodChoiceAccount2">
+                                        <label class="catalog-4lvl__filters-radio-label"
+                                            for="paymentMethodChoiceAccount2">Другой
+                                            плательщик</label>
+                                    </div>
+                                </div>
+                                <div class="payment-method__account-inputs">
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="Название компании*"
+                                            id="paymentMethodChoiceAccountName">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="ИНН*"
+                                            id="paymentMethodChoiceAccountTIN">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="КПП*"
+                                            id="paymentMethodChoiceAccountKPP">
+                                    </div>
+                                    <div class="form-input__wrapper">
+                                        <input type="text" class="form-input" placeholder="БИК*"
+                                            id="paymentMethodChoiceAccountBIC">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- СПИСОК ТОВАРОВ -->
+                <div class="product-list checkout-item">
+                    <div class="wrapper">
+                        <h2 class="title title-left">Список товаров</h2>
+
+                        <div class="product-list__wrapper">
+                            <div class="product-list__head">
+                                <div class="product-list__head__item">Товар</div>
+                                <div class="product-list__head__item">Количество</div>
+                                <div class="product-list__head__item">Сумма</div>
+                            </div>
+                            <div class="product-list__container">
+                                <div class="product-list__item">
+                                    <div class="cart__order-info">
+                                        <div class="cart__order-image">
+                                            <img src="img/catalog-page/catalog-page-1.png" alt="">
+                                        </div>
+                                        <div class="cart__order-wrapper">
+                                            <div class="cart__order-name">
+                                                <a href="javascript:void(0)"
+                                                    class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                                <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                                    первичный
+                                                    КПП
+                                                </a>
+                                                <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                                    <span>53-12-1701302</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart__order-values">
+                                                <div class="product-list__item-quantity">2 шт</div>
+                                                <div class="cart__order-sum">
+                                                    <div class="catalog-4lvl__catalog-item-cost">
+                                                        <div class="catalog-4lvl__catalog-item-cost-new">3 564049,34
+                                                            &#8381;
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-list__item">
+                                    <div class="cart__order-info">
+                                        <div class="cart__order-image">
+                                            <img src="img/catalog-page/catalog-page-2.png" alt="">
+                                        </div>
+                                        <div class="cart__order-wrapper">
+                                            <div class="cart__order-name">
+                                                <a href="javascript:void(0)"
+                                                    class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                                <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                                    первичный
+                                                    КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                                    doloremque.
+                                                    Facilis,
+                                                    non. In quae a i cumque minima eaque consequuntur quos.
+                                                </a>
+                                                <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                                    <span>53-12-1701302</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart__order-values">
+                                                <div class="product-list__item-quantity">2 шт</div>
+                                                <div class="cart__order-sum">
+                                                    <div class="catalog-4lvl__catalog-item-cost">
+                                                        <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
+                                                            &#8381;
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-list__item">
+                                    <div class="cart__order-info">
+                                        <div class="cart__order-image">
+                                            <img src="img/catalog-page/catalog-page-3.png" alt="">
+                                        </div>
+                                        <div class="cart__order-wrapper">
+                                            <div class="cart__order-name">
+                                                <a href="javascript:void(0)"
+                                                    class="catalog-4lvl__catalog-item-manufacturer">ГАЗ</a>
+                                                <a href="javascript:void(0)" class="catalog-4lvl__catalog-item-name">Вал
+                                                    первичный
+                                                    КПП Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                                    doloremque.
+                                                    Facilis,
+                                                    non. In quae a i cumque minima eaque consequuntur quos.
+                                                </a>
+                                                <div class="catalog-4lvl__catalog-item-article">Артикул:
+                                                    <span>53-12-1701302</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart__order-values">
+                                                <div class="product-list__item-quantity">2 шт</div>
+                                                <div class="cart__order-sum">
+                                                    <div class="catalog-4lvl__catalog-item-cost">
+                                                        <div class="catalog-4lvl__catalog-item-cost-new">3 049,34
+                                                            &#8381;
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- СУММА ЗАКАЗА -->
+            <div class="cart__ordering-wrapper">
+                <div class="cart__ordering">
+                    <div class="cart__ordering-info">
+                        <div class="cart__ordering-title">Сумма заказа</div>
+                        <div class="cart__ordering-item cart__ordering-sum">
+                            <div class="cart__ordering-text">Количество товаров</div>
+                            <div class="cart__ordering-dash"></div>
+                            <div class="cart__ordering-value">5</div>
+                        </div>
+                        <div class="cart__ordering-item cart__ordering-sum">
+                            <div class="cart__ordering-text">Сумма</div>
+                            <div class="cart__ordering-dash"></div>
+                            <div class="cart__ordering-value">24 393,99 &#8381;</div>
+                        </div>
+                        <div class="cart__ordering-item cart__ordering-discount">
+                            <div class="cart__ordering-text">Скидка</div>
+                            <div class="cart__ordering-dash"></div>
+                            <div class="cart__ordering-value">3 049,34 &#8381;</div>
+                        </div>
+                        <div class="cart__ordering-item cart__ordering-total">
+                            <div class="cart__ordering-text">Итоговая сумма</div>
+                            <div class="cart__ordering-dash"></div>
+                            <div class="cart__ordering-value">21 344,65 &#8381;</div>
+                        </div>
+                    </div>
+                    <div class="cart__ordering-buttons">
+                        <a href="javascript:void(0)" class="cart__ordering-checkout">Оформить заказ</a>
+                        <div class="checkout__ordering-copy">
+                            Нажимая кнопку “Оформить заказ”, вы соглашаетесь со <a href="javascript:void(0)">сбором и
+                                обработкой персональных данных</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- СПОСОБ ДОСТАВКИ -->
-        <div class="delivery checkout-item">
-            <div class="wrapper">
-                <h2 class="title title-left">Способ доставки</h2>
-            </div>
-
-            <div class="scroll">
-                <div class="delivery__cards">
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryPickup1">
-                        <label for="deliveryPickup1" class="tab active" data-id="deliveryMethod"
-                            data-tab="deliveryPickup">
-                            <div class="delivery__cards-item delivery__cards-delivery">
-                                <div class="delivery__cards-delivery-title">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.20312 6.45327V17.156L10.3491 22.41M1.20312 6.45327L10.3491 11.8046M1.20312 6.45327L6.16529 3.60267M10.3491 22.41V11.8046M10.3491 22.41L13.7796 20.4601M10.3491 11.8046L14.7274 9.26977M19.5923 6.45327L10.3491 1.19922L6.16529 3.60267M19.5923 6.45327L14.7274 9.26977M19.5923 6.45327V13.3579M6.16529 3.60267L14.7274 9.26977M14.7274 9.26977V11.8695M15.7977 17.7398L17.4518 19.6857L20.1761 16.0857M19.5923 13.3579C19.076 13.1712 18.519 13.0695 17.9383 13.0695C15.2515 13.0695 13.0734 15.2476 13.0734 17.9344C13.0734 18.8592 13.3315 19.7238 13.7796 20.4601M19.5923 13.3579C21.4649 14.0348 22.8031 15.8283 22.8031 17.9344C22.8031 20.6211 20.625 22.7992 17.9383 22.7992C16.1763 22.7992 14.6332 21.8626 13.7796 20.4601"
-                                            stroke="#00A0E3" stroke-linecap="round" />
-                                    </svg>
-                                    <span>Самовывоз</span>
-                                </div>
-                                <div class="delivery__cards-delivery-terms">
-                                    <div class="delivery__cards-delivery-date">Завтра и позже</div>
-                                    <div class="delivery__cards-delivery-cost">
-                                        <div class="delivery__cards-delivery-cost-text">Бесплатно</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCouruier1">
-                        <label for="deliveryCouruier1" class="tab" data-id="deliveryMethod" data-tab="deliveryCouruier">
-                            <div class="delivery__cards-item delivery__cards-delivery">
-                                <div class="delivery__cards-delivery-title">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.3564 13.3448H6.9564C6.9564 13.3592 6.95718 13.3737 6.95875 13.388L7.3564 13.3448ZM10.3887 14.2408C10.3887 14.0199 10.2096 13.8408 9.98866 13.8408C9.76775 13.8408 9.58866 14.0199 9.58866 14.2408H10.3887ZM10.8661 13.3448H10.4661C10.4661 13.4116 10.4828 13.4773 10.5147 13.5359L10.8661 13.3448ZM8.62235 7.87366C8.56981 7.65909 8.35328 7.52772 8.1387 7.58025C7.92413 7.63279 7.79276 7.84932 7.84529 8.0639L8.62235 7.87366ZM10.4274 9.76078L10.0388 9.8559C10.0776 10.0141 10.2084 10.1331 10.3696 10.1566L10.4274 9.76078ZM10.3772 7.87366C10.3247 7.65909 10.1081 7.52772 9.89354 7.58025C9.67896 7.63279 9.5476 7.84932 9.60013 8.0639L10.3772 7.87366ZM12.1822 7.96878V7.56878C11.9613 7.56878 11.7822 7.74787 11.7822 7.96878H12.1822ZM19.2016 7.96878H19.6016C19.6016 7.74787 19.4225 7.56878 19.2016 7.56878V7.96878ZM19.2016 11.1048V11.5048C19.4225 11.5048 19.6016 11.3257 19.6016 11.1048H19.2016ZM12.1822 10.0168L12.1245 10.4126L12.1822 10.0168ZM12.6117 10.0794L12.6695 9.68363L12.6117 10.0794ZM10.7034 18.0236L10.3685 18.2423L10.7034 18.0236ZM8.26196 22.152L8.62739 22.3146L8.26196 22.152ZM7.68537 17.6233L8.0508 17.786L7.68537 17.6233ZM9.90224 18.4669L9.53681 18.3043L9.90224 18.4669ZM12.8165 16.9298L12.4651 17.121L12.8165 16.9298ZM6.9564 7.03562V13.3448H7.7564V7.03562H6.9564ZM6.95875 13.388L7.36827 17.1518L8.16357 17.0652L7.75405 13.3015L6.95875 13.388ZM7.31994 17.4607L5.73284 21.0262L6.46371 21.3515L8.0508 17.786L7.31994 17.4607ZM8.62739 22.3146L10.2677 18.6296L9.53681 18.3043L7.89652 21.9893L8.62739 22.3146ZM10.3887 18.0603V16.9288H9.58866V18.0603H10.3887ZM10.3887 16.9288V14.2408H9.58866V16.9288H10.3887ZM9.65372 17.1474L10.3685 18.2423L11.0384 17.805L10.3236 16.7101L9.65372 17.1474ZM10.4661 18.5703V22.104H11.2661V18.5703H10.4661ZM13.4596 22.104V17.8856H12.6596V22.104H13.4596ZM13.1678 16.7387L11.2174 13.1536L10.5147 13.5359L12.4651 17.121L13.1678 16.7387ZM7.84529 8.0639L8.53611 10.8857L9.31317 10.6955L8.62235 7.87366L7.84529 8.0639ZM10.8159 9.66566L10.3772 7.87366L9.60013 8.0639L10.0388 9.8559L10.8159 9.66566ZM12.1822 8.36878H19.2016V7.56878H12.1822V8.36878ZM18.8016 7.96878V11.1048H19.6016V7.96878H18.8016ZM12.5822 10.0168V7.96878H11.7822V10.0168H12.5822ZM12.6695 9.68363L12.2399 9.62097L12.1245 10.4126L12.554 10.4753L12.6695 9.68363ZM19.2016 10.7048H13.4983V11.5048H19.2016V10.7048ZM9.89596 11.9528H10.8661V11.1528H9.89596V11.9528ZM10.8661 11.9528H13.0503V11.1528H10.8661V11.9528ZM11.2661 13.3448V11.5528H10.4661V13.3448H11.2661ZM11.2661 9.82478V7.03562H10.4661V9.82478H11.2661ZM12.2399 9.62097L10.9238 9.42897L10.8083 10.2206L12.1245 10.4126L12.2399 9.62097ZM10.9238 9.42897L10.4851 9.36497L10.3696 10.1566L10.8083 10.2206L10.9238 9.42897ZM11.3435 3.04078C11.3435 4.06493 10.5326 4.88078 9.54995 4.88078V5.68078C10.9902 5.68078 12.1435 4.49087 12.1435 3.04078H11.3435ZM9.54995 4.88078C8.56726 4.88078 7.7564 4.06493 7.7564 3.04078H6.9564C6.9564 4.49087 8.10971 5.68078 9.54995 5.68078V4.88078ZM7.7564 3.04078C7.7564 2.01663 8.56726 1.20078 9.54995 1.20078V0.400781C8.10971 0.400781 6.9564 1.59069 6.9564 3.04078H7.7564ZM9.54995 1.20078C10.5326 1.20078 11.3435 2.01663 11.3435 3.04078H12.1435C12.1435 1.59069 10.9902 0.400781 9.54995 0.400781V1.20078ZM12.554 10.4753C12.8666 10.5208 13.0983 10.7889 13.0983 11.1048H13.8983C13.8983 10.3917 13.3751 9.78657 12.6695 9.68363L12.554 10.4753ZM13.0983 11.1048C13.0983 11.1313 13.0768 11.1528 13.0503 11.1528V11.9528C13.5187 11.9528 13.8983 11.5731 13.8983 11.1048H13.0983ZM11.9629 23.6008C12.7895 23.6008 13.4596 22.9307 13.4596 22.104H12.6596C12.6596 22.4888 12.3477 22.8008 11.9629 22.8008V23.6008ZM10.4661 22.104C10.4661 22.9307 11.1362 23.6008 11.9629 23.6008V22.8008C11.578 22.8008 11.2661 22.4888 11.2661 22.104H10.4661ZM10.3685 18.2423C10.4322 18.3399 10.4661 18.4538 10.4661 18.5703H11.2661C11.2661 18.2985 11.187 18.0326 11.0384 17.805L10.3685 18.2423ZM8.53611 10.8857C8.68948 11.5122 9.25099 11.9528 9.89596 11.9528V11.1528C9.61954 11.1528 9.3789 10.9639 9.31317 10.6955L8.53611 10.8857ZM6.58108 23.137C7.37333 23.4606 8.27938 23.0965 8.62739 22.3146L7.89652 21.9893C7.72426 22.3763 7.27576 22.5566 6.88359 22.3964L6.58108 23.137ZM5.73284 21.0262C5.36923 21.8431 5.75331 22.7988 6.58108 23.137L6.88359 22.3964C6.47384 22.229 6.28372 21.7559 6.46371 21.3515L5.73284 21.0262ZM9.11124 5.68078C9.8595 5.68078 10.4661 6.28736 10.4661 7.03562H11.2661C11.2661 5.84553 10.3013 4.88078 9.11124 4.88078V5.68078ZM7.36827 17.1518C7.37974 17.2572 7.36306 17.3638 7.31994 17.4607L8.0508 17.786C8.15143 17.5599 8.19034 17.3112 8.16357 17.0652L7.36827 17.1518ZM10.2677 18.6296C10.3474 18.4504 10.3887 18.2564 10.3887 18.0603H9.58866C9.58866 18.1443 9.57099 18.2275 9.53681 18.3043L10.2677 18.6296ZM13.4596 17.8856C13.4596 17.4849 13.3593 17.0906 13.1678 16.7387L12.4651 17.121C12.5928 17.3556 12.6596 17.6185 12.6596 17.8856H13.4596ZM7.7564 7.03562C7.7564 6.28736 8.36298 5.68078 9.11124 5.68078V4.88078C7.92116 4.88078 6.9564 5.84553 6.9564 7.03562H7.7564Z"
-                                            fill="#00A0E3" />
-                                    </svg>
-                                    <span>Доставка курьером</span>
-                                </div>
-                                <div class="delivery__cards-delivery-terms">
-                                    <div class="delivery__cards-delivery-date">Завтра и позже</div>
-                                    <div class="delivery__cards-delivery-cost">
-                                        <div class="delivery__cards-delivery-cost-min">от 10 000&#8381;</div>
-                                        <div class="delivery__cards-delivery-cost-text">Бесплатно</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCdek1">
-                        <label for="deliveryCdek1" class="tab" data-id="deliveryMethod" data-tab="deliveryCdek"
-                            data-map="#map_cdek">
-                            <div class="delivery__cards-item delivery__cards-companie">
-                                <div class="delivery__cards-companie-img">
-                                    <img src="img/companies/companies-2.png" alt="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryDL1">
-                        <label for="deliveryDL1" class="tab" data-id="deliveryMethod" data-tab="deliveryDL"
-                            data-map="#map_dl">
-                            <div class="delivery__cards-item delivery__cards-companie">
-                                <div class="delivery__cards-companie-img">
-                                    <img src="img/companies/companies-1.png" alt="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryEnergy1">
-                        <label for="deliveryEnergy1" class="tab" data-id="deliveryMethod" data-tab="deliveryEnergy"
-                            data-map="#map_energy">
-                            <div class="delivery__cards-item delivery__cards-companie">
-                                <div class="delivery__cards-companie-img">
-                                    <img src="img/companies/companies-3.png" alt="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryLove1">
-                        <label for="deliveryLove1" class="tab" data-id="deliveryMethod" data-tab="deliveryLove"
-                            data-map="#map_love">
-                            <div class="delivery__cards-item delivery__cards-companie">
-                                <div class="delivery__cards-companie-img">
-                                    <img src="img/companies/companies-5.png" alt="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryGTD1">
-                        <label for="deliveryGTD1" class="tab" data-id="deliveryMethod" data-tab="deliveryGTD"
-                            data-map="#map_gtd">
-                            <div class="delivery__cards-item delivery__cards-companie">
-                                <div class="delivery__cards-companie-img">
-                                    <img src="img/companies/companies-6.png" alt="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryCdek">
-                        <label for="deliveryCdek" class="tab" data-id="deliveryMethod" data-tab="deliveryPAC"
-                            data-map="#map_pac">
-                            <div class="delivery__cards-item delivery__cards-companie">
-                                <div class="delivery__cards-companie-img">
-                                    <img src="img/companies/companies-4.png" alt="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="delivery__cards-radio">
-                        <input type="radio" name="delivery" id="deliveryOther1">
-                        <label for="deliveryOther1" class="tab" data-id="deliveryMethod" data-tab="deliveryOther">
-                            <div class="delivery__cards-item delivery__cards-companie">
-                                <div class="delivery__cards-companie-img">
-                                    <p>Другая</p>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="delivery__content">
-                <!-- ТАБА С САМОВЫВОЗОМ -->
-                <div class="tab-content active" data-tab="deliveryPickup" data-id="deliveryMethod">
-                    <div class="wrapper wrapper-pickup">
-                        <div class="delivery__pickup-container">
-                            <div class="delivery__title">Выберите пункт самовывоза</div>
-                            <div class="catalog-4lvl__filters-radio">
-                                <input class="catalog-4lvl__filters-radio-input" type="radio" name="pickupAddress"
-                                    id="pickupAddress1" checked>
-                                <label class="catalog-4lvl__filters-radio-label tab active" for="pickupAddress1"
-                                    data-tab="pickupAddressNino" data-id="deliveryMethodChoice" data-map="#map">г.
-                                    Нижний Новгород ул. Плотникова,
-                                    д. 2/1</label>
-                            </div>
-                            <div class="catalog-4lvl__filters-radio">
-                                <input class="catalog-4lvl__filters-radio-input" type="radio" name="pickupAddress"
-                                    id="pickupAddress2">
-                                <label class="catalog-4lvl__filters-radio-label tab" for="pickupAddress2"
-                                    data-id="deliveryMethodChoice" data-tab="pickupAddressPavlovo"
-                                    data-map="#map_new">г. Павлово, ул. 1-я Северная, д.
-                                    39</label>
-                            </div>
-                        </div>
-
-                        <div class="tab-content active" data-id="deliveryMethodChoice" data-tab="pickupAddressNino">
-                            <div class="checkout__pickup-map ">
-                                <div id="map" data-coords="56.26201438137114, 43.863453" class="js-map"></div>
-                            </div>
-                        </div>
-                        <div class="tab-content" data-tab="pickupAddressPavlovo" data-id="deliveryMethodChoice">
-                            <div class="checkout__pickup-map ">
-                                <div id="map_new" data-coords="55.98564811400813, 43.10444608749817" class="js-map">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА С КУРЬЕРОМ -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryCouruier">
-                    <div class="wrapper wrapper-couruier">
-                        <div class="checkout__couruier-text">
-                            <p>После оформления заказа наши мнеджеры свяжутся с Вами для выбора времени доставки.</p>
-                        </div>
-                        <div class="checkout__couruier-container">
-                            <div class="form-input__wrapper checkout__couruier-street">
-                                <input type="text" class="form-input" placeholder="Улица и дом"
-                                    id="deliveryCouruierStreet">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Квартира" id="deliveryCouruierFlat">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Подъезд"
-                                    id="deliveryCouruierEntrance">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Этаж" id="deliveryCouruierFloor">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА СДЭКА -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryCdek">
-                    <div class="wrapper wrapper-company">
-                        <div class="checkout__company-container">
-                            <div class="form-input__wrapper checkout__company-region">
-                                <input type="text" class="form-input checkout__company-region-input"
-                                    placeholder="Выберите регион*" id="deliveryCdekRegion">
-                                <div class="checkout__company-region-content">
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Нижегородская область">Нижегородская
-                                        область</a>
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Республика Коми">Республика
-                                        Коми</a>
-                                </div>
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Район" id="deliveryCdekArea">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Населенный пункт*"
-                                    id="deliveryCdekLocality">
-                            </div>
-                        </div>
-
-                        <div class="checkout__company-map">
-                            <div id="map_cdek" data-coords="63.5669296530831, 53.664043664566535" class="js-map"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА ДЕЛОВЫЕ ЛИНИИ -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryDL">
-                    <div class="wrapper wrapper-company">
-                        <div class="checkout__company-container">
-                            <div class="form-input__wrapper checkout__company-region">
-                                <input type="text" class="form-input checkout__company-region-input"
-                                    placeholder="Выберите регион*" id="deliveryDLRegion">
-                                <div class="checkout__company-region-content">
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Нижегородская область">Нижегородская
-                                        область</a>
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Республика Коми">Республика
-                                        Коми</a>
-                                </div>
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Район" id="deliveryDLArea">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Населенный пункт*"
-                                    id="deliveryDLLocality">
-                            </div>
-                        </div>
-
-                        <div class="checkout__company-map">
-                            <div id="map_dl" data-coords="63.54787604660868, 53.800099502701066" class="js-map"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА ЭНЕРГИЯ -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryEnergy">
-                    <div class="wrapper wrapper-company">
-                        <div class="checkout__company-container">
-                            <div class="form-input__wrapper checkout__company-region">
-                                <input type="text" class="form-input checkout__company-region-input"
-                                    placeholder="Выберите регион*" id="deliveryEnergyRegion">
-                                <div class="checkout__company-region-content">
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Нижегородская область">Нижегородская
-                                        область</a>
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Республика Коми">Республика
-                                        Коми</a>
-                                </div>
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Район" id="deliveryEnergyArea">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Населенный пункт*"
-                                    id="deliveryEnergyLocality">
-                            </div>
-                        </div>
-
-                        <div class="checkout__company-map">
-                            <div id="map_energy" data-coords="63.56254672989881, 53.672423003643146" class="js-map">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА С ЛЮБОВЬЮ -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryLove">
-                    <div class="wrapper wrapper-company">
-                        <div class="checkout__company-container">
-                            <div class="form-input__wrapper checkout__company-region">
-                                <input type="text" class="form-input checkout__company-region-input"
-                                    placeholder="Выберите регион*" id="deliveryLoveRegion">
-                                <div class="checkout__company-region-content">
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Нижегородская область">Нижегородская
-                                        область</a>
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Республика Коми">Республика
-                                        Коми</a>
-                                </div>
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Район" id="deliveryLoveArea">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Населенный пункт*"
-                                    id="deliveryLoveLocality">
-                            </div>
-                        </div>
-
-                        <div class="checkout__company-map">
-                            <div id="map_love" data-coords="63.57526131592826, 53.68345836003135" class="js-map">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА ГТД -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryGTD">
-                    <div class="wrapper wrapper-company">
-                        <div class="checkout__company-container">
-                            <div class="form-input__wrapper checkout__company-region">
-                                <input type="text" class="form-input checkout__company-region-input"
-                                    placeholder="Выберите регион*" id="deliveryGTDRegion">
-                                <div class="checkout__company-region-content">
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Нижегородская область">Нижегородская
-                                        область</a>
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Республика Коми">Республика
-                                        Коми</a>
-                                </div>
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Район" id="deliveryGTDArea">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Населенный пункт*"
-                                    id="deliveryGTDLocality">
-                            </div>
-                        </div>
-
-                        <div class="checkout__company-map">
-                            <div id="map_gtd" data-coords="63.564991460556, 53.666541932521945" class="js-map">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА ПЭК -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryPAC">
-                    <div class="wrapper wrapper-company">
-                        <div class="checkout__company-container">
-                            <div class="form-input__wrapper checkout__company-region">
-                                <input type="text" class="form-input checkout__company-region-input"
-                                    placeholder="Выберите регион*" id="deliveryPACRegion">
-                                <div class="checkout__company-region-content">
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Нижегородская область">Нижегородская
-                                        область</a>
-                                    <a href="javascript:void(0)" class="checkout__company-region-item"
-                                        data-text="Республика Коми">Республика
-                                        Коми</a>
-                                </div>
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Район" id="deliveryPACArea">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Населенный пункт*"
-                                    id="deliveryPACLocality">
-                            </div>
-                        </div>
-
-                        <div class="checkout__company-map">
-                            <div id="map_pac" data-coords="56.248213487222785, 43.87546559710951" class="js-map">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ТАБА ДРУГАЯ КОМПАНИЯ -->
-                <div class="tab-content" data-id="deliveryMethod" data-tab="deliveryOther">
-                    <div class="wrapper wrapper-other">
-                        <div class="checkout__couruier-text">
-                            <p>После оформления заказа мы свяжемся с выбранной транспортной компанией.</p>
-                        </div>
-                        <div class="checkout__other-container">
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Название компании"
-                                    id="deliveryOtherName">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input input-phone" placeholder="Телефон"
-                                    id="deliveryOtherPhone">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- СПОСОБ ОПЛАТЫ -->
-        <div class="payment-method checkout-item">
-            <div class="wrapper">
-                <h2 class="title title-left">Способ оплаты</h2>
-            </div>
-            <div class="scroll">
-                <div class="payment-method__container">
-                    <div class="payment-method__radio">
-                        <input type="radio" name="paymentMethod" id="paymentMethodCash1">
-                        <label for="paymentMethodCash1" class="tab active" data-id="paymentMethod"
-                            data-tab="paymentMethodCash">
-                            <div class="payment-method__item">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.9514 10.376V10.8422H12.3672V11.2803H12.9514V12.0218H13.5692V11.2803H15.1027V10.8422H13.5692V10.376H14.5859C14.996 10.376 15.3161 10.2692 15.5464 10.0614C15.7823 9.85359 15.9003 9.57274 15.9003 9.2301C15.9003 8.89308 15.7823 8.61784 15.5464 8.41001C15.3161 8.19657 14.996 8.08984 14.5859 8.08984H12.9514V9.93784H12.3672V10.376H12.9514ZM13.5692 8.64593H14.5297C15.0016 8.64593 15.2824 8.88184 15.2824 9.29189C15.2824 9.69631 15.0016 9.93784 14.5297 9.93784H13.5692V8.64593Z"
-                                        fill="#00A0E3" />
-                                    <path
-                                        d="M5.21277 7.34043V5H23V14.8298H20.6596M5.21277 7.34043V14.8298H20.6596M5.21277 7.34043H2.87234V9.21277M20.6596 14.8298V17.1702H18.3191M2.87234 9.21277V17.1702H18.3191M2.87234 9.21277H1V19.0426H18.3191V17.1702M8.02128 6.40426H20.1915C20.4281 7.19541 20.6774 7.56499 21.5957 7.80851V12.0213C20.6596 12.0213 20.1915 12.4894 20.1915 13.4255H8.02128C8.02128 12.4894 7.55319 12.0213 6.61702 12.0213V7.80851C7.40768 7.59012 7.77578 7.26469 8.02128 6.40426Z"
-                                        stroke="#00A0E3" stroke-width="0.8" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <div class="payment-method__text">Наличными</div>
-                            </div>
-                        </label>
-                    </div>
-                    <!-- ОПЛАТА ПО СЧЕТУ ПОЯВЛЯЕТСЯ ТОЛЬКО У ЮРИДИЧЕСКОГО ЛИЦА? -->
-                    <div class="payment-method__radio form-entity">
-                        <input type="radio" name="paymentMethod" id="paymentMethodAccount1">
-                        <label for="paymentMethodAccount1" class="tab" data-id="paymentMethod"
-                            data-tab="paymentMethodAccount">
-                            <div class="payment-method__item">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12 7.5H18.5M14 10.5H20.5M20.5 13.5H16M12 13.5H13M12 16H18.5M20 16H20.5M14 13.5H14.5M12 10.5H12.5M19.5 7.5H20M2 1H23V22L22 20.5L19.5 23L17 20.5L14.5 23L12 20.5L9.5 23L7 20.5L4.5 23L2.5 21L2 22V1Z"
-                                        stroke="#00A0E3" stroke-width="0.8" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M4.50763 12.73V13.39H3.5V14.42H4.50763V15.5H5.81756V14.42H8.14427V13.39H5.81756V12.73H7.26489C7.95191 12.73 8.49237 12.53 8.89542 12.14C9.29847 11.75 9.5 11.24 9.5 10.61C9.5 9.98 9.29847 9.48 8.89542 9.09C8.49237 8.7 7.95191 8.5 7.26489 8.5H4.50763V11.7H3.5V12.73H4.50763ZM5.81756 9.76H7.09084C7.75954 9.76 8.17176 10.1 8.17176 10.73C8.17176 11.34 7.75954 11.7 7.09084 11.7H5.81756V9.76Z"
-                                        fill="#00A0E3" />
-                                </svg>
-                                <div class="payment-method__text">Оплата по счету</div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="delivery__content">
-                <div class="tab-content" data-tab="paymentMethodAccount" data-id="paymentMethod">
-                    <div class="wrapper wrapper-payment-method">
-                        <div class="payment-method__account-radio">
-                            <div class="catalog-4lvl__filters-radio">
-                                <input class="catalog-4lvl__filters-radio-input" type="radio"
-                                    name="paymentMethodChoiceAccount" id="paymentMethodChoiceAccount1" checked>
-                                <label class="catalog-4lvl__filters-radio-label"
-                                    for="paymentMethodChoiceAccount1">Плательщик</label>
-                            </div>
-                            <div class="catalog-4lvl__filters-radio">
-                                <input class="catalog-4lvl__filters-radio-input" type="radio"
-                                    name="paymentMethodChoiceAccount" id="paymentMethodChoiceAccount2">
-                                <label class="catalog-4lvl__filters-radio-label"
-                                    for="paymentMethodChoiceAccount2">Другой
-                                    плательщик</label>
-                            </div>
-                        </div>
-                        <div class="payment-method__account-inputs">
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="Название компании*"
-                                    id="paymentMethodChoiceAccountName">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="ИНН*"
-                                    id="paymentMethodChoiceAccountTIN">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="КПП*"
-                                    id="paymentMethodChoiceAccountKPP">
-                            </div>
-                            <div class="form-input__wrapper">
-                                <input type="text" class="form-input" placeholder="БИК*"
-                                    id="paymentMethodChoiceAccountBIC">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
 
     <!-- НАЧАЛО СЕКЦИИ ПОДВАЛ -->
-<div class="footer">
+<footer class="footer">
     <div class="wrapper">
         <div class="footer__container">
             <div class="footer__item">
@@ -1091,9 +1268,25 @@
             </div>
         </div>
     </div>
-</div>
 </footer>
 <!-- КОНЕЦ СЕКЦИИ ПОДВАЛ -->
+
+    <div class="cart-window">
+        <div class="wrapper">
+            <div class="cart-window__container">
+                <div class="cart__ordering-info">
+                    <div class="cart__ordering-item cart__ordering-total">
+                        <div class="cart__ordering-text">Итого <span>486</span> товаров на сумму</div>
+                        <div class="cart__ordering-dash"></div>
+                        <div class="cart__ordering-value">11 111 114 &#8381;</div>
+                    </div>
+                </div>
+                <div class="cart__ordering-buttons">
+                    <a href="javascript:void(0)" class="cart__ordering-checkout">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- НАЧАЛО ТАБ-БАРА -->
 <div class="tab-bar">

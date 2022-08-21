@@ -2239,6 +2239,37 @@
         grid-gap: 1.6rem;
     }
 
+    .product-list__item {
+        .cart__order-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 1.2rem;
+        }
+
+        .cart__order-name {
+            max-width: 25rem;
+            width: 100%;
+        }
+
+        .catalog-4lvl__catalog-item-article {
+            margin-top: 1rem;
+        }
+
+        .cart__order-values {
+            margin: 0;
+            max-width: unset;
+            gap: 2.4rem;
+            width: 100%;
+        }
+    }
+
+    .product-list__item-quantity {
+        min-width: 10.5rem;
+        padding: 0.6rem 0;
+        text-align: center;
+    }
+
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 668*/
 }
 
@@ -4604,6 +4635,7 @@
         top: 8.8rem;
         box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
         transition: 0.3s ease;
+        z-index: 10;
     }
 
     /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
@@ -5557,6 +5589,63 @@
 
     .payment-method__account-inputs {
         grid-gap: 3.2rem;
+    }
+
+    .product-list__item {
+        padding: 2.4rem 0;
+
+        .cart__order-info {
+            max-width: unset;
+        }
+
+        .cart__order-name {
+            max-width: 24.3rem;
+        }
+
+        .catalog-4lvl__catalog-item-name {
+            min-height: 3.6rem;
+        }
+
+        .catalog-4lvl__catalog-item-article {
+            margin-top: 1.2rem;
+        }
+
+        .cart__order-wrapper {
+            gap: 6.1rem;
+        }
+    }
+
+    .product-list__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        padding-left: 10.1rem;
+    }
+
+    .product-list__head__item {
+        font-size: 1.2rem;
+        line-height: 2.1rem;
+        color: #A3A8AB;
+
+        &:nth-of-type(1) {
+            min-width: 24.3rem;
+        }
+
+        &:nth-of-type(2) {
+            min-width: 10.5rem;
+            text-align: center;
+            margin-left: 6.4rem;
+        }
+
+        &:nth-of-type(3) {
+            min-width: 13.4rem;
+            text-align: center;
+            margin-left: auto;
+        }
+    }
+
+    .checkout__wrapper {
+        margin-top: 4.6rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
@@ -6928,6 +7017,64 @@
         padding-right: 0;
         box-sizing: content-box;
         max-width: 85.2rem;
+    }
+
+    .product-list__item {
+        padding: 2.4rem 0.8rem;
+    }
+
+    .product-list__wrapper {
+        max-width: 83.2rem;
+    }
+
+    .product-list__head {
+        padding-left: 10.8rem;
+    }
+
+    .product-list__head__item {
+        &:nth-of-type(1) {
+            min-width: 27rem;
+        }
+
+        &:nth-of-type(2) {
+            margin-left: 5.7rem;
+        }
+    }
+
+    .product-list__item {
+        .cart__order-wrapper {
+            gap: 5.6rem;
+        }
+
+        .cart__order-name {
+            max-width: 27rem;
+        }
+    }
+
+    .checkout-details__radio {
+        padding: 0 8rem;
+        padding-right: 0;
+    }
+
+    .checkout__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .checkout__info {
+        flex-shrink: 0;
+        max-width: 91.2rem;
+        width: 100%;
+    }
+
+    .product-list {
+        .wrapper {
+            padding-right: 0;
+        }
+    }
+
+    .wrapper-payment-method {
+        padding-right: 0;
     }
 
     /*КОНЕЦ СТИЛЕЙ ОФОРМЛЕНИЕ ЗАКАЗА 1500*/
