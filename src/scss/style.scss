@@ -80,6 +80,10 @@ h1 {
     }
 }
 
+.buy-wrapper {
+    width: 100%;
+}
+
 .to-catalog {
     margin-top: 1.6rem;
     width: fit-content;
@@ -5840,6 +5844,16 @@ h1 {
     &+& {
         margin-top: 1.6rem;
     }
+
+    &:hover {
+        background-color: #FAFAFA;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        background-color: #EDF8FD;
+    }
 }
 
 .card__applicability-item-container {
@@ -5914,6 +5928,12 @@ h1 {
 .swiper-related {
     .swiper-wrapper {
         gap: 3.2rem;
+    }
+
+    .catalog-4lvl__catalog-item-bottom-buttons-basket {
+        width: 100%;
+        max-width: 70%;
+        margin: 0 auto;
     }
 }
 

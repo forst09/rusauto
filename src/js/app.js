@@ -1,5 +1,7 @@
 'use strict';
 
+// const { active } = require("browser-sync");
+
 $(document).ready(function () {
 
     // ОТКЛЮЧЕНИЕ ZOOM ЧЕРЕЗ СКРОЛЛ (В ТОМ ЧИСЛЕ ТРЕКАПАДАМИ В MACOS)
@@ -444,10 +446,12 @@ $(document).ready(function () {
     // ТАБЫ, НА МОБИЛКАХ ВКЛЮЧАТЬ ДЛИННЫЕ КАРТОЧКИ
     if (($(window).width() >= 320) && ($(window).width() < 1023)) {
         $("#catalog4lvlTabLines").trigger("click");
+        $('.catalog-4lvl__catalog-lines').addClass('active');
     }
     // ТАБЫ, НАЧИНАЯ С ПК ВКЛЮЧАТЬ ПЛИТКИ
     if ($(window).width() >= 1024) {
-        $("#catalog4lvlTabTiles").trigger("click");
+        $("#catalog4lvlTabTiles").addClass('active');
+        $('.catalog-4lvl__catalog-tile').addClass('active');
     }
 
     //ВЫПАДАШКА С СОРТИРОВКОЙ В КАТАЛОГЕ 4 УРОВНЯ 
@@ -480,32 +484,20 @@ $(document).ready(function () {
     //ВМЕСТО КНОПКИ В КОРЗИНУ ПОКАЗАТЬ СЧЕТЧИК
     $(document).on('click', ".buy", function () {
         $(this).hide();
-        $(this).parents('.catalog-4lvl__catalog-item-bottom').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').addClass('active');
+        $(this).parents('.buy-wrapper').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').addClass('active');
     });
 
     //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА
     $(document).on('click', ".catalog-4lvl__catalog-item-bottom-buttons-basket-minus", function () {
-        let val = $(this).parents('catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
-        if (val == 1) {
-            $(this).parents('catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').removeClass('active');
-            $(this).parents('catalog-4lvl__catalog-item-bottom-buttons-basket').find('.buy').show();
-        }
-        else {
-            $(this).parents('catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(--val);
-        }
-    });
 
-
-    //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА В КОРЗИНЕ
-    $(document).on('click', ".catalog-4lvl__catalog-item-bottom-buttons-basket-minus", function () {
         let val = $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val();
         if (val == 1) {
             $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').removeClass('active');
-            $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.buy').show();
+            $(this).parents('.buy-wrapper').find('.buy').show();
         }
-        // else {
-        //     $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(--val);
-        // }
+        else {
+            $(this).parents('.catalog-4lvl__catalog-item-bottom-buttons-basket').find('.catalog-4lvl__catalog-item-bottom-buttons-basket-value').val(--val);
+        }
     });
 
     //УВЕЛИЧИТЬ СЧЕТЧИК ТОВАРА

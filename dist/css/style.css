@@ -73,6 +73,10 @@ h1 {
   margin-bottom: 3.2rem;
 }
 
+.buy-wrapper {
+  width: 100%;
+}
+
 .to-catalog {
   margin-top: 1.6rem;
   width: fit-content;
@@ -4971,6 +4975,12 @@ h1 {
 .card__applicability-item + .card__applicability-item {
   margin-top: 1.6rem;
 }
+.card__applicability-item:hover {
+  background-color: #FAFAFA;
+}
+.card__applicability-item:active, .card__applicability-item:focus, .card__applicability-item:focus-within {
+  background-color: #EDF8FD;
+}
 
 .card__applicability-item-container {
   display: flex;
@@ -5043,6 +5053,11 @@ h1 {
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
 .swiper-related .swiper-wrapper {
   gap: 3.2rem;
+}
+.swiper-related .catalog-4lvl__catalog-item-bottom-buttons-basket {
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА*/

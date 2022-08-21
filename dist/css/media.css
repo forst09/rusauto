@@ -1666,6 +1666,55 @@
     text-align: center;
   }
 
+  .card__applicability-head .card__availability-head-item:nth-of-type(1) {
+    width: 18.7rem;
+  }
+  .card__applicability-head .card__availability-head-item:nth-of-type(2) {
+    width: 11.9rem;
+  }
+  .card__applicability-head .card__availability-head-item:nth-of-type(3) {
+    width: 16.2rem;
+  }
+
+  .card__applicability-item {
+    padding: 0.4rem 0;
+    align-items: center;
+  }
+  .card__applicability-item:not(:nth-last-of-type(1)) {
+    padding: 0.4rem 0;
+    border: unset;
+  }
+  .card__applicability-item + .card__applicability-item {
+    margin-top: 2.4rem;
+  }
+
+  .card__applicability-brand {
+    min-width: 18.7rem;
+  }
+
+  .card__applicability-brand-name {
+    width: 12.5rem;
+  }
+
+  .card__applicability-model {
+    width: 11.9rem;
+    margin-left: 5.6rem;
+    text-align: center;
+  }
+
+  .card__applicability-place {
+    margin: 0;
+    height: fit-content;
+  }
+
+  .card__applicability-place-left {
+    display: none;
+  }
+
+  .card__applicability-place-right {
+    width: 16.2rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 668*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ 668*/
@@ -4401,6 +4450,10 @@
     padding: 0;
     max-width: 89.6rem;
   }
+  .swiper-related .catalog-4lvl__catalog-item-bottom-buttons-basket {
+    margin: unset;
+    max-width: none;
+  }
 
   .card-desc__characteristics-container {
     padding: 0 6.4rem;
@@ -4434,6 +4487,33 @@
 
   .card__availability-address {
     width: 24rem;
+  }
+
+  .card__applicability-head .card__availability-head-item:nth-of-type(1) {
+    width: 24.2rem;
+  }
+  .card__applicability-head .card__availability-head-item:nth-of-type(2) {
+    width: 18rem;
+  }
+  .card__applicability-head .card__availability-head-item:nth-of-type(3) {
+    width: 21.8rem;
+  }
+
+  .card__applicability-brand {
+    min-width: 24.2rem;
+  }
+
+  .card__applicability-brand-name {
+    width: 18rem;
+  }
+
+  .card__applicability-model {
+    width: 18rem;
+    margin-left: 12.8rem;
+  }
+
+  .card__applicability-place-right {
+    width: 21.8rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
@@ -5770,6 +5850,29 @@
   .swiper-related {
     padding: 0;
     max-width: 134rem;
+  }
+
+  .card__applicability-head .card__availability-head-item:nth-of-type(1) {
+    width: 29.3rem;
+  }
+  .card__applicability-head .card__availability-head-item:nth-of-type(3) {
+    width: 23.7rem;
+  }
+
+  .card__applicability-brand {
+    min-width: 29.3re;
+  }
+
+  .card__applicability-brand-name {
+    width: 23.1rem;
+  }
+
+  .card__applicability-model {
+    margin-left: 11.5rem;
+  }
+
+  .card__applicability-place-right {
+    width: 23.7rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1500*/
