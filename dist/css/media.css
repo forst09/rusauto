@@ -4516,6 +4516,14 @@
     width: 21.8rem;
   }
 
+  .card-desc__buttons-buy .catalog-4lvl__catalog-item-bottom-buttons-basket.active {
+    gap: 2.4rem;
+    min-width: 23.3rem;
+  }
+  .card-desc__buttons-buy .catalog-4lvl__catalog-item-bottom-buttons-basket form {
+    width: 9.1rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ КАРТОЧКИ ТОВАРА 1024*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ АДРЕСА ДОСТАВКИ 1024*/

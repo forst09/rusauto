@@ -5050,6 +5050,17 @@ h1 {
   box-orient: vertical;
 }
 
+.card-desc__buttons-buy .catalog-4lvl__catalog-item-bottom-buttons-basket.active {
+  min-width: 16.8rem;
+  min-height: 4rem;
+  background-color: #FAFAFA;
+  justify-content: center;
+  margin: 0;
+}
+.card-desc__buttons-buy .catalog-4lvl__catalog-item-bottom-buttons-basket form {
+  width: 9.1rem;
+}
+
 /*СОПУТСТВУЮЩИЕ ТОВАРЫ*/
 .swiper-related .swiper-wrapper {
   gap: 3.2rem;
