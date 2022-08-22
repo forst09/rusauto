@@ -310,6 +310,7 @@ $(document).ready(function () {
 
 
     // ПОДКЛЮЧЕНИЕ КАРТЫ
+    let isMapLoaded = false;
     const jsMap = document.querySelector("#map");
     const jsMapNew = document.querySelector("#map_new");
     const renderMap = function (mapId = "map") {
@@ -361,7 +362,7 @@ $(document).ready(function () {
     };
     // renderMap();
     //check scroll to map block
-    const creatMapsScript = function () {
+    const creatMapsScript = function (id) {
         let scriptYMAPS = document.createElement("script");
         scriptYMAPS.src =
             "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<ваш API-ключ>";
@@ -372,14 +373,19 @@ $(document).ready(function () {
         // let loader = `<div class="loader-catalog"><img src="/upload/imgs_new/loader.gif" alt="preloader"></div>`;
         // jsMap.insertAdjacentHTML("afterbegin", loader);
         scriptYMAPS.onload = function () {
-            renderMap();
+            renderMap(id);
         };
     };
 
     const revealMapBlock = function (entries, observer) {
         const [entry] = entries;
         if (!entry.isIntersecting) return;
-        creatMapsScript();
+
+
+        if (!isMapLoaded) {
+            creatMapsScript();
+            isMapLoaded = true;
+        }
         observer.unobserve(entry.target);
     };
 
@@ -435,12 +441,17 @@ $(document).ready(function () {
 
                 // if($('.contacts__map'))
                 if (this.hasAttribute('data-map')) {
-                    console.log(this);
                     $.map([...$(".js-map")], function (map) {
                         $(map).empty();
-                        console.log($(map));
                     });
-                    renderMap($(this).attr('data-map').split("#")[1]);
+                    if (!isMapLoaded) {
+                        creatMapsScript($(this).attr('data-map').split("#")[1]);
+                        isMapLoaded = true;
+                    } else {
+                        renderMap($(this).attr('data-map').split("#")[1]);
+                    }
+
+
                 }
                 // console.log($(this).attr('data-map'));
             })
