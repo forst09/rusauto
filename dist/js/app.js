@@ -528,6 +528,16 @@ $(document).ready(function () {
         }
     });
 
+    //скролл страницы наверх
+    $(window).scroll(function () {
+        let height = $(window).scrollTop();
+        if (height > 1000) {
+            $('.arrow-top').show();
+        } else {
+            $('.arrow-top').hide();
+        }
+    });
+
     //РАСКРЫТИЕ ТАБА
     $(document).on('click', ".catalog-4lvl__filters-dropdown-link", function () {
         if ($(this).hasClass('active')) {

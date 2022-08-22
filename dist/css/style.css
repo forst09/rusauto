@@ -2221,6 +2221,28 @@ h1 {
   text-align: center;
 }
 
+/*КНОПКА НАВЕРХ*/
+.arrow-top {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 160, 227, 0.25);
+  transition: 0.3s ease;
+  padding: 0.6rem;
+  width: 4rem;
+  height: 4rem;
+  bottom: 20rem;
+  right: 1.6rem;
+  z-index: 99992;
+  animation: fadeEffect 0.3s;
+}
+.arrow-top svg {
+  width: 2.9rem;
+  height: 2.9rem;
+}
+.arrow-top:hover, .arrow-top:active, .arrow-top:focus, .arrow-top:focus-within {
+  background-color: #00a0e3;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА*/
