@@ -357,6 +357,7 @@ h1 {
   right: 1.6rem;
   top: 6rem;
   padding: 2.4rem 1.6rem;
+  animation: fadeEffect 0.3s;
 }
 .ma-notification__text {
   font-weight: 400;
@@ -378,6 +379,7 @@ h1 {
 }
 
 .ma-notification.active {
+  display: block;
   z-index: 1000;
 }
 
@@ -4720,6 +4722,7 @@ h1 {
   font-size: 1.4rem;
   line-height: 1.8rem;
   max-height: 3.8rem;
+  font-family: "Geometria";
 }
 .form-input::placeholder {
   color: #A3A8AB;

@@ -305,6 +305,8 @@ $(document).ready(function () {
         }
     });
 
+    //УВЕДОМЛЕНИЕ О ДОБАВЛЕНИИ В КОРЗИНУ
+
 
 
     // ПОДКЛЮЧЕНИЕ КАРТЫ
@@ -489,6 +491,10 @@ $(document).ready(function () {
     $(document).on('click', ".buy", function () {
         $(this).hide();
         $(this).parents('.buy-wrapper').find('.catalog-4lvl__catalog-item-bottom-buttons-basket').addClass('active');
+        $('.ma-notification').addClass('active');
+        setTimeout(function () {
+            $('.ma-notification').removeClass('active');
+        }, 2000);
     });
 
     //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА
@@ -1045,11 +1051,11 @@ $(document).ready(function () {
         $(this).parents('.checkout__company-region').find('.checkout__company-region-content').addClass('active');
     });
     //ВЫПАДАШКА С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
-    $(document).on('blur', ".checkout__company-region-input", function () {
-        $(this).removeClass('active');
-        $(this).parents('.checkout__company-region').find('.checkout__company-region-content').removeClass('active');
-        $(this).parents('.checkout__company-region').removeClass('active');
-    });
+    // $(document).on('blur', ".checkout__company-region-input", function () {
+    //     $(this).removeClass('active');
+    //     $(this).parents('.checkout__company-region').find('.checkout__company-region-content').removeClass('active');
+    //     $(this).parents('.checkout__company-region').removeClass('active');
+    // });
     //ПЕРЕДАЧА ТЕКСТА В ВЫПАДАШКУ С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
     $(document).on('click', ".checkout__company-region-item", function () {
         $(this).parents('.checkout__company-region').find('input').val($(this).attr('data-text'));
