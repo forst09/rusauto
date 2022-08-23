@@ -116,10 +116,19 @@ $(document).ready(function () {
     });
 
     //ЗАКРЫТИЕ ПОИСКА НА 1024 В ШАПКЕ
-    $(document).on('blur', '.header-bottom__search-input', function () {
+    $(document).on('focusout', '.header-bottom__search-input', function () {
         $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-result').removeClass('active');
         $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-close').removeClass('active');
         $(this).val('');
+    });
+
+    //ВСТАВИТЬ В ИНПУТ ПОИСКА ПРИМЕР ПО КЛИКУ
+    $(document).on('click', '.header-bottom__search-example a', function () {
+        let exampleValue = $(this).text();
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-input').val(exampleValue);
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-result').addClass('active');
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-close').addClass('active');
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-input').focus();
     });
 
     //ПОИСК ГОРОДА В МОДАЛКЕ ВЫБОРА ГОРОДА
