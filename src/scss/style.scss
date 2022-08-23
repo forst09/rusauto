@@ -1548,8 +1548,6 @@ textarea {
         a {
             font-size: 1.4rem;
             line-height: 1.8rem;
-            -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
             color: #00A0E3;
             display: inline-block;
         }
@@ -3647,6 +3645,8 @@ textarea {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     position: absolute;
+    display: flex;
+    align-items: center;
     width: 6.4rem;
     height: 5.2rem;
     top: calc(50% - 2.6rem);
@@ -3656,8 +3656,8 @@ textarea {
     transition: 0.3s ease-in-out;
 
     svg {
-        height: 100%;
-        width: auto;
+        width: 100%;
+        height: auto;
 
         path {
             opacity: 0.18;
