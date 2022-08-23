@@ -34,6 +34,24 @@ $(document).ready(function () {
         $('body').addClass('scroll-hide');
     });
 
+    //ЯКОРЬ
+    const scrollAnchor = function () {
+        let detailProductHeight = 0;
+        if ($(".card-window").length !== 0) {
+            detailProductHeight = $('.card-window').outerHeight();
+        }
+
+        let elementClick = $(this).attr("href");
+        let destination = $(elementClick).offset().top - $('.header-fixed').height() - detailProductHeight;
+        jQuery("html:not(:animated),body:not(:animated)").animate(
+            {
+                scrollTop: destination,
+            },
+            100
+        );
+        // return false;
+    };
+
     //ОТКРЫТИЕ МОДАЛЬНОГО КАТАЛОГА
     $(document).on('click', '.catalog-modal__btn', function () {
         $('.catalog-modal').addClass('active');
@@ -140,6 +158,13 @@ $(document).ready(function () {
     $(document).on('blur', '.modal-choice__search-input', function () {
         $(this).parents('.modal-choice__search').find('.header-bottom__search-close').removeClass('active');
         $(this).val('');
+    });
+
+    //ПЕРЕХОД КО ВСЕМ ХАРАКТЕРИСТИКАМ В КАРТОЧКЕ ТОВАРА
+    $('.all-characteristics').bind("click", {}, scrollAnchor);
+
+    $(document).on('click', '.all-characteristics', function () {
+        $(`.card__tabs-item[data-tab='${$(this).attr('href').split('#')[1]}']`)[0].click();
     });
 
     //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
@@ -717,10 +742,10 @@ $(document).ready(function () {
 
     // detect element in viewport
     function elementInViewport(el) {
-        var top = el.offsetTop;
-        var left = el.offsetLeft;
-        var width = el.offsetWidth;
-        var height = el.offsetHeight;
+        let top = el.offsetTop;
+        let left = el.offsetLeft;
+        let width = el.offsetWidth;
+        let height = el.offsetHeight;
 
         while (el.offsetParent) {
             el = el.offsetParent;
@@ -739,34 +764,6 @@ $(document).ready(function () {
 
     let blockItems = [...document.querySelectorAll('.ma-pay__item')]
     let containerItem = document.querySelector('.ma-container');
-
-
-    // leftLinks.forEach((link, index, arr) => {
-
-    //     link.addEventListener('click', function (e) {
-
-    //         e.preventDefault();
-    //         blockItems.forEach(item => {
-    //             if (item.id === link.getAttribute('data-id')) {
-
-    //                 let prevElt = item.previousElementSibling
-    //                 if (prevElt != null) {
-    //                     prevElt.lastElementChild.scrollIntoView();
-    //                 } else {
-    //                     if (containerItem.previousElementSibling != null) {
-    //                         containerItem.previousElementSibling.lastElementChild.scrollIntoView()
-    //                     } else {
-    //                         item.scrollIntoView()
-    //                     }
-    //                 }
-
-    //             }
-
-
-
-    //         })
-    //     })
-    // })
     window.addEventListener('scroll', function () {
         blockItems.forEach(item => {
             if (elementInViewport(item.lastElementChild)) {
@@ -781,19 +778,6 @@ $(document).ready(function () {
             }
         })
     })
-    const scrollAnchor = function () {
-
-
-        let elementClick = $(this).attr("href");
-        let destination = $(elementClick).offset().top - $('.header-fixed').height();
-        jQuery("html:not(:animated),body:not(:animated)").animate(
-            {
-                scrollTop: destination,
-            },
-            0
-        );
-        return false;
-    };
     $(".content-left-nav__link").bind("click", {}, scrollAnchor)
 
 
@@ -1292,13 +1276,13 @@ $(document).ready(function () {
 
 
         //СВАЙПЕР ДЛЯ ТАБОВ КАРТОЧКИ ТОВАРА
-        const swiperCardTabs = new Swiper('.swiper-card-tabs', {
-            speed: 700,
-            slidesPerView: 'auto',
-            mousewheel: {
-                invert: true,
-            },
-        });
+        // const swiperCardTabs = new Swiper('.swiper-card-tabs', {
+        //     speed: 700,
+        //     slidesPerView: 'auto',
+        //     mousewheel: {
+        //         invert: true,
+        //     },
+        // });
 
     }
 

@@ -2770,6 +2770,11 @@ textarea::-webkit-scrollbar-track {
   padding: 2.4rem 0;
 }
 
+.desc-icon--transparrent {
+  background-color: unset;
+  padding: 0 !important;
+}
+
 .desc-icon__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5254,24 +5259,6 @@ textarea::-webkit-scrollbar-track {
   font-weight: 500 !important;
   position: relative;
 }
-.ma-autobus-schema-item__file-link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  left: 0;
-  bottom: 0;
-  background-color: #00A0E3;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-.ma-autobus-schema-item__file-link:hover::after {
-  width: 0;
-}
-.ma-autobus-schema-item__file-link:active, .ma-autobus-schema-item__file-link:focus, .ma-autobus-schema-item__file-link:focus-within {
-  width: 0;
-}
 .ma-autobus .ma-production__content .ma-production__scroll {
   margin: 0 0;
   margin-bottom: 4.8rem;
@@ -5769,7 +5756,9 @@ textarea::-webkit-scrollbar-track {
   text-align: center;
   color: #064E8C;
 }
-
+.ma-btn-simple:hover {
+  color: #00A0E3;
+}
 .ma-btn-row {
   width: 100%;
   margin-top: 2.4rem;
@@ -6472,7 +6461,7 @@ textarea::-webkit-scrollbar-track {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #064E8C;
-  max-width: 32.8rem;
+  max-width: 33rem;
 }
 .ma-address-livraison__body-text--comment {
   margin-top: 0.8rem;
@@ -7637,16 +7626,13 @@ textarea::-webkit-scrollbar-track {
   line-height: 1.8rem;
   font-weight: 500;
 }
-.order__item-payment--assembly {
-  color: #E6951C;
+.order__item-payment--not-paid {
+  color: #ED9CA1;
 }
-.order__item-payment--canceled {
-  color: #E6281C;
-}
-.order__item-payment--delivered {
+.order__item-payment--paid {
   color: #9CCE85;
 }
-.order__item-payment--received {
+.order__item-payment--cancelled {
   color: #A3A8AB;
 }
 

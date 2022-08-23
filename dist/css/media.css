@@ -2107,14 +2107,10 @@
     padding: 0 1.6rem;
   }
   .ma-address-livraison__body-text--comment {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    row-gap: unset;
-    -webkit-column-gap: 0.8rem;
-    -moz-column-gap: 0.8rem;
-    column-gap: 0.8rem;
+    display: inline-block;
+  }
+  .ma-address-livraison__body-text--comment span + span {
+    margin-left: 0.8rem;
   }
 
   .livraison-modal {
@@ -2134,6 +2130,10 @@
   #livraison-page .fancybox-close-small {
     top: 2.4rem;
     right: 2.4rem;
+  }
+
+  .livraison__button-wrapper {
+    text-align: left;
   }
 
   /*КОНЕЦ СТИЛЕЙ АДРЕСА ДОСТАВКИ 668*/
@@ -3631,6 +3631,10 @@
     line-height: 2.6rem;
   }
 
+  .desc-icon__container {
+    padding: 0 1.8rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ 1024*/
   .spares__container {
@@ -4024,7 +4028,20 @@
     color: #fff;
     font-size: 1.2rem;
     line-height: 2.1rem;
-    text-decoration: underline;
+    position: relative;
+  }
+  .footer__info-contacts-feedback-call::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transition: 0.3s ease;
+    background-color: #ffffff;
+  }
+  .footer__info-contacts-feedback-call:hover::after, .footer__info-contacts-feedback-call:active::after, .footer__info-contacts-feedback-call:focus::after, .footer__info-contacts-feedback-call:focus-within::after {
+    width: 0;
   }
 
   .footer__info-contacts-text {
@@ -6278,6 +6295,10 @@
     padding: 5.6rem 0;
   }
 
+  .desc-icon__container {
+    padding: 0 24rem;
+  }
+
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ С ИКОНКАМИ 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ 1500*/
   .spares__container {
@@ -6298,7 +6319,7 @@
   }
 
   .spares__item-info-models {
-    max-width: 29.3rem;
+    max-width: 27.6rem;
   }
 
   .spares__item-info-models-item:nth-of-type(2n) {

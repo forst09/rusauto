@@ -3288,6 +3288,11 @@ textarea {
     padding: 2.4rem 0;
 }
 
+.desc-icon--transparrent {
+    background-color: unset;
+    padding: 0 !important;
+}
+
 .desc-icon__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6108,31 +6113,6 @@ textarea {
             &-link {
                 font-weight: 500 !important;
                 position: relative;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 1px;
-                    left: 0;
-                    bottom: 0;
-                    background-color: #00A0E3;
-                    -webkit-transition: 0.3s ease;
-                    -o-transition: 0.3s ease;
-                    transition: 0.3s ease;
-                }
-
-                &:hover {
-                    &::after {
-                        width: 0;
-                    }
-                }
-
-                &:active,
-                &:focus,
-                &:focus-within {
-                    width: 0;
-                }
             }
         }
     }
@@ -6739,6 +6719,13 @@ textarea {
     text-align: center;
     color: #064E8C;
 
+    &:hover {
+        color: #00A0E3;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {}
 }
 
 .ma-btn-row {
@@ -7536,7 +7523,7 @@ textarea {
             font-size: 1.4rem;
             line-height: 1.8rem;
             color: #064E8C;
-            max-width: 32.8rem;
+            max-width: 33rem;
 
             &--comment {
                 margin-top: .8rem;
@@ -8970,19 +8957,15 @@ textarea {
     line-height: 1.8rem;
     font-weight: 500;
 
-    &--assembly {
-        color: #E6951C;
+    &--not-paid {
+        color: #ED9CA1;
     }
 
-    &--canceled {
-        color: #E6281C;
-    }
-
-    &--delivered {
+    &--paid {
         color: #9CCE85;
     }
 
-    &--received {
+    &--cancelled {
         color: #A3A8AB;
     }
 }
