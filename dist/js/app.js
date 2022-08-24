@@ -821,7 +821,7 @@ $(document).ready(function () {
         }
         let field = [];
         let count = 0;
-        $(this).find('input[type=text]').each(function (input, gt) {
+        $(this).find('.form-input').each(function (input, gt) {
             field.push(gt);
             let value = $(this).val();
             if (value == '') {

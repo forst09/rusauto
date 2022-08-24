@@ -10,11 +10,8 @@ body {
     font-family: 'Geometria';
     color: $black;
     padding-bottom: 4rem;
+    overflow-x: hidden;
 }
-
-// section {
-//     margin-bottom: 4.8rem;
-// }
 
 section {
     &+& {
@@ -159,8 +156,6 @@ textarea {
     }
 
     &__content {
-
-        // padding: 0 1.6rem ;
         margin: auto;
         max-width: 28rem;
     }
@@ -305,9 +300,6 @@ textarea {
                 &__money {
                     line-height: 2.2rem;
                 }
-
-
-
             }
 
             .form-btn__wrapper {
@@ -471,13 +463,11 @@ textarea {
             background: #00A0E3;
 
             &::after {
-
                 border-top: 3.8rem solid #00A0E3;
 
             }
 
             &::before {
-
                 border-bottom: 3.8rem solid #00A0E3;
 
             }
@@ -494,7 +484,6 @@ textarea {
         text-align: center;
         color: #00A0E3;
         display: inline-block;
-        // border: 1px solid red;
         padding: .7rem 3.8rem;
     }
 }
@@ -528,7 +517,6 @@ textarea {
     }
 
     button {
-
         top: .8rem;
         right: .8rem;
 
@@ -1067,7 +1055,6 @@ textarea {
     align-items: center;
 }
 
-
 .navigation-pages__item {
 
     a {
@@ -1125,8 +1112,6 @@ textarea {
             position: absolute;
             width: 2.6rem;
             height: 2.6rem;
-            // top: calc(50% - 1.3rem);
-            // left: calc(50% - 1.3rem);
         }
     }
 

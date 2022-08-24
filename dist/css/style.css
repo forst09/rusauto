@@ -8,6 +8,7 @@ body {
   font-family: "Geometria";
   color: #262B2E;
   padding-bottom: 4rem;
+  overflow-x: hidden;
 }
 
 section + section {
