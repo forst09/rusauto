@@ -160,11 +160,34 @@ $(document).ready(function () {
         $(this).val('');
     });
 
+    //СОЗДАТЬ ССЫЛКИ К ЗАГОЛОВКАМ КОНТЕНТНОЙ ЧАСТИ
+    if ($('.js-content-links').length !== 0) {
+        const linksArray = [...$(".ma-production__content h3")];
+        $.each(linksArray, function (index, link) {
+            $(link).attr('id', `pay_anchor_${index}`);
+            const htmlLink = `
+            <div class="content-left-nav__item">
+                <a href="#pay_anchor_${index}" class="content-left-nav__link" data-id="pay_anchor_${index}">
+                    <span>${$(link).text()}</span>
+                </a>
+            </div>
+            `;
+            $(".content-left-nav").append(htmlLink);
+
+        });
+
+    }
+
     //ПЕРЕХОД КО ВСЕМ ХАРАКТЕРИСТИКАМ В КАРТОЧКЕ ТОВАРА
     $('.all-characteristics').bind("click", {}, scrollAnchor);
 
     $(document).on('click', '.all-characteristics', function () {
         $(`.card__tabs-item[data-tab='${$(this).attr('href').split('#')[1]}']`)[0].click();
+    });
+
+    //ЗАКРЫТЬ УВЕДОМЛЕНИЕ О ДОБАВЛЕНИИ В КОРЗИНУ
+    $(document).on('click', '.ma-notification-btn', function () {
+        $(this).parents('.ma-notification').removeClass('active');
     });
 
     //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
@@ -229,7 +252,7 @@ $(document).ready(function () {
     let containerHeight = Math.floor(+$(container).css("max-height").split("px")[0]);
     let doubleContainerHeight = containerHeight * 2;
     // console.log(doubleContainerHeight);
-    console.log(containerHeight);
+
     let containerElements = $(container).find('a');
     // console.log(containerElements);
     let heightAll = 0;
@@ -252,7 +275,7 @@ $(document).ready(function () {
     let containerSPHeight = Math.floor(+$(containerSP).css("max-height").split("px")[0]);
     let doublecontainerSPHeight = containerSPHeight * 2;
     // console.log(doubleContainerHeight);
-    console.log(containerSPHeight);
+
     let containerSPElements = $(containerSP).find('.spares__item');
     // console.log(containerElements);
     let heightSPAll = 0;
@@ -266,7 +289,7 @@ $(document).ready(function () {
     //     $(".catalog-modal__groups-container").addClass("width-100");
     // }
     if (heightSPAll > doublecontainerSPHeight) {
-        console.log(heightSPAll, doublecontainerSPHeight);
+
         $('.catalog-modal__spares').find('.btn-jump__wrapper').addClass('active');
     }
 
@@ -300,11 +323,11 @@ $(document).ready(function () {
 
     //УБРАТЬ КНОПКУ ПОКАЗАТЬ ПОЛНОСТЬЮ, ЕСЛИ ТЕКСТ ВМЕЩАЕТСЯ В БЛОК
     let jshide = $('.js-hide');
-    console.log(jshide.length);
+
 
     jshide.each(function () {
         let texthideHeight = $(this).find('.text-hide').height();
-        console.log(texthideHeight);
+
         if (texthideHeight <= $(this).height()) {
             $(this).parents('section').find('.btn-show__wrapper').hide();
             $(this).css('height', texthideHeight);
@@ -564,7 +587,7 @@ $(document).ready(function () {
 
     //УДАЛЕНИЕ КУКОВ
     let cookieCloseBtns = [document.querySelector('.ma-cookie__close'), document.querySelector('.ma-cookie__button')];
-    console.log(typeof (cookieCloseBtns));
+
     cookieCloseBtns.forEach(buttonClose => {
         if (buttonClose != null) {
             buttonClose.addEventListener('click', function (e) {
@@ -699,7 +722,7 @@ $(document).ready(function () {
                 parent.replaceChild(wrapper, table)
                 content.appendChild(table)
                 wrapper.appendChild(content)
-                console.log(wrapper)
+
             })
         }
         imgs.forEach(img => {
@@ -709,7 +732,7 @@ $(document).ready(function () {
                 div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
                 div.classList.add('ma-production__img-auto')
                 img.parentNode.replaceChild(div, img);
-                console.log(div)
+
             }
 
         })
@@ -717,7 +740,7 @@ $(document).ready(function () {
         if (allTagInContent.includes('iframe')) {
 
             let iframes = content.querySelectorAll('iframe');
-            console.log(iframes)
+
             iframes.forEach(iframe => {
                 let wrapper = document.createElement('div')
                 let iframeSrc = iframe.src
@@ -762,7 +785,7 @@ $(document).ready(function () {
     }
 
 
-    let blockItems = [...document.querySelectorAll('.ma-pay__item')]
+    let blockItems = [...document.querySelectorAll('.ma-pay__item')];
     let containerItem = document.querySelector('.ma-container');
     window.addEventListener('scroll', function () {
         blockItems.forEach(item => {
@@ -1134,7 +1157,7 @@ $(document).ready(function () {
         };
     }
 
-    console.log(thumbsCard);
+
 
     //ПОДКЛЮЧЕНИЕ СВАЙПЕРА КАРТОЧКА ТОВАРА
     const swiperCard = new Swiper('.swiper-card', {

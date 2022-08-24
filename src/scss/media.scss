@@ -178,6 +178,12 @@
     /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ 668*/
     .ma-subscribe {
 
+        &::after {
+            transform: scaleX(1);
+            left: unset;
+            right: 0;
+        }
+
         &__content {
             padding: 3.2rem 0 3.2rem 4.4rem;
             width: 40rem;
@@ -2180,10 +2186,10 @@
         width: 8.4rem;
         height: 8.4rem;
 
-        &::after {
+        svg {
+            margin-left: 0.7rem;
             width: 2.6rem;
             height: 2.9rem;
-            background-size: 2.6rem 2.9rem;
         }
     }
 
@@ -3150,6 +3156,12 @@
     /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ 1024*/
     .ma-subscribe {
 
+        &::after {
+            left: 10.7rem;
+            right: unset;
+            top: 0;
+        }
+
         &__content {
             padding: 3.2rem 6.4rem;
             width: auto;
@@ -3417,7 +3429,7 @@
         width: 1.6rem;
         height: 1.6rem;
 
-        img {
+        svg {
             width: 100%;
             height: auto;
         }
@@ -3687,6 +3699,42 @@
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 1.5rem;
+    }
+
+    .main-link {
+        color: #00A0E3;
+        position: relative;
+        z-index: 1;
+        transition: 0.3s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 5.5rem;
+            height: 3.1rem;
+            background-color: #ffffff;
+            opacity: 0;
+            transition: 0.3s ease;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            color: #064E8C;
+        }
     }
 
     .header-top__links-icons-user-wrapper {
@@ -5204,7 +5252,7 @@
         align-items: center;
         margin: 0;
 
-        form {
+        .count-wrapper {
             max-width: 9.7rem;
         }
     }
@@ -5344,6 +5392,14 @@
     /*#################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
     .ma-pay {
+        .desc {
+            margin-bottom: 0;
+        }
+
+        .ma-autobus__left {
+            text-align: left;
+        }
+
         &__container {
 
 
@@ -6147,10 +6203,9 @@
         width: 11.2rem;
         height: 11.2rem;
 
-        &::after {
+        svg {
             width: 3.4rem;
             height: 3.8rem;
-            background-size: 3.4rem 3.8rem;
         }
     }
 
@@ -6441,7 +6496,7 @@
         .catalog-4lvl__catalog-item-bottom-buttons-basket {
             padding: 0.4rem 1.6rem;
 
-            form {
+            .count-wrapper {
                 min-width: 9.7rem;
                 padding: 0.5rem 0.45rem;
                 -webkit-box-sizing: content-box;

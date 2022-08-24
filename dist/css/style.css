@@ -589,10 +589,6 @@ textarea::-webkit-scrollbar-track {
   width: 0;
 }
 
-.main-link {
-  color: #00A0E3 !important;
-}
-
 .btn__wrapper {
   margin-top: 4rem;
   text-align: center;
@@ -1366,10 +1362,24 @@ textarea::-webkit-scrollbar-track {
 /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ*/
 .ma-subscribe {
   background: #F5FBFE;
-  background-image: url("../img/content-page/bg.jpg");
-  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.ma-subscribe::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  width: 42.6rem;
+  height: 19.8rem;
+  display: block;
+  background-image: url("../img/subscribe/bg.svg");
+  background-size: 42.6rem 19.8rem;
   background-repeat: no-repeat;
-  background-position-x: left;
+  background-position: center center;
+  z-index: -1;
+  transform: scaleX(-1);
 }
 .ma-subscribe__content {
   padding: 2.4rem 3.2rem;
@@ -1616,12 +1626,19 @@ textarea::-webkit-scrollbar-track {
   width: 2rem;
   height: 2rem;
 }
-.header-fixed .header-top__location-img img {
+.header-fixed .header-top__location-img svg {
   width: 100%;
   height: auto;
 }
+.header-fixed .header-top__location-img svg path {
+  transition: 0.3s ease;
+}
+.header-fixed .header-top__location-img .header-top__location-text {
+  color: #262B2E;
+}
 .header-fixed .header-top__location-text {
   display: none;
+  transition: 0.3s ease;
 }
 .header-fixed .header-bottom__logo {
   margin: 0;
@@ -1635,6 +1652,10 @@ textarea::-webkit-scrollbar-track {
 }
 .header-fixed .header-top__links-icons {
   display: none;
+}
+
+.header-top__location:active svg path, .header-top__location:focus svg path, .header-top__location:focus-within svg path {
+  stroke: #262B2E;
 }
 
 .header-fixed.active {
@@ -4120,7 +4141,7 @@ textarea::-webkit-scrollbar-track {
   width: 9.1rem;
   margin-right: 0.2rem;
 }
-.catalog-4lvl__catalog-item-bottom-buttons-basket form {
+.catalog-4lvl__catalog-item-bottom-buttons-basket .count-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4675,7 +4696,7 @@ textarea::-webkit-scrollbar-track {
   width: fit-content;
   width: -moz-fit-content;
 }
-.cart__order-item .catalog-4lvl__catalog-item-bottom-buttons-basket form {
+.cart__order-item .catalog-4lvl__catalog-item-bottom-buttons-basket .count-wrapper {
   padding: 0.45rem 0.4rem;
   min-width: 10.5rem;
 }
@@ -5755,10 +5776,15 @@ textarea::-webkit-scrollbar-track {
   line-height: 2rem;
   text-align: center;
   color: #064E8C;
+  transition: 0.3s ease;
 }
 .ma-btn-simple:hover {
   color: #00A0E3;
 }
+.ma-btn-simple:active, .ma-btn-simple:focus, .ma-btn-simple:focus-within {
+  color: #0091CE;
+}
+
 .ma-btn-row {
   width: 100%;
   margin-top: 2.4rem;
@@ -5815,18 +5841,26 @@ textarea::-webkit-scrollbar-track {
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 50%;
+  transition: 0.3s ease;
 }
-.about-company__video-link::after {
-  content: "";
-  margin-left: 0.5rem;
-  position: absolute;
-  display: block;
+.about-company__video-link svg {
   width: 1.5rem;
   height: 1.7rem;
-  background-image: url("../img/about/triangle.svg");
-  background-size: 1.5rem 1.7rem;
-  background-repeat: no-repeat;
-  background-position: center center;
+  margin-left: 0.3rem;
+  transition: 0.3s ease;
+}
+.about-company__video-link:hover {
+  background-color: white;
+  transform: scale(1.02);
+}
+.about-company__video-link:hover svg path {
+  fill: #00A0E3;
+}
+.about-company__video-link:active, .about-company__video-link:focus, .about-company__video-link:focus-within {
+  transform: scale(0.84);
+}
+.about-company__video-link:active svg path, .about-company__video-link:focus svg path, .about-company__video-link:focus-within svg path {
+  fill: #064E8C;
 }
 
 /*НАЧАЛО СТИЛЕЙ НАШИ НАГРАДЫ*/

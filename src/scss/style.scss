@@ -712,10 +712,6 @@ textarea {
     }
 }
 
-.main-link {
-    color: #00A0E3 !important;
-}
-
 .btn__wrapper {
     margin-top: 4rem;
     text-align: center;
@@ -1654,12 +1650,25 @@ textarea {
 /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ*/
 .ma-subscribe {
     background: #F5FBFE;
-    // margin-bottom: 12.8rem;
-    // margin-top: 6.4rem;
-    background-image: url('../img/content-page/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: left;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -2rem;
+        width: 42.6rem;
+        height: 19.8rem;
+        display: block;
+        background-image: url('../img/subscribe/bg.svg');
+        background-size: 42.6rem 19.8rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: -1;
+        transform: scaleX(-1);
+    }
 
     &__content {
         padding: 2.4rem 3.2rem;
@@ -1958,14 +1967,23 @@ textarea {
         width: 2rem;
         height: 2rem;
 
-        img {
+        svg {
             width: 100%;
             height: auto;
+
+            path {
+                transition: 0.3s ease;
+            }
+        }
+
+        .header-top__location-text {
+            color: #262B2E;
         }
     }
 
     .header-top__location-text {
         display: none;
+        transition: 0.3s ease;
     }
 
     .header-bottom__logo {
@@ -1983,6 +2001,17 @@ textarea {
 
     .header-top__links-icons {
         display: none;
+    }
+}
+
+.header-top__location {
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg path {
+            stroke: #262B2E;
+        }
     }
 }
 
@@ -4774,7 +4803,7 @@ textarea {
     width: 9.1rem;
     margin-right: 0.2rem;
 
-    form {
+    .count-wrapper {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -5433,7 +5462,7 @@ textarea {
         width: fit-content;
         width: -moz-fit-content;
 
-        form {
+        .count-wrapper {
             padding: 0.45rem 0.4rem;
             min-width: 10.5rem;
         }
@@ -6718,6 +6747,7 @@ textarea {
     line-height: 2.0rem;
     text-align: center;
     color: #064E8C;
+    transition: 0.3s ease;
 
     &:hover {
         color: #00A0E3;
@@ -6725,7 +6755,9 @@ textarea {
 
     &:active,
     &:focus,
-    &:focus-within {}
+    &:focus-within {
+        color: #0091CE;
+    }
 }
 
 .ma-btn-row {
@@ -6788,18 +6820,32 @@ textarea {
     -ms-flex-pack: center;
     justify-content: center;
     border-radius: 50%;
+    transition: 0.3s ease;
 
-    &::after {
-        content: '';
-        margin-left: 0.5rem;
-        position: absolute;
-        display: block;
+    svg {
         width: 1.5rem;
         height: 1.7rem;
-        background-image: url('../img/about/triangle.svg');
-        background-size: 1.5rem 1.7rem;
-        background-repeat: no-repeat;
-        background-position: center center;
+        margin-left: 0.3rem;
+        transition: 0.3s ease;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 1);
+        transform: scale(1.02);
+
+        svg path {
+            fill: #00A0E3;
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        transform: scale(0.84);
+
+        svg path {
+            fill: #064E8C;
+        }
     }
 }
 

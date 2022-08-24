@@ -139,6 +139,11 @@
 
   /*КОНЕЦ КОНТЕНТНЫХ СТИЛЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ 668*/
+  .ma-subscribe::after {
+    transform: scaleX(1);
+    left: unset;
+    right: 0;
+  }
   .ma-subscribe__content {
     padding: 3.2rem 0 3.2rem 4.4rem;
     width: 40rem;
@@ -1852,10 +1857,10 @@
     width: 8.4rem;
     height: 8.4rem;
   }
-  .about-company__video-link::after {
+  .about-company__video-link svg {
+    margin-left: 0.7rem;
     width: 2.6rem;
     height: 2.9rem;
-    background-size: 2.6rem 2.9rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ О КОМПАНИИ 668*/
@@ -2655,6 +2660,11 @@
 
   /*КОНЕЦ КОНТЕНТНЫХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ РАССЫЛКИ 1024*/
+  .ma-subscribe::after {
+    left: 10.7rem;
+    right: unset;
+    top: 0;
+  }
   .ma-subscribe__content {
     padding: 3.2rem 6.4rem;
     width: auto;
@@ -2881,7 +2891,7 @@
     width: 1.6rem;
     height: 1.6rem;
   }
-  .header-top__location-img img {
+  .header-top__location-img svg {
     width: 100%;
     height: auto;
   }
@@ -3126,6 +3136,32 @@
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.5rem;
+  }
+
+  .main-link {
+    color: #00A0E3;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s ease;
+  }
+  .main-link::after {
+    content: "";
+    position: absolute;
+    width: 5.5rem;
+    height: 3.1rem;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main-link:hover::after, .main-link:active::after, .main-link:focus::after, .main-link:focus-within::after {
+    opacity: 1;
+  }
+  .main-link:active, .main-link:focus, .main-link:focus-within {
+    color: #064E8C;
   }
 
   .header-top__links-icons-user-wrapper {
@@ -4386,7 +4422,7 @@
     align-items: center;
     margin: 0;
   }
-  .catalog-4lvl__catalog-item-bottom-buttons-basket form {
+  .catalog-4lvl__catalog-item-bottom-buttons-basket .count-wrapper {
     max-width: 9.7rem;
   }
 
@@ -4508,6 +4544,12 @@
   /*КОНЕЦ СТИЛЕЙ ЭНЦИКЛОПЕДИЯ АВТОБУСОВ 1024*/
   /*#################################################################################################################################*/
   /*НАЧАЛО СТИЛЕЙ ОПЛАТА И ДОСТАВКА 1024*/
+  .ma-pay .desc {
+    margin-bottom: 0;
+  }
+  .ma-pay .ma-autobus__left {
+    text-align: left;
+  }
   .ma-pay__container {
     padding: 0 6.4rem;
     display: -webkit-box;
@@ -5183,10 +5225,9 @@
     width: 11.2rem;
     height: 11.2rem;
   }
-  .about-company__video-link::after {
+  .about-company__video-link svg {
     width: 3.4rem;
     height: 3.8rem;
-    background-size: 3.4rem 3.8rem;
   }
 
   .rewards__item {
@@ -5439,7 +5480,7 @@
   .card-window .catalog-4lvl__catalog-item-bottom-buttons-basket {
     padding: 0.4rem 1.6rem;
   }
-  .card-window .catalog-4lvl__catalog-item-bottom-buttons-basket form {
+  .card-window .catalog-4lvl__catalog-item-bottom-buttons-basket .count-wrapper {
     min-width: 9.7rem;
     padding: 0.5rem 0.45rem;
     -webkit-box-sizing: content-box;
