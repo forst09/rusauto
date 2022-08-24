@@ -1,7 +1,5 @@
 'use strict';
 
-// const { active } = require("browser-sync");
-
 $(document).ready(function () {
 
     // ОТКЛЮЧЕНИЕ ZOOM ЧЕРЕЗ СКРОЛЛ (В ТОМ ЧИСЛЕ ТРЕКАПАДАМИ В MACOS)
@@ -49,7 +47,6 @@ $(document).ready(function () {
             },
             100
         );
-        // return false;
     };
 
     //ОТКРЫТИЕ МОДАЛЬНОГО КАТАЛОГА
@@ -125,8 +122,6 @@ $(document).ready(function () {
         $('body').addClass('scroll-hide');
     });
 
-
-
     //ПОИСК НА 1024 В ШАПКЕ
     $(document).on('input', '.header-bottom__search-input', function () {
         $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-result').addClass('active');
@@ -136,8 +131,11 @@ $(document).ready(function () {
     //ЗАКРЫТИЕ ПОИСКА НА 1024 В ШАПКЕ
     $(document).on('focusout', '.header-bottom__search-input', function () {
         $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-result').removeClass('active');
-        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-close').removeClass('active');
-        $(this).val('');
+    });
+
+    $(document).on('click', '.header-bottom__search-close', function () {
+        $(this).removeClass('active');
+        $(this).parents('.header-bottom__search-wrapper').find('.header-bottom__search-result').removeClass('active');
     });
 
     //ВСТАВИТЬ В ИНПУТ ПОИСКА ПРИМЕР ПО КЛИКУ
@@ -175,7 +173,6 @@ $(document).ready(function () {
             $(".content-left-nav").append(htmlLink);
 
         });
-
     }
 
     //ПЕРЕХОД КО ВСЕМ ХАРАКТЕРИСТИКАМ В КАРТОЧКЕ ТОВАРА
@@ -223,45 +220,18 @@ $(document).ready(function () {
             }
         }
 
-
-        // if ($('.catalog-4lvl__catalog-buttons-sorting-dropdown').hasClass('active')) {
-        //     if (!($(e.target).is('.catalog-4lvl__catalog-buttons-sorting-btn'))) {
-        //         console.log('cl');
-        //         $('.catalog-4lvl__catalog-buttons-sorting-dropdown').removeClass('active');
-        //     }
-        // }
-
     });
 
-    //ПОКАЗАТЬ КНОПКУ ПЕРЕЙТИ К... НА МОДАЛЬНОМ КАТАЛОГЕ
-    // function showJumpBtn(maxHeight, sectionName) {
-
-    // }
-    // if ($(window).width() > 1499) {
-    //     const heightParent = Math.floor(+$(".catalog-modal__groups-wrapper").css("max-height").split("px")[0]);
-    //     const heightItems = [...$(".catalog-modal__groups-item")].reduce((acc, item) => acc + item.offsetHeight, 0);
-    //     if (heightItems > heightParent) $(".catalog-modal__groups-container").addClass("width-100");
-    //     console.log(heightItems, heightParent);
-    //     if (heightItems > (heightParent * 2)) {
-    //         $('.catalog-modal__groups-container .btn-jump__wrapper').addClass('active');
-    //     }
-    // }
-
     let container = $('.catalog-modal__groups-js');
-    // console.log(container);
     let containerHeight = Math.floor(+$(container).css("max-height").split("px")[0]);
     let doubleContainerHeight = containerHeight * 2;
-    // console.log(doubleContainerHeight);
 
     let containerElements = $(container).find('a');
-    // console.log(containerElements);
     let heightAll = 0;
     containerElements.each(function () {
         let elementsHeight = $(this).outerHeight(true);
-        // console.log(elementsHeight);
         heightAll = heightAll + elementsHeight;
     });
-    // console.log(heightAll, containerHeight);
     if (heightAll > containerHeight) {
         $(".catalog-modal__groups-container").addClass("width-100");
     }
@@ -271,60 +241,22 @@ $(document).ready(function () {
     }
 
     let containerSP = $('.catalog-modal .spares__container');
-    // console.log(container);
     let containerSPHeight = Math.floor(+$(containerSP).css("max-height").split("px")[0]);
     let doublecontainerSPHeight = containerSPHeight * 2;
-    // console.log(doubleContainerHeight);
 
     let containerSPElements = $(containerSP).find('.spares__item');
-    // console.log(containerElements);
     let heightSPAll = 0;
     containerSPElements.each(function () {
         let elementsSPHeight = $(this).outerHeight(true);
-        // console.log(elementsHeight);
         heightSPAll = heightSPAll + elementsSPHeight;
     });
-    // console.log(heightAll, containerHeight);
-    // if (heightSPAll > containerSPHeight) {
-    //     $(".catalog-modal__groups-container").addClass("width-100");
-    // }
     if (heightSPAll > doublecontainerSPHeight) {
 
         $('.catalog-modal__spares').find('.btn-jump__wrapper').addClass('active');
     }
 
-    //   ПОКАЗАТЬ КНОПКУ ПЕРЕЙТИ К... НА МОДАЛЬНОМ КАТАЛОГЕ
-    // function showJumpBtn(divName, divNameElements, divParentName) {
-    //     let container = $(`.${divName}`);
-    //     console.log(container);
-    //     let containerHeight = Math.floor(+$(container).css("max-height").split("px")[0]);
-    //     let doubleContainerHeight = containerHeight * 2;
-    //     // console.log(doubleContainerHeight);
-    //     console.log(containerHeight);
-    //     containerElements = $(container).find(`${divNameElements}`);
-    //     // console.log(containerElements);
-    //     let heightAll = 0;
-    //     containerElements.each(function () {
-    //         let elementsHeight = $(this).outerHeight(true);
-    //         // console.log(elementsHeight);
-    //         heightAll = heightAll + elementsHeight;
-    //     });
-    //     // console.log(heightAll, containerHeight);
-    //     if (heightAll > containerHeight) {
-    //         $(`.${divParentName}`).addClass("width-100");
-    //     }
-    //     if (heightAll > doubleContainerHeight) {
-    //         console.log(heightAll, doubleContainerHeight);
-    //         $(`.${divParentName}`).find('.btn-jump__wrapper').addClass('active');
-    //     }
-    // };
-
-    // showJumpBtn('catalog-modal__groups-wrapper', 'a', 'catalog-modal__groups-container');
-
     //УБРАТЬ КНОПКУ ПОКАЗАТЬ ПОЛНОСТЬЮ, ЕСЛИ ТЕКСТ ВМЕЩАЕТСЯ В БЛОК
     let jshide = $('.js-hide');
-
-
     jshide.each(function () {
         let texthideHeight = $(this).find('.text-hide').height();
 
@@ -333,21 +265,6 @@ $(document).ready(function () {
             $(this).css('height', texthideHeight);
         }
     });
-
-    // texthide.each(function (index, el) {
-    //     texthideHeight = $(this).height();
-    //     let elements = $(this).find('*');
-    //     console.log(elements);
-    //     let heightAll = 0;
-    //     elements.each(function () {
-    //         let elementsHeight = $(this).height();
-    //         heightAll = heightAll + elementsHeight;
-    //     });
-    //     console.log(heightAll);
-    //     if (heightAll <= texthideHeight) {
-    //         $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
-    //     }
-    // });
 
     // ПОКАЗАТЬ/СКРЫТЬ ТЕКСТ
     $(document).on('click', ".btn-show", function () {
@@ -410,15 +327,11 @@ $(document).ready(function () {
                 myMap.controls.remove("fullscreenControl");
                 myMap.controls.remove("geolocationControl");
                 myMap.controls.remove("searchControl");
-                // jsMap.firstChild.remove();
                 myMap.geoObjects
-                    // .add(myPlacemark)
                     .add(myPlacemarkWithContent);
             });
         }
     };
-    // renderMap();
-    //check scroll to map block
     const creatMapsScript = function (id) {
         let scriptYMAPS = document.createElement("script");
         scriptYMAPS.src =
@@ -427,8 +340,6 @@ $(document).ready(function () {
         document
             .querySelector("body")
             .insertAdjacentElement("beforeend", scriptYMAPS);
-        // let loader = `<div class="loader-catalog"><img src="/upload/imgs_new/loader.gif" alt="preloader"></div>`;
-        // jsMap.insertAdjacentHTML("afterbegin", loader);
         scriptYMAPS.onload = function () {
             renderMap(id);
         };
@@ -469,34 +380,20 @@ $(document).ready(function () {
                     }
                 })
                 this.classList.add('active');
-                // handler active content
                 if (tabContents.length != 0) {
                     tabContents.forEach(tabContent => {
                         if (tabContent.dataset.id === this.dataset.id) {
                             if (tabContent.dataset.tab === this.dataset.tab) {
                                 tabContent.classList.add('active');
                                 $(tabContent).find('.tab.active').trigger('click');
-                                // if ($(tabContent).find('.tab-content').hasClass('active')) {
-
-                                // let dataTab = $(tabContent).find('.tab-content.active').attr('data-tab');
-                                // console.log(dataTab);
-                                // $($(tabContent).find('.tab-content.active').attr('data-tab'));
-                                // console.log($(tabContent).find('.tab').attr('data-tab', dataTab));
-                                // console.log($(tabContent).find('.tab').attr('data-tab') == dataTab);
-                                // if ($(tabContent).find('.js-map') != null) {
-                                //     console.log($(tabContent).find('.js-map').parents('.tab-content').attr('data-tab'));
-                                // }
-                                // }
                             }
                             else {
                                 tabContent.classList.remove('active');
                             }
                         }
                     })
-                    // tabContents[index].classList.add('active');
                 }
 
-                // if($('.contacts__map'))
                 if (this.hasAttribute('data-map')) {
                     $.map([...$(".js-map")], function (map) {
                         $(map).empty();
@@ -510,7 +407,6 @@ $(document).ready(function () {
 
 
                 }
-                // console.log($(this).attr('data-map'));
             })
         }
 
@@ -519,13 +415,13 @@ $(document).ready(function () {
 
     // ТАБЫ, НА МОБИЛКАХ ВКЛЮЧАТЬ ДЛИННЫЕ КАРТОЧКИ
     if (($(window).width() >= 320) && ($(window).width() < 1023)) {
-        $("#catalog4lvlTabLines").trigger("click");
         $('.catalog-4lvl__catalog-lines').addClass('active');
     }
     // ТАБЫ, НАЧИНАЯ С ПК ВКЛЮЧАТЬ ПЛИТКИ
     if ($(window).width() >= 1024) {
         $("#catalog4lvlTabTiles").addClass('active');
         $('.catalog-4lvl__catalog-tile').addClass('active');
+        $('.catalog-4lvl__catalog-lines').removeClass('active');
     }
 
     //ВЫПАДАШКА С СОРТИРОВКОЙ В КАТАЛОГЕ 4 УРОВНЯ 
@@ -596,7 +492,7 @@ $(document).ready(function () {
         }
     });
 
-    //скролл страницы наверх
+    //СКРОЛЛ СТРАНИЦЫ НАВЕРХ
     $(window).scroll(function () {
         let height = $(window).scrollTop();
         if (height > 1000) {
@@ -699,7 +595,6 @@ $(document).ready(function () {
 
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
     let content = document.querySelector('.ma-production__content ');
-
     let imgs = document.querySelectorAll('.ma-production__content img');
     let allTagInContent = [];
 
@@ -753,15 +648,12 @@ $(document).ready(function () {
         }
     }
 
-
-
     //СКРОЛЛ ОПЛАТА И ДОСТАВКА
     let leftLinks = [...document.querySelectorAll('.content-left-nav__link')];
     let body = document.querySelector('.ma-pay-body');
     let leftBlock = document.querySelector('.ma-pay-left');
     let titles = [...document.querySelectorAll('.ma-pay__title')];
     let linkTexts = [...document.querySelectorAll('.ma-pay-left__link span')];
-
 
     // detect element in viewport
     function elementInViewport(el) {
@@ -790,7 +682,6 @@ $(document).ready(function () {
     window.addEventListener('scroll', function () {
         blockItems.forEach(item => {
             if (elementInViewport(item.lastElementChild)) {
-                //    item.classList.add('ma-pay-left__link--active');
                 leftLinks.forEach(link => {
                     link.classList.remove('ma-pay-left__link--active')
                     if (item.id === link.getAttribute('data-id')) {
@@ -801,123 +692,10 @@ $(document).ready(function () {
             }
         })
     })
-    $(".content-left-nav__link").bind("click", {}, scrollAnchor)
-
-
-
-    // let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
-    // let body = document.querySelector('.ma-pay-body');
-    // let leftBlock = document.querySelector('.ma-pay-left');
-    // let titles = [...document.querySelectorAll('.ma-pay__title')];
-
-
-
-    // // detect element in viewport
-    // function elementInViewport(el) {
-    //     var top = el.offsetTop;
-    //     var left = el.offsetLeft;
-    //     var width = el.offsetWidth;
-    //     var height = el.offsetHeight;
-
-    //     while (el.offsetParent) {
-    //         el = el.offsetParent;
-    //         top += el.offsetTop;
-    //         left += el.offsetLeft;
-    //     }
-
-    //     return (
-    //         top >= window.pageYOffset &&
-    //         left >= window.pageXOffset &&
-    //         (top + height) <= (window.pageYOffset + window.innerHeight) &&
-    //         (left + width) <= (window.pageXOffset + window.innerWidth)
-    //     );
-    // }
-
-
-    // window.addEventListener('scroll', function (e) {
-    //     this.document.querySelectorAll('.ma-pay__item').forEach(item => {
-
-
-    //         if (elementInViewport(item.lastElementChild)) {
-    //             leftLinks.forEach(link => {
-    //                 link.classList.remove('ma-pay-left__link--active')
-    //                 if (item.id === link.getAttribute('data-id')) {
-    //                     link.classList.add('ma-pay-left__link--active')
-    //                 }
-    //             })
-
-
-    //         }
-    //     })
-    // })
-
-    // window.addEventListener('load', function (e) {
-    //     let headerFixed = document.querySelector('.header-fixed');
-    //     // let headerFixed_height = parseFloat(this.getComputedStyle(headerFixed).height);
-    //     let headerFixed_height = headerFixed.offsetHeight
-    //     // console.log(headerFixed_height + 'mamamamama')
-    //     leftLinks.forEach(link => {
-    //         link.addEventListener('click', e => {
-    //             e.preventDefault()
-    //             if (!link.classList.contains('ma-pay-left__link--active')) {
-    //                 this.document.querySelectorAll('.ma-pay__item').forEach(item => {
-    //                     if (item.id === link.getAttribute('data-id')) {
-
-    //                         // item.scrollIntoView();
-    //                         this.window.scrollTo(0, item.offsetTop);
-
-    //                     }
-
-    //                 })
-    //             }
-    //         })
-    //     })
-
-
-    // })
-    // let leftLinks = [...document.querySelectorAll('.ma-pay-left__link')];
-    // let body = document.querySelector('.ma-pay-body');
-    // let leftBlock = document.querySelector('.ma-pay-left');
-
-
-
-
-    // window.addEventListener('scroll', function (e) {
-
-
-
-
-    //     if (this.scrollY < 600) {
-    //         leftLinks[0].classList.add('ma-pay-left__link--active')
-    //         leftLinks[1].classList.remove('ma-pay-left__link--active')
-    //     } else {
-    //         leftLinks[1].classList.add('ma-pay-left__link--active')
-    //         leftLinks[0].classList.remove('ma-pay-left__link--active')
-
-    //     }
-
-    //     if (this.scrollY >= body.offsetHeight - 105) {
-    //         leftBlock.classList.add('absolute')
-    //     } else {
-    //         leftBlock.classList.remove('absolute')
-    //     }
-
-    // })
-    //     let header = document.querySelector('header');
-    //     let navbar = document.querySelector('.ma-pay-left');
-
-    //     navbar.style.top = parseFloat(getComputedStyle(header).height) + 100 + 'px';
-    //     console.log(getComputedStyle(header).height);
-
-
-    // })
-
-
+    $(".content-left-nav__link").bind("click", {}, scrollAnchor);
 
 
     //СЛАЙДЕР В ФИЛЬТРАХ КАТАЛОГА 4 УРОВНЯ
-
-
     let slider = document.getElementById('filtersSlider');
     if (slider != null) {
         let input0 = document.getElementById('filtersSliderInput1');
@@ -950,8 +728,6 @@ $(document).ready(function () {
 
                 let values = slider.noUiSlider.get();
                 let value = Number(values[handle]);
-
-                // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
                 let steps = slider.noUiSlider.steps();
 
                 // [down, up]
@@ -1043,6 +819,18 @@ $(document).ready(function () {
         if (event.target.classList.contains('form-input')) {
             document.querySelector('.personal-data__submit').classList.add('undisabled');
         }
+        let field = [];
+        let count = 0;
+        $(this).find('input[type=text]').each(function (input, gt) {
+            field.push(gt);
+            let value = $(this).val();
+            if (value == '') {
+                count++;
+            }
+        })
+        if (count == field.length) {
+            document.querySelector('.personal-data__submit').classList.remove('undisabled');
+        }
     }
 
     if (document.querySelector('.personal-data__form form') != null) {
@@ -1073,7 +861,6 @@ $(document).ready(function () {
 
     //УДАЛИТЬ АДРЕС
     let LivraisonDeleteIcons = [...document.querySelectorAll('.livraison-delete-icon')];
-
     let LivraisonOpenIcons = [...document.querySelectorAll('.livraison-open-icon')];
     let livraisonAddressItems = [...document.querySelectorAll('.livraison__address')];
     LivraisonDeleteIcons.forEach((LivraisonDeleteIcon, index, tab) => {
@@ -1121,7 +908,6 @@ $(document).ready(function () {
         }
     });
 
-
     //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ГЛАВНАЯ СТРАНИЦА ГЛАВНЫЙ ЭКРАН
     const swiperMain = new Swiper('.swiper-main', {
         speed: 700,
@@ -1157,8 +943,6 @@ $(document).ready(function () {
         };
     }
 
-
-
     //ПОДКЛЮЧЕНИЕ СВАЙПЕРА КАРТОЧКА ТОВАРА
     const swiperCard = new Swiper('.swiper-card', {
         speed: 700,
@@ -1181,25 +965,6 @@ $(document).ready(function () {
 
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
-        //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ"
-        const swiperCompanies = new Swiper('.swiper-companies', {
-            speed: 700,
-            slidesPerView: 'auto',
-            mousewheel: {
-                invert: true,
-            },
-            breakpoints: {
-
-                1024: {
-                    spaceBetween: 72,
-                },
-
-                1500: {
-                    spaceBetween: 120,
-                },
-            }
-        });
-
 
         //ГЛАВНАЯ СТРАНИЦА СЕКЦИЯ "НАШИ ПАРТНЕРЫ"
         const swiperPartners = new Swiper('.swiper-partners', {
@@ -1286,46 +1051,7 @@ $(document).ready(function () {
         swiperCard.pagination.destroy();
         $('.swiper-card__pagination').remove();
 
-        // const swiperCardThumbs = new Swiper('.swiper-card-thumbs', {
-        //     speed: 700,
-        //     slidesPerView: 'auto',
-        //     spaceBetween: 8,
-        //     navigation: {
-        //         nextEl: '.swiper-card-next',
-        //         prevEl: '.swiper-card-prev',
-        //     }
-        // });
-
-
-
-        //СВАЙПЕР ДЛЯ ТАБОВ КАРТОЧКИ ТОВАРА
-        // const swiperCardTabs = new Swiper('.swiper-card-tabs', {
-        //     speed: 700,
-        //     slidesPerView: 'auto',
-        //     mousewheel: {
-        //         invert: true,
-        //     },
-        // });
-
     }
-
-
-
-
-
-
-    // $(document).on('click', ".tab", function () {
-    //     $('.tab-content').removeClass('active');
-    //     $('#' + $(this).attr("data-tab")).addClass('active');
-    //     $('.tab').removeClass('active');
-    //     $(this).addClass('active');
-
-    //     $.map([...$(".contacts__map")], function (map) {
-    //         $(map).empty();
-    //     });
-    //     renderMap($(this).attr('data-map').split("#")[1]);
-
-    // });
 });
 
 

@@ -3434,10 +3434,9 @@ textarea {
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ*/
 
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
-.swiper-companies {
-    .swiper-wrapper {
-        gap: 2.4rem;
-    }
+.companies__wrapper {
+    display: inline-flex;
+    gap: 2.4rem;
 }
 
 .companies__image {

@@ -1108,10 +1108,8 @@
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 668*/
 
-    .swiper-companies {
-        .swiper-wrapper {
-            gap: 3.92rem;
-        }
+    .companies__wrapper {
+        gap: 4rem;
     }
 
     .companies__banner-text {
@@ -3551,7 +3549,6 @@
             background-color: #00A0E3;
             border-radius: 50%;
             font-size: 0.9rem;
-            line-height: 1.1rem;
             color: #fff;
         }
     }
@@ -4440,11 +4437,12 @@
         }
     }
 
-    .swiper-companies {
-
-        .swiper-wrapper {
-            gap: unset;
-        }
+    .companies__wrapper {
+        padding: 0 6.4rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, max-content);
+        justify-content: space-between;
     }
 
     .companies__image {
@@ -5487,10 +5485,6 @@
     .body-card {
         padding-bottom: 0;
 
-        .header:not(.header-fixed) {
-            padding-bottom: 7rem;
-        }
-
         .header-fixed {
             -webkit-box-shadow: none;
             box-shadow: none;
@@ -5718,10 +5712,14 @@
 
     /* ПРИКРЕПЛЯШКА КОРЗИНЫ НАВЕРХУ СТРАНИЦЫ 1024*/
     .cart-window {
-        position: absolute;
-        top: 14.2rem;
+        position: fixed;
+        top: 0;
         padding: 1.6rem 0;
         bottom: unset;
+        transition: 0.6s ease;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
 
         .cart__ordering-info {
             margin-right: 4rem;
@@ -5733,14 +5731,12 @@
     }
 
     .cart-window.fixed {
-        position: fixed;
         top: 8.8rem;
         -webkit-box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
         box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
-        -webkit-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
-        transition: 0.3s ease;
         z-index: 10;
+        visibility: visible;
+        opacity: 1;
     }
 
     /*КОНЕЦ СТИЛЕЙ КОРЗИНЫ 1024*/
@@ -6466,10 +6462,14 @@
 
     /* ПРИКРЕПЛЯШКА НАВЕРХУ СТРАНИЦЫ 1024*/
     .card-window {
-        position: absolute;
-        top: 14.2rem;
         bottom: unset;
         padding: 0.8rem 0;
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transition: 0.6s ease;
 
         .catalog-4lvl__catalog-item-cost {
             gap: 1.6rem;
@@ -6517,9 +6517,9 @@
         top: 8.8rem;
         -webkit-box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
         box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
-        -webkit-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
-        transition: 0.3s ease;
+        visibility: visible;
+        z-index: 10;
+        opacity: 1;
     }
 
     .card-window__container {
@@ -7109,9 +7109,6 @@
     }
 
     .body-cart {
-        .header:not(.header-fixed) {
-            padding: 0;
-        }
 
         .header-fixed {
             -webkit-box-shadow: 0px 1px 24px rgba(74, 74, 74, 0.12);
@@ -7590,15 +7587,9 @@
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ 1500*/
-    .companies {
-        .swiper-slide {
-            width: 9.2rem;
-        }
+    .companies__wrapper {
+        padding: 0 8rem;
     }
-
-    // .swiper-companies {
-    //     padding: 0 16.5rem;
-    // }
 
     .companies__image {
         width: 9.2rem;
@@ -7988,7 +7979,7 @@
     }
 
     .cart__order-item {
-        padding: 0.8rem 0.8rem 2.4rem;
+        padding: 2.4rem 0.8rem 2.4rem;
     }
 
     .cart__ordering-wrapper {
@@ -8028,10 +8019,6 @@
 
     .cart__ordering-title {
         font-size: 1.8rem;
-    }
-
-    .cart__item-deleted {
-        padding: 2.6rem 0 1rem 0;
     }
 
     /* ПРИКРЕПЛЯШКА КОРЗИНЫ НАВЕРХУ СТРАНИЦЫ 1500*/

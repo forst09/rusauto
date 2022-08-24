@@ -2902,7 +2902,8 @@ textarea::-webkit-scrollbar-track {
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ТРАНСПОРТНЫЕ КОМПАНИИ, С КОТОРЫМИ МЫ РАБОТАЕМ*/
-.swiper-companies .swiper-wrapper {
+.companies__wrapper {
+  display: inline-flex;
   gap: 2.4rem;
 }
 
