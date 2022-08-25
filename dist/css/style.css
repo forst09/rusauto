@@ -7617,6 +7617,10 @@ textarea::-webkit-scrollbar-track {
   font-size: 1.4rem;
   line-height: 1.8rem;
   display: inline-block;
+  transition: 0.3s ease;
+}
+.order__title-btn a:hover, .order__title-btn a:active, .order__title-btn a:focus, .order__title-btn a:focus-within {
+  background-color: #0091CE;
 }
 
 .order__sum {

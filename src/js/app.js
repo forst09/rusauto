@@ -309,7 +309,7 @@ $(document).ready(function () {
                             // Необходимо указать данный тип макета.
                             iconLayout: "default#imageWithContent",
                             // Своё изображение иконки метки.
-                            iconImageHref: "../img/map.svg",
+                            iconImageHref: "img/map.svg",
                             // Размеры метки.
                             iconImageSize: [82, 51],
                             // Смещение левого верхнего угла иконки относительно

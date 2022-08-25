@@ -8946,6 +8946,14 @@ textarea {
         font-size: 1.4rem;
         line-height: 1.8rem;
         display: inline-block;
+        transition: 0.3s ease;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            background-color: #0091CE;
+        }
     }
 }
 
