@@ -817,19 +817,22 @@ $(document).ready(function () {
     //УБИРАТЬ С КНОПКИ САБМИТ DISABLED, ЕСЛИ В ФОРМУ БЫЛИ ВНЕСЕНЫ ИЗМЕНЕНИЯ
     function handle(event) {
         if (event.target.classList.contains('form-input')) {
-            document.querySelector('.personal-data__submit').classList.add('undisabled');
-        }
-        let field = [];
-        let count = 0;
-        $(this).find('.form-input').each(function (input, gt) {
-            field.push(gt);
-            let value = $(this).val();
-            if (value == '') {
-                count++;
+            if ($('.personal-data__submit')) {
+                document.querySelector('.personal-data__submit').classList.add('undisabled');
+
+                let field = [];
+                let count = 0;
+                $(this).find('.form-input').each(function (input, gt) {
+                    field.push(gt);
+                    let value = $(this).val();
+                    if (value == '') {
+                        count++;
+                    }
+                })
+                if (count == field.length) {
+                    document.querySelector('.personal-data__submit').classList.remove('undisabled');
+                }
             }
-        })
-        if (count == field.length) {
-            document.querySelector('.personal-data__submit').classList.remove('undisabled');
         }
     }
 

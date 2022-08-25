@@ -7006,6 +7006,8 @@ textarea::-webkit-scrollbar-track {
 .delivery__cards-delivery-date {
   font-size: 1.2rem;
   line-height: 1.5rem;
+  flex-shrink: 0;
+  max-width: 11rem;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -7020,6 +7022,11 @@ textarea::-webkit-scrollbar-track {
   box-orient: vertical;
 }
 
+.delivery__cards-delivery-cost {
+  width: fit-content;
+  display: inline-grid;
+}
+
 .delivery__cards-delivery-cost-text {
   color: #00A0E3;
   font-size: 1.4rem;
@@ -7028,6 +7035,7 @@ textarea::-webkit-scrollbar-track {
 }
 
 .delivery__cards-delivery-cost-min {
+  display: inline-block;
   line-height: 1.3rem;
   margin-bottom: 0.2rem;
 }
@@ -7053,7 +7061,7 @@ textarea::-webkit-scrollbar-track {
   min-width: 100%;
   min-height: 100%;
 }
-.delivery__cards-companie-img p {
+.delivery__cards-companie-img span {
   font-size: 1.4rem;
   line-height: 1.8rem;
   font-weight: 500;
