@@ -884,6 +884,10 @@ $(document).ready(function () {
         $(this).parents('.checkout__company-region').find('.checkout__company-region-content').removeClass('active');
         $(this).parents('.checkout__company-region').find('.checkout__company-region-input').removeClass('active');
     });
+    //ОЧИСТКА ВЫБОРА РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
+    $(document).on('click', ".checkout__company-region-close", function () {
+        $(this).removeClass('active');
+    });
     //ПОИСК ПО РЕГИОНАМ В ОФОРМЛЕНИИ ЗАКАЗА
     $(".checkout__company-region-input").keyup(function () {
         let filter = $(this).val(),
@@ -908,6 +912,7 @@ $(document).ready(function () {
             $(this).addClass('active');
             $(this).parents('.checkout__company-region').addClass('active');
             $(this).parents('.checkout__company-region').find('.checkout__company-region-content').addClass('active');
+            $(this).parents('.checkout__company-region').find('.checkout__company-region-close').addClass('active');
         }
     });
 

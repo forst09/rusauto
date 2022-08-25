@@ -5282,6 +5282,19 @@ textarea::-webkit-scrollbar-track {
   font-weight: 500 !important;
   position: relative;
 }
+.ma-autobus-schema-item__file-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #00A0E3;
+  transition: 0.3s ease;
+}
+.ma-autobus-schema-item__file-link:hover::after, .ma-autobus-schema-item__file-link:active::after, .ma-autobus-schema-item__file-link:focus::after, .ma-autobus-schema-item__file-link:focus-within::after {
+  width: 100%;
+}
 .ma-autobus .ma-production__content .ma-production__scroll {
   margin: 0 0;
   margin-bottom: 4.8rem;
