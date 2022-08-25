@@ -2835,9 +2835,10 @@ textarea::-webkit-scrollbar-track {
   height: 4rem;
   margin-bottom: 1.6rem;
 }
-.desc-icon__item-img img {
+.desc-icon__item-img svg {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .desc-icon__text-title {
