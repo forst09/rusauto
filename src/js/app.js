@@ -482,15 +482,21 @@ $(document).ready(function () {
     });
 
     //УДАЛЕНИЕ КУКОВ
-    let cookieCloseBtns = [document.querySelector('.ma-cookie__close'), document.querySelector('.ma-cookie__button')];
+    let cookieCloseBtnClose = document.querySelector(".ma-cookie__close");
+    if (cookieCloseBtnClose != null) {
+        cookieCloseBtnClose.addEventListener("click", function (e) {
+            document.querySelector(".ma-cookie").remove();
+        });
+    }
 
-    cookieCloseBtns.forEach(buttonClose => {
-        if (buttonClose != null) {
-            buttonClose.addEventListener('click', function (e) {
-                document.querySelector('.ma-cookie').remove();
-            })
-        }
-    });
+    //ПРИНЯТИЕ КУКОВ
+    let cookieConfirmBtn = document.querySelector(".ma-cookie__button");
+    if (cookieConfirmBtn != null) {
+        cookieConfirmBtn.addEventListener("click", function (e) {
+            document.cookie = "cookie=yes";
+            document.querySelector(".ma-cookie").remove();
+        });
+    }
 
     //СКРОЛЛ СТРАНИЦЫ НАВЕРХ
     $(window).scroll(function () {
