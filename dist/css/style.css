@@ -547,6 +547,13 @@ textarea::-webkit-scrollbar-track {
 .desc .link-underline {
   font-weight: 400;
 }
+.desc b {
+  font-weight: 500;
+}
+.desc i {
+  font-style: italic;
+  font-weight: 400;
+}
 
 .desc-left {
   max-width: none;
@@ -7172,6 +7179,13 @@ textarea::-webkit-scrollbar-track {
   width: 100%;
   height: auto;
 }
+.checkout__company-region-close label svg path {
+  transition: 0.3s ease;
+}
+.checkout__company-region-close:hover label svg path {
+  fill: #00A0E3;
+}
+
 .checkout__company-region-close.active {
   display: block;
 }

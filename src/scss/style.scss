@@ -8425,11 +8425,17 @@ textarea {
         svg {
             width: 100%;
             height: auto;
+
+            path {
+                transition: 0.3s ease;
+            }
         }
     }
 
     &:hover {
-        label svg path {}
+        label svg path {
+            fill: #00A0E3;
+        }
     }
 }
 
