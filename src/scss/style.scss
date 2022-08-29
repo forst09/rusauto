@@ -1099,6 +1099,11 @@ textarea {
     }
 }
 
+.nav-current-page {
+    background-color: transparent;
+    color: #00A0E3;
+}
+
 .navigation-pages__item+.navigation-pages__item {
     margin-left: 0.8rem;
 }
