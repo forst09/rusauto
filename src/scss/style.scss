@@ -538,6 +538,8 @@ textarea {
 
 /*ДОБАВИТЬ КЛАСС .input-error К ОБЕРТКЕ ИНПУТА, ЕСЛИ В ИНПУТЕ ОШИБКА*/
 .input-error {
+    position: relative;
+
     input {
         border: 1px solid #ED9CA1 !important;
     }
@@ -8413,39 +8415,33 @@ textarea {
     }
 }
 
+//меняла
 .checkout__company-region-close {
-    display: none;
     position: absolute;
-    right: 1rem;
-    top: calc(50% - 0.95rem);
+    height: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    right: 2rem;
+    transition: transform 0.3s ease;
 
-    input {
-        display: none;
-    }
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
 
-    label {
-        width: 1.6rem;
-        height: 1.6rem;
-
-        svg {
-            width: 100%;
-            height: auto;
-
-            path {
-                transition: 0.3s ease;
-            }
+        path {
+            transition: fill 0.3s ease;
         }
     }
 
     &:hover {
-        label svg path {
-            fill: #00A0E3;
+        svg path {
+            stroke: #00A0E3;
         }
     }
 }
 
 .checkout__company-region-close.active {
-    display: block;
+    transform: translateY(-50%) rotate(0);
 }
 
 // .checkout__company-region.active {
@@ -8464,7 +8460,7 @@ textarea {
     display: none;
     position: absolute;
     left: 0;
-    top: calc(100% - 1px);
+    top: calc(100% - 2px);
     width: 100%;
     // width: calc(100% + 2px);
 }

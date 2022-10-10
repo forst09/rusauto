@@ -220,6 +220,12 @@ $(document).ready(function () {
             }
         }
 
+        // console.log(e);
+        // if ($(e.target).is('.checkout__company-region-input')) {
+        // }
+        // else {
+        //     $('.checkout__company-region-input').parents('.checkout__company-region').find('.checkout__company-region-content').removeClass('active');
+        // }
     });
 
     let container = $('.catalog-modal__groups-js');
@@ -880,7 +886,14 @@ $(document).ready(function () {
     });
 
     //ВЫПАДАШКА С ВЫБОРОМ РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА
-    $(document).on('input', ".checkout__company-region-input", function () {
+    // $(document).on('input', ".checkout__company-region-input", function () {
+    //     $(this).parents('.checkout__company-region').find('.checkout__company-region-content').addClass('active');
+    //     $(this).parents('.checkout__company-region').find('.checkout__company-region-close').addClass('active');
+    // });
+
+    $(document).on('focus', ".checkout__company-region-input", function () {
+        $(this).addClass('active');
+        $(this).parents('.checkout__company-region').find('.checkout__company-region-content').addClass('active');
         $(this).parents('.checkout__company-region').find('.checkout__company-region-close').addClass('active');
     });
 
@@ -888,6 +901,7 @@ $(document).ready(function () {
     $(document).on('click', ".checkout__company-region-item", function () {
         $(this).parents('.checkout__company-region').find('input').val($(this).attr('data-text'));
         $(this).parents('.checkout__company-region').find('.checkout__company-region-content').removeClass('active');
+        $(this).parents('.checkout__company-region').find('.checkout__company-region-close').removeClass('active');
         $(this).parents('.checkout__company-region').find('.checkout__company-region-input').removeClass('active');
     });
     //ОЧИСТКА ВЫБОРА РЕГИОНА В ОФОРМЛЕНИИ ЗАКАЗА

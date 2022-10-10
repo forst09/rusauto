@@ -2728,6 +2728,10 @@
     .checkout__couruier-container {
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 1.6rem;
+
+        .checkout__company-region {
+            grid-column: 1 / -1;
+        }
     }
 
     .checkout__couruier-street {
