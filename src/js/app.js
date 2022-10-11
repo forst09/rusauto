@@ -219,14 +219,26 @@ $(document).ready(function () {
                 $('.modal__background').removeClass('active');
             }
         }
-
-        // console.log(e);
-        // if ($(e.target).is('.checkout__company-region-input')) {
-        // }
-        // else {
-        //     $('.checkout__company-region-input').parents('.checkout__company-region').find('.checkout__company-region-content').removeClass('active');
-        // }
+        let container = $(".checkout__company-region");
+        if ($(container).find('.checkout__company-region-content').hasClass('active')) {
+            if ($(container).has(e.target).length === 0) {
+                $(container).find('.checkout__company-region-content').removeClass('active');
+                $(container).find('.checkout__company-region-input').removeClass('active');
+                $(container).find('.checkout__company-region-close').removeClass('active');
+            }
+        }
     });
+
+    // $(document).mouseup(function (e) {
+    //     let container = $(".checkout__company-region");
+    //     if ($(container).find('.checkout__company-region-content').hasClass('active')) {
+    //         if ($(container).has(e.target).length === 0) {
+    //             $(container).find('.checkout__company-region-content').removeClass('active');
+    //             $(container).find('.checkout__company-region-input').removeClass('active');
+    //             $(container).find('.checkout__company-region-close').removeClass('active');
+    //         }
+    //     }
+    // });
 
     let container = $('.catalog-modal__groups-js');
     let containerHeight = Math.floor(+$(container).css("max-height").split("px")[0]);
